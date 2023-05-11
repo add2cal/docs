@@ -1,0 +1,24 @@
+{
+  "name": "add-to-calendar-pro-docs",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.15.0",
+    "npm": ">=9.5.1"
+  },
+  "description": "The official Add to Calendar Pro documentation.",
+  "author": {
+    "name": "Jens Kuerschner",
+    "url": "https://jenskuerschner.de/"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://docs.add-to-calendar-pro.com/",
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.75"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview --port 6789"
+  }
+}
