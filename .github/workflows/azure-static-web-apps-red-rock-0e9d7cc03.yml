@@ -26,7 +26,7 @@ jobs:
           app_build_command: 'npm run docs:build'
           app_location: '/'
           api_location: ''
-          output_location: 'dist'
+          output_location: '.vitepress/dist'
           is_static_export: true
           ###### End of Repository/Build Configurations ######
           
