@@ -23,12 +23,13 @@ export default defineConfig({
       description: "Offizielle Add to Calendar Pro Dokumentation",
       themeConfig: {
         sidebar: [
+          { text: 'Einführung', link: '/de/index' },
           {
-            text: 'Getting started DE',
+            text: 'Erste Schritte',
             collapsed: false,
             items: [
-              { text: 'Markdown Examples', link: '/getting-started/markdown-examples' },
-              { text: 'Runtime API Examples', link: '/getting-started/api-examples' }
+              { text: 'Markdown Examples', link: '/de/getting-started/markdown-examples' },
+              { text: 'Runtime API Examples', link: '/de/getting-started/api-examples' }
             ]
           }
         ],
@@ -84,6 +85,7 @@ export default defineConfig({
   themeConfig: {
     siteTitle: false,
     sidebar: [
+      { text: 'Introduction', link: '/index' },
       {
         text: 'Getting started',
         collapsed: false,
