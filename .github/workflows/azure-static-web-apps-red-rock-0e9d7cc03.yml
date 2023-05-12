@@ -23,7 +23,7 @@ jobs:
           production_branch: 'main'
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_build_command: 'vitepress build'
+          app_build_command: 'npm run docs:build'
           app_location: '/'
           api_location: ''
           output_location: 'dist'
