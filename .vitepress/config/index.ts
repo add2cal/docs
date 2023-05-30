@@ -31,6 +31,14 @@ export default defineConfig({
               { text: 'Markdown Examples', link: '/de/getting-started/markdown-examples' },
               { text: 'Runtime API Examples', link: '/de/getting-started/api-examples' }
             ]
+          },
+          {
+            text: 'Rechtliches',
+            collapsed: true,
+            items: [
+              { text: 'Impressum', link: 'https://add-to-calendar-pro.com/de/legal-notice' },
+              { text: 'Datenschutzbestimmungen', link: 'https://add-to-calendar-pro.com/de/privacy-policy' }
+            ]
           }
         ],
     
@@ -92,6 +100,14 @@ export default defineConfig({
         items: [
           { text: 'Markdown Examples', link: '/getting-started/markdown-examples' },
           { text: 'Runtime API Examples', link: '/getting-started/api-examples' }
+        ]
+      },
+      {
+        text: 'Legal',
+        collapsed: true,
+        items: [
+          { text: 'Legal Notice', link: 'https://add-to-calendar-pro.com/legal-notice' },
+          { text: 'Privacy Policy', link: 'https://add-to-calendar-pro.com/privacy-policy' }
         ]
       }
     ],
