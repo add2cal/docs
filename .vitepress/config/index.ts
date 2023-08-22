@@ -23,15 +23,57 @@ export default defineConfig({
       description: "Offizielle Add to Calendar Pro Dokumentation",
       themeConfig: {
         sidebar: [
-          { text: 'Einführung', link: '/de/index' },
+          { text: 'Erste Schritte', link: '/de/index' },
           {
-            text: 'Erste Schritte',
+            text: 'App Handbuch',
             collapsed: false,
             items: [
-              { text: 'Markdown Examples', link: '/de/getting-started/markdown-examples' },
-              { text: 'Runtime API Examples', link: '/de/getting-started/api-examples' }
+              { text: 'Elemente', link: '/de/application-manual/elements' },
+              { text: 'Gruppen und Events', link: '/de/application-manual/groups-and-events' },
+              { text: 'Styles und Templates', link: '/de/application-manual/styles-and-templates' },
+              { text: 'Team', link: '/de/application-manual/team' },
+              { text: 'Einstellungen', link: '/de/application-manual/settings' }
             ]
           },
+          {
+            text: 'Use Cases',
+            collapsed: false,
+            items: [
+              { text: 'RSVP', link: '/de/use-cases/rsvp' },
+              { text: 'Newsletter-Promotion', link: '/de/use-cases/newsletter-promotion' },
+              { text: 'Dynamic Checkout', link: '/de/use-cases/dynamic-checkout' }
+            ]
+          },
+          { text: 'Fehlerbehebung', link: '/de/troubleshooting' },
+          {
+            text: 'Integration',
+            collapsed: true,
+            items: [
+              { text: 'Allgemein', link: '/de/integration/general' },
+              { text: 'Angular', link: '/de/integration/angular' },
+              { text: 'React', link: '/de/integration/react' },
+              { text: 'Next.js', link: '/de/integration/nextjs' },
+              { text: 'Vue 3', link: '/de/integration/vue' },
+              { text: 'Nuxt 3', link: '/de/integration/nuxt' },
+              { text: 'Svelte', link: '/de/integration/svelte' },
+              { text: 'Astro', link: '/de/integration/astro' },
+              { text: 'WordPress', link: '/de/integration/wordpress' }
+            ]
+          },
+          {
+            text: 'API-Dokumentation',
+            collapsed: true,
+            items: [
+              { text: 'Authentication', link: '/de/api/auth' },
+              { text: 'Gruppen', link: '/de/api/groups' },
+              { text: 'Events', link: '/de/api/events' },
+              { text: 'Styles', link: '/de/api/styles' },
+              { text: 'RSVP', link: '/de/api/rsvp' },
+              { text: 'Verschiedenes', link: '/de/api/miscellaneous' },
+            ]
+          },
+          { text: 'Webhooks', link: '/de/webhooks' },
+          { text: 'Zapier-Integration', link: '/de/zapier' },
           {
             text: 'Rechtliches',
             collapsed: true,
@@ -93,15 +135,57 @@ export default defineConfig({
   themeConfig: {
     siteTitle: false,
     sidebar: [
-      { text: 'Introduction', link: '/index' },
+      { text: 'Getting started', link: '/index' },
       {
-        text: 'Getting started',
+        text: 'Application Manual',
         collapsed: false,
         items: [
-          { text: 'Markdown Examples', link: '/getting-started/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/getting-started/api-examples' }
+          { text: 'Elements', link: '/application-manual/elements' },
+          { text: 'Groups and Events', link: '/application-manual/groups-and-events' },
+          { text: 'Styles and Templates', link: '/application-manual/styles-and-templates' },
+          { text: 'Team', link: '/application-manual/team' },
+          { text: 'Settings', link: '/application-manual/settings' }
         ]
       },
+      {
+        text: 'Use Cases',
+        collapsed: false,
+        items: [
+          { text: 'RSVP', link: '/use-cases/rsvp' },
+          { text: 'Newsletter Promotion', link: '/use-cases/newsletter-promotion' },
+          { text: 'Dynamic Checkout', link: '/use-cases/dynamic-checkout' }
+        ]
+      },
+      { text: 'Troubleshooting', link: '/troubleshooting' },
+      {
+        text: 'Integration',
+        collapsed: true,
+        items: [
+          { text: 'General', link: '/integration/general' },
+          { text: 'Angular', link: '/integration/angular' },
+          { text: 'React', link: '/integration/react' },
+          { text: 'Next.js', link: '/integration/nextjs' },
+          { text: 'Vue 3', link: '/integration/vue' },
+          { text: 'Nuxt 3', link: '/integration/nuxt' },
+          { text: 'Svelte', link: '/integration/svelte' },
+          { text: 'Astro', link: '/integration/astro' },
+          { text: 'WordPress', link: '/integration/wordpress' }
+        ]
+      },
+      {
+        text: 'API Reference',
+        collapsed: true,
+        items: [
+          { text: 'Authentication', link: '/api/auth' },
+          { text: 'Groups', link: '/api/groups' },
+          { text: 'Events', link: '/api/events' },
+          { text: 'Styles', link: '/api/styles' },
+          { text: 'RSVP', link: '/api/rsvp' },
+          { text: 'Miscellaneous', link: '/api/miscellaneous' },
+        ]
+      },
+      { text: 'Working with Webhooks', link: '/webhooks' },
+      { text: 'Integrate with Zapier', link: '/zapier' },
       {
         text: 'Legal',
         collapsed: true,
