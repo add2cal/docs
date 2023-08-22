@@ -23,7 +23,7 @@ export default defineConfig({
       description: "Offizielle Add to Calendar Pro Dokumentation",
       themeConfig: {
         sidebar: [
-          { text: 'Erste Schritte', link: '/de' },
+          { text: 'Erste Schritte', link: '/de/index' },
           {
             text: 'App Handbuch',
             collapsed: false,
@@ -37,7 +37,7 @@ export default defineConfig({
           },
           {
             text: 'Use Cases',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'RSVP', link: '/de/use-cases/rsvp' },
               { text: 'Newsletter-Promotion', link: '/de/use-cases/newsletter-promotion' },
@@ -72,8 +72,16 @@ export default defineConfig({
               { text: 'Verschiedenes', link: '/de/api/miscellaneous' },
             ]
           },
-          { text: 'Webhooks', link: '/de/webhooks' },
-          { text: 'Zapier-Integration', link: '/de/zapier' },
+          {
+            text: 'Automation-Integration',
+            collapsed: true,
+            items: [
+              { text: 'Webhooks', link: '/de/automation-integration/webhooks' },
+              { text: 'Zapier', link: '/de/automation-integration/zapier' },
+              { text: 'n8n', link: '/de/automation-integration/n8n' },
+              { text: 'Make', link: '/de/automation-integration/make' },
+            ]
+          },
           {
             text: 'Rechtliches',
             collapsed: true,
@@ -135,7 +143,7 @@ export default defineConfig({
   themeConfig: {
     siteTitle: false,
     sidebar: [
-      { text: 'Getting started', link: '/' },
+      { text: 'Getting started', link: '/index' },
       {
         text: 'Application Manual',
         collapsed: false,
@@ -149,7 +157,7 @@ export default defineConfig({
       },
       {
         text: 'Use Cases',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: 'RSVP', link: '/use-cases/rsvp' },
           { text: 'Newsletter Promotion', link: '/use-cases/newsletter-promotion' },
@@ -184,8 +192,16 @@ export default defineConfig({
           { text: 'Miscellaneous', link: '/api/miscellaneous' },
         ]
       },
-      { text: 'Working with Webhooks', link: '/webhooks' },
-      { text: 'Integrate with Zapier', link: '/zapier' },
+      {
+        text: 'Automation Integration',
+        collapsed: true,
+        items: [
+          { text: 'Webhooks', link: '/automation-integration/webhooks' },
+          { text: 'Zapier', link: '/automation-integration/zapier' },
+          { text: 'n8n', link: '/automation-integration/n8n' },
+          { text: 'Make', link: '/automation-integration/make' },
+        ]
+      },
       {
         text: 'Legal',
         collapsed: true,
