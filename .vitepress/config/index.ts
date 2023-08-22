@@ -23,7 +23,7 @@ export default defineConfig({
       description: "Offizielle Add to Calendar Pro Dokumentation",
       themeConfig: {
         sidebar: [
-          { text: 'Erste Schritte', link: '/de/index' },
+          { text: 'Erste Schritte', link: '/de' },
           {
             text: 'App Handbuch',
             collapsed: false,
@@ -135,7 +135,7 @@ export default defineConfig({
   themeConfig: {
     siteTitle: false,
     sidebar: [
-      { text: 'Getting started', link: '/index' },
+      { text: 'Getting started', link: '/' },
       {
         text: 'Application Manual',
         collapsed: false,
