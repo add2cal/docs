@@ -1,6 +1,6 @@
 // https://vitepress.dev/reference/site-config
 export default {  
-  mpa: true, // https://vitepress.dev/guide/mpa-mode
+  mpa: false, // https://vitepress.dev/guide/mpa-mode
   srcDir: './src',
   vite: {
     publicDir: '../public',
@@ -16,14 +16,14 @@ export default {
     root: {
       label: 'English',
       lang: 'en',
-      title: "Add to Calendar Documentation",
-      description: "Official Add to Calendar Pro Documentation",
+      title: "Add to Calendar Docs",
+      description: "Official Add to Calendar PRO Documentation",
     },
     de: {
       label: 'German',
       lang: 'de',
-      title: "Add to Calendar Dokumentation",
-      description: "Offizielle Add to Calendar Pro Dokumentation",
+      title: "Add to Calendar Doku",
+      description: "Offizielle Add to Calendar PRO Dokumentation",
       themeConfig: {
         sidebar: [
           { text: 'Erste Schritte', link: '/de/index' },
