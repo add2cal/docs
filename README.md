@@ -2,9 +2,9 @@
 
 This is the official documentation for Add to Calendar PRO.
 
-[add-to-calendar-pro.com](https://add-to-calendar-pro.com)
+[docs.add-to-calendar-pro.com](https://docsadd-to-calendar-pro.com) | [add-to-calendar-pro.com](https://add-to-calendar-pro.com)
 
-<br /><br /><br /><br />
+<br /><br /><br />
 
 
 ## 🙌 Contributing
