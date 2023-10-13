@@ -1,6 +1,3 @@
----
-outline: deep
----
 
 # Integriere es in deine Website oder Web-App
 

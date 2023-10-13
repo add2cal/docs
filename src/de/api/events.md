@@ -1,5 +1,2 @@
----
-outline: deep
----
 
 # Events API

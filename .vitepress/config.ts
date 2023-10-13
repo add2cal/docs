@@ -1,10 +1,13 @@
-import { defineConfig } from 'vitepress'
-
 // https://vitepress.dev/reference/site-config
-export default defineConfig({  
+export default {  
+  mpa: true, // https://vitepress.dev/guide/mpa-mode
   srcDir: './src',
   vite: {
     publicDir: '../public',
+  },
+
+  sitemap: {
+    hostname: 'https://docs.add-to-calendar-pro.com'
   },
 
   lastUpdated: false,
@@ -239,8 +242,8 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/add2cal' },
-      { icon: 'twitter', link: 'https://twitter.com/add2calendar' },
-      { icon: 'youtube', link: 'https://www.youtube.com/@add2cal' }
+      { icon: 'x', link: 'https://x.com/add2calendar' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/company/add-to-calendar' }
     ],
 
     search: {
@@ -274,4 +277,4 @@ export default defineConfig({
       }
     }
   }
-})
+}

@@ -1,11 +1,11 @@
 // https://vitepress.dev/guide/custom-theme
 import { h, watchEffect } from 'vue';
 import { useData, inBrowser } from 'vitepress';
-import Theme from 'vitepress/theme';
-import './custom-style.css';
+import DefaultTheme  from 'vitepress/theme';
+import './custom.css';
 
 export default {
-  ...Theme,
+  ...DefaultTheme ,
   setup() {
     const { lang } = useData();
     watchEffect(() => {
@@ -15,7 +15,7 @@ export default {
     })
   },
   Layout: () => {
-    return h(Theme.Layout, null, {
+    return h(DefaultTheme .Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
