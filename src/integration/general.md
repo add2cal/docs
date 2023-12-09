@@ -2,11 +2,69 @@
 
 ## Things to consider
 
+There are 3 important things to consider before implementing.
+
+### 1. Package/Plugin vs. CDN
+
+Whether you want the script to be part of your core, managed via your usual package/plugin flows - or whether you want to load it via a script tag from an external CDN.
+
+There are Pros and Cons for both approaches and it is completely up to you what you prefer. In doubt, it is about convenience and what you are used to. Mind that using it as a module requires you to keep it up-to-date manually!
+
+### 2. Bundle Size
+
+How important bundle size is to you, if you use the script as npm package.
+If you are using the script in its plain version, you might wonder whether you can reduze the size of the script. Due to the nature of the script, this (e.g. tree-shaking) is not directly possible.
+However, you can load the unstyle version instead to save on css data you do not need. With this approach, you would need to make sure that events in the app are linked to a style AND at this style, the "load async" option is active. This makes sure the style gets loaded async via the jsDelivr CDN (make sure this is allowed at potential CORS settings).
+
+### 3. User Flow
+
+If you want links and files to be generated via the script on the client side or whether you want to use our Proxy service. The first case  will generate the links to the calendar sites dynamically directly in the browser. It will also generate the ics file that way. This is the fastest approach (from a user's perspective). However, ics generation gets blocked at some systems and if a calendar provider goes offline or has interal problems, the user will not be able to save an event. Using our proxy requires events to be connected to a style with the "proxy" option active. In this case, links and files get generated on our side and the user gets redirected to to us first. This way, when something does not work, we can tell the user about it and offer alternatives and guidance. It is more secure, but a little slower for the user. You can customize this journey by linking a style to a custom landingpage template.
+
 ## General workflow
+
+There are only 2 steps necessary to get RSVP forms and buttons showing up in your application.
+
+1. Load the script (via importing the package, loading the script via CDN, or via a plugin).
+2. Place an `<add-to-calendar-button />` tag where you want the element to show up and add the proKey as option.
+
+```html
+<add-to-calendar-button proKey="prokey-of-your-event" />
+```
+
+We automatically generate a proKey for every event you create. You can find it at the very top of the respective event page.
+
+When you create an event via our API, you will receive the proKey as response.
 
 ## Using it via CDN
 
+Load the script by adding the following script tag to the head section of your website.
+The script will be loaded in a non-blocking way.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+```
+
 ## Using it via NPM
+
+Import the package using the following npm command:
+
+```bash
+npm install add-to-calendar-button
+```
+
+Import the module into your project/component
+
+```javascript
+import 'add-to-calendar-button';
+```
+
+Based on your framework/library, you might need to make minor adjustments to the respective config.
+
+## Using it via Plugin
+
+For some systems (like WordPress), we provide official plugins.
+
+Usually, you can find them in the respective stores, but check the respective page in this documentation for details.
 
 ## Overwrite settings
 

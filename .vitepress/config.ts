@@ -39,12 +39,12 @@ export default {
             ]
           },
           {
-            text: 'Use Cases',
+            text: 'Anleitungen',
             collapsed: true,
             items: [
-              { text: 'RSVP', link: '/de/use-cases/rsvp' },
-              { text: 'Newsletter-Promotion', link: '/de/use-cases/newsletter-promotion' },
-              { text: 'Dynamic Checkout', link: '/de/use-cases/dynamic-checkout' }
+              { text: 'RSVP', link: '/de/recipes/rsvp' },
+              { text: 'Newsletter-Promotion', link: '/de/recipes/newsletter-promotion' },
+              { text: 'Dynamic Checkout', link: '/de/recipes/dynamic-checkout' }
             ]
           },
           { text: 'Fehlerbehebung', link: '/de/troubleshooting' },
@@ -67,6 +67,7 @@ export default {
             text: 'API-Dokumentation',
             collapsed: true,
             items: [
+              { text: 'Einführung', link: '/de/api/introduction' },
               { text: 'Authentication', link: '/de/api/auth' },
               { text: 'Gruppen', link: '/de/api/groups' },
               { text: 'Events', link: '/de/api/events' },
@@ -159,12 +160,12 @@ export default {
         ]
       },
       {
-        text: 'Use Cases',
+        text: 'Recipes',
         collapsed: true,
         items: [
-          { text: 'RSVP', link: '/use-cases/rsvp' },
-          { text: 'Newsletter Promotion', link: '/use-cases/newsletter-promotion' },
-          { text: 'Dynamic Checkout', link: '/use-cases/dynamic-checkout' }
+          { text: 'RSVP', link: '/recipes/rsvp' },
+          { text: 'Newsletter Promotion', link: '/recipes/newsletter-promotion' },
+          { text: 'Dynamic Checkout', link: '/recipes/dynamic-checkout' }
         ]
       },
       { text: 'Troubleshooting', link: '/troubleshooting' },
@@ -187,6 +188,7 @@ export default {
         text: 'API Reference',
         collapsed: true,
         items: [
+          { text: 'Introduction', link: '/api/introduction' },
           { text: 'Authentication', link: '/api/auth' },
           { text: 'Groups', link: '/api/groups' },
           { text: 'Events', link: '/api/events' },
