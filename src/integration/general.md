@@ -35,6 +35,12 @@ We automatically generate a proKey for every event you create. You can find it a
 
 When you create an event via our API, you will receive the proKey as response.
 
+::: warning It's client-side only!
+Mind that the button only works on the client-side.
+Therefore, trying to render it on the server (e.g. with SSR or SSG prerendering), might lead to unexpected behavior.
+Depending on your framework, you might want to wrap it into something like `<ClientOnly></ClientOnly>` (Nuxt) or add `use client` to the component (React).
+:::
+
 ## Using it via CDN
 
 Load the script by adding the following script tag to the head section of your website.

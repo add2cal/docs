@@ -71,7 +71,6 @@ export default {
               { text: 'Authentication', link: '/de/api/auth' },
               { text: 'Gruppen', link: '/de/api/groups' },
               { text: 'Events', link: '/de/api/events' },
-              { text: 'Styles', link: '/de/api/styles' },
               { text: 'RSVP', link: '/de/api/rsvp' },
               { text: 'Verschiedenes', link: '/de/api/miscellaneous' },
             ]
@@ -192,7 +191,6 @@ export default {
           { text: 'Authentication', link: '/api/auth' },
           { text: 'Groups', link: '/api/groups' },
           { text: 'Events', link: '/api/events' },
-          { text: 'Styles', link: '/api/styles' },
           { text: 'RSVP', link: '/api/rsvp' },
           { text: 'Miscellaneous', link: '/api/miscellaneous' },
         ]

@@ -7,7 +7,7 @@
 GET /event/:id
 ```
 
-Reading an event does not allow for any additional parameters.
+Reading an event does not allow for any additional parameters. It only takes the proKey/id in the request url.
 It simply provides you with all data for a specific event.
 
 ### Potential response
@@ -63,11 +63,80 @@ It simply provides you with all data for a specific event.
 ]
 ```
 
+<br />
+
 ## Add an event
 
 ```
 POST /event
 ```
+
+Creating a new event requires you to at least provide the following fields in the body:
+
+```json
+{
+    "event_group": "prokey-of-event-group", // gets returned as "id", when creating a group
+    "dates": [{
+        "name": "Title of the date",
+        "startDate": "2024-12-24",
+        "timeZone": "America/Los_Angelese" // not required, but highly recommended
+    }],
+}
+```
+
+Instead of `event_group`, you can also use `new_event_group_name`, which takes a string. This will create a new group with the provided name instead of linking the event to an existing one.
+
+Going further, you can add more dates to the array (= multi-date event) and add all fields, which are also present in the application's UI.
+
+::: warning Limitations
+Mind limitations, like recurrence not allowing for multiple dates, etc.
+We recommend to create a potential setup in the application first, before building it via the API.
+Additionally, the API does not allow to set the status of an event - it will always be published on creation.
+:::
+
+### Potential request with all fields
+
+```json
+{
+    "event_group": "prokey-of-event-group", // gets returned as "id", when creating a group
+    "dates": [{
+        "name": "Title of the date",
+        "description": "<p>An event description</p>", // allowing for <p>, <strong>, <em>, <u>, <h1>, <h2>, <h3>, <h4>, <ul>, <ol>, <li>, <a>
+        "startDate": "2024-12-24",
+        "startTime": "14:45",
+        "endDate": "2024-12-24",
+        "endTime": "16:15",
+        "timeZone": "America/Los_Angelese", // not required, but highly recommended
+        "location": "World Wide Web",
+        "status": "CONFIRMED", // or "TENTATIVE" or "CANCELLED"
+        "availability": "free", // or "busy"
+        "organizer_name": "Jack",
+        "organizer_email": "jack.frost@email.com",
+        "attendee_name": "Santa",
+        "attendee_email": "santa.claus@north.pole"
+    }],
+    "title_event_series": "Title for an event series if >1 date",
+    "simplified_recurrence": true, // set false, if you go for the "recurrence" field, which takes an RRULE; and true if you use the other recurrence fields
+    "recurrence": "RRULE:...",
+    "recurrence_simple_type": "daily", // or: "weekly", "monthly", "yearly",
+    "recurrence_interval": 1,
+    "recurrence_byDay": "2MO,TU", // example for the second Monday and each Tuesday
+    "recurrence_byMonth": "1,2,12", // example for Jan, Feb, and Dec
+    "recurrence_byMonthDay": "3,23", // example for the 3rd and 23rd day of the month
+    "recurrence_count": 10, // example: repeat 10 times
+    "recurrence_weekstart": "MO", // example for Monday
+    "layout": "id-of-a-style-template", // take the id from the url in the application
+    "iCalFileName": "overriding the ics file name",
+    "rsvp": true,
+    "rsvp_block": "id-of-an-rsvp-block", // take the id from the url in the application or the response when creating an rsvp block via API
+    "cta": true,
+    "cta_block": "id-of-a-cta-block", // take the id from the url in the application
+    "hide_button": false
+}
+```
+
+
+<br />
 
 ## Update an event
 
@@ -75,8 +144,23 @@ POST /event
 PATCH /event/:id
 ```
 
+Updating an event follows the same rules as creating one.
+
+The only important difference: The `event_group` field is not allowed.
+
+::: warning Limitations
+Mind the further lmitations, also present on creation via API.
+For the status, mind that if an event gets set to draft on the application UI, you cannot publish it via API!
+:::
+
+<br />
+
 ## Delete an event
 
 ```
 DELETE /event/:id
 ```
+
+Deleting an event is simple. Only provide the id/prokey and it gets removed.
+
+**Be careful with this call!**
