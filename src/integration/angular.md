@@ -1,5 +1,5 @@
 
-# Using Buttons and Forms with Angular
+# Using Buttons and RSVP Forms with Angular
 
 ## Step 1: npm installation
 
@@ -19,12 +19,10 @@ import 'add-to-calendar-button';
 
 ## Step 3: Optimize the Angular config
 
-To make Angular work properly with the Web Component, you need to import the CUSTOM_ELEMENTS_SCHEMA and update the @NgModule or @Component block respectively.
+To make Angular work properly with the Web Component, you need to import the **CUSTOM_ELEMENTS_SCHEMA** and update the **@NgModule** or **@Component** block respectively.
 
 ```typescript
-// app.module.ts
-
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 //(...)
 
 @NgModule({
@@ -36,7 +34,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 
 ## Step 4: Use it
 
-Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event">` tag to your source code.
+Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event" />` tag to your source code.
 
 ## Proper bindings
 
@@ -45,7 +43,5 @@ To bind data to a specific attribute, you need to use the syntax [attr.PARAMETER
 Based on your setup, the data flow might happen after the first rendering of the button. This is no problem, but you might see errors in the console when in debug mode, claiming there is data missing. Mind that due to this reason, binding the "identifier" option would not work.
 
 ```javascript
-<add-to-calendar-button
-  [attr.proKey]="yourProkeyVar"
-></add-to-calendar-button>
+<add-to-calendar-button [attr.proKey]="yourProkeyVar" />
 ```

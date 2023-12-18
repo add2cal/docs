@@ -4,11 +4,10 @@
 ## Get an event
 
 ```
-GET /event/:id
+GET /event/:prokey
 ```
 
-Reading an event does not allow for any additional parameters. It only takes the proKey/id in the request url.
-It simply provides you with all data for a specific event.
+Reading an event does not allow for any additional parameters. It only takes the proKey in the request url and simply provides you with all data for a specific event.
 
 ### Potential response
 
@@ -75,7 +74,7 @@ Creating a new event requires you to at least provide the following fields in th
 
 ```json
 {
-    "event_group": "prokey-of-event-group", // gets returned as "id", when creating a group
+    "event_group": "prokey-of-event-group", // gets returned as "id", when creating a group; also visible in the application
     "dates": [{
         "name": "Title of the date",
         "startDate": "2024-12-24",
@@ -86,11 +85,13 @@ Creating a new event requires you to at least provide the following fields in th
 
 Instead of `event_group`, you can also use `new_event_group_name`, which takes a string. This will create a new group with the provided name instead of linking the event to an existing one.
 
-Going further, you can add more dates to the array (= multi-date event) and add all fields, which are also present in the application's UI.
+Going further, you can add more dates to the array (= multi-date event).
 
 ::: warning Limitations
 Mind limitations, like recurrence not allowing for multiple dates, etc.
+
 We recommend to create a potential setup in the application first, before building it via the API.
+
 Additionally, the API does not allow to set the status of an event - it will always be published on creation.
 :::
 
@@ -98,7 +99,7 @@ Additionally, the API does not allow to set the status of an event - it will alw
 
 ```json
 {
-    "event_group": "prokey-of-event-group", // gets returned as "id", when creating a group
+    "event_group": "prokey-of-event-group",
     "dates": [{
         "name": "Title of the date",
         "description": "<p>An event description</p>", // allowing for <p>, <strong>, <em>, <u>, <h1>, <h2>, <h3>, <h4>, <ul>, <ol>, <li>, <a>
@@ -106,7 +107,7 @@ Additionally, the API does not allow to set the status of an event - it will alw
         "startTime": "14:45",
         "endDate": "2024-12-24",
         "endTime": "16:15",
-        "timeZone": "America/Los_Angelese", // not required, but highly recommended
+        "timeZone": "America/Los_Angelese",
         "location": "World Wide Web",
         "status": "CONFIRMED", // or "TENTATIVE" or "CANCELLED"
         "availability": "free", // or "busy"
@@ -135,13 +136,33 @@ Additionally, the API does not allow to set the status of an event - it will alw
 }
 ```
 
+### Potential response
+
+```json
+{
+    "success": "Created",
+    "id": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
+}
+```
+
+**The id from a successful creation is the proKey of your new event.**
+
+You can use this for further processing and several additional measures:
+
+* We automatically set up a landingpage you can use. Its url would be `https://go.caldn.net/:prokey`.
+* In most cases, we auto-create an ics file for you. You can download it from `https://event.caldn.net/:prokey/event.ics`. Mind the specialties here:
+  * We are not able to generate a file, if you are using dynamic dates like "today+4" (you can still use the link option for "ical" below);
+  * We are not able to generate a file for RSVP forms - here, we generate them dynamically for each attendee and send personalized ones within the confirmation emails;
+  * In case there are multiple dates to an event, as well as an organizer set, there would be multiple ics files. The first one follows the logic above, while subsequent ones get an ascending number added (example: event-2.ics);
+  * In case you set a custom ics file name, you would need to replace "event" with your custom name.
+* For non-RSVP events, you can use the following link scheme for direct links (like within emails): `https://go.caldn.net/:prokey/o/:calendarType`. CalendarType options would be: ical, apple, google, ms365, outlookcom, msteams, yahoo.
 
 <br />
 
 ## Update an event
 
 ```
-PATCH /event/:id
+PATCH /event/:prokey
 ```
 
 Updating an event follows the same rules as creating one.
@@ -150,6 +171,7 @@ The only important difference: The `event_group` field is not allowed.
 
 ::: warning Limitations
 Mind the further lmitations, also present on creation via API.
+
 For the status, mind that if an event gets set to draft on the application UI, you cannot publish it via API!
 :::
 
@@ -158,9 +180,9 @@ For the status, mind that if an event gets set to draft on the application UI, y
 ## Delete an event
 
 ```
-DELETE /event/:id
+DELETE /event/:prokey
 ```
 
-Deleting an event is simple. Only provide the id/prokey and it gets removed.
+Deleting an event is simple. Only provide the prokey and it gets removed.
 
 **Be careful with this call!**

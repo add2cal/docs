@@ -1,5 +1,5 @@
 
-# Using Buttons and Forms with Astro
+# How to integrate Buttons and RSVP Forms with Astro
 
 ## Step 0: Pick a solution
 
@@ -47,4 +47,4 @@ npm install add-to-calendar-button
 
 ## Step 2: Use it
 
-Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event">` tag to your source code.
+Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event" />` tag to your source code.

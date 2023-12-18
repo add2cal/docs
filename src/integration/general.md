@@ -1,4 +1,4 @@
-# Using Buttons and Forms with your Tech Stack
+# Using Buttons and RSVP Forms with your Tech Stack
 
 ## Things to consider
 
@@ -13,19 +13,24 @@ There are Pros and Cons for both approaches and it is completely up to you what 
 ### 2. Bundle Size
 
 How important bundle size is to you, if you use the script as npm package.
+
 If you are using the script in its plain version, you might wonder whether you can reduze the size of the script. Due to the nature of the script, this (e.g. tree-shaking) is not directly possible.
 However, you can load the unstyle version instead to save on css data you do not need. With this approach, you would need to make sure that events in the app are linked to a style AND at this style, the "load async" option is active. This makes sure the style gets loaded async via the jsDelivr CDN (make sure this is allowed at potential CORS settings).
 
 ### 3. User Flow
 
-If you want links and files to be generated via the script on the client side or whether you want to use our Proxy service. The first case  will generate the links to the calendar sites dynamically directly in the browser. It will also generate the ics file that way. This is the fastest approach (from a user's perspective). However, ics generation gets blocked at some systems and if a calendar provider goes offline or has interal problems, the user will not be able to save an event. Using our proxy requires events to be connected to a style with the "proxy" option active. In this case, links and files get generated on our side and the user gets redirected to to us first. This way, when something does not work, we can tell the user about it and offer alternatives and guidance. It is more secure, but a little slower for the user. You can customize this journey by linking a style to a custom landingpage template.
+If you want links and files to be generated via the script on the client side or whether you want to use our Proxy service.
+
+The first case will generate the links to the calendar sites dynamically directly in the browser. It will also generate the ics file that way. This is the fastest approach (from a user's perspective). However, ics generation gets blocked at some systems and if a calendar provider goes offline or has interal problems, the user will not be able to save an event. Using our proxy requires events to be connected to a style with the "proxy" option active. In this case, links and files get generated on our side and the user gets redirected to to us first.
+
+This way, when something does not work, we can tell the user about it and offer alternatives and guidance. It is more stable, but a little slower for the user. You can customize this journey by linking a style to a custom landingpage template.
 
 ## General workflow
 
 There are only 2 steps necessary to get RSVP forms and buttons showing up in your application.
 
 1. Load the script (via importing the package, loading the script via CDN, or via a plugin).
-2. Place an `<add-to-calendar-button />` tag where you want the element to show up and add the proKey as option.
+2. Place an `<add-to-calendar-button />` tag where you want the element to show up and add the proKey as attribute to it.
 
 ```html
 <add-to-calendar-button proKey="prokey-of-your-event" />
@@ -33,11 +38,12 @@ There are only 2 steps necessary to get RSVP forms and buttons showing up in you
 
 We automatically generate a proKey for every event you create. You can find it at the very top of the respective event page.
 
-When you create an event via our API, you will receive the proKey as response.
+When you [create an event via our API](/api/events.html#add-an-event), you will receive the proKey as response.
 
 ::: warning It's client-side only!
 Mind that the button only works on the client-side.
 Therefore, trying to render it on the server (e.g. with SSR or SSG prerendering), might lead to unexpected behavior.
+
 Depending on your framework, you might want to wrap it into something like `<ClientOnly></ClientOnly>` (Nuxt) or add `use client` to the component (React).
 :::
 
@@ -52,25 +58,25 @@ The script will be loaded in a non-blocking way.
 
 ## Using it via NPM
 
-Import the package using the following npm command:
+Install the package using the following npm command:
 
 ```bash
 npm install add-to-calendar-button
 ```
 
-Import the module into your project/component
+Import the module into your project/component:
 
 ```javascript
 import 'add-to-calendar-button';
 ```
 
-Based on your framework/library, you might need to make minor adjustments to the respective config.
+*Based on your framework/library, you might need to make minor adjustments to the respective config.*
 
 ## Using it via Plugin
 
 For some systems (like WordPress), we provide official plugins.
 
-Usually, you can find them in the respective stores, but check the respective page in this documentation for details.
+Usually, you can find them in the respective stores; but check the respective page in this documentation for details and to make sure you do not install wrong or malicious code.
 
 ## Overwrite settings
 

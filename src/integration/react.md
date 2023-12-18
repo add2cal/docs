@@ -1,7 +1,8 @@
 
-# Using Buttons and Forms with React
+# How to integrate Buttons and RSVP Forms with React
 
 ## Step 0: Pick a solution
+
 As React projects can be very versatile, there are multiple potential ways to work with the Add to Calendar Button.
 
 * In rather basic projects, you can use the Web Component out-of-the-box.

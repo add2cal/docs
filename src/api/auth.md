@@ -4,10 +4,11 @@ In order to authenticate your calls, you will first need to create an API key at
 
 Use this key for every request with the Header `Authorization`.
 
+<br />
 
 ---
 
-
+<br />
 
 **Example:**
 

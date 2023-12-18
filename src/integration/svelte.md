@@ -1,5 +1,5 @@
 
-# Using Buttons and Forms with Svelte
+# How to integrate Buttons and RSVP Forms with Svelte
 
 ## Step 1: npm installation
 

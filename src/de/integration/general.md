@@ -1,12 +1,82 @@
-# Nutze die Buttons und RSVP mit deinem Tech Stack
+# Nutze die Buttons und RSVP-Formulare mit deinem Tech Stack
 
-## Zu beachten
+## Wichtige Überlegungen
+
+Es gibt 3 Dinge, die vor der Implementierung zu beachten, bzw. deinerseits zu prüfen sind.
+
+### 1. Paket/Plugin vs. CDN
+
+Ob du das Skript als Teil deines Kernsystems verwalten möchtest - über deine üblichen Paket-/Plugin-Flows; oder ob du es lieber über einen Script-Tag von einem externen CDN laden möchtest.
+
+Es gibt Vor- und Nachteile für beide Ansätze und es liegt ganz bei dir, was du bevorzugst. Im Zweifelsfall geht es um Bequemlichkeit und darum, was du gewohnt bist. Bedenke, dass die Verwendung als Modul von dir verlangt, es manuell aktuell zu halten!
+
+### 2. Bundle-Size
+
+Wie wichtig dir die Bundle-Size ist, wenn du das Skript als npm-Paket verwendest.
+
+Wenn du das Skript in seiner Standard-Variante verwendest, fragst du dich vielleicht, ob du die Größe des Skripts reduzieren kannst. Aufgrund der Natur des Skripts ist dies (z. B. Tree-Shaking) nicht direkt möglich.
+Du kannst jedoch stattdessen die unstyle-Version laden, um CSS-Daten zu sparen, die du nicht benötigst. Bei diesem Ansatz musst du sicherstellen, dass Events in der App mit einem Style verknüpft sind UND bei diesem die Option "Load Async" aktiv ist. Dies stellt sicher, dass der Stil asynchron über das jsDelivr CDN geladen wird (stelle sicher, dass dies bei potenziellen CORS-Einstellungen erlaubt ist).
+
+### 3. User Flow
+
+Ob du Links und Dateien über das Skript auf der Client-Seite generieren lassen oder ob du unseren Proxy-Service verwenden möchtest.
+
+Im ersten Fall werden die Links zu den Kalendern direkt im Browser dynamisch generiert. Auch die ics-Datei wird auf diese Weise dynamisch erstellt. Dies ist der schnellste Ansatz (aus Sicht des Benutzers). Allerdings wird die ics-Generierung bei einigen Systemen blockiert und falls ein Kalenderanbieter offline geht oder interne Probleme hat, kann der Benutzer kein Event speichern. Die Verwendung unseres Proxys erfordert, dass Events mit einem Style verknüpft sind, bei dem die "Proxy"-Option aktiv ist.
+
+In diesem Fall werden Links und Dateien auf unserer Seite generiert und der Benutzer wird zuerst zu uns umgeleitet. Sollte etwas nicht funktionieren, können wir den Benutzer damit auch darüber informieren und Alternativen sowie Anleitungen anbieten. Dies ist daher der stabilere Weg, für den Benutzer aber etwas langsamer. Du kannst die Zwischenseiten anpassen, indem du einen Style mit einem Landingpage-Template verknüpfst.
 
 ## Allgemeiner Workflow
 
-## Via CDN nutzen
+Es sind nur 2 Schritte notwendig, um RSVP-Formulare und Buttons in deiner Anwendung anzuzeigen.
 
-## Via NPM nutzen
+1. Lade das Skript (durch Importieren des Pakets, Laden des Skripts über CDN oder über ein Plugin).
+2. Platziere ein `<add-to-calendar-button />`-Tag dort, wo du das Element anzeigen möchtest, und füge den proKey als Attribut hinzu.
+
+```html
+<add-to-calendar-button proKey="prokey-deines-events" />
+```
+
+Wir generieren automatisch einen proKey für jedes von dir erstellte Event. Du kannst ihn ganz oben auf der jeweiligen Eventseite finden.
+
+Wenn du ein [Event über unsere API erstellst](/de/api/events.html#event-erstellen), erhältst du den proKey als Response.
+
+::: Warnung Client only!
+Bedenke, dass der Button nur auf Seite des "Clients" funktioniert.
+Daher kann das Rendern auf dem Server (z. B. mittels SSR oder SSG-Prerendering) zu unerwartetem Verhalten führen.
+
+Je nach Framework solltest du deiner Komponente entsprechende Auszeichnungen, wie `<ClientOnly></ClientOnly>` (Nuxt) oder `use client` (React) zufügen.
+:::
+
+## Verwendung via CDN
+
+Lade das Skript, indem du den folgenden Script-Tag zum Head-Bereich deiner Webseite hinzufügst.
+Das Skript wird auf nicht blockierende Weise geladen.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+```
+
+## Verwendung via npm
+
+Installiere das Paket mit dem folgenden npm-Befehl:
+
+```bash
+npm install add-to-calendar-button
+```
+
+Importiere das Modul in deinem Projekt/Komponente:
+
+```javascript
+import 'add-to-calendar-button';
+```
+
+*Je nach Framework/Library musst du möglicherweise kleinere Anpassungen an der jeweiligen Konfiguration vornehmen.*
+
+## Verwendung über ein Plugin
+
+Für einige Systeme (wie WordPress) bieten wir offizielle Plugins an.
+
+Normalerweise findest du diese in den entsprechenden Stores. Überprüfe allerdings unbedingt die jeweilige Seite in dieser Dokumentation für Details und um keine falschen (oder gar schädlichen) Inhalte zu installieren.
 
 ## Einstellungen überschreiben
 

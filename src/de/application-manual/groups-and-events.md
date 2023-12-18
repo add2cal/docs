@@ -1,2 +1,6 @@
 
-# Groups and Events
+# Gruppen und Events
+
+::: warning Diese Seite befindet sich aktuell noch im Aufbau!
+Schau in wenigen Wochen nochmal vorbei. :)
+:::

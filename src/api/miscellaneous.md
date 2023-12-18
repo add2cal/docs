@@ -1,13 +1,12 @@
-
 # Miscellaneous
 
-## List RSVP answers
+## List RSVP replies
 
 ```
 GET /rsvp-answers/:id
 ```
 
-Providing the proKey/id of the respective event, you can get a list of all connected RSVP answers/replies.
+Providing the proKey of the respective event, you can get a list of all connected RSVP answers/replies.
 
 ### Potential response
 

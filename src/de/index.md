@@ -12,7 +12,9 @@ Schau in wenigen Wochen nochmal vorbei. :)
 :::
 
 <br />
+
 ---
+
 <br />
 
 * Lerne die [Elemente der Anwendunge kennen](/de/application-manual/elements.html).
@@ -20,3 +22,5 @@ Schau in wenigen Wochen nochmal vorbei. :)
 * Lies mehr zu den Details unserer [API](/de/api/introduction.html) und [Automatisierungen](/de/automation-integration/webhooks.html).
 * Lass dich von [weiteren detaillierten Case Studies](/de/recipes/rsvp.html) inspirieren.
 * Etwas funktioniert nicht? Wirf einen Blick in den ["Troubleshooting"-Bereich](/de/troubleshooting.html)!
+
+<br />

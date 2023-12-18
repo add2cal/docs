@@ -11,7 +11,9 @@ Have a second look in a few weeks. :)
 :::
 
 <br />
+
 ---
+
 <br />
 
 * Learn more about the [elements you will find and work with](/application-manual/elements.html).
@@ -19,3 +21,5 @@ Have a second look in a few weeks. :)
 * Discover our [API](/api/introduction.html) and [automations](/automation-integration/webhooks.html).
 * Get inspired by [more special recipes](/recipes/rsvp.html).
 * Something is not working? Check the ["Troubleshooting" area](/troubleshooting.html)!
+
+<br />

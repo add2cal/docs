@@ -133,3 +133,19 @@
   --vp-custom-block-tip-text: var(--vp-c-brand-alt-2);
   --vp-custom-block-tip-bg: var(--vp-c-brand-alt-soft);
 }
+
+/**
+  * Overrides
+  * -------------------------------------------------------------------------- */
+
+.vp-doc h1 {
+  margin-bottom: 1.3em;
+}
+
+.VPDocFooter {
+  margin-top: 8em !important;
+}
+
+.vp-doc ul, .vp-doc ol {
+  padding-left: 2rem;
+}

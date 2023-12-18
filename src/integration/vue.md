@@ -1,5 +1,5 @@
 
-# Using Buttons and Forms with Vue 3
+# How to integrate Buttons and RSVP Forms with Vue 3
 
 ## Step 1: npm installation
 
