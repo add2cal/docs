@@ -19,7 +19,7 @@ import 'add-to-calendar-button';
 
 ## Step 3: Optimize the Angular config
 
-To make Angular work properly with the Web Component, you need to import the CUSTOM_ELEMENTS_SCHEMA and update the @NgModule block respectively.
+To make Angular work properly with the Web Component, you need to import the CUSTOM_ELEMENTS_SCHEMA and update the @NgModule or @Component block respectively.
 
 ```typescript
 // app.module.ts

@@ -1,5 +1,6 @@
 ---
 next: false
+lastUpdated: false
 ---
 
 # Willkommen im Dokumentations-Bereich

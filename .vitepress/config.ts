@@ -7,10 +7,24 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://docs.add-to-calendar-pro.com'
+    hostname: 'https://docs.add-to-calendar-pro.com',
+    xmlns: {
+      news: false,
+      image: false,
+      video: false
+    },
+    transformItems: (items) => {
+      return items.map(item => {
+        return {
+          ...item,
+          changefreq: 'weekly',
+          priority: 0.8
+        };
+      });
+    }
   },
 
-  lastUpdated: false,
+  lastUpdated: true,
 
   locales: {
     root: {
@@ -99,6 +113,13 @@ export default {
           pattern: 'https://github.com/add2cal/docs/edit/main/src/:path',
           text: 'Edit on GitHub'
         },    
+
+        lastUpdated: {
+          text: 'Aktualisiert am',
+          formatOptions: {
+            forceLocale: true
+          }
+        },
     
         docFooter: {
           prev: 'Previous page',
@@ -218,7 +239,14 @@ export default {
     editLink: {
       pattern: 'https://github.com/add2cal/docs/edit/main/src/:path',
       text: 'Edit on GitHub'
-    },    
+    },
+
+    lastUpdated: {
+      text: 'Last Update',
+      formatOptions: {
+        forceLocale: true
+      }
+    },
 
     docFooter: {
       prev: 'Previous page',
