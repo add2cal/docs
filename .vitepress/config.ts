@@ -10,8 +10,13 @@ export default {
     hostname: 'https://docs.add-to-calendar-pro.com',
     xmlns: {
       news: false,
+      xhtml: true,
       image: false,
-      video: false
+      video: false,
+      custom: [
+        'xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"',
+        'xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"',
+      ],
     },
     transformItems: (items) => {
       return items.map(item => {
