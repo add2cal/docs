@@ -14,6 +14,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
+          lfs: false
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -23,7 +24,7 @@ jobs:
           production_branch: 'main'
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_build_command: 'npm ci & npm run docs:build'
+          app_build_command: 'npm run docs:build'
           app_location: '/'
           output_location: '.vitepress/dist'
           skip_api_build: true
