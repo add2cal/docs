@@ -134,6 +134,10 @@ export default {
         sidebarMenuLabel: 'Menu',
         darkModeSwitchLabel: 'Theme',
         langMenuLabel: 'Change language',
+
+        nav: [
+          { text: 'Entdecke das PRO-Angebot', link: 'https://add-to-calendar-pro.com/de' },
+        ],
       }
     }
   },
@@ -269,8 +273,7 @@ export default {
     },
 
     nav: [
-      { text: 'Go Pro', link: 'https://add-to-calendar-pro.com' },
-      { text: 'App Login', link: 'https://app.add-to-calendar-pro.com' },
+      { text: 'Discover the PRO offering', link: 'https://add-to-calendar-pro.com' },
     ],
 
     socialLinks: [
