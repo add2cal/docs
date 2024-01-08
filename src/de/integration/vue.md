@@ -39,8 +39,6 @@ compilerOptions: {
 Für den Fall, dass der Add to Calendar Button der einzige Web Component in deinem Projekt ist, kannst du hierbei auch etwas konkreter werden.
 
 ```javascript
-// vite.config.js oder vite.config.ts
-
 compilerOptions: {
   isCustomElement: (tag) => tag === 'add-to-calendar-button'
 }
