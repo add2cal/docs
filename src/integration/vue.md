@@ -38,13 +38,11 @@ compilerOptions: {
 
 In case the Add to Calendar Button is the only Web Component in your project, you could also be a little bit more explicit here.
 
-In this case, our recommendation is to define tags, which start with "add-" as "custom elements".
-
 ```javascript
 // vite.config.js or vite.config.ts
 
 compilerOptions: {
-  isCustomElement: (tag) => tag.startsWith('add-')
+  isCustomElement: (tag) => tag === 'add-to-calendar-button'
 }
 ```
 

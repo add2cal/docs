@@ -17,6 +17,37 @@ Import the module into the component, where you want to use the button.
 import 'add-to-calendar-button';
 ```
 
-## Step 3: Use it
+## Step 3: Optimize the config
+
+Theoretically, this was already it.
+
+Vue works extremely well with Web Components.
+
+However, you might notice a warning in the browser console.
+To get rid of this, you need to provide a little bit more information to the vue compiler options.
+
+This usually goes into your `nuxt.config.ts`.
+
+```javascript
+// nuxt.config.js or nuxt.config.ts
+
+vue: {
+  compilerOptions: {
+    isCustomElement: (tag) => tag.includes('-'),
+  },
+}
+```
+
+In case the Add to Calendar Button is the only Web Component in your project, you could also be a little bit more explicit here.
+
+```javascript
+vue: {
+  compilerOptions: {
+    isCustomElement: (tag) => tag === 'add-to-calendar-button',
+  },
+}
+```
+
+## Step 4: Use it
 
 Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event" />` tag to your source code.
