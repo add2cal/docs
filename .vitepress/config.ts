@@ -29,6 +29,18 @@ export default {
     }
   },
 
+  transformPageData(pageData) {
+    const canonicalUrl = `https://docs.add-to-calendar-pro.com/${pageData.relativePath}`
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '.html')
+
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push([
+      'link',
+      { rel: 'canonical', href: canonicalUrl }
+    ])
+  },
+
   lastUpdated: true,
 
   locales: {
@@ -63,7 +75,10 @@ export default {
             items: [
               { text: 'RSVP', link: '/de/recipes/rsvp' },
               { text: 'Newsletter-Promotion', link: '/de/recipes/newsletter-promotion' },
-              { text: 'Dynamic Checkout', link: '/de/recipes/dynamic-checkout' }
+              { text: 'Dynamic Checkout', link: '/de/recipes/dynamic-checkout' },
+              { text: 'Individuelle Event-Texte', link: '/de/recipes/dynamic-text' },
+              { text: 'Event-Webseite', link: '/de/recipes/event-website' },
+              { text: 'Warteliste', link: '/de/recipes/waitlist' }
             ]
           },
           { text: 'Fehlerbehebung', link: '/de/troubleshooting' },
@@ -194,7 +209,10 @@ export default {
         items: [
           { text: 'RSVP', link: '/recipes/rsvp' },
           { text: 'Newsletter Promotion', link: '/recipes/newsletter-promotion' },
-          { text: 'Dynamic Checkout', link: '/recipes/dynamic-checkout' }
+          { text: 'Dynamic Checkout', link: '/recipes/dynamic-checkout' },
+          { text: 'Individual Event Text', link: '/recipes/dynamic-text' },
+          { text: 'Event Website', link: '/recipes/event-website' },
+          { text: 'Waitlist', link: '/recipes/waitlist' }
         ]
       },
       { text: 'Troubleshooting', link: '/troubleshooting' },

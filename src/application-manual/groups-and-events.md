@@ -1,7 +1,7 @@
 
 # Groups and Events
 
-An **event group** acts as a container for multiple events.
+An **event group** acts as a container for one or multiple events.
 
 It can be used for structuring and organize all of your data, or to link to an external calendar instead of individual events.
 The latter one creates a button, which will trigger a subscription to this calendar. In this case, styles, RSVPs, and CTAs can be directly connected to the group.
