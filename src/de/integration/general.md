@@ -1,3 +1,7 @@
+---
+outline: [2,3]
+---
+
 # Nutze die Buttons und RSVP-Formulare mit deinem Tech Stack
 
 ## Wichtige Überlegungen

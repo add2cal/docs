@@ -51,3 +51,25 @@ vue: {
 ## Schritt 4: Loslegen
 
 Beginne mit der Nutzung, indem du einen `<add-to-calendar-button proKey="prokey-deines-events" />` Tag in deinen Quellcode einfügst.
+
+<br />
+
+## Bring your own button
+
+Alternativ kannst du den Button oder Form auch programmatisch über die atcb_action Funktion auslösen. Beachte, dass hierbei ein Modal erzwungen wird.
+
+Wenn du mit dem npm-Package arbeitest, musst du atcb_action zunächst importieren:
+
+```javascript
+import { atcb_action } from "add-to-calendar-button";
+```
+
+Du solltest zudem ein HTML-Element als zweiten Paramter angeben. Auch wenn dieser optional ist, optimiert er die UX deiner Nutzer; vor allem bei Navigation über die Tastatur.
+
+Im folgenden Beispiel nutzen wir dieses Element auch als Trigger bei Klick:
+
+```javascript
+const button = document.getElementById('my-custom-button');
+button.addEventListener('click', () => atcb_action({ proKey: "prokey-deines-events"}, button));
+
+```

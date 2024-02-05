@@ -1,3 +1,7 @@
+---
+outline: [2,3]
+---
+
 # Using Buttons and RSVP Forms with your Tech Stack
 
 ## Things to consider
