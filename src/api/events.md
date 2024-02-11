@@ -51,7 +51,8 @@ Reading an event does not allow for any additional parameters. It only takes the
         "rsvp_block": null,
         "cta": true,
         "cta_block": 74,
-        "hide_button": false,
+        "hideButton": false,
+        "distribution": true,
         "sequence": "10",
         "date_created": "2024-11-01T12:57:25.983Z",
         "date_updated": "2024-11-02T18:20:56.152Z",
@@ -132,7 +133,8 @@ Additionally, the API does not allow to set the status of an event - it will alw
     "rsvp_block": "id-of-an-rsvp-block", // take the id from the url in the application or the response when creating an rsvp block via API
     "cta": true,
     "cta_block": "id-of-a-cta-block", // take the id from the url in the application
-    "hide_button": false
+    "hideButton": false,
+    "distribution": true,
 }
 ```
 

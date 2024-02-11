@@ -9,7 +9,7 @@ GET /group/:prokey
 
 Beim Abrufen einer Event-Gruppe sind keine zusätzlichen Parameter möglich. Es wird lediglich der proKey in der Anfrage-URL benötigt, um alle Daten für ein bestimmtes Element zu erhalten.
 
-Die Antwort enthält mehr Felder, als du vielleicht erwartest, da eine Gruppe mit einem Kalender-Abonnement und dadurch auch mit einem Style, RSVP- und CTA-Template kombiniert werden kann.
+Die Antwort enthält mehr Felder, als du vielleicht erwartest, da eine Gruppe mit einem Kalender-Abonnement und dadurch auch mit einem Style und CTA-Template kombiniert werden kann.
 
 ### Mögliche Response
 
@@ -22,11 +22,8 @@ Die Antwort enthält mehr Felder, als du vielleicht erwartest, da eine Gruppe mi
         "subscription": "no",
         "subscription_cal_url": null,
         "layout": null,
-        "rsvp": false,
-        "rsvp_block": null,
         "cta": false,
         "cta_block": null,
-        "hide_button": false,
         "date_updated": "2023-11-24T15:05:14.079Z",
         "date_created": "2023-11-24T15:05:13.007Z",
         "events": [
@@ -72,11 +69,8 @@ Beachte, dass du bei der Erstellung einer Gruppe keine Events hinzufügen kannst
     "subscription": "no", // kann "no" oder "external" lauten - letzteres erfordert eine subscription_cal_url
     "subscription_cal_url": null, // url zu einem externen Kalender. Muss mit "http" beginnen! Endet gewöhnlich mit ".ics"
     "layout": "id-eines-style-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
-    "rsvp": true,
-    "rsvp_block": "id-eines-rsvp-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung eines RSVP-Blocks über die API
     "cta": true,
     "cta_block": "id-eines-cta-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
-    "hide_button": false
 }
 ```
 

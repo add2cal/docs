@@ -51,7 +51,8 @@ Beim Abrufen eines Events sind keine zusätzlichen Parameter möglich. Es wird l
         "rsvp_block": null,
         "cta": true,
         "cta_block": 74,
-        "hide_button": false,
+        "hideButton": false,
+        "distribution": true,
         "sequence": "10",
         "date_created": "2024-11-01T12:57:25.983Z",
         "date_updated": "2024-11-02T18:20:56.152Z",
@@ -132,7 +133,8 @@ Weiterhin ist es nicht erlaubt, den Status eines Events über die API zu ändern
     "rsvp_block": "id-eines-rsvp-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung eines RSVP-Blocks über die API
     "cta": true,
     "cta_block": "id-eines-cta-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
-    "hide_button": false
+    "hideButton": false,
+    "distribution": true,
 }
 ```
 

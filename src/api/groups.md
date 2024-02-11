@@ -9,7 +9,7 @@ GET /group/:prokey
 
 Reading a group does not allow for any additional parameters. It only takes the proKey in the request url and simply provides you with all data for a specific element.
 
-The response holds more fields than you might expect, as a group can be combined with a calendar subscription and therefore with a style, rsvp, and cta template.
+The response holds more fields than you might expect, as a group can be combined with a calendar subscription and therefore with a style and cta template.
 
 ### Potential response
 
@@ -22,11 +22,8 @@ The response holds more fields than you might expect, as a group can be combined
         "subscription": "no",
         "subscription_cal_url": null,
         "layout": null,
-        "rsvp": false,
-        "rsvp_block": null,
         "cta": false,
         "cta_block": null,
-        "hide_button": false,
         "date_updated": "2023-11-24T15:05:14.079Z",
         "date_created": "2023-11-24T15:05:13.007Z",
         "events": [
@@ -72,11 +69,8 @@ Mind that you cannot add events on group creation. **You can only link events to
     "subscription": "no", // can be "no" or "external" - the latter one requires a subscription_cal_url
     "subscription_cal_url": null, // url to an external calendar. Needs to start with "http"! Usually ends with ".ics"
     "layout": "id-of-a-style-template", // take the id from the url in the application
-    "rsvp": true,
-    "rsvp_block": "id-of-an-rsvp-block", // take the id from the url in the application or the response when creating an rsvp block via API
     "cta": true,
     "cta_block": "id-of-a-cta-block", // take the id from the url in the application
-    "hide_button": false
 }
 ```
 
