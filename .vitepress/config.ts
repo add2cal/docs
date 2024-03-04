@@ -88,12 +88,14 @@ export default {
             items: [
               { text: 'Allgemein', link: '/de/integration/general' },
               { text: 'Angular', link: '/de/integration/angular' },
-              { text: 'React', link: '/de/integration/react' },
-              { text: 'Next.js', link: '/de/integration/nextjs' },
-              { text: 'Vue 3', link: '/de/integration/vue' },
-              { text: 'Nuxt 3', link: '/de/integration/nuxt' },
-              { text: 'Svelte', link: '/de/integration/svelte' },
               { text: 'Astro', link: '/de/integration/astro' },
+              { text: 'HubSpot', link: '/de/integration/hubspot' },
+              { text: 'Next.js', link: '/de/integration/nextjs' },
+              { text: 'Nuxt 3', link: '/de/integration/nuxt' },
+              { text: 'React', link: '/de/integration/react' },
+              { text: 'Svelte', link: '/de/integration/svelte' },
+              { text: 'Vue 3', link: '/de/integration/vue' },
+              { text: 'Wix.com', link: '/de/integration/wix' },
               { text: 'WordPress', link: '/de/integration/wordpress' }
             ]
           },
@@ -222,12 +224,14 @@ export default {
         items: [
           { text: 'General', link: '/integration/general' },
           { text: 'Angular', link: '/integration/angular' },
-          { text: 'React', link: '/integration/react' },
-          { text: 'Next.js', link: '/integration/nextjs' },
-          { text: 'Vue 3', link: '/integration/vue' },
-          { text: 'Nuxt 3', link: '/integration/nuxt' },
-          { text: 'Svelte', link: '/integration/svelte' },
           { text: 'Astro', link: '/integration/astro' },
+          { text: 'HubSpot', link: '/integration/hubspot' },
+          { text: 'Next.js', link: '/integration/nextjs' },
+          { text: 'Nuxt 3', link: '/integration/nuxt' },
+          { text: 'React', link: '/integration/react' },
+          { text: 'Svelte', link: '/integration/svelte' },
+          { text: 'Vue 3', link: '/integration/vue' },
+          { text: 'Wix.com', link: '/integration/wix' },
           { text: 'WordPress', link: '/integration/wordpress' }
         ]
       },
