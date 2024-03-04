@@ -7,13 +7,11 @@ Beim Erstellen von Webseiten und Landingpages mit HubSpot gelten einige Limitati
 
 **Good News: Es ist trotzdem sehr einfach möglich einen Add to Calendar Button oder RSVP-Formular zu integrieren!**
 
-Einzige Voraussetzung: Du musst in der Lage sein den Quellcode eines Rich-Text-Felds zu bearbeiten. Beim Arbeiten mit Landingpages kann dies zusätzlich limitiert sein - abhängig von der gewählten Vorlage.
-
 ## Schritt 1: Integriere unsere Skripte
 
 Zunächst musst du unser Haupt-Skript sowie eine HubSpot-spezifische Erweiterung irgendwo auf der Seite unterbringen.
 
-Dies kann der erwähnte Rich-Text-Quellcode sein - oder (im Webseiten-Fall) der Header-HTML-Bereich in den Einstellungen.
+Dies kann ein Rich-Text-Quellcode, der Einbettungscode eines Video-Elements oder (im Webseiten-Fall) der Header-HTML-Bereich in den Einstellungen sein.
 
 Wichtig: Du musst diesen Block nur 1x je Seite integrieren - unabhängig davon wie viele Add to Calendar Buttons und/oder RSVP-Formulare du auf einer Seite nutzt.
 
@@ -26,10 +24,22 @@ Kopiere den folgenden Code-Block und füge ihn dort ein:
 
 ## Schritt 2: Loslegen
 
-Nun kannst du damit beginnen, deine Buttons und Formulare zu integrieren, indem du <div></div> Tags im Quellcode eines Rich-Text-Elements anlegst. Gib dem Tag die Klasse (class) "add-to-calendar-pro-frame" und kopiere deinen proKey.
+Nun kannst du damit beginnen, deine Buttons und Formulare zu integrieren, indem du <div></div> Tags im Quellcode eines Rich-Text-Elements oder als "Einbettungscode" eines Video-Elements anlegst. Gib dem Tag die Klasse (class) "add-to-calendar-pro-frame" und kopiere deinen proKey.
 
 Folge einfach folgendem Schema:
 
 ```html
 <div class="add-to-calendar-pro-frame">prokey-of-your-event</div>
 ```
+
+<br /><br />
+
+::: tip Sonderall Landingpage
+Auf Landingpages kannst du leider kein globales Header-HTML definieren und in einigen Fällen auch nicht den Quellcode eines Rich-Text-Elements bearbeiten.
+
+Nutze das Video-Element und füge beide Code-Blöcke von oben als Einbettungscode zu.
+:::
+
+::: warning Vorschau im Editor
+Solltest du den Rich-Text-Quellcode anstelle des Video-Elements nutzen, siehst du das Add to Calendar Element nur im Vorschau-Modus oder der Live-Ansicht; nicht aber im Editor!
+:::
