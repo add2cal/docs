@@ -4,7 +4,7 @@
 ::: warning App vs. PRO
 The following instructions describe the integration of the PRO buttons and forms into Wix!
 
-For use cases where only a simple button is used, we also offer an official app in the [Wix App Market](), which, however, is not connected to our PRO offering!
+For use cases where only a simple button is used, we also offer an official app in the Wix App Market, which, however, is not connected to our PRO offering!
 :::
 
 
