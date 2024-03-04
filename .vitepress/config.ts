@@ -95,6 +95,7 @@ export default {
               { text: 'React', link: '/de/integration/react' },
               { text: 'Svelte', link: '/de/integration/svelte' },
               { text: 'Vue 3', link: '/de/integration/vue' },
+              { text: 'Webflow', link: '/de/integration/webflow' },
               { text: 'Wix.com', link: '/de/integration/wix' },
               { text: 'WordPress', link: '/de/integration/wordpress' }
             ]
@@ -231,6 +232,7 @@ export default {
           { text: 'React', link: '/integration/react' },
           { text: 'Svelte', link: '/integration/svelte' },
           { text: 'Vue 3', link: '/integration/vue' },
+          { text: 'Webflow', link: '/integration/webflow' },
           { text: 'Wix.com', link: '/integration/wix' },
           { text: 'WordPress', link: '/integration/wordpress' }
         ]

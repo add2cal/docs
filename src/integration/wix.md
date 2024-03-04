@@ -10,7 +10,7 @@ For use cases where only a simple button is used, we also offer an official app 
 
 ## Step 0: Prerequisites
 
-When integration Add to Calendar Buttons or RSPV forms, you need to use the "Custom Element" of Wix ([Wix Help Article](https://support.wix.com/en/article/wix-editor-adding-a-custom-element-to-your-site)).
+When integrating Add to Calendar Buttons or RSPV forms with your Wix website, you need to use the "Custom Element" of Wix ([Wix Help Article](https://support.wix.com/en/article/wix-editor-adding-a-custom-element-to-your-site)).
 
 **This comes with some additional requirements!**
 
