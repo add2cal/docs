@@ -26,10 +26,12 @@ Kopiere den folgenden Code-Block und füge ihn dort ein:
 
 Nun kannst du damit beginnen, deine Buttons und Formulare zu integrieren, indem du <div></div> Tags im Quellcode eines Rich-Text-Elements oder als "Einbettungscode" eines Video-Elements anlegst. Gib dem Tag die Klasse (class) "add-to-calendar-pro-frame" und kopiere deinen proKey.
 
+Wir empfehlen zudem einen "Wrapper" um das Element, um die Positionierung zu optimieren.
+
 Folge einfach folgendem Schema:
 
 ```html
-<div class="add-to-calendar-pro-frame">prokey-of-your-event</div>
+<div style="width:fit-content;margin:auto;"><div class="add-to-calendar-pro-frame">prokey-deines-events</div></div>
 ```
 
 <br /><br />
@@ -42,4 +44,6 @@ Nutze das Video-Element und füge beide Code-Blöcke von oben als Einbettungscod
 
 ::: warning Vorschau im Editor
 Solltest du den Rich-Text-Quellcode anstelle des Video-Elements nutzen, siehst du das Add to Calendar Element nur im Vorschau-Modus oder der Live-Ansicht; nicht aber im Editor!
+
+Bei Nutzung des Video-Elements wird der Button oder Formular u.U. doppelt dargestellt. Auch das ist lediglich im Editor der Fall!
 :::

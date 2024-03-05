@@ -84,7 +84,7 @@ export default {
           { text: 'Fehlerbehebung', link: '/de/troubleshooting' },
           {
             text: 'Integration',
-            collapsed: true,
+            collapsed: false,
             items: [
               { text: 'Allgemein', link: '/de/integration/general' },
               { text: 'Angular', link: '/de/integration/angular' },
@@ -221,7 +221,7 @@ export default {
       { text: 'Troubleshooting', link: '/troubleshooting' },
       {
         text: 'Integration',
-        collapsed: true,
+        collapsed: false,
         items: [
           { text: 'General', link: '/integration/general' },
           { text: 'Angular', link: '/integration/angular' },
