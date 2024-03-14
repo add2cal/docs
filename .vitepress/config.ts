@@ -134,7 +134,7 @@ export default {
     
         editLink: {
           pattern: 'https://github.com/add2cal/docs/edit/main/src/:path',
-          text: 'Edit on GitHub'
+          text: 'Via GitHub editieren'
         },    
 
         lastUpdated: {
@@ -154,7 +154,9 @@ export default {
         langMenuLabel: 'Change language',
 
         nav: [
-          { text: 'Entdecke das PRO-Angebot', link: 'https://add-to-calendar-pro.com/de' },
+          { text: '🚀 PRO', link: 'https://add-to-calendar-pro.com/de' },
+          { text: '✨ Features', link: 'https://add-to-calendar-pro.com/de/features' },
+          { text: '🏷️ Preise', link: 'https://add-to-calendar-pro.com/de/features#pricing' },
         ],
       }
     }
@@ -297,7 +299,9 @@ export default {
     },
 
     nav: [
-      { text: 'Discover the PRO offering', link: 'https://add-to-calendar-pro.com' },
+      { text: '🚀 PRO', link: 'https://add-to-calendar-pro.com/' },
+      { text: '✨ Features', link: 'https://add-to-calendar-pro.com/features' },
+      { text: '🏷️ Pricing', link: 'https://add-to-calendar-pro.com/features#pricing' },
     ],
 
     socialLinks: [

@@ -1,6 +1,14 @@
 
 # Troubleshooting
 
+## My IDE throws TypeScript warnings
+
+This can happen in rare cases, where types got not yet loaded. Sometimes it takes a restart of the IDE or the computer.
+
+If the issue is still present, you can set the [skipLibCheck](https://www.typescriptlang.org/tsconfig#skipLibCheck) in your `tsconfig` to `false`, which should disable it.
+Please also open a new issue at our GitHub repo ["add-to-calendar-button"](https://github.com/add2cal/add-to-calendar-button/issues/new/choose) or send us an email, so we can have a check too.
+
+
 ## Social preview image not updating
 
 When sharing a link to the landingpage, we automatically generate a preview image, which displays the event details. This helps to spread the word more prominently.

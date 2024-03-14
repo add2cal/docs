@@ -1,6 +1,13 @@
 
 # Fehlerbehebung
 
+## Meine IDE zeigt TypeScript-Warnings
+
+Das kann in seltenen Fällen passieren, wenn die Typen noch nicht sauber geladen und verarbeitet wurden. Manchmal hilft ein Neustart der IDE oder des Computers.
+
+Wenn das Problem weiterhin besteht, kannst du in der `tsconfig`-Datei [skipLibCheck](https://www.typescriptlang.org/tsconfig#skipLibCheck) auf `false` setzen, was die Warnung verhindern sollte.
+Bitte eröffne auch einen neuen Issue in unserem GitHub-Repo ["add-to-calendar-button"](https://github.com/add2cal/add-to-calendar-button/issues/new/choose) oder sende uns eine E-Mail, damit wir das Problem genauer prüfen können.
+
 ## Das Vorschaubild in sozialen Medien aktualisiert sich nicht
 
 Wenn ein Link zur Landingpage geteilt wird, generieren wir automatisch ein Vorschaubild, das die Veranstaltungsdetails anzeigt. Dies hilft dabei, das Event prominenter zu bewerben.
