@@ -14,7 +14,7 @@
   "license": "Apache-2.0",
   "homepage": "https://docs.add-to-calendar-pro.com/",
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.44"
+    "vitepress": "^1.0.0-rc.45"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
