@@ -51,7 +51,7 @@ import { AddToCalendarButton } from 'add-to-calendar-button-react';
 
 ### Option A: Web Component
 
-Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event">` tag to your source code.
+Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event" />` tag to your source code.
 
 ### Option B: React Wrapper
 

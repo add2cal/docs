@@ -73,11 +73,12 @@ export default {
             text: 'Anleitungen',
             collapsed: true,
             items: [
-              { text: 'RSVP', link: '/de/recipes/rsvp' },
-              { text: 'Newsletter-Promotion', link: '/de/recipes/newsletter-promotion' },
               { text: 'Dynamic Checkout', link: '/de/recipes/dynamic-checkout' },
-              { text: 'Individuelle Event-Texte', link: '/de/recipes/dynamic-text' },
               { text: 'Event-Webseite', link: '/de/recipes/event-website' },
+              { text: 'Individuelle E-Mail-Links', link: '/de/recipes/custom-email-links' },
+              { text: 'Individuelle Event-Texte', link: '/de/recipes/dynamic-text' },
+              { text: 'Newsletter-Promotion', link: '/de/recipes/newsletter-promotion' },
+              { text: 'RSVP', link: '/de/recipes/rsvp' },
               { text: 'Warteliste', link: '/de/recipes/waitlist' }
             ]
           },
@@ -89,6 +90,7 @@ export default {
               { text: 'Allgemein', link: '/de/integration/general' },
               { text: 'Angular', link: '/de/integration/angular' },
               { text: 'Astro', link: '/de/integration/astro' },
+              { text: 'HTML / JavaScript', link: '/de/integration/html' },
               { text: 'HubSpot', link: '/de/integration/hubspot' },
               { text: 'Next.js', link: '/de/integration/nextjs' },
               { text: 'Nuxt 3', link: '/de/integration/nuxt' },
@@ -212,11 +214,12 @@ export default {
         text: 'Recipes',
         collapsed: true,
         items: [
-          { text: 'RSVP', link: '/recipes/rsvp' },
-          { text: 'Newsletter Promotion', link: '/recipes/newsletter-promotion' },
+          { text: 'Custom Email Links', link: '/recipes/custom-email-links' },
           { text: 'Dynamic Checkout', link: '/recipes/dynamic-checkout' },
-          { text: 'Individual Event Text', link: '/recipes/dynamic-text' },
           { text: 'Event Website', link: '/recipes/event-website' },
+          { text: 'Individual Event Text', link: '/recipes/dynamic-text' },
+          { text: 'Newsletter Promotion', link: '/recipes/newsletter-promotion' },
+          { text: 'RSVP', link: '/recipes/rsvp' },
           { text: 'Waitlist', link: '/recipes/waitlist' }
         ]
       },
@@ -228,6 +231,7 @@ export default {
           { text: 'General', link: '/integration/general' },
           { text: 'Angular', link: '/integration/angular' },
           { text: 'Astro', link: '/integration/astro' },
+          { text: 'HTML / JavaScript', link: '/integration/html' },
           { text: 'HubSpot', link: '/integration/hubspot' },
           { text: 'Next.js', link: '/integration/nextjs' },
           { text: 'Nuxt 3', link: '/integration/nuxt' },

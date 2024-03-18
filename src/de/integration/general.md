@@ -59,6 +59,12 @@ Das Skript wird auf nicht blockierende Weise geladen.
 <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
 ```
 
+Bei Nutzung der kleineren Unstyled-Version wäre dies:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2/dist/atcb-unstyle.min.js" async defer></script>
+```
+
 ## Verwendung via npm
 
 Installiere das Paket mit dem folgenden npm-Befehl:
@@ -71,6 +77,12 @@ Importiere das Modul in deinem Projekt/Komponente:
 
 ```javascript
 import 'add-to-calendar-button';
+```
+
+..., bzw für die Unstyled-Version:
+
+```javascript
+import 'add-to-calendar-button/unstyle';
 ```
 
 *Je nach Framework/Library musst du möglicherweise kleinere Anpassungen an der jeweiligen Konfiguration vornehmen.*

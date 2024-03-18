@@ -33,10 +33,10 @@ Simply follow our guides for your distinctive tech stack.
 
 ## Monitoring it
 
-All answers are stored at the event and can be reached via the respective buttons.
-You can watch new responses flying in there.
+All answers are stored at the event and can be reached via the respective button.
+You can watch new responses flying in there. 👀
 
-You can also export them as csv or JSON.
+You can also export them as csv or JSON. 💪
 
 ## Using it stand-alone
 
@@ -44,7 +44,7 @@ As each event comes with its own landingpage, our form comes with one as well.
 
 You find the url right at the event page after creation as usual.
 
-Since we excluded all date information, this page looks slightly different as it only displays the signup form.
+*Since we excluded all date information, this page looks slightly different as it only displays the signup form.*
 
 By adding a landingpage template to the used style, you can still customize this landingpage. For example, you can add some intro text, an additional headline, change colors, and so on.
 
@@ -57,5 +57,4 @@ As with all things you create at Add to Calendar PRO, you can customize the hell
 You might already have used a specific style. This comes with a lot of options, of course.
 
 Besides that, you should set up custom email templates and link the to the style.
-
 This way, you can give all the emails that are send to the user (e.g. for signup confirmation) an individual touch and adjust it to your specific case!

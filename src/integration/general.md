@@ -59,6 +59,12 @@ The script will be loaded in a non-blocking way.
 <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
 ```
 
+For the smaller unstyled version, it would be:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2/dist/atcb-unstyle.min.js" async defer></script>
+```
+
 ## Using it via NPM
 
 Install the package using the following npm command:
@@ -71,6 +77,12 @@ Import the module into your project/component:
 
 ```javascript
 import 'add-to-calendar-button';
+```
+
+... or for the unstyled version:
+
+```javascript
+import 'add-to-calendar-button/unstyle';
 ```
 
 *Based on your framework/library, you might need to make minor adjustments to the respective config.*
