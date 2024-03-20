@@ -10,13 +10,13 @@ For example, when you want to create a waitlist for your product launch or just 
 
 Technically, this would not necessarily be an RSVP, but we can still make it happen!
 
-## What you need
+## 📋 What you need
 
 You still need to create an event, but don't worry about date information.
 
 Besides that, you should work with a style as well as specific RSVP template.
 
-## Setting it up
+## 🧱 Setting it up
 
 1. Create a new event.
 2. Activate the RSVP functionality.
@@ -25,20 +25,20 @@ Besides that, you should work with a style as well as specific RSVP template.
 5. Select or create an RSVP template and (optionally, but recommended) style.
 6. Hit the "Save" button and you're done!
 
-## Integrating it
+## 🛠️ Integrating it
 
 The integration is as easy as integration any other RSVP form or Add to Calendar Button.
 
 Simply follow our guides for your distinctive tech stack.
 
-## Monitoring it
+## 📬 Monitoring it
 
 All answers are stored at the event and can be reached via the respective button.
 You can watch new responses flying in there. 👀
 
 You can also export them as csv or JSON. 💪
 
-## Using it stand-alone
+## 🏠 Using it stand-alone
 
 As each event comes with its own landingpage, our form comes with one as well.
 
@@ -50,7 +50,7 @@ By adding a landingpage template to the used style, you can still customize this
 
 You can then share this page wherever you want and easily collect information.
 
-## How to optimize
+## ❇️ How to optimize
 
 As with all things you create at Add to Calendar PRO, you can customize the hell out of it.
 

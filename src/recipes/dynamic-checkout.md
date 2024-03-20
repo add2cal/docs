@@ -1,3 +1,6 @@
+---
+outline: [2,3]
+---
 
 # Add to Calendar Buttons in a dynamic Checkout
 

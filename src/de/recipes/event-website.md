@@ -1,3 +1,6 @@
+---
+outline: [2,3]
+---
 
 # Deine Event-Webseite ohne Zusatzaufwand
 

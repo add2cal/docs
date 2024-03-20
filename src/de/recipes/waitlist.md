@@ -10,13 +10,13 @@ Zum Beispiel, wenn man eine Warteliste für einen Produkt-Launch erstellen oder 
 
 Technisch gesehen wäre dies nicht unbedingt ein RSVP, aber wir können es dir trotzdem ermöglichen!
 
-## Was du brauchst
+## 📋 Was du brauchst
 
 Du musst auch in diesem Fall ein Event erstellen, aber mach dir keine Sorgen um die Datumsinformationen.
 
 Davon abgesehen solltest du mit einem Style sowie einem spezifischen RSVP-Template arbeiten.
 
-## Einrichtung
+## 🧱 Einrichtung
 
 1. Erstelle ein neues Event.
 2. Aktiviere die RSVP-Funktionalität.
@@ -25,19 +25,19 @@ Davon abgesehen solltest du mit einem Style sowie einem spezifischen RSVP-Templa
 5. Wähle oder erstelle ein RSVP-Template und (optional, aber empfohlen) einen Style.
 6. Drücke den "Speichern"-Button und du bist fertig!
 
-## Integration
+## 🛠️ Integration
 
 Die Integration ist genauso einfach wie die Integration eines anderen RSVP-Formulars oder Add-to-Calendar-Buttons.
 
 Folge einfach unseren Anleitungen für deinen spezifischen Technologie-Stack.
 
-## Daten-Tracking
+## 📬 Daten-Tracking
 
 Alle Antworten werden an dem Event gespeichert und können über den entsprechenden Button erreicht werden. 👀
 
 Du kannst diese dort auch als CSV oder JSON exportieren. 💪
 
-## Stand-alone-Nutzung
+## 🏠 Stand-alone-Nutzung
 
 Da jedes Event mit einer eigenen Landingpage kommt, kommt unser Formular hier ebenfalls mit einer.
 
@@ -49,7 +49,7 @@ Indem du eine Landingpage-Vorlage zum verwendeten Style hinzufügst, kannst du d
 
 Du kannst diese Seite dann überall teilen, wo du möchtest, und damit im Nu Daten sammeln.
 
-## Optimierung
+## ❇️ Optimierung
 
 Wie bei allem, was du bei Add to Calendar PRO erstellst, kannst du es bis ins Kleinste anpassen.
 

@@ -1,3 +1,6 @@
+---
+outline: [2,3]
+---
 
 # Working with RSVP Forms
 
