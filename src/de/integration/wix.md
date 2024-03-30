@@ -4,7 +4,7 @@
 ::: warning App vs. PRO
 Die folgende Anleitung beschreibt die Einbindung der PRO-Buttons und -Formulare in Wix!
 
-Für Anwendungsfälle, bei denen nur ein einfacher Button genutzt wird, bieten wir im Wix App Market auch eine offizielle App an, die mit unserem PRO-Angebot allerdings nicht verbunden ist!
+Für Anwendungsfälle, bei denen nur ein einfacher Button genutzt wird, bieten wir im [Wix App Market](https://www.wix.com/app-market/add-to-calendar-button) auch eine offizielle App an, die mit unserem PRO-Angebot allerdings nicht verbunden ist!
 :::
 
 ## Schritt 0: Voraussetzungen
