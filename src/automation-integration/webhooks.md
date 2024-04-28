@@ -4,6 +4,8 @@ You can use webhooks to ping any other service or system, when things change at 
 
 Per default, we send all data of the trigger element as JSON object with the key "element_data"; but you can also specify very custom payloads.
 
+[Open in the app ❯](https://app.add-to-calendar-pro.com/webhooks)
+
 ## Potential Use Cases
 
 * Additionally sending RSVP sign-ups to your CMS.

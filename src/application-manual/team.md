@@ -26,6 +26,8 @@ Those information help you to manage your team in terms of usage and security.
 
 On the very right side of each user, you find action buttons to change their role or delete them.
 
+[Open in the app ❯](https://app.add-to-calendar-pro.com/team)
+
 ## Inviting Team Members
 
 The invitation form is below the overview table and simply requires a valid email address.

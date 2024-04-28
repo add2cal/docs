@@ -65,8 +65,10 @@ export default {
               { text: 'Elemente', link: '/de/application-manual/elements' },
               { text: 'Gruppen und Events', link: '/de/application-manual/groups-and-events' },
               { text: 'Styles und Templates', link: '/de/application-manual/styles-and-templates' },
+              { text: 'Statistiken', link: '/de/application-manual/analytics' },
               { text: 'Team', link: '/de/application-manual/team' },
-              { text: 'Einstellungen', link: '/de/application-manual/settings' }
+              { text: 'Einstellungen', link: '/de/application-manual/settings' },
+              { text: 'Fehlerbehebung', link: '/de/application-manual/troubleshooting' }
             ]
           },
           {
@@ -82,7 +84,6 @@ export default {
               { text: 'Warteliste', link: '/de/recipes/waitlist' }
             ]
           },
-          { text: 'Fehlerbehebung', link: '/de/troubleshooting' },
           {
             text: 'Integration',
             collapsed: false,
@@ -156,9 +157,9 @@ export default {
         langMenuLabel: 'Change language',
 
         nav: [
-          { text: '🚀 PRO', link: 'https://add-to-calendar-pro.com/de' },
-          { text: '✨ Features', link: 'https://add-to-calendar-pro.com/de/features' },
-          { text: '🏷️ Preise', link: 'https://add-to-calendar-pro.com/de/features#pricing' },
+          { text: '🚀 PRO', link: 'https://add-to-calendar-pro.com/de', rel: 'author' },
+          { text: '✨ Features', link: 'https://add-to-calendar-pro.com/de/features', rel: 'author' },
+          { text: '🏷️ Preise', link: 'https://add-to-calendar-pro.com/de/features#pricing', rel: 'author' },
         ],
       }
     }
@@ -206,8 +207,10 @@ export default {
           { text: 'Elements', link: '/application-manual/elements' },
           { text: 'Groups and Events', link: '/application-manual/groups-and-events' },
           { text: 'Styles and Templates', link: '/application-manual/styles-and-templates' },
+          { text: 'Analytics', link: '/application-manual/analytics' },
           { text: 'Team', link: '/application-manual/team' },
-          { text: 'Settings', link: '/application-manual/settings' }
+          { text: 'Settings', link: '/application-manual/settings' },
+          { text: 'Troubleshooting', link: '/application-manual/troubleshooting' }
         ]
       },
       {
@@ -223,7 +226,6 @@ export default {
           { text: 'Waitlist', link: '/recipes/waitlist' }
         ]
       },
-      { text: 'Troubleshooting', link: '/troubleshooting' },
       {
         text: 'Integration',
         collapsed: false,
@@ -303,9 +305,9 @@ export default {
     },
 
     nav: [
-      { text: '🚀 PRO', link: 'https://add-to-calendar-pro.com/' },
-      { text: '✨ Features', link: 'https://add-to-calendar-pro.com/features' },
-      { text: '🏷️ Pricing', link: 'https://add-to-calendar-pro.com/features#pricing' },
+      { text: '🚀 PRO', link: 'https://add-to-calendar-pro.com/', rel: 'author' },
+      { text: '✨ Features', link: 'https://add-to-calendar-pro.com/features', rel: 'author' },
+      { text: '🏷️ Pricing', link: 'https://add-to-calendar-pro.com/features#pricing', rel: 'author' },
     ],
 
     socialLinks: [

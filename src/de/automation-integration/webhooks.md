@@ -4,6 +4,8 @@ Du kannst Webhooks verwenden, um einen anderen Dienst oder System zu benachricht
 
 Standardmäßig senden wir alle Daten des Trigger-Elements als JSON-Objekt mit dem Schlüssel "element_data". Du kannst aber auch benutzerdefinierte Felder und Werte ergänzen.
 
+[In der App öffnen ❯](https://app.add-to-calendar-pro.com/de/webhooks)
+
 ## Mögliche Use Cases
 
 * Sende RSVP-Anmeldungen zusätzlich an dein CMS.

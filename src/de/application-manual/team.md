@@ -26,6 +26,8 @@ Diese Informationen helfen dir, dein Team in Bezug auf Nutzung und Sicherheit zu
 
 Ganz rechts neben jedem Benutzer findest du Aktionsbuttons, um deren Rolle zu ändern oder sie zu löschen.
 
+[In der App öffnen ❯](https://app.add-to-calendar-pro.com/de/team)
+
 ## Teammitglieder einladen
 
 Das Einladungsformular befindet sich unterhalb der Übersichtstabelle und erfordert lediglich eine gültige E-Mail-Adresse.

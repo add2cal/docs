@@ -6,6 +6,8 @@ outline: [2,3]
 
 Du gelangst zu den Einstellungen über das Zahnradsymbol in der Seitenleiste/dem Menü.
 
+[In der App öffnen ❯](https://app.add-to-calendar-pro.com/de/settings)
+
 Die Seite besteht aus 3 Unterseiten:
 
 * Benutzer

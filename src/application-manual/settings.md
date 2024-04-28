@@ -6,6 +6,8 @@ outline: [2,3]
 
 You get to the settings via the cog wheel icon in the sidebar/menu.
 
+[Open in the app ❯](https://app.add-to-calendar-pro.com/settings)
+
 The seetings consist of 3 sub pages:
 
 * User

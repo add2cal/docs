@@ -17,6 +17,6 @@ Hier findest du alles, was du brauchst, um unsere Tools bedienen und in deinen T
 * Entdecke Anleitungen zur [Einbindung in deinen Tech-Stack](/de/integration.html).
 * Lies mehr zu den Details unserer [API](/de/api/introduction.html) und [Automatisierungen](/de/automation-integration/webhooks.html).
 * Lass dich von [weiteren detaillierten Case Studies](/de/recipes/rsvp.html) inspirieren.
-* Etwas funktioniert nicht? Wirf einen Blick in den ["Troubleshooting"-Bereich](/de/troubleshooting.html)!
+* Etwas funktioniert nicht? Wirf einen Blick in den ["Troubleshooting"-Bereich](/de/application-manual/troubleshooting.html)!
 
 <br />

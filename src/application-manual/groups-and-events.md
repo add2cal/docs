@@ -11,6 +11,8 @@ Both can be found via the "Events" link at the menu.
 
 At the overview page, you can easily switch between the two hierarchical levels via the respective toggle button.
 
+[Open in the app ❯](https://app.add-to-calendar-pro.com/)
+
 ## The event group
 
 It can be used for structuring and organize all of your data, or to link to an external calendar instead of individual events.
@@ -23,6 +25,8 @@ The creation is quite simple, as you do not need to define a lot of information 
 You can use the **internal note** field for some custom information. This has no impact on anything, but can help to identify the purpose of the group, when working in a team.
 
 When you go for a subscription case, you will have the chance to link the group to a **style** as well as to an **Call to Action** element. For visualization, you will also see a preview of the result.
+
+[Open in the app ❯](https://app.add-to-calendar-pro.com/create-group)
 
 ### Detail page
 
@@ -64,6 +68,8 @@ You can create multiple date blocks to make it a multi-date event (e.g. if the e
 Finally, depending on what you specified before, you can define a style, RSVP form, and CTA element for the event.
 
 In all cases, you can always check the result at the dynamic preview.
+
+[Open in the app ❯](https://app.add-to-calendar-pro.com/group/create-group/create-event)
 
 ### Detail page
 

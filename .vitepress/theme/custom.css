@@ -157,3 +157,8 @@
 .vp-doc ul, .vp-doc ol {
   padding-left: 2rem;
 }
+
+.vp-doc p img {
+  max-width: 100%;
+  border-radius: 6px;
+}

@@ -11,6 +11,7 @@ Du findest beide über den Punkt "Events" im Menü.
 
 Auf der Übersichtsseite kannst du über den Toggle-Switch zwischen den beiden Hierarchie-Ebenen wechseln.
 
+[In der App öffnen ❯](https://app.add-to-calendar-pro.com/de)
 
 ## Die Event-Gruppe
 
@@ -25,6 +26,8 @@ Du kannst das Feld **"Interne Notiz"** für individuelle Informationen nutzen. D
 
 Legt du ein Kalender-Abonnement an, so kannst du diesem einen **Style** sowie ein **Call-to-Action-Element** zuweisen.
 Zur Visualisierung des Ganzen gibt es eine entsprechende Vorschau.
+
+[In der App öffnen ❯](https://app.add-to-calendar-pro.com/de/create-group)
 
 ### Detail-Seite
 
@@ -66,6 +69,8 @@ Du kannst mehrere Termin-Blöcke erstellen, um ein Multi-Date-event zu kreieren 
 Schließlich kannst du, abhängig von dem, was du zuvor angegeben hast, einen Style, RSVP-Formular und CTA-Element für das Event definieren.
 
 In allen Fällen kannst du das Ergebnis immer in der dynamischen Vorschau überprüfen.
+
+[In der App öffnen ❯](https://app.add-to-calendar-pro.com/de/group/create-group/create-event)
 
 ### Detail-Seite
 
