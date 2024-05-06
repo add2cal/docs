@@ -111,7 +111,6 @@ Two things to mind:
 
 You can always test your settings via the button at the very right of the screen.
 
-
 ### Email
 
 When working with RSVP, there are multiple emails, your user's might receive. This can be a Double-Opt-In confirmation email or an email, containing a magic link to log into the management page, where users can adjust their responses.
