@@ -23,6 +23,12 @@ import { AddToCalendarButton } from 'add-to-calendar-button-react';
 
 Start using it by adding a `<AddtoCalendarButton proKey="prokey-of-your-event" />` tag to your source code.
 
+::: warning use client!
+The button works only on the client side!
+
+You should add `'use client';` respectively.
+:::
+
 <br />
 
 ## Bring your own button
@@ -32,7 +38,7 @@ Alternatively, you can also trigger the button or form programmatically via the 
 When working with the npm package, you would need to import the atcb_action first:
 
 ```javascript
-import { atcb_action } from "add-to-calendar-button";
+import { atcb_action } from "add-to-calendar-button-react";
 ```
 
 You should also provide a HTML element as second parameter. Event it is optional, it optimizes the UX; especially for keyboard navigation.

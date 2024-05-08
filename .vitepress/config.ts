@@ -1,10 +1,11 @@
 // https://vitepress.dev/reference/site-config
 export default {  
-  mpa: false, // https://vitepress.dev/guide/mpa-mode
+  mpa: true, // https://vitepress.dev/guide/mpa-mode
   srcDir: './src',
   vite: {
     publicDir: '../public',
   },
+  appearance: true,
 
   sitemap: {
     hostname: 'https://docs.add-to-calendar-pro.com',

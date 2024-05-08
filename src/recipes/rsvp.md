@@ -46,6 +46,7 @@ When you are clear about your goals, start building it!
 * Create a style fitting your brand and play with all the details that affect the UX.
 * Whether specific options make sense for your case, highly depends on your plan. For example, if you do not want to show any Add to Calendar Button, you do not need to care about calendar options.
 * The most important setting is the "Render RSVP inline" option. It defines whether the form is shown directly or if we render a button, where the form only appears on click (in a modal).
+* You can observe the result in the right-hand side preview, if you activate the "RSVP simulation" there. Mind that this uses dummy data! *(When creating everything at once during the event creation, you would see the preview including your actual RSVP setup.)*
 * That's it for now. We will revisit the style later.
 
 ## 📅 Create the event
