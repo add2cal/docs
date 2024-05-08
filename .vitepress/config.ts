@@ -1,6 +1,6 @@
 // https://vitepress.dev/reference/site-config
 export default {  
-  mpa: true, // https://vitepress.dev/guide/mpa-mode
+  mpa: false, // https://vitepress.dev/guide/mpa-mode
   srcDir: './src',
   vite: {
     publicDir: '../public',
