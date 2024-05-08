@@ -55,7 +55,7 @@ Now, let's get to the core of everything - the event!
 
 * Go to the event overview and create a new event.
 * At the very top, activate the RSVP type.
-* You can also drop the Add to Calendar Button functionality here. This way, we will not show any Add to Calendar functionality at the form after the signup.
+* You can also drop the Add to Calendar Button functionality here. This way, we will not show any Add to Calendar Buttons at the form after the signup.
 * Also mind the event distribution switch. When active, we show the date and details on the landingpage and also send an ics file to the user via email. When inactive, you would have a pure signup form, which is not bound to any date and time at all.
 * Next select or specify a group. This is basically a container for the event. It can be helpful to organize multiple RSVP events in a meaningful way.
 * The date setup speaks for itself.
@@ -66,7 +66,7 @@ Now, let's get to the core of everything - the event!
 
 With the previous steps, your RSVP form is already working and can collect data.
 
-However, it still uses the default email templates and landingpage style. Nothing wrong with that! It is designed to fit any use case.
+However, it still uses the default email templates. Nothing wrong with that! It is designed to fit any use case.
 
 **But let's be honest - customizing this makes a lot of sense!**
 
