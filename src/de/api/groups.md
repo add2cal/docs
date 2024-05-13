@@ -101,6 +101,8 @@ Die Aktualisierung einer Gruppe folgt den gleichen Regeln wie die Erstellung ein
 Die "subscription"-Einstellung lässt sich nur ändern, solange noch keine Events mit der Gruppe verknüpft sind!
 
 Beachte, dass du den Status über die Anwendungs-Oberfläche auf "Entwurf", über die API aber nicht auf "Veröffentlicht" setzen kannst!
+
+**Für jedes 5te Update ziehen wir zudem 1 Event-Credit ab, um Missbrauch vorzubeugen!**
 :::
 
 <br />

@@ -40,6 +40,18 @@ The inline RSVP form adapts to its surrounding container.
 
 This usually already leads to it taking all the available width. Based on the used css, however, you might want to add something like `style="width:100%;"` to this container. For example, if the container uses a flexbox, explictly specifying the width is mandatory.
 
+## How can I make sure there is no data publicly available on the internet
+
+Per default, the event data and ics file are available to everybody who knows the link to it. We encourage search engines to not pick it up, but cannot guarantee this.
+
+This is basically necessary for things like email links or even the Add to Calendar Button to work properly.
+
+If you do not want this to happen - because, for example, you put sensitive information into the event details - you can set an event (or group) to private. Click the flap on the top of the big box at the beginning of the details page.
+
+A private event has no public ics file or landingpage. The Add to Calendar Button will also not work as it requires to pull the information via the web. However, you can still [generate ics files via our API](/api/miscellaneous.html#retrieve-ics-file-body). 
+
+This makes it an ideal case for [dynamic checkout flows](/recipes/dynamic-checkout.html) with sensitive information!
+
 ## The Add to Calendar Button dropdown is behind other elements
 
 The dropdown gets rendered next to the button element with a higher z index.

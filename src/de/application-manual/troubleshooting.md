@@ -40,6 +40,18 @@ Das Inline-RSVP-Formular passt sich an den umgebenden Container an.
 
 Das führt normalerweise bereits dazu, dass es die gesamte verfügbare Breite einnimmt. Abhängig vom verwendeten CSS musst du jedoch möglicherweise etwas wie `style="width:100%;"` zu diesem Container hinzufügen. Wenn der Container zum Beispiel ein Flexbox verwendet, ist das Angeben der Breite (`width`) obligatorisch.
 
+## Wie kann ich sicherstellen, dass keine Daten öffentlich im Internet verfügbar sind
+
+Standardmäßig sind die Eventdaten und die ics-Datei für jeden verfügbar, der den Link dazu kennt. Wir ermutigen Suchmaschinen, diese nicht aufzurufen, können dies jedoch nicht garantieren.
+
+Dies ist für Funktionen wie E-Mail-Links oder den Add-to-Calendar-Button notwendig, um ordnungsgemäß zu funktionieren.
+
+Wenn du nicht möchtest, dass dies geschieht - zum Beispiel, weil du sensible Informationen in die Eventdetails einfügst - kannst du ein Event (oder eine Gruppe) auf privat setzen. Klicke dazu auf die Klappe oben am großen Kasten zu Beginn der Detailseite.
+
+Ein privates Event hat keine öffentliche ics-Datei oder Landingpage. Der Add-to-Calendar-Button funktioniert ebenfalls nicht, da er die Informationen über das Web abrufen muss. Du kannst jedoch weiterhin [ics-Dateien über unsere API generieren](/de/api/miscellaneous.html#retrieve-ics-file-body).
+
+Das macht es zu einem idealen Fall für [dynamische Checkout-Flows](/de/recipes/dynamic-checkout.html) mit sensiblen Informationen!
+
 ## Das Dropdown des Add to Calendar Buttons verschwindet hinter anderen Elementen
 
 Das Dropdown wird direkt nach dem Button-Element mit einem höheren z-Index gerendert.

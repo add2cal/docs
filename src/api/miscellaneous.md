@@ -1,5 +1,15 @@
 # Miscellaneous
 
+## Retrieve ics file body
+
+```
+GET /ics/:id
+```
+
+Providing the proKey of the respective event, you can get the body for the ics file.
+
+Use this to create the ics file on your side without relying on any auto-generation on our side (which would result in an ics file, placed on a public storage).
+
 ## List RSVP replies
 
 ```

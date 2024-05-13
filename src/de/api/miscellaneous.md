@@ -1,5 +1,15 @@
 # Verschiedenes
 
+## ics-Datei-Inhalt abrufen
+
+```
+GET /ics/:id
+```
+
+Indem du den proKey des jeweiligen Events angibst, kannst du den "Body" der zugehörigen ics-Datei abrufen.
+
+Nutze dies, um die ics-Datei in deinem System zu erstellen - ohne Abhängigkeit zur Generierung auf unserer Seite (was dazu führt, dass die ics-Datei auf einem öffentlich erreichbaren Storage abgelegt wird).
+
 ## RSVP-Rückmeldungen listen
 
 ```

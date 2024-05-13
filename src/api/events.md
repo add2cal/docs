@@ -175,6 +175,8 @@ The only important difference: The `event_group` field is not allowed.
 Mind the further lmitations, also present on creation via API.
 
 For the status, mind that if an event gets set to draft on the application UI, you cannot publish it via API!
+
+**For every 5th update, we also deduct 1 event credit to prevent abuse!**
 :::
 
 <br />

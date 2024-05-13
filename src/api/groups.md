@@ -101,6 +101,8 @@ Updating a group follows the same rules as creating one.
 You can only change the subscription setting as long as there are no events linked to the group!
 
 For the status, mind that if a group gets set to draft on the application UI, you cannot publish it via API!
+
+**For every 5th update, we also deduct 1 event credit to prevent abuse!**
 :::
 
 <br />

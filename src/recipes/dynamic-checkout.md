@@ -16,15 +16,34 @@ You should prepare a style as well as a general event group (which acts as some 
 
 Besides that, everything else will happen via the API - you need to create an API key for that case, of course.
 
+::: warning Mind sensitive information!
+When you create an event, we automatically generate an ics file and provide you with a landingpage and more.
+Those things are public by nature. Everybody with a respective link can retrieve this information. So, it is not completely "open", it can be a risk when placing sensitive information into the event's detail information. This can be a problem for checkout flows.
+
+**You can [prevent this](/application-manual/troubleshooting.html#how-can-i-make-sure-there-is-no-data-publicly-available-on-the-internet) by setting the event to "private".**
+
+In the following guide, we also highlight the process with a private event.
+:::
+
 ## 🧱 Setting it up
 
 The setup of this flow requires some more work as you will need to weave this into your existing backend flows!
 
-**Have a look at the general scheme:**
-
-![Editor](/screenshots/checkout-flow.svg)
+**Have a look at the general scheme (public):**
 
 <br />
+
+![checkout-Flow-with-ics-file-and-add-to-calendar-button](/screenshots/checkout-flow.svg)
+
+<br /><br />
+
+**When you keep the event _private_, the flow would look slightly different:**
+
+<br />
+
+![secured-checkout-Flow-with-ics-file-and-add-to-calendar-button](/screenshots/checkout-flow-secured.svg)
+
+<br /><br />
 
 **No here comes a list of the steps you need to take:**
 
@@ -33,10 +52,14 @@ The setup of this flow requires some more work as you will need to weave this in
 3. Create an API key (at the organization settings page).
 4. Create an event group (with subscription set to "no"), which will hold all future events.
 5. Read the [API documentation about event creation](/api/events.html#add-an-event).
-6. At your backend, create a function, which creates an event via the Add to Calendar PRO API based on the data you have for the user. We recommend to also set the organizer and attendee in this case (at some systems, this adds the event automatically to the user's calendar, as soon as an email with the ics file is opened)! The response includes an id, which is the ProKey of the event.
-7. Use this id to pull and add the generated ics file when sending a confirmation email.
-8. Use this id to add Add to Calendar links at this confirmation email.
-9. Use this id to render a nice Add to Calendar Button at the "Thank you" page after the checkout.
+6. At your backend, create a function, which creates an event via the Add to Calendar PRO API based on the data you have for the user. We recommend to also set the organizer and attendee in this case (at some systems, this adds the event automatically to the user's calendar, as soon as an email with the ics file is opened)! _Set the event to private if necessary._ The response includes an id, which is the ProKey of the event.
+7. With regular events:
+   1. Use this id to pull and add the generated ics file when sending a confirmation email.
+   2. Use this id to add Add to Calendar links at this confirmation email.
+   3. Use this id to render a nice Add to Calendar Button at the "Thank you" page after the checkout.
+8. For events marked as "private":
+   1. Use this ID to retrieve the body content of the [ics file via API](/api/miscellaneous.html#retrieve-ics-file-body), generate the file yourself, and send it.
+   2. For private events, you cannot use Add to Calendar links. Add to Calendar buttons do not work via the usual method either. However, you can use the data already provided (for creating the event) to create a button according to the open-source schema (see [add-to-calendar-button.com](https://add-to-calendar-button.com/de))
 
 ### Scheme for ics files
 

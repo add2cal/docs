@@ -175,6 +175,8 @@ Der einzig wichtige Unterschied: Das `event_group`-Feld ist hier nicht erlaubt.
 Beachte die Einschränkungen, die auch für die Erstellung via API gelten.
 
 Beachte ferner, dass du den Status über die Anwendungs-Oberfläche auf "Entwurf", über die API aber nicht auf "Veröffentlicht" setzen kannst!
+
+**Für jedes 5te Update ziehen wir zudem 1 Event-Credit ab, um Missbrauch vorzubeugen!**
 :::
 
 <br />
