@@ -130,8 +130,8 @@ export default {
             text: 'Rechtliches',
             collapsed: true,
             items: [
-              { text: 'Impressum', link: 'https://add-to-calendar-pro.com/de/legal-notice' },
-              { text: 'Datenschutzbestimmungen', link: 'https://add-to-calendar-pro.com/de/privacy-policy' }
+              { text: 'Impressum', link: 'https://add-to-calendar-pro.de/legal-notice' },
+              { text: 'Datenschutzbestimmungen', link: 'https://add-to-calendar-pro.de/privacy-policy' }
             ]
           }
         ],
@@ -158,9 +158,9 @@ export default {
         langMenuLabel: 'Change language',
 
         nav: [
-          { text: '🚀 PRO', link: 'https://add-to-calendar-pro.com/de', rel: 'author' },
-          { text: '✨ Features', link: 'https://add-to-calendar-pro.com/de/features', rel: 'author' },
-          { text: '🏷️ Preise', link: 'https://add-to-calendar-pro.com/de/features#pricing', rel: 'author' },
+          { text: '🚀 PRO', link: 'https://add-to-calendar-pro.de', rel: 'author' },
+          { text: '✨ Features', link: 'https://add-to-calendar-pro.de/features', rel: 'author' },
+          { text: '🏷️ Preise', link: 'https://add-to-calendar-pro.de/features#pricing', rel: 'author' },
         ],
       }
     }
