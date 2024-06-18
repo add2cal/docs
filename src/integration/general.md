@@ -101,8 +101,15 @@ This means that the value, put as attribute to the button integration, overrules
 
 This can be useful, if custom style shall be defined within the code or you want to change some details dynamically. Latter one is quite limited and should be considered carefully! Usually, the better way to change things dynamically is via our API.
 
-Parameters, that can be overwritten or even only set at the code level:
+::: warning Make all settings overridable
+You can set the option `proOverride` to the button and you will be able to override all available settings on the code level.
 
+**Be careful with that, as it can easily lead to mixed data, since any changes on the code level will not get reflected anywhere else at Add to Calendar PRO!**
+
+This, however, can be useful for special cases, where you want to only use the button on your website, where you only set the date there (maybe due to privacy reasons), while you want to have the style managed on the Add to Calendar PRO app (maybe by the marketing team).
+:::
+
+Parameters, that can be always overwritten or even only set at the code level, are listed below.
 
 | Attribute          | Description                                                                                                                                                                                                                                                                                                                                                                                                                             | Type / Format                            |
 | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------- |

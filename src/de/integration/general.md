@@ -101,7 +101,15 @@ Dies bedeutet, dass die Einstellung, die über das entsprechende Attribut an der
 
 Dies kann hilfreich sein, wenn bspw. Styles im Code definiert werden oder dynamische Inhalte eingefügt werden sollen. Letzeres ist stark limitiert und sollte mit Bedacht genutzt werden! In den meisten Fällen empfiehlt sich hier eher die Arbeit über unsere API.
 
-Parameter, die überschrieben oder gar nur im Code gesetzt werden können:
+::: warning Alle Einstellungen überschreibbar machen
+Du kannst die Option `proOverride` am Button-Tag setzen und damit alle verfügbaren Einstellungen auf Codeebene überschreiben.
+
+**Sei vorsichtig damit, da dies leicht zu widersprüchlichen Daten führen kann, da Änderungen auf Codeebene sonst nirgendwo bei Add to Calendar PRO übernommen werden!**
+
+Dies kann jedoch in (eher seltenen) Fällen nützlich sein, in denen du nur den Button auf deiner Website verwenden möchtest, während du die Event-Details auch nur dort festlegst (vielleicht aus Datenschutzgründen), während du das Design in der Add to Calendar PRO App verwalten lassen möchtest (vielleicht vom Marketing-Team).
+:::
+
+Parameter, die jederzeit überschrieben oder gar nur im Code gesetzt werden können, sind nachfolgend gelistet.
 
 
 | Attribut           | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Typ / Format                             |
