@@ -2,6 +2,8 @@
 
 We offer a simple REST API to create and read elements.
 
+## URL
+
 The base url is:
 
 ```
