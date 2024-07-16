@@ -24,9 +24,11 @@ However, you can load the unstyle version instead to save on css data you do not
 
 If you want links and files to be generated via the script on the client side or whether you want to use our Proxy service.
 
-The first case will generate the links to the calendar sites dynamically directly in the browser. It will also generate the ics file that way. This is the fastest approach (from a user's perspective). However, ics generation gets blocked at some systems and if a calendar provider goes offline or has interal problems, the user will not be able to save an event. Using our proxy requires events to be connected to a style with the "proxy" option active. In this case, links and files get generated on our side and the user gets redirected to to us first.
+The first case will generate the links to the calendar sites dynamically directly in the browser. It will also generate the ics file that way. This is the fastest approach (from a user's perspective). However, ics generation gets blocked at some systems and if a calendar provider goes offline or has interal problems, the user will not be able to save an event.  
+With the proxy, links and files get generated on our side and the user gets redirected to to us first.  
+This way, when something does not work, we can tell the user about it and offer alternatives and guidance. It is more stable, but a little slower for the user.
 
-This way, when something does not work, we can tell the user about it and offer alternatives and guidance. It is more stable, but a little slower for the user. You can customize this journey by linking a style to a custom landingpage template.
+You can control this setting at a style, which you then link to your event or group. If no style is set, the proxy will be the default.
 
 ## General workflow
 

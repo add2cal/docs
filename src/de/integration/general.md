@@ -24,9 +24,10 @@ Du kannst jedoch stattdessen die unstyle-Version laden, um CSS-Daten zu sparen, 
 
 Ob du Links und Dateien über das Skript auf der Client-Seite generieren lassen oder ob du unseren Proxy-Service verwenden möchtest.
 
-Im ersten Fall werden die Links zu den Kalendern direkt im Browser dynamisch generiert. Auch die ics-Datei wird auf diese Weise dynamisch erstellt. Dies ist der schnellste Ansatz (aus Sicht des Benutzers). Allerdings wird die ics-Generierung bei einigen Systemen blockiert und falls ein Kalenderanbieter offline geht oder interne Probleme hat, kann der Benutzer kein Event speichern. Die Verwendung unseres Proxys erfordert, dass Events mit einem Style verknüpft sind, bei dem die "Proxy"-Option aktiv ist.
+Im ersten Fall werden die Links zu den Kalendern direkt im Browser dynamisch generiert. Auch die ics-Datei wird auf diese Weise dynamisch erstellt. Dies ist der schnellste Ansatz (aus Sicht des Benutzers). Allerdings wird die ics-Generierung bei einigen Systemen blockiert und falls ein Kalenderanbieter offline geht oder interne Probleme hat, kann der Benutzer kein Event speichern.  
+Bei Verwendung des Proxys werden Links und Dateien auf unserer Seite generiert und der Benutzer wird zuerst zu uns umgeleitet. Sollte etwas nicht funktionieren, können wir den Benutzer damit auch darüber informieren und Alternativen sowie Anleitungen anbieten. Dies ist daher der stabilere Weg, für den Benutzer aber etwas langsamer.
 
-In diesem Fall werden Links und Dateien auf unserer Seite generiert und der Benutzer wird zuerst zu uns umgeleitet. Sollte etwas nicht funktionieren, können wir den Benutzer damit auch darüber informieren und Alternativen sowie Anleitungen anbieten. Dies ist daher der stabilere Weg, für den Benutzer aber etwas langsamer. Du kannst die Zwischenseiten anpassen, indem du einen Style mit einem Landingpage-Template verknüpfst.
+Du kannst die Proxy-Einstellung über einen Style verwalten, den du mit dem Event (oder Event-Gruppe) verbindest. Wenn kein Style definiert ist, verwendet wir standardmäßig die Proxy-Option.
 
 ## Allgemeiner Workflow
 
