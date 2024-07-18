@@ -60,14 +60,14 @@ This puts the information into the button at runtime. It could look like this in
 
 #### Email:
 
-When sending the email, we use the link to the landingpage `https://go.caldn.net/the-ProKey-of-our-event`, but we add the customVar information as query parameter. 
+When sending the email, we use the link to the landingpage `https://caldn.net/the-ProKey-of-our-event`, but we add the customVar information as query parameter. 
 
 Mind that you need to encode this to work within a url! You can use a free online encoder like [urlencoder.io](https://www.urlencoder.io/).
 
 In our case, this leads to a url like the following:
 
 ```
-https://go.caldn.net/1b39d497-bf14-45ed-b9af-2cfab5c1231a?customVar=%7B%22firstname%22%3A%20%22John%22%2C%20%22lastname%22%3A%20%22Doe%22%7D
+https://caldn.net/1b39d497-bf14-45ed-b9af-2cfab5c1231a?customVar=%7B%22firstname%22%3A%20%22John%22%2C%20%22lastname%22%3A%20%22Doe%22%7D
 ```
 
 <br />

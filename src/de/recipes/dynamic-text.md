@@ -60,14 +60,14 @@ Das setzt die Informationen zur Laufzeit in den Button. Am Ende könnte es so au
 
 #### E-Mail:
 
-Beim Senden der E-Mail verwenden wir den Link zur Landingpage `https://go.caldn.net/der-ProKey-unseres-Events`, fügen aber die customVar Informationen als Query-Parameter hinzu.
+Beim Senden der E-Mail verwenden wir den Link zur Landingpage `https://caldn.net/der-ProKey-unseres-Events`, fügen aber die customVar Informationen als Query-Parameter hinzu.
 
 Beachte, dass du diese Information kodieren musst, damit sie in einer URL nutzbar ist! Du kannst einen kostenlosen Online-Kodierer wie [urlencoder.io](https://www.urlencoder.io/) verwenden.
 
 In unserem Fall führt das zu einer URL wie die Folgende:
 
 ```
-https://go.caldn.net/1b39d497-bf14-45ed-b9af-2cfab5c1231a?customVar=%7B%22firstname%22%3A%20%22Max%22%2C%20%22lastname%22%3A%20%22Mustermann%22%7D
+https://caldn.net/1b39d497-bf14-45ed-b9af-2cfab5c1231a?customVar=%7B%22firstname%22%3A%20%22Max%22%2C%20%22lastname%22%3A%20%22Mustermann%22%7D
 ```
 
 <br />

@@ -72,7 +72,7 @@ You can adjust the name of the file via the `iCalFileName` option. Adjust the na
 ### Scheme for email links
 
 ```
-https://go.caldn.net/:id/o/:type
+https://caldn.net/:id/o/:type
 ```
 
 With `type` being "apple", "google", "ical", "ms365", "outlookcom", "msteams", or "yahoo".

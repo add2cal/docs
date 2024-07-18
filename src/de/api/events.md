@@ -151,13 +151,13 @@ Weiterhin ist es nicht erlaubt, den Status eines Events über die API zu ändern
 
 Du kannst diese für weitere Schritte sowie diverse Maßnahmen nutzen:
 
-* Wir generieren automatisch eine Landingpage, die du teilen kannst. Die URL baut sich wie folgt auf: `https://go.caldn.net/:prokey`.
+* Wir generieren automatisch eine Landingpage, die du teilen kannst. Die URL baut sich wie folgt auf: `https://caldn.net/:prokey`.
 * In den meisten Fällen erstellen wir automatisch eine ics-Datei. Du kannst diese via `https://event.caldn.net/:prokey/event.ics` herunterladen. Beachten hierbei folgende Besonderheiten:
   * Wir sind nicht in der Lage, eine Datei zu erstellen, wenn du dynamische Daten wie "today+4" verwendest (du kannst aber die Link-Option für "ical" unten nutzen);
   * Wir sind nicht in der Lage, eine Datei für RSVP-Formulare zu generieren - hier generieren wir die Datei dynamisch für jeden Teilnehmer und versenden diese personalisiert in den Bestätigungs-E-Mails;
   * Wenn mehrere Termine für eine Veranstaltung sowie ein Organisator definiert sind, werden mehrere ics-Dateien erzeugt. Die erste Datei folgt der obigen Logik, während die nachfolgenden Dateien eine aufsteigende Nummer erhalten (Beispiel: event-2.ics);
   * Falls du einen benutzerdefinierten ics-Dateinamen festgelegt hast, musst du "event" durch eben diesen Namen ersetzen.
-* Für nicht-RSVP-Ereignisse kannst du das folgende Link-Schema für Hyperlinks (bspw. für E-Mails) verwenden: `https://go.caldn.net/:prokey/o/:calendarType`. Folgende Kalendertypen sind verfügbar: ical, apple, google, ms365, outlookcom, msteams, yahoo.
+* Für nicht-RSVP-Ereignisse kannst du das folgende Link-Schema für Hyperlinks (bspw. für E-Mails) verwenden: `https://caldn.net/:prokey/o/:calendarType`. Folgende Kalendertypen sind verfügbar: ical, apple, google, ms365, outlookcom, msteams, yahoo.
 
 <br />
 

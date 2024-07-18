@@ -71,7 +71,7 @@ Du kannst den Namen der Datei über die Option `iCalFileName` anpassen. Passe de
 ### Schema für E-Mail-Links
 
 ```
-https://go.caldn.net/:id/o/:type
+https://caldn.net/:id/o/:type
 ```
 
 Mit `type` als "apple", "google", "ical", "ms365", "outlookcom", "msteams" oder "yahoo".

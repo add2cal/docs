@@ -151,13 +151,13 @@ Additionally, the API does not allow to set the status of an event - it will alw
 
 You can use this for further processing and several additional measures:
 
-* We automatically set up a landingpage you can use. Its url would be `https://go.caldn.net/:prokey`.
+* We automatically set up a landingpage you can use. Its url would be `https://caldn.net/:prokey`.
 * In most cases, we auto-create an ics file for you. You can download it from `https://event.caldn.net/:prokey/event.ics`. Mind the specialties here:
   * We are not able to generate a file, if you are using dynamic dates like "today+4" (you can still use the link option for "ical" below);
   * We are not able to generate a file for RSVP forms - here, we generate them dynamically for each attendee and send personalized ones within the confirmation emails;
   * In case there are multiple dates to an event, as well as an organizer set, there would be multiple ics files. The first one follows the logic above, while subsequent ones get an ascending number added (example: event-2.ics);
   * In case you set a custom ics file name, you would need to replace "event" with your custom name.
-* For non-RSVP events, you can use the following link scheme for direct links (like within emails): `https://go.caldn.net/:prokey/o/:calendarType`. CalendarType options would be: ical, apple, google, ms365, outlookcom, msteams, yahoo.
+* For non-RSVP events, you can use the following link scheme for direct links (like within emails): `https://caldn.net/:prokey/o/:calendarType`. CalendarType options would be: ical, apple, google, ms365, outlookcom, msteams, yahoo.
 
 <br />
 
