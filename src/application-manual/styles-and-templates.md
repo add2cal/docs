@@ -9,9 +9,9 @@ While you can create them right during event creation, you can also do this at t
 
 As it might be obvious already, styles define the look and feel of your published elements. They, however, also account for usability and UX - like which calendar providers are available for an Add to Calendar Button.
 
-Templates exist for RSVP forms, Call to Action (CTA) screens, emails, as well as landingpages.
+Templates exist for RSVP forms and emails, Call to Action (CTA) screens, as well as landingpages.
 
-While RSVP forms, CTA screens, and styles can be linked to events; emails and landingpages can be linked to styles.
+While RSVP forms, CTA screens, and styles can be linked to events; emails can be linked to RSVP forms and landingpages can be linked to styles.
 
 ::: info Build your world!
 The Add to Calendar system is structured in way to offer you a maximum of flexibilty when it comes to you building your specific setup.
@@ -82,40 +82,15 @@ Depending on the field type, the available options might differ.
 
 When you want to create a radio button group, create multiple radio fields after each other.
 
-### Call to Action (CTA)
+#### Email templates
 
-CTA templates are relevant when you activate this functionality at an event.
-Having it enabled, we show a respective screen to the user after the connected event got saved.
-
-The template defines what is shown on this screen.
-
-It can be simple text, a link (button), a sharing function, or a custom form.
-
-While the settings for the text, or link, or even the sharing tool, are quite obvious, setting up the form can be a little bit more complicated.
-
-But it is an awesome feature, as you can even use it to offer a newsletter subscription after a person saved your event!
-
-When working with the form, the `url` specifies the endpoint, where we send the input to. The `button label` can be used to customize what is shown on the submit button.
-
-Next, you can specify all the `fields` you want to show.
-
-They are basically the same as with the RSVP form.
-
-The `name` is mandatory and used to identify the field in the backend. The `label` is the user facing label, while you can use `placeholder` and `default` value information to prefil input fields.
-
-Depending on the field type, the available options might differ.
-
-Two things to mind:
-1. When you want to create a radio button group, create multiple radio fields after each other.
-2. If you name a hidden field "header" and its value is a JSON scheme, we will use this as the requests header information. In this case, we send the form as JSON; otherwise as multipart/form-data.
-
-You can always test your settings via the button at the very right of the screen.
+Override the default emails with customized ones by linking email templates with the RSVP form.
 
 ### Email
 
 When working with RSVP, there are multiple emails, your user's might receive. This can be a Double-Opt-In confirmation email or an email, containing a magic link to log into the management page, where users can adjust their responses.
 
-*You can link those templates to a style.*
+*You can link those templates to an RSVP form.*
 
 Our default is created in a way that it fits all cases.
 
@@ -144,3 +119,32 @@ As you see, there is a big chance, your users are getting in contact with your e
 With a respective template, linkable to an event style, you can customize this page.
 
 You can change the auto-generated headline, add some intro text, define colors, and optimize meta/SEO content.
+
+### Call to Action (CTA)
+
+CTA templates are relevant when you activate this functionality at an event.
+Having it enabled, we show a respective screen to the user after the connected event got saved.
+
+The template defines what is shown on this screen.
+
+It can be simple text, a link (button), a sharing function, or a custom form.
+
+While the settings for the text, or link, or even the sharing tool, are quite obvious, setting up the form can be a little bit more complicated.
+
+But it is an awesome feature, as you can even use it to offer a newsletter subscription after a person saved your event!
+
+When working with the form, the `url` specifies the endpoint, where we send the input to. The `button label` can be used to customize what is shown on the submit button.
+
+Next, you can specify all the `fields` you want to show.
+
+They are basically the same as with the RSVP form.
+
+The `name` is mandatory and used to identify the field in the backend. The `label` is the user facing label, while you can use `placeholder` and `default` value information to prefil input fields.
+
+Depending on the field type, the available options might differ.
+
+Two things to mind:
+1. When you want to create a radio button group, create multiple radio fields after each other.
+2. If you name a hidden field "header" and its value is a JSON scheme, we will use this as the requests header information. In this case, we send the form as JSON; otherwise as multipart/form-data.
+
+You can always test your settings via the button at the very right of the screen.

@@ -44,6 +44,12 @@ Reading an rsvp block does not allow for any additional parameters. It only take
             "default": false
         }
     ],
+    "email_rsvp_doi": 34,
+    "email_rsvp_thank_you": 33,
+    "email_rsvp_signup_confirmation": 763,
+    "email_rsvp_change_confirmation": 434,
+    "email_rsvp_event_update": 55,
+    "email_rsvp_magic_link": 454,
     "date_updated": "2023-12-09T14:54:27.586Z",
     "date_created": "2023-11-19T08:43:16.180Z",
 }
@@ -95,6 +101,12 @@ Creating a new RSVP template block requires you to at least provide the "name" f
             "default": false
         }
     ],
+    "email_rsvp_doi": 34, // the id of an email template can be seen from the url, when opening it in the web app
+    "email_rsvp_thank_you": 33,
+    "email_rsvp_signup_confirmation": 763,
+    "email_rsvp_change_confirmation": 434,
+    "email_rsvp_event_update": 55,
+    "email_rsvp_magic_link": 454,
 }
 ```
 

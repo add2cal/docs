@@ -14,10 +14,10 @@ Die Hierarchie sieht folgendermaßen aus:
 └─ Event-Gruppe
    └─ Event
       ├─ RSVP-Template *(optional)*
+          └─ E-Mail-Template je RSVP-E-Mail-Typ *(optional)*
       ├─ CTA-Template *(optional)*
       └─ Style *(optional)*
-          ├─ Landingpage-Template *(optional)*
-          └─ E-Mail-Template je RSVP-E-Mail-Typ *(optional)*
+          └─ Landingpage-Template *(optional)*
 ```
 
 Du wirst auf diese Hierarchie während der Erstellung eines Elements stoßen. Innerhalb der App sind sie jedoch etwas anders organisiert, um sie leichter zugänglich zu machen - siehe Hauptnavigation (Events - Styles - Templates).
@@ -84,7 +84,7 @@ Erstelle hier die Funktionalität, verlinke sie mit deinem Event, und der CTA wi
 
 ### E-Mails
 
-[E-Mail-Templates](/de/application-manual/styles-and-templates.html#emails) können mit einem Style verknüpft werden.
+[E-Mail-Templates](/de/application-manual/styles-and-templates.html#emails) können mit einem RSVP-Template verknüpft werden.
 
 Wenn du sie definierst, überschreibst du die Standard-E-Mails, die wir für jede RSVP-Interaktion des Benutzers senden (wie Double-Opt-In, Bestätigung usw.).
 

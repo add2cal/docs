@@ -77,7 +77,7 @@ Es verwendet jedoch immer noch die Standard-E-Mail-Vorlagen. Nicht schlimm - die
 * Passe alles nach deinen Wünschen und Vorstellungen an.
 * Nachdem du gespeichert und das Template erneut geöffnet hast, kannst du dir eine Test-E-Mail über den Button auf der rechten Seite des Bildschirms senden.
 * Wiederhole dies für alle verschiedenen Typen.
-* E-Mail-Templates werden mit dem Style deines Events verknüpft. Gehe daher zurück zu deinem vorher erstellten Style-Element, aktiviere die erweiterten Einstellungen (falls noch nicht sichtbar) und wähle die E-Mail-Templates in den entsprechenden Dropdowns aus.
+* E-Mail-Templates werden mit dem genutzten RSVP-Template verknüpft. Gehe daher zurück zu deinem vorher erstellten Element und wähle die E-Mail-Templates in den entsprechenden Dropdowns aus.
 
 ## ✨ Die Landingpage individualisieren
 

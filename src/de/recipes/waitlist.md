@@ -55,5 +55,5 @@ Wie bei allem, was du bei Add to Calendar PRO erstellst, kannst du es bis ins Kl
 
 Vielleicht hast du bereits einen spezifischen Style verwendet. Dieser bietet bereits viele Optionen.
 
-Davon abgesehen solltest du benutzerdefinierte E-Mail-Templates einrichten und sie mit dem Style verlinken.
+Davon abgesehen solltest du benutzerdefinierte E-Mail-Templates einrichten und sie mit dem RSVP-Formular verlinken.
 Auf diese Weise kannst du allen E-Mails, die an den Benutzer gesendet werden (z.B. für die Anmeldebestätigung), eine individuelle Note verleihen und sie an deinen spezifischen Fall anpassen!

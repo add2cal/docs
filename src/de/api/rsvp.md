@@ -44,6 +44,12 @@ Beim Abrufen eines RSVP-Blocks sind keine zusätzlichen Parameter möglich. Es w
             "default": false
         }
     ],
+    "email_rsvp_doi": 34,
+    "email_rsvp_thank_you": 33,
+    "email_rsvp_signup_confirmation": 763,
+    "email_rsvp_change_confirmation": 434,
+    "email_rsvp_event_update": 55,
+    "email_rsvp_magic_link": 454,
     "date_updated": "2023-12-09T14:54:27.586Z",
     "date_created": "2023-11-19T08:43:16.180Z",
 }
@@ -95,6 +101,12 @@ Um einen neuen RSVP-Template-Block zu erstellen, musst du mindestens das Feld "n
             "default": false
         }
     ],
+    "email_rsvp_doi": 34, // die ID eines E-Mail-Templates ist aus der URL ersichtlic, wenn du das Template in der Web App aufrufst
+    "email_rsvp_thank_you": 33,
+    "email_rsvp_signup_confirmation": 763,
+    "email_rsvp_change_confirmation": 434,
+    "email_rsvp_event_update": 55,
+    "email_rsvp_magic_link": 454,
 }
 ```
 

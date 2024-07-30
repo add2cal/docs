@@ -15,10 +15,10 @@ The hierarchy looks likes this:
 └─ Event Group
    └─ Event
       ├─ RSVP template *(optional)*
+          └─ Email template per RSVP email type *(optional)*
       ├─ CTA template *(optional)*
       └─ Style *(optional)*
-          ├─ Landingpage template *(optional)*
-          └─ Email template per RSVP email type *(optional)*
+          └─ Landingpage template *(optional)*
 ```
 
 You will face this hierarchy during the creation of element. Still, within the app, they are organized a little different, in order to make them easily accessible - see the main navigation (Events - Styles - Templates).
@@ -85,7 +85,7 @@ Create the functionality here, link it to your event, and it will automatically 
 
 ### Emails
 
-[Email templates](/application-manual/styles-and-templates.html#emails) can be linked to a Style.
+[Email templates](/application-manual/styles-and-templates.html#emails) can be linked to an RSVP template.
 
 When setting them, you overwrite the default emails, that we send for any RSVP interaction of the user (like Double-Opt-In, confirmation, etc.).
 

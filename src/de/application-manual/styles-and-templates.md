@@ -9,9 +9,9 @@ Obwohl du sie direkt während der Erstellung eines Events erstellen kannst, kann
 
 Wie vielleicht schon offensichtlich ist, definieren Styles Look and Feel deiner veröffentlichten Elemente. Sie berücksichtigen jedoch auch die Benutzerfreundlichkeit und UX - wie bspw. welche Kalenderanbieter für einen „Add to Calendar“-Button verfügbar sind.
 
-Templates gibt es für RSVP-Formulare, Call to Action (CTA)-Screens, E-Mails sowie Landingpages.
+Templates gibt es für RSVP-Formulare und -E-Mails, Call to Action (CTA)-Screens, sowie Landingpages.
 
-Während RSVP-Formulare, CTA-Screens und Styles mit Events verknüpft werden können; werden E-Mails und Landingpages mit Styles verbunden.
+Während RSVP-Formulare, CTA-Screens und Styles mit Events verknüpft werden können; werden E-Mails mit RSVP-Formularen und Landingpages mit Styles verbunden.
 
 ::: info Baue deine Welt!
 Das „Add to Calendar“-System ist so strukturiert, dass es dir maximale Flexibilität bietet, wenn du dein spezifisches Setup erstellst.
@@ -82,41 +82,15 @@ Je nach Feldtyp können die verfügbaren Optionen unterschiedlich sein.
 
 Wenn du eine Radio-Button-Gruppe erstellen möchtest, erstelle mehrere Radiofelder nacheinander.
 
-### Call to Action (CTA)
+#### E-Mail-Templates
 
-CTA-Templates sind relevant, wenn du diese Funktionalität bei einem Event aktivierst.
-Wenn sie aktiviert ist, zeigen wir dem Benutzer nach dem Speichern des verbundenen Events eine entsprechende Nachricht an.
-
-Das Template definiert, was hierbei gezeigt wird.
-
-Es kann einfacher Text, ein Link (Button), eine Sharing-Funktion oder ein benutzerdefiniertes Formular sein.
-
-Während die Einstellungen für den Text oder den Link oder sogar das Sharing-Tool ziemlich offensichtlich sind, kann die Einrichtung des Formulars ein wenig komplizierter sein.
-
-Aber es ist ein großartiges Feature, da du es sogar verwenden kannst, um ein Newsletter-Abonnement anzubieten, nachdem eine Person dein Event gespeichert hat!
-
-Bei der Arbeit mit dem Formular gibt die `URL` den Endpunkt an, an den wir die Eingaben senden. `Button-Text` kann verwendet werden, um anzupassen, was auf dem Absende-Button angezeigt wird.
-
-Als nächstes kannst du alle `Felder` spezifizieren, die du anzeigen möchtest.
-
-Sie sind im Grunde ähnlich dem RSVP-Formular.
-
-Der `Name` ist obligatorisch und wird verwendet, um das Feld im Backend zu identifizieren. Das `Label` ist das dem Benutzer gegenüber sichtbare Label, während du über `Platzhalter` und `Standard` die Werte der Felder (quasi) vorausfüllen kannst.
-
-Je nach Feldtyp können die verfügbaren Optionen unterschiedlich sein.
-
-Zwei Dinge zu beachten:
-1. Wenn du eine Radio-Button-Gruppe erstellen möchtest, erstelle mehrere Radiofelder nacheinander.
-2. Wenn du ein ausgeblendetes Feld "header" nennst und dessen Wert ein JSON-Schema ist, übermitteln wir dies als Header-Information. In diesem Fall wird das Formular als JSON gesendet; ohne Header als multipart/form-data.
-
-Du kannst deine Einstellungen immer über den Button ganz rechts auf dem Bildschirm testen.
-
+Überschreibe die Standard-E-Mails mit angepassten Versionen, indem du E-Mail-Templates mit dem RSVP-Formular verbindest.
 
 ### E-Mail
 
 Bei der Arbeit mit RSVP gibt es mehrere E-Mails, die deine Benutzer erhalten können. Dies kann eine Double-Opt-In-Bestätigungs-E-Mail oder eine E-Mail sein, die einen Magic Link enthält, um sich auf der Verwaltungsseite einzuloggen, wo Benutzer ihre Antworten anpassen können.
 
-*Du kannst diese Templates mit einem Style verknüpfen.*
+*Du kannst diese Templates mit einem RSVP-Formular verknüpfen.*
 
 Unser Standard ist so erstellt, dass er auf alle Fälle grob passt.
 
@@ -145,3 +119,32 @@ Wie du siehst, ist es sehr wahrscheinlich, dass deine Benutzer mit der Landingpa
 Mit einem entsprechenden Template, das mit einem Event-Style verknüpft werden kann, kannst du diese Seite anpassen.
 
 Du kannst die automatisch generierte Überschrift ändern, etwas Einführungstext hinzufügen, Farben definieren und Meta/SEO-Inhalte optimieren.
+
+### Call to Action (CTA)
+
+CTA-Templates sind relevant, wenn du diese Funktionalität bei einem Event aktivierst.
+Wenn sie aktiviert ist, zeigen wir dem Benutzer nach dem Speichern des verbundenen Events eine entsprechende Nachricht an.
+
+Das Template definiert, was hierbei gezeigt wird.
+
+Es kann einfacher Text, ein Link (Button), eine Sharing-Funktion oder ein benutzerdefiniertes Formular sein.
+
+Während die Einstellungen für den Text oder den Link oder sogar das Sharing-Tool ziemlich offensichtlich sind, kann die Einrichtung des Formulars ein wenig komplizierter sein.
+
+Aber es ist ein großartiges Feature, da du es sogar verwenden kannst, um ein Newsletter-Abonnement anzubieten, nachdem eine Person dein Event gespeichert hat!
+
+Bei der Arbeit mit dem Formular gibt die `URL` den Endpunkt an, an den wir die Eingaben senden. `Button-Text` kann verwendet werden, um anzupassen, was auf dem Absende-Button angezeigt wird.
+
+Als nächstes kannst du alle `Felder` spezifizieren, die du anzeigen möchtest.
+
+Sie sind im Grunde ähnlich dem RSVP-Formular.
+
+Der `Name` ist obligatorisch und wird verwendet, um das Feld im Backend zu identifizieren. Das `Label` ist das dem Benutzer gegenüber sichtbare Label, während du über `Platzhalter` und `Standard` die Werte der Felder (quasi) vorausfüllen kannst.
+
+Je nach Feldtyp können die verfügbaren Optionen unterschiedlich sein.
+
+Zwei Dinge zu beachten:
+1. Wenn du eine Radio-Button-Gruppe erstellen möchtest, erstelle mehrere Radiofelder nacheinander.
+2. Wenn du ein ausgeblendetes Feld "header" nennst und dessen Wert ein JSON-Schema ist, übermitteln wir dies als Header-Information. In diesem Fall wird das Formular als JSON gesendet; ohne Header als multipart/form-data.
+
+Du kannst deine Einstellungen immer über den Button ganz rechts auf dem Bildschirm testen.

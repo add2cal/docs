@@ -56,5 +56,5 @@ As with all things you create at Add to Calendar PRO, you can customize the hell
 
 You might already have used a specific style. This comes with a lot of options, of course.
 
-Besides that, you should set up custom email templates and link the to the style.
+Besides that, you should set up custom email templates and link them to the RSVP.
 This way, you can give all the emails that are send to the user (e.g. for signup confirmation) an individual touch and adjust it to your specific case!

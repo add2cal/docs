@@ -77,7 +77,7 @@ However, it still uses the default email templates. Nothing wrong with that! It 
 * Adjust and set a style.
 * After saving and opening the template again, you can send yourself a test email via the button on the right side of the screen.
 * Repeat this for all different types.
-* Email templates get linked to the style of your event. So, get back to your style, activate the advanced settings (if not already visible) and select the email templates at the respective dropdowns.
+* Email templates get linked to the RSVP template. So, get back to it and select the email templates at the respective dropdowns.
 
 ## ✨ Enrich the landingpage
 
