@@ -79,7 +79,7 @@ Creating a new event requires you to at least provide the following fields in th
     "dates": [{
         "name": "Title of the date",
         "startDate": "2024-12-24",
-        "timeZone": "America/Los_Angelese" // not required, but highly recommended
+        "timeZone": "America/Los_Angeles" // not required, but highly recommended
     }],
 }
 ```
@@ -108,7 +108,7 @@ Additionally, the API does not allow to set the status of an event - it will alw
         "startTime": "14:45",
         "endDate": "2024-12-24",
         "endTime": "16:15",
-        "timeZone": "America/Los_Angelese",
+        "timeZone": "America/Los_Angeles",
         "location": "World Wide Web",
         "status": "CONFIRMED", // or "TENTATIVE" or "CANCELLED"
         "availability": "free", // or "busy"

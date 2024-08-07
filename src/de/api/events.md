@@ -79,7 +79,7 @@ Um ein neues Event zu erstellen, musst du mindestens die folgenden Felder im Bod
     "dates": [{
         "name": "Titel des Termins",
         "startDate": "2024-12-24",
-        "timeZone": "America/Los_Angelese" // nicht verpflichtend, aber strengstens empfohlen
+        "timeZone": "America/Los_Angeles" // nicht verpflichtend, aber strengstens empfohlen
     }],
 }
 ```
@@ -108,7 +108,7 @@ Weiterhin ist es nicht erlaubt, den Status eines Events über die API zu ändern
         "startTime": "14:45",
         "endDate": "2024-12-24",
         "endTime": "16:15",
-        "timeZone": "America/Los_Angelese",
+        "timeZone": "America/Los_Angeles",
         "location": "World Wide Web",
         "status": "CONFIRMED", // oder "TENTATIVE" oder "CANCELLED"
         "availability": "free", // oder "busy"
