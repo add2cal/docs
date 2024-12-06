@@ -18,7 +18,7 @@ Besides that, everything else will happen via the API - you need to create an AP
 
 ::: warning Mind sensitive information!
 When you create an event, we automatically generate an ics file and provide you with a landingpage and more.
-Those things are public by nature. Everybody with a respective link can retrieve this information. So, it is not completely "open", it can be a risk when placing sensitive information into the event's detail information. This can be a problem for checkout flows.
+Those things are public by nature. Everybody with a respective link can retrieve this information. So, even this link is quite cryptographic and it is therefore not completely "open", it can be a risk when placing sensitive information into the event's detail information. This can be a problem for checkout flows.
 
 **You can [prevent this](/application-manual/troubleshooting.html#how-can-i-make-sure-there-is-no-data-publicly-available-on-the-internet) by setting the event to "private".**
 
