@@ -107,6 +107,8 @@ Du kannst die Option `proOverride` am Button-Tag setzen und damit alle verfügba
 
 **Sei vorsichtig damit, da dies leicht zu widersprüchlichen Daten führen kann, da Änderungen auf Codeebene sonst nirgendwo bei Add to Calendar PRO übernommen werden!**
 
+Du solltest mindestens `proxy="false"` setzen.
+
 Dies kann jedoch in (eher seltenen) Fällen nützlich sein, in denen du nur den Button auf deiner Website verwenden möchtest, während du die Event-Details auch nur dort festlegst (vielleicht aus Datenschutzgründen), während du das Design in der Add to Calendar PRO App verwalten lassen möchtest (vielleicht vom Marketing-Team).
 :::
 
