@@ -108,6 +108,8 @@ You can set the option `proOverride` to the button and you will be able to overr
 
 **Be careful with that, as it can easily lead to mixed data, since any changes on the code level will not get reflected anywhere else at Add to Calendar PRO!**
 
+You should at least also set `proxy="false"`.
+
 This, however, can be useful for special cases, where you want to only use the button on your website, where you only set the date there (maybe due to privacy reasons), while you want to have the style managed on the Add to Calendar PRO app (maybe by the marketing team).
 :::
 
