@@ -1,50 +1,62 @@
 
 # How to integrate Buttons and RSVP Forms with Astro
 
-## Step 0: Pick a solution
+## Step 0: Pick the right solution
 
-For static site generators (SSG), we generally recommend to load the Add to Calendar Button script via CDN.
+You can simply load the Add to Calendar Button script via CDN and integrate as described at the default [HTML guide](/integration/html.html).  
+However, this some at some cost and you would need to take precaution to only load and render it on the client.
 
-Alternatively, you can still use the npm package and include the module via an observer function.
-
-We will highlight all options below.
+We recommend to use the React wrapper npm package, create a custom JSX component, and then integrate this component with `client:only="react"` attribute.
 
 ## Step 1: Setup
 
-### Option A: Integrate via CDN
+### Create a new component
 
-Load the respective script by adding the following script tag to the head section of your website.
+Create a new component in the components folder and name it "AddtoCalendarButton.tsx".  
+If you have multiple buttons, you can either create multiple components or make it accept the props you need to customize it.
 
-The script will be loaded in a non-blocking way. So you don't need to worry about where to include it exactly.
+### Add the React wrapper package
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
-```
-
-### Option B: npm installation
-
-Alternatively, install the package from the npm registry.
+Install the package from the npm registry.
 
 ```bash
-npm install add-to-calendar-button
+npm install add-to-calendar-button-react
 ```
 
-...and setup an Observer to load the script properly:
+...and import it into your new component:
 
-```html
-<script type="module" hoist>
-  const observer = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      observer.disconnect();
-      import('../../node_modules/add-to-calendar-button/dist/module/index.js');
-    }
-  });
-  const instances = document.querySelectorAll('add-to-calendar-button');
-  for (const instance of instances) observer.observe(instance);
-</script>
+```tsx
+import { AddToCalendarButton } from 'add-to-calendar-button-react';
 ```
 
-## Step 2: Use it
+## Step 2: Define the button
 
-Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event" />` tag to your source code.
+Define the button in your new component.  
+In our example, we also added a ProKey prop to illustrate how you can make it more dynamic.
+
+```tsx
+import { AddToCalendarButton } from 'add-to-calendar-button-react';
+import type { AddToCalendarButtonType } from 'add-to-calendar-button-react';
+
+export default function atcb(props: AddToCalendarButtonType) {
+  return (
+    <AddToCalendarButton proKey={props.prokey} ></AddToCalendarButton>
+  );
+}
+```
+
+## Step 3: Use it
+
+You can now import this component wherever you need it and use it like any other Astro component.
+
+Your code block could look like the following.
+
+```astro
+---
+import AddToCalendarButton from '../components/AddToCalendarButton.tsx';
+import Layout from '../layouts/Layout.astro';
+---
+<Layout>
+  <AddToCalendarButton client:only="react" prokey="prokey-of-your-event" />
+</Layout>
+```
