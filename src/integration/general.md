@@ -35,10 +35,10 @@ You can control this setting at a style, which you then link to your event or gr
 There are only 2 steps necessary to get RSVP forms and buttons showing up in your application.
 
 1. Load the script (via importing the package, loading the script via CDN, or via a plugin).
-2. Place an `<add-to-calendar-button />` tag where you want the element to show up and add the proKey as attribute to it.
+2. Place an `<add-to-calendar-button>` tag where you want the element to show up and add the proKey as attribute to it.
 
 ```html
-<add-to-calendar-button proKey="prokey-of-your-event" />
+<add-to-calendar-button proKey="prokey-of-your-event"></add-to-calendar-button>
 ```
 
 We automatically generate a proKey for every event you create. You can find it at the very top of the respective event page.

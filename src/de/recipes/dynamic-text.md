@@ -49,13 +49,13 @@ Zusätzlich senden wir eine **E-Mail** an den Benutzer, in der wir ihn auf die *
 Auf unserer Webseite binden wir den Button mit folgendem Code ein:
 
 ```
-<add-to-calendar-button proKey="der-ProKey-unseres-Events" customVar='{"firstname": "dynamischer-Wert-aus-dem-Backend", "lastname": "dynamischer-Wert-aus-dem-Backend"}' />
+<add-to-calendar-button proKey="der-ProKey-unseres-Events" customVar='{"firstname": "dynamischer-Wert-aus-dem-Backend", "lastname": "dynamischer-Wert-aus-dem-Backend"}'></add-to-calendar-button>
 ```
 
 Das setzt die Informationen zur Laufzeit in den Button. Am Ende könnte es so aussehen:
 
 ```
-<add-to-calendar-button proKey="1b39d497-bf14-45ed-b9af-2cfab5c1231a" customVar='{"firstname": "Max", "lastname": "Mustermann"}' />
+<add-to-calendar-button proKey="1b39d497-bf14-45ed-b9af-2cfab5c1231a" customVar='{"firstname": "Max", "lastname": "Mustermann"}'></add-to-calendar-button>
 ```
 
 #### E-Mail:

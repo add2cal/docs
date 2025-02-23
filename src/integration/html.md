@@ -13,7 +13,7 @@ You can place the respective script tag anywhere on your page. We recommend the 
 
 ## Step 2: Use it
 
-Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event" />` tag to your source code.
+Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event"></add-to-calendar-button>` tag to your source code.
 
 <br />
 

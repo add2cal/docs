@@ -11,7 +11,7 @@ We are not automatically tracking any additional data as this would usually go d
 
 However, we prepared a lot for you here as well!
 
-1. We push the latest event into the attribute `atcb-last-event` at the `<add-to-calendar-button />` element. It holds the event and respective trigger (schema: "EVENT:TRIGGER"; example: "openList:atcb-btn-1").
+1. We push the latest event into the attribute `atcb-last-event` at the `<add-to-calendar-button>` element. It holds the event and respective trigger (schema: "EVENT:TRIGGER"; example: "openList:atcb-btn-1").
 2. We are pushing this data also into the "Data Layer". This, for example, can be directly used with Google Analytics to follow all events.
 
 The events we push:

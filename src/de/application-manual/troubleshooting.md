@@ -11,7 +11,7 @@ Wir verfolgen keine zusätzlichen Daten automatisch, da dies normalerweise tiefe
 
 Wir haben jedoch auch hier einiges für dich vorbereitet!
 
-1. Wir fügen das neueste Ereignis als Attribut `atcb-last-event` dem `<add-to-calendar-button />` Element hinzu. Es enthält dabei das Ereignis und den jeweiligen Trigger (Schema: "EVENT:TRIGGER"; Beispiel: "openList:atcb-btn-1").
+1. Wir fügen das neueste Ereignis als Attribut `atcb-last-event` dem `<add-to-calendar-button>` Element hinzu. Es enthält dabei das Ereignis und den jeweiligen Trigger (Schema: "EVENT:TRIGGER"; Beispiel: "openList:atcb-btn-1").
 2. Wir pushen diese Daten auch in den "Data Layer". Dies kann zum Beispiel direkt mit Google Analytics verwendet werden, um alle Ereignisse zu verfolgen.
 
 Die Ereignisse, die wir pushen:

@@ -49,13 +49,13 @@ Additionally, we are sending an **email** to the user, where we point him to the
 At our website, we include the button with the following code:
 
 ```
-<add-to-calendar-button proKey="the-ProKey-of-our-event" customVar='{"firstname": "dynamic-value-from-the-backend", "lastname": "dynamic-value-from-the-backend"}' />
+<add-to-calendar-button proKey="the-ProKey-of-our-event" customVar='{"firstname": "dynamic-value-from-the-backend", "lastname": "dynamic-value-from-the-backend"}'></add-to-calendar-button>
 ```
 
 This puts the information into the button at runtime. It could look like this in the end:
 
 ```
-<add-to-calendar-button proKey="1b39d497-bf14-45ed-b9af-2cfab5c1231a" customVar='{"firstname": "John", "lastname": "Doe"}' />
+<add-to-calendar-button proKey="1b39d497-bf14-45ed-b9af-2cfab5c1231a" customVar='{"firstname": "John", "lastname": "Doe"}'></add-to-calendar-button>
 ```
 
 #### Email:

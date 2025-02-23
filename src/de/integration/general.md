@@ -34,10 +34,10 @@ Du kannst die Proxy-Einstellung über einen Style verwalten, den du mit dem Even
 Es sind nur 2 Schritte notwendig, um RSVP-Formulare und Buttons in deiner Anwendung anzuzeigen.
 
 1. Lade das Skript (durch Importieren des Pakets, Laden des Skripts über CDN oder über ein Plugin).
-2. Platziere ein `<add-to-calendar-button />`-Tag dort, wo du das Element anzeigen möchtest, und füge den proKey als Attribut hinzu.
+2. Platziere ein `<add-to-calendar-button>`-Tag dort, wo du das Element anzeigen möchtest, und füge den proKey als Attribut hinzu.
 
 ```html
-<add-to-calendar-button proKey="prokey-deines-events" />
+<add-to-calendar-button proKey="prokey-deines-events"></add-to-calendar-button>
 ```
 
 Wir generieren automatisch einen proKey für jedes von dir erstellte Event. Du kannst ihn ganz oben auf der jeweiligen Eventseite finden.

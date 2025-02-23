@@ -46,7 +46,7 @@ compilerOptions: {
 
 ## Step 4: Use it
 
-Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event" />` tag to your source code.
+Start using it by adding a `<add-to-calendar-button proKey="prokey-of-your-event"></add-to-calendar-button>` tag to your source code.
 
 <br />
 
