@@ -46,6 +46,7 @@ Reading an event does not allow for any additional parameters. It only takes the
         "recurrence_weekstart": null,
         "recurrence_simple_type": null,
         "layout": null,
+        "landingpage": null,
         "iCalFileName": null,
         "rsvp": false,
         "rsvp_block": null,
@@ -128,6 +129,7 @@ Additionally, the API does not allow to set the status of an event - it will alw
     "recurrence_count": 10, // example: repeat 10 times
     "recurrence_weekstart": "MO", // example for Monday
     "layout": "id-of-a-style-template", // take the id from the url in the application
+    "landingpage": "id-of-a-landingpage-template", // take the id from the url in the application
     "iCalFileName": "overriding the ics file name",
     "rsvp": true,
     "rsvp_block": "id-of-an-rsvp-block", // take the id from the url in the application or the response when creating an rsvp block via API

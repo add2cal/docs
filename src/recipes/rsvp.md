@@ -89,7 +89,7 @@ Even if not, you should be aware that when users want to edit their reply, they 
 * Create a new one.
 * Customize it.
 * Save it.
-* The landingpage template gets linked to the style of your event. So, get back to your style, activate the advanced settings (if not already visible) and select the landingpage at the respective dropdown.
+* The landingpage template gets linked to your event. So, get back to your event and select the landingpage at the respective dropdown.
 * The landingpage gets tested best by visiting the actual landingpage. You can find the link at the very top of the event detail page.
 
 ## 📣 Share and integrate it

@@ -14,13 +14,15 @@ Die Hierarchie sieht folgendermaßen aus:
 └─ Event-Gruppe
    └─ Event
       ├─ RSVP-Template *(optional)*
-          └─ E-Mail-Template je RSVP-E-Mail-Typ *(optional)*
+      |  └─ E-Mail-Template je RSVP-E-Mail-Typ *(optional)*
       ├─ CTA-Template *(optional)*
-      └─ Style *(optional)*
-          └─ Landingpage-Template *(optional)*
+      ├─ Style *(optional)*
+      └─ Landingpage-Template *(optional)*
 ```
 
 Du wirst auf diese Hierarchie während der Erstellung eines Elements stoßen. Innerhalb der App sind sie jedoch etwas anders organisiert, um sie leichter zugänglich zu machen - siehe Hauptnavigation (Events - Styles - Templates).
+
+*Styles, CTA- und Landingpage-Templates können auch mit einer Gruppe verbunden sein, wenn diese als Kalendar-Abo aufgesetzt ist.*
 
 Webhooks, Team und Einstellungen sind zusätzliche Elemente, die wir auf dieser Seite ebenfalls beschreiben.
 
@@ -97,7 +99,7 @@ Für jedes Event generieren wir automatisch eine ansprechende, responsive Landin
 Dies erleichtert das Teilen deines RSVPs oder Events in sozialen Medien und darüber hinaus.
 
 Indem du ein [Landingpage-Template](/de/application-manual/styles-and-templates.html#landingpages) erstellst, kannst du das Aussehen sowie zusätzliche Inhalte dieser Landingpage anpassen.
-Verknüpfe das Template mit dem Style, der beim jeweiligen Event verwendet wird, und du bist fertig.
+Verknüpfe das Template mit dem Event/Gruppe und du bist fertig.
 
 ## Webhooks
 

@@ -22,6 +22,7 @@ Die Antwort enthält mehr Felder, als du vielleicht erwartest, da eine Gruppe mi
         "subscription": "no",
         "subscription_cal_url": null,
         "layout": null,
+        "landingpage": null,
         "cta": false,
         "cta_block": null,
         "date_updated": "2023-11-24T15:05:14.079Z",
@@ -69,6 +70,7 @@ Beachte, dass du bei der Erstellung einer Gruppe keine Events hinzufügen kannst
     "subscription": "no", // kann "no" oder "external" lauten - letzteres erfordert eine subscription_cal_url
     "subscription_cal_url": null, // url zu einem externen Kalender. Muss mit "http" beginnen! Endet gewöhnlich mit ".ics"
     "layout": "id-eines-style-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
+    "landingpage": "id-eines-landingpage-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
     "cta": true,
     "cta_block": "id-eines-cta-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
 }

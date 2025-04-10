@@ -20,7 +20,7 @@ Diese ist hauptsächlich für das einfache Teilen deines Events gedacht, kann ab
 
 * Du musst dein Event erstellen (offensichtlich).
 * Dieses Event muss mit einem Style verknüpft werden (über Auswahl am Event).
-* Dieser Style muss mit einem Landingpage-Template verknüpft werden (über Einstellung im Style).
+* Dieses Event muss zusätzlich mit einem Landingpage-Template verknüpft werden (über Auswahl am Event).
 * Mit dem Enterprise-Plan kannst du zudem deine eigene Domain verwenden, die zu diesem Zeitpunkt eingerichtet sein sollte.
 
 ## ✨ Anpassung

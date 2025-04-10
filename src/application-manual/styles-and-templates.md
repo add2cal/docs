@@ -11,7 +11,7 @@ As it might be obvious already, styles define the look and feel of your publishe
 
 Templates exist for RSVP forms and emails, Call to Action (CTA) screens, as well as landingpages.
 
-While RSVP forms, CTA screens, and styles can be linked to events; emails can be linked to RSVP forms and landingpages can be linked to styles.
+While RSVP forms, landingpage templates, CTA screens, and styles can be linked to events; emails can be linked to RSVP forms.
 
 ::: info Build your world!
 The Add to Calendar system is structured in way to offer you a maximum of flexibilty when it comes to you building your specific setup.
@@ -116,7 +116,7 @@ For the RSVP case, any communication, like DOI, the user editing his response, e
 
 As you see, there is a big chance, your users are getting in contact with your event's or RSVP's landingpage.
 
-With a respective template, linkable to an event style, you can customize this page.
+With a respective template, linkable to an event/group, you can customize this page.
 
 You can change the auto-generated headline, add some intro text, define colors, and optimize meta/SEO content.
 

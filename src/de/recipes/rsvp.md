@@ -89,7 +89,7 @@ Falls du dies nicht planst, solltest du wissen, dass, wenn Benutzer ihre Antwort
 * Erstelle einen neuen Eintrag.
 * Passe die Werte an.
 * Speichere alles.
-* Das Landingpage-Template wird mit dem Style deines Events verknüpft. Gehe daher zurück zu deinem vorher erstellten Style-Element, aktiviere die erweiterten Einstellungen (falls noch nicht sichtbar) und wähle die Landingpage im entsprechenden Dropdown aus.
+* Das Landingpage-Template wird mit deinem Event verknüpft. Gehe daher zurück zu deinem vorher erstellten Event und wähle die Landingpage im entsprechenden Dropdown aus.
 * Die Landingpage lässt sich am besten testen, indem du die tatsächliche Seite besuchst. Den Link findest du ganz oben auf der Event-Detailseite.
 
 ## 📣 Teile und integriere alles

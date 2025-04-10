@@ -47,11 +47,11 @@ Die Einrichtung dieses Ablaufs erfordert etwas mehr Arbeit, da du dies in deine 
 **Hier kommt eine Liste der nötigen Schritte:**
 
 1. Erstelle einen Style und bereite alles für einen potenziellen Add to Calendar Button vor, damit dieser gut aussieht (überspringe diesen Schritt, wenn du nur mit ics-Dateien arbeiten möchtest).
-2. Erstelle ein Landingpage-Template und verknüpfe es mit dem Style. Das ist wichtig, wenn du E-Mail-Links verwendest; oder wenn du einfach eine schöne Veranstaltungs-Landingpage teilen möchtest (kann auch für das Support-Team nützlich sein, wenn ein Benutzer Hilfe beim Speichern des Events benötigt).
+2. Erstelle ein Landingpage-Template. Das ist wichtig, wenn du E-Mail-Links verwendest; oder wenn du einfach eine schöne Veranstaltungs-Landingpage teilen möchtest (kann auch für das Support-Team nützlich sein, wenn ein Benutzer Hilfe beim Speichern des Events benötigt).
 3. Erstelle einen API-Key (auf der Seite der Organisationseinstellungen).
 4. Erstelle eine Event-Gruppe (mit Kalender-Abonnement auf "Nein"), die alle zukünftigen Veranstaltungen beinhalten wird.
 5. Lies die [API-Dokumentation über die Eventerstellung](/de/api/events.html#add-an-event).
-6. Erstelle in deinem Backend eine Funktion, die ein Event über die Add to Calendar PRO API basierend auf den Daten, die du für den Benutzer hast, erstellt. Wir empfehlen, in diesem Fall auch den Organizer und den Attendee festzulegen (bei manchen Systemen wird das Event dadurch automatisch zum Kalender des Benutzers hinzugefügt, sobald eine E-Mail mit der ics-Datei geöffnet wird)! _Definiere das Event als "privat", falls nötig._ Die Response beinhaltet eine ID (der ProKey des Events).
+6. Erstelle in deinem Backend eine Funktion, die ein Event über die Add to Calendar PRO API basierend auf den Daten, die du für den Benutzer hast, erstellt. Gib den gespeicherten Style und Landingpage an, um das Event damit zu verknüpfen. Wir empfehlen, in diesem Fall auch den Organizer und den Attendee festzulegen (bei manchen Systemen wird das Event dadurch automatisch zum Kalender des Benutzers hinzugefügt, sobald eine E-Mail mit der ics-Datei geöffnet wird)! _Definiere das Event als "privat", falls nötig._ Die Response beinhaltet eine ID (der ProKey des Events).
 7. Bei regulären Events:
    1. Verwende diese ID, um die generierte ics-Datei beim Senden einer Bestätigungs-E-Mail abzurufen und an die E-Mail anzufügen.
    2. Verwende diese ID, um Add to Calendar Links in dieser Bestätigungs-E-Mail zu integrieren.

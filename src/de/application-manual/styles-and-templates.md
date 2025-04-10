@@ -11,7 +11,7 @@ Wie vielleicht schon offensichtlich ist, definieren Styles Look and Feel deiner 
 
 Templates gibt es für RSVP-Formulare und -E-Mails, Call to Action (CTA)-Screens, sowie Landingpages.
 
-Während RSVP-Formulare, CTA-Screens und Styles mit Events verknüpft werden können; werden E-Mails mit RSVP-Formularen und Landingpages mit Styles verbunden.
+Während RSVP-Formulare, Landingpage-Templates, CTA-Screens und Styles mit Events verknüpft werden können; werden E-Mails mit RSVP-Formularen verbunden.
 
 ::: info Baue deine Welt!
 Das „Add to Calendar“-System ist so strukturiert, dass es dir maximale Flexibilität bietet, wenn du dein spezifisches Setup erstellst.
@@ -116,7 +116,7 @@ Für den RSVP-Fall nutzt jegliche Kommunikation, wie DOI, das Bearbeiten von Ant
 
 Wie du siehst, ist es sehr wahrscheinlich, dass deine Benutzer mit der Landingpage deines Events oder RSVPs in Kontakt kommen.
 
-Mit einem entsprechenden Template, das mit einem Event-Style verknüpft werden kann, kannst du diese Seite anpassen.
+Mit einem entsprechenden Template, das mit einem Event/Gruppe verknüpft werden kann, kannst du diese Seite anpassen.
 
 Du kannst die automatisch generierte Überschrift ändern, etwas Einführungstext hinzufügen, Farben definieren und Meta/SEO-Inhalte optimieren.
 

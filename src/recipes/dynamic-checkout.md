@@ -48,11 +48,11 @@ The setup of this flow requires some more work as you will need to weave this in
 **No here comes a list of the steps you need to take:**
 
 1. Create a style and prepare everything for a potential Add to Calendar Button to look good (skip this if you are only up for ics files).
-2. Create a landingpage template and link it to the style. This is important if you want to use email links; or if you simply want to be able to share a nice event landingpage (can be a nice thing for the support team, when a user needs help saving the event).
+2. Create a landingpage template. This is important if you want to use email links; or if you simply want to be able to share a nice event landingpage (can be a nice thing for the support team, when a user needs help saving the event).
 3. Create an API key (at the organization settings page).
 4. Create an event group (with subscription set to "no"), which will hold all future events.
 5. Read the [API documentation about event creation](/api/events.html#add-an-event).
-6. At your backend, create a function, which creates an event via the Add to Calendar PRO API based on the data you have for the user. We recommend to also set the organizer and attendee in this case (at some systems, this adds the event automatically to the user's calendar, as soon as an email with the ics file is opened)! _Set the event to private if necessary._ The response includes an id, which is the ProKey of the event.
+6. At your backend, create a function, which creates an event via the Add to Calendar PRO API based on the data you have for the user. Use the ids of the new style and landingpage to link them to the new event. We recommend to also set the organizer and attendee in this case (at some systems, this adds the event automatically to the user's calendar, as soon as an email with the ics file is opened)! _Set the event to private if necessary._ The response includes an id, which is the ProKey of the event.
 7. With regular events:
    1. Use this id to pull and add the generated ics file when sending a confirmation email.
    2. Use this id to add Add to Calendar links at this confirmation email.

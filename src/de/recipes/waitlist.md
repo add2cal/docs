@@ -45,7 +45,7 @@ Du findest die URL direkt auf der Event-Seite nach der Erstellung.
 
 *Da wir alle Datumsinformationen ausgeschlossen haben, sieht diese Seite etwas anders aus, da sie nur das Formular ohne Meta-Informationen anzeigt.*
 
-Indem du eine Landingpage-Vorlage zum verwendeten Style hinzufügst, kannst du diese Landingpage dennoch anpassen. Zum Beispiel kannst du etwas Einführungstext und eine zusätzliche Überschrift hinzufügen, Farben ändern und so weiter.
+Indem du eine Landingpage-Vorlage zum verwendeten Event hinzufügst, kannst du diese Landingpage dennoch anpassen. Zum Beispiel kannst du etwas Einführungstext und eine zusätzliche Überschrift hinzufügen, Farben ändern und so weiter.
 
 Du kannst diese Seite dann überall teilen, wo du möchtest, und damit im Nu Daten sammeln.
 

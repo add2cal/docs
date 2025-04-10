@@ -18,7 +18,7 @@ This is mainly for easy sharing of your event, but it can be customized and exte
 
 * You need to create your event (obvious).
 * This event needs to be linked to a style (at the event setting).
-* This style needs to be linked to a landingpage template (at the style's settings).
+* This event also needs to be linked to a landingpage template (at the event setting).
 * With the enterprise plan, you can also use your own domain, which should be set up at this point in time.
 
 ## ✨ Customization
