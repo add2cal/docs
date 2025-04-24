@@ -8,10 +8,11 @@ You get to the settings via the cog wheel icon in the sidebar/menu.
 
 [Open in the app ❯](https://app.add-to-calendar-pro.com/settings)
 
-The seetings consist of 3 sub pages:
+The seetings consist of 4 sub pages:
 
 * User
 * Organization
+* Technical
 * Pro Plan
 
 ## User settings
@@ -36,13 +37,22 @@ You can also upload your logo, which then will appear on any related emails.
 
 When you delete the last user, the organization and all data will get deleted as well.
 
+## Technical
+
 ### API Keys
 
-At this page, you also create and manage any API keys.
+At this page and section, you create and manage your API keys.
 
 When creating a new key, you can make it last forever or expire at a specific point in time.
 
 You can also always temporarily disable a key or delete it.
+
+### Email Sender Address
+
+You can specify which address should be used to send any RSVP emails.  
+Use one of our 2 defaults or define your own address (which requires your own SMTP server to be specified).
+
+You can additionally specify a custom FROM name (not the email address) per email template.
 
 ## Pro Plan settings
 

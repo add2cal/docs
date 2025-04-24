@@ -8,10 +8,11 @@ Du gelangst zu den Einstellungen über das Zahnradsymbol in der Seitenleiste/dem
 
 [In der App öffnen ❯](https://app.add-to-calendar-pro.com/de/settings)
 
-Die Seite besteht aus 3 Unterseiten:
+Die Seite besteht aus 4 Unterseiten:
 
 * Benutzer
 * Organisation
+* Technisches
 * Pro Lizenz
 
 ## Benutzereinstellungen
@@ -36,13 +37,22 @@ Du kannst auch dein Logo hochladen, das dann bei allen zugehörigen E-Mails ange
 
 Wenn du den letzten Benutzer löschst, werden die Organisation und alle Daten ebenfalls gelöscht.
 
+## Technisches
+
 ### API-Keys
 
-Auf dieser Seite kannst du auch deine API-Keys erstellen und verwalten.
+Auf dieser Seite kannst du deine API-Keys erstellen und verwalten.
 
 Beim Erstellen eines neuen Keys kannst du festlegen, dass dieser ewig gültig ist oder zu einem bestimmten Zeitpunkt abläuft.
 
 Du kannst einen Schlüssel auch jederzeit vorübergehend deaktivieren oder ganz löschen.
+
+### E-Mail-Absender
+
+Du kannst festlegen, von welcher E-Mail-Adresse RSVP-Nachrichten versendet werden sollen.  
+Nutze eine unserer beiden vordefinierten Adressen oder deine eigene Adresse. Letzteres erfordert einen eigenen SMTP-Server, den du ebenfalls hier spezifizieren kannst.
+
+Den Namen, der als Absender angezeigt wird, kann zusätzlich je E-Mail-Template angepasst werden.
 
 ## Pro-Lizenz-Einstellungen
 

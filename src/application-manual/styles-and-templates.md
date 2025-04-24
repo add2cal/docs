@@ -104,8 +104,8 @@ With the then following fields, you can adjust text blocks, font, and colors.
 
 Test your email via the button on the very right side of the page! It sends an email to the address of the logged in user, so you can easily check the result directly in your email inbox.
 
-Mind that we send the email from our domain, adding any custom FROM name and set your custom reply-to address.
-To even send from your own domain, you will require an enterprise plan!
+Mind that here you can only define a custom FROM name and set your custom reply-to address.  
+To define the sender email address, you need to set this up globally at the settings page.
 
 ### Landingpage
 

@@ -104,8 +104,8 @@ Mit den dann folgenden Feldern kannst du Textblöcke, Schriftarten und Farben an
 
 Teste deine E-Mail über den Button ganz rechts auf der Seite! Er sendet eine E-Mail an die Adresse des eingeloggten Benutzers, sodass du das Ergebnis direkt in deinem E-Mail-Posteingang überprüfen kannst.
 
-Beachte, dass wir die E-Mail von unserer Domain senden und einen benutzerdefinierten FROM-Namen hinzufügen und deine benutzerdefinierte Adresse als "reply-to" festlegen.
-Um sogar von deiner eigenen Domain zu senden, benötigst du eine Enterprise-Lizenz!
+Beachte, dass du im Template lediglich einen benutzerdefinierten FROM-Namen hinzufügen und deine benutzerdefinierte Adresse als "reply-to" festlegen kannst.  
+Die Absender-E-Mail-Adresse kann über die Einstellungen global definiert werden.
 
 ### Landingpage
 
