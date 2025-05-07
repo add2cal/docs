@@ -50,6 +50,7 @@ Beim Abrufen eines RSVP-Blocks sind keine zusätzlichen Parameter möglich. Es w
     "email_rsvp_change_confirmation": 434,
     "email_rsvp_event_update": 55,
     "email_rsvp_magic_link": 454,
+    "email_rsvp_second_signup": 153,
     "date_updated": "2023-12-09T14:54:27.586Z",
     "date_created": "2023-11-19T08:43:16.180Z",
 }
@@ -107,6 +108,7 @@ Um einen neuen RSVP-Template-Block zu erstellen, musst du mindestens das Feld "n
     "email_rsvp_change_confirmation": 434,
     "email_rsvp_event_update": 55,
     "email_rsvp_magic_link": 454,
+    "email_rsvp_second_signup": 153,
 }
 ```
 
