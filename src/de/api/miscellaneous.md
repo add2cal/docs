@@ -10,6 +10,70 @@ Indem du den proKey des jeweiligen Events angibst, kannst du den "Body" der zuge
 
 Nutze dies, um die ics-Datei in deinem System zu erstellen - ohne Abhängigkeit zur Generierung auf unserer Seite (was dazu führt, dass die ics-Datei auf einem öffentlich erreichbaren Storage abgelegt wird).
 
+## Custom Domains abrufen
+
+```
+GET /custom-domains
+```
+
+Erhalte eine Liste aller eingerichteten verfügbaren Custom Domains sowie die globale Standard-Einstellung.
+
+### Mögliche Response
+
+```json
+{
+    "default_custom_domain": 34,
+    "available_custom_domains": [
+        {
+            "id": 34,
+            "status": "published",
+            "host": "rsvp.your-domain.com",
+            "fallback_url": "https://www.your-domain.com",
+            "dns_settings": [
+                {
+                    "type": "TXT",
+                    "host": "_cf-custom-hostname.rsvp.your-domain.com",
+                    "value": "eee4b77a-a131-446a-9924-882d5902e12c"
+                },
+                {
+                    "type": "CNAME",
+                    "host": "_acme-challenge.rsvp.your-domain.com",
+                    "value": "rsvp.your-domain.com.f984fc006cffa4a5.dcv.cloudflare.com"
+                },
+                {
+                    "type": "CNAME",
+                    "host": "rsvp.your-domain.com",
+                    "value": "custom.caldn.net"
+                }
+            ]
+        },
+        {
+            "id": 65,
+            "status": "draft",
+            "host": "events.your-domain.com",
+            "fallback_url": null,
+            "dns_settings": [
+                {
+                    "type": "TXT",
+                    "host": "_cf-custom-hostname.events.your-domain.com",
+                    "value": "dad4b77a-a131-446a-9924-882d5902e34d"
+                },
+                {
+                    "type": "CNAME",
+                    "host": "_acme-challenge.events.your-domain.com",
+                    "value": "events.your-domain.com.f984fc006cffa4a5.dcv.cloudflare.com"
+                },
+                {
+                    "type": "CNAME",
+                    "host": "events.your-domain.com",
+                    "value": "custom.caldn.net"
+                }
+            ]
+        }
+    ]
+}
+```
+
 ## RSVP-Rückmeldungen listen
 
 ```
