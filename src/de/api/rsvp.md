@@ -7,7 +7,15 @@ Diese API behandelt lediglich RSVP-Template-Blocks.
 Ein funktionierendes RSVP-Formular besteht aus 2 Grund-Elementen. Einen solchen RSVP-Template-Block, der die Informationen zur Strukture des Formulars beinhaltet, sowie ein [Event](/de/api/events.html), das den eigentlichen Termin definiert.
 :::
 
-## RSVP-Template lesen
+## Alle RSVP-Templates listen
+
+```
+GET /rsvp-block/all
+```
+
+Gibt eine Liste mit den IDs aller verfügbaren RSVP-Templates zurück.
+
+## 1 RSVP-Template lesen
 
 ```
 GET /rsvp-block/:id

@@ -1,7 +1,19 @@
 
 # Events API
 
-## Get an event
+::: info Style = Layout
+Styles are referenced with the key "layout".
+:::
+
+## Get all events
+
+```
+GET /event/all
+```
+
+Gets a list with the ids of all available events.
+
+## Get 1 event
 
 ```
 GET /event/:prokey
@@ -174,11 +186,13 @@ Updating an event follows the same rules as creating one.
 The only important difference: The `event_group` field is not allowed.
 
 ::: warning Limitations
-Mind the further lmitations, also present on creation via API.
-
 For the status, mind that if an event gets set to draft on the application UI, you cannot publish it via API!
 
-**For every 5th update, we also deduct 1 event credit to prevent abuse!**
+Additionally, updating an event falls under the same limitations as creating a new one.
+:::
+
+::: danger Attention
+For every 5th update, we also deduct 1 event credit to prevent abuse!
 :::
 
 <br />

@@ -1,7 +1,19 @@
 
 # Groups API
 
-## Get a group
+::: info Style = Layout
+Styles are referenced with the key "layout".
+:::
+
+## Get all groups
+
+```
+GET /group/all
+```
+
+Gets a list with the ids of all available groups.
+
+## Get 1 group
 
 ```
 GET /group/:prokey

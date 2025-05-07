@@ -1,7 +1,19 @@
 
 # Event-Gruppen-API
 
-## Gruppe lesen
+::: info Style = Layout
+Styles werrden auf API-Ebene als "layout" bezeichnet.
+:::
+
+## Alle Gruppen listen
+
+```
+GET /group/all
+```
+
+Gibt eine Liste mit den IDs aller verfügbaren Gruppen zurück.
+
+## 1 Gruppe lesen
 
 ```
 GET /group/:prokey

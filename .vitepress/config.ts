@@ -87,7 +87,7 @@ export default {
           },
           {
             text: 'Integration',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'Allgemein', link: '/de/integration/general' },
               { text: 'Angular', link: '/de/integration/angular' },
@@ -229,7 +229,7 @@ export default {
       },
       {
         text: 'Integration',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: 'General', link: '/integration/general' },
           { text: 'Angular', link: '/integration/angular' },

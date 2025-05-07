@@ -7,7 +7,15 @@ This is about the RSVP template blocks.
 A functional RSVP form consists of 2 base elements. Such an RSVP template block, holding the data about the structure of the form, as well as an [event](/api/events.html), which defines the underlying date.
 :::
 
-## Get an RSVP
+## Get all RSVP templates
+
+```
+GET /rsvp-block/all
+```
+
+Gets a list with the ids of all available RSVP template blocks.
+
+## Get 1 RSVP template
 
 ```
 GET /rsvp-block/:id
@@ -58,7 +66,7 @@ Reading an rsvp block does not allow for any additional parameters. It only take
 
 <br />
 
-## Add an RSVP
+## Add an RSVP template
 
 ```
 POST /rsvp-block
@@ -140,7 +148,7 @@ The id from a successful creation can be used for further processing, like using
 
 <br />
 
-## Update an RSVP
+## Update an RSVP template
 
 ```
 PATCH /rsvp-block/:id
@@ -158,7 +166,7 @@ However, the data you collect might be harder to compare, as some replies might 
 
 <br />
 
-## Delete an RSVP
+## Delete an RSVP template
 
 ```
 DELETE /rsvp-block/:id

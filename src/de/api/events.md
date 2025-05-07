@@ -1,7 +1,19 @@
 
 # Event-API
 
-## Event lesen
+::: info Style = Layout
+Styles werrden auf API-Ebene als "layout" bezeichnet.
+:::
+
+## Alle Events listen
+
+```
+GET /event/all
+```
+
+Gibt eine Liste mit den IDs aller verfügbaren Events zurück.
+
+## 1 Event lesen
 
 ```
 GET /event/:prokey
@@ -174,11 +186,13 @@ Die Aktualisierung eines Events folgt den gleichen Regeln wie die Erstellung ein
 Der einzig wichtige Unterschied: Das `event_group`-Feld ist hier nicht erlaubt.
 
 ::: warning Einschränkungen
-Beachte die Einschränkungen, die auch für die Erstellung via API gelten.
+Beachte, dass du den Status über die Anwendungs-Oberfläche auf "Entwurf", über die API aber nicht auf "Veröffentlicht" setzen kannst!
 
-Beachte ferner, dass du den Status über die Anwendungs-Oberfläche auf "Entwurf", über die API aber nicht auf "Veröffentlicht" setzen kannst!
+Ferner gelten die gleichen Einschränkungen wie bei der Erstellung eines neuen Events.
+:::
 
-**Für jedes 5te Update ziehen wir zudem 1 Event-Credit ab, um Missbrauch vorzubeugen!**
+::: danger Achtung
+Für jedes 5te Update ziehen wir zudem 1 Event-Credit ab, um Missbrauch vorzubeugen!
 :::
 
 <br />
