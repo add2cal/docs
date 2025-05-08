@@ -13,67 +13,65 @@ GET /event/all
 
 Gets a list with the ids of all available events.
 
-## Get 1 event
+## Get one event
 
 ```
 GET /event/:prokey
 ```
 
-Reading an event does not allow for any additional parameters. It only takes the proKey in the request url and simply provides you with all data for a specific event.
+Reading a sepcific event does not allow for any additional parameters. It only takes the proKey in the request url and simply provides you with all data for this one.
 
 ### Potential response
 
 ```json
-[
+{
+  "status": "published",
+  "dates": [
     {
-        "status": "published",
-        "dates": [
-            {
-                "name": "Date 1",
-                "startDate": "2024-11-14",
-                "endDate": null,
-                "timeZone": "Europe/Berlin",
-                "organizer_name": "",
-                "organizer_email": "",
-                "description": "<p>A short description.</p>",
-                "location": "Nowhere"
-            },
-            {
-                "name": "Date 2",
-                "startDate": "2024-11-15",
-                "endDate": null,
-                "timeZone": "Europe/Berlin",
-                "organizer_name": "",
-                "organizer_email": ""
-            }
-        ],
-        "title_event_series": "Dummy Event Series",
-        "simplified_recurrence": true,
-        "recurrence": null,
-        "recurrence_interval": null,
-        "recurrence_count": null,
-        "recurrence_byDay": null,
-        "recurrence_byMonthDay": null,
-        "recurrence_byMonth": null,
-        "recurrence_weekstart": null,
-        "recurrence_simple_type": null,
-        "layout": null,
-        "landingpage": null,
-        "iCalFileName": null,
-        "rsvp": false,
-        "rsvp_block": null,
-        "cta": true,
-        "cta_block": 74,
-        "hideButton": false,
-        "distribution": true,
-        "sequence": "10",
-        "date_created": "2024-11-01T12:57:25.983Z",
-        "date_updated": "2024-11-02T18:20:56.152Z",
-        "event_group": {
-            "prokey": "803a96ac-aaaa-2222-bbbb-6fb191041543"
-        }
+      "name": "Date 1",
+      "startDate": "2024-11-14",
+      "endDate": null,
+      "timeZone": "Europe/Berlin",
+      "organizer_name": "",
+      "organizer_email": "",
+      "description": "<p>A short description.</p>",
+      "location": "Nowhere"
+    },
+    {
+      "name": "Date 2",
+      "startDate": "2024-11-15",
+      "endDate": null,
+      "timeZone": "Europe/Berlin",
+      "organizer_name": "",
+      "organizer_email": ""
     }
-]
+  ],
+  "title_event_series": "Dummy Event Series",
+  "simplified_recurrence": true,
+  "recurrence": null,
+  "recurrence_interval": null,
+  "recurrence_count": null,
+  "recurrence_byDay": null,
+  "recurrence_byMonthDay": null,
+  "recurrence_byMonth": null,
+  "recurrence_weekstart": null,
+  "recurrence_simple_type": null,
+  "layout": null,
+  "landingpage": null,
+  "iCalFileName": null,
+  "rsvp": false,
+  "rsvp_block": null,
+  "cta": true,
+  "cta_block": 74,
+  "hideButton": false,
+  "distribution": true,
+  "sequence": "10",
+  "date_created": "2024-11-01T12:57:25.983Z",
+  "date_updated": "2024-11-02T18:20:56.152Z",
+  "event_group": {
+    "prokey": "803a96ac-aaaa-2222-bbbb-6fb191041543"
+  }
+}
 ```
 
 <br />
@@ -88,12 +86,12 @@ Creating a new event requires you to at least provide the following fields in th
 
 ```json
 {
-    "event_group": "prokey-of-event-group", // gets returned as "id", when creating a group; also visible in the application
-    "dates": [{
-        "name": "Title of the date",
-        "startDate": "2024-12-24",
-        "timeZone": "America/Los_Angeles" // not required, but highly recommended
-    }],
+  "event_group": "prokey-of-event-group", // gets returned as "id", when creating a group; also visible in the application
+  "dates": [{
+    "name": "Title of the date",
+    "startDate": "2024-12-24",
+    "timeZone": "America/Los_Angeles" // not required, but highly recommended
+  }]
 }
 ```
 
@@ -113,42 +111,42 @@ Additionally, the API does not allow to set the status of an event - it will alw
 
 ```json
 {
-    "event_group": "prokey-of-event-group",
-    "dates": [{
-        "name": "Title of the date",
-        "description": "<p>An event description</p>", // allowing for <p>, <strong>, <em>, <u>, <h1>, <h2>, <h3>, <h4>, <ul>, <ol>, <li>, <a>
-        "startDate": "2024-12-24",
-        "startTime": "14:45",
-        "endDate": "2024-12-24",
-        "endTime": "16:15",
-        "timeZone": "America/Los_Angeles",
-        "location": "World Wide Web",
-        "status": "CONFIRMED", // or "TENTATIVE" or "CANCELLED"
-        "availability": "free", // or "busy"
-        "organizer_name": "Jack",
-        "organizer_email": "jack.frost@email.com",
-        "attendee_name": "Santa",
-        "attendee_email": "santa.claus@north.pole"
-    }],
-    "title_event_series": "Title for an event series if >1 date",
-    "simplified_recurrence": true, // set false, if you go for the "recurrence" field, which takes an RRULE; and true if you use the other recurrence fields
-    "recurrence": "RRULE:...",
-    "recurrence_simple_type": "daily", // or: "weekly", "monthly", "yearly",
-    "recurrence_interval": 1,
-    "recurrence_byDay": "2MO,TU", // example for the second Monday and each Tuesday
-    "recurrence_byMonth": "1,2,12", // example for Jan, Feb, and Dec
-    "recurrence_byMonthDay": "3,23", // example for the 3rd and 23rd day of the month
-    "recurrence_count": 10, // example: repeat 10 times
-    "recurrence_weekstart": "MO", // example for Monday
-    "layout": "id-of-a-style-template", // take the id from the url in the application
-    "landingpage": "id-of-a-landingpage-template", // take the id from the url in the application
-    "iCalFileName": "overriding the ics file name",
-    "rsvp": true,
-    "rsvp_block": "id-of-an-rsvp-block", // take the id from the url in the application or the response when creating an rsvp block via API
-    "cta": true,
-    "cta_block": "id-of-a-cta-block", // take the id from the url in the application
-    "hideButton": false,
-    "distribution": true,
+  "event_group": "prokey-of-event-group",
+  "dates": [{
+    "name": "Title of the date",
+    "description": "<p>An event description</p>", // allowing for <p>, <strong>, <em>, <u>, <h1>, <h2>, <h3>, <h4>, <ul>, <ol>, <li>, <a>
+    "startDate": "2024-12-24",
+    "startTime": "14:45",
+    "endDate": "2024-12-24",
+    "endTime": "16:15",
+    "timeZone": "America/Los_Angeles",
+    "location": "World Wide Web",
+    "status": "CONFIRMED", // or "TENTATIVE" or "CANCELLED"
+    "availability": "free", // or "busy"
+    "organizer_name": "Jack",
+    "organizer_email": "jack.frost@email.com",
+    "attendee_name": "Santa",
+    "attendee_email": "santa.claus@north.pole"
+  }],
+  "title_event_series": "Title for an event series if >1 date",
+  "simplified_recurrence": true, // set false, if you go for the "recurrence" field, which takes an RRULE; and true if you use the other recurrence fields
+  "recurrence": "RRULE:...",
+  "recurrence_simple_type": "daily", // or: "weekly", "monthly", "yearly",
+  "recurrence_interval": 1,
+  "recurrence_byDay": "2MO,TU", // example for the second Monday and each Tuesday
+  "recurrence_byMonth": "1,2,12", // example for Jan, Feb, and Dec
+  "recurrence_byMonthDay": "3,23", // example for the 3rd and 23rd day of the month
+  "recurrence_count": 10, // example: repeat 10 times
+  "recurrence_weekstart": "MO", // example for Monday
+  "layout": "id-of-a-style-template", // take the id from the url in the application
+  "landingpage": "id-of-a-landingpage-template", // take the id from the url in the application
+  "iCalFileName": "overriding the ics file name",
+  "rsvp": true,
+  "rsvp_block": "id-of-an-rsvp-block", // take the id from the url in the application or the response when creating an rsvp block via API
+  "cta": true,
+  "cta_block": "id-of-a-cta-block", // take the id from the url in the application
+  "hideButton": false,
+  "distribution": true
 }
 ```
 
@@ -156,8 +154,8 @@ Additionally, the API does not allow to set the status of an event - it will alw
 
 ```json
 {
-    "success": "Created",
-    "id": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
+  "success": "Created",
+  "id": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
 }
 ```
 

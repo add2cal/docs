@@ -22,55 +22,55 @@ Retrieves a list of all set up available custom domains as well as the global de
 
 ```json
 {
-    "default_custom_domain": 34,
-    "available_custom_domains": [
+  "default_custom_domain": 34,
+  "available_custom_domains": [
+    {
+      "id": 34,
+      "status": "published",
+      "host": "rsvp.your-domain.com",
+      "fallback_url": "https://www.your-domain.com",
+      "dns_settings": [
         {
-            "id": 34,
-            "status": "published",
-            "host": "rsvp.your-domain.com",
-            "fallback_url": "https://www.your-domain.com",
-            "dns_settings": [
-                {
-                    "type": "TXT",
-                    "host": "_cf-custom-hostname.rsvp.your-domain.com",
-                    "value": "eee4b77a-a131-446a-9924-882d5902e12c"
-                },
-                {
-                    "type": "CNAME",
-                    "host": "_acme-challenge.rsvp.your-domain.com",
-                    "value": "rsvp.your-domain.com.f984fc006cffa4a5.dcv.cloudflare.com"
-                },
-                {
-                    "type": "CNAME",
-                    "host": "rsvp.your-domain.com",
-                    "value": "custom.caldn.net"
-                }
-            ]
+          "type": "TXT",
+          "host": "_cf-custom-hostname.rsvp.your-domain.com",
+          "value": "eee4b77a-a131-446a-9924-882d5902e12c"
         },
         {
-            "id": 65,
-            "status": "draft",
-            "host": "events.your-domain.com",
-            "fallback_url": null,
-            "dns_settings": [
-                {
-                    "type": "TXT",
-                    "host": "_cf-custom-hostname.events.your-domain.com",
-                    "value": "dad4b77a-a131-446a-9924-882d5902e34d"
-                },
-                {
-                    "type": "CNAME",
-                    "host": "_acme-challenge.events.your-domain.com",
-                    "value": "events.your-domain.com.f984fc006cffa4a5.dcv.cloudflare.com"
-                },
-                {
-                    "type": "CNAME",
-                    "host": "events.your-domain.com",
-                    "value": "custom.caldn.net"
-                }
-            ]
+          "type": "CNAME",
+          "host": "_acme-challenge.rsvp.your-domain.com",
+          "value": "rsvp.your-domain.com.f984fc006cffa4a5.dcv.cloudflare.com"
+        },
+        {
+          "type": "CNAME",
+          "host": "rsvp.your-domain.com",
+          "value": "custom.caldn.net"
         }
-    ]
+      ]
+    },
+    {
+      "id": 65,
+      "status": "draft",
+      "host": "events.your-domain.com",
+      "fallback_url": null,
+      "dns_settings": [
+        {
+          "type": "TXT",
+          "host": "_cf-custom-hostname.events.your-domain.com",
+          "value": "dad4b77a-a131-446a-9924-882d5902e34d"
+        },
+        {
+          "type": "CNAME",
+          "host": "_acme-challenge.events.your-domain.com",
+          "value": "events.your-domain.com.f984fc006cffa4a5.dcv.cloudflare.com"
+        },
+        {
+          "type": "CNAME",
+          "host": "events.your-domain.com",
+          "value": "custom.caldn.net"
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -86,31 +86,31 @@ Providing the proKey of the respective event, you can get a list of all connecte
 
 ```json
 [
-    {
-        "id": "id-of-the-answer-1",
-        "status": "undecided",
-        "email": "john.doe@email.com",
-        "amount": 1,
-        "payload": {
-            "required_check": true,
-            "first_name": "John",
-            "last_name": "Doe"
-        },
-        "date_created": "2023-12-07T08:58:47.510Z",
-        "date_updated": "2023-12-09T16:46:24.381Z"
+  {
+    "id": "id-of-the-answer-1",
+    "status": "undecided",
+    "email": "john.doe@email.com",
+    "amount": 1,
+    "payload": {
+      "required_check": true,
+      "first_name": "John",
+      "last_name": "Doe"
     },
-    {
-        "id": "id-of-the-answer-2",
-        "status": "confirmed",
-        "email": "jane.doe@email.com",
-        "amount": 2,
-        "payload": {
-            "required_check": true,
-            "first_name": "Jane",
-            "last_name": "Doe"
-        },
-        "date_created": "2023-11-21T15:54:09.823Z",
-        "date_updated": "2023-12-03T19:30:00.314Z"
-    }
+    "date_created": "2023-12-07T08:58:47.510Z",
+    "date_updated": "2023-12-09T16:46:24.381Z"
+  },
+  {
+    "id": "id-of-the-answer-2",
+    "status": "confirmed",
+    "email": "jane.doe@email.com",
+    "amount": 2,
+    "payload": {
+      "required_check": true,
+      "first_name": "Jane",
+      "last_name": "Doe"
+    },
+    "date_created": "2023-11-21T15:54:09.823Z",
+    "date_updated": "2023-12-03T19:30:00.314Z"
+  }
 ]
 ```

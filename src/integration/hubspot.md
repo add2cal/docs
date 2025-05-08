@@ -24,7 +24,7 @@ Copy and paste the following code block:
 
 ## Step 2: Use it
 
-You can now add your buttons and forms by creating <div></div> elements in the source code of a rich text input or video embed code, where you add the class name "add-to-calendar-pro-frame" and the proKey as innerHTML.
+You can now add your buttons and forms by creating `<div></div>` elements in the source code of a rich text input or video embed code, where you add the class name "add-to-calendar-pro-frame" and the proKey as innerHTML.
 
 We also recommend a wrapper to optimize the positioning.
 

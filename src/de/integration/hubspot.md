@@ -24,7 +24,7 @@ Kopiere den folgenden Code-Block und füge ihn dort ein:
 
 ## Schritt 2: Loslegen
 
-Nun kannst du damit beginnen, deine Buttons und Formulare zu integrieren, indem du <div></div> Tags im Quellcode eines Rich-Text-Elements oder als "Einbettungscode" eines Video-Elements anlegst. Gib dem Tag die Klasse (class) "add-to-calendar-pro-frame" und kopiere deinen proKey.
+Nun kannst du damit beginnen, deine Buttons und Formulare zu integrieren, indem du `<div></div>` Tags im Quellcode eines Rich-Text-Elements oder als "Einbettungscode" eines Video-Elements anlegst. Gib dem Tag die Klasse (class) "add-to-calendar-pro-frame" und kopiere deinen proKey.
 
 Wir empfehlen zudem einen "Wrapper" um das Element, um die Positionierung zu optimieren.
 

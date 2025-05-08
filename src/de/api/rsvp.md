@@ -2,9 +2,9 @@
 # RSVP-Template-API
 
 ::: info Achte auf die Details!
-Diese API behandelt lediglich RSVP-Template-Blocks.
+Diese Seite behandelt lediglich RSVP-Template-Blöcke.
 
-Ein funktionierendes RSVP-Formular besteht aus 2 Grund-Elementen. Einen solchen RSVP-Template-Block, der die Informationen zur Strukture des Formulars beinhaltet, sowie ein [Event](/de/api/events.html), das den eigentlichen Termin definiert.
+Ein funktionierendes RSVP-Formular besteht aus 2 Grundelementen. Einen solchen RSVP-Template-Block, der die Informationen zur Strukture des Formulars beinhaltet, sowie ein [Event](/de/api/events.html), das den eigentlichen Termin definiert.
 :::
 
 ## Alle RSVP-Templates listen
@@ -15,7 +15,7 @@ GET /rsvp-block/all
 
 Gibt eine Liste mit den IDs aller verfügbaren RSVP-Templates zurück.
 
-## 1 RSVP-Template lesen
+## Ein RSVP-Template lesen
 
 ```
 GET /rsvp-block/:id
@@ -60,7 +60,7 @@ Beim Abrufen eines RSVP-Blocks sind keine zusätzlichen Parameter möglich. Es w
     "email_rsvp_magic_link": 454,
     "email_rsvp_second_signup": 153,
     "date_updated": "2023-12-09T14:54:27.586Z",
-    "date_created": "2023-11-19T08:43:16.180Z",
+    "date_created": "2023-11-19T08:43:16.180Z"
 }
 ```
 
@@ -76,7 +76,7 @@ Um einen neuen RSVP-Template-Block zu erstellen, musst du mindestens das Feld "n
 
 ```json
 {
-    "name": "Name des Elements", // nur für interne Nutzung relevant
+    "name": "Name des Elements" // nur für interne Nutzung relevant
 }
 ```
 
@@ -116,11 +116,10 @@ Um einen neuen RSVP-Template-Block zu erstellen, musst du mindestens das Feld "n
     "email_rsvp_change_confirmation": 434,
     "email_rsvp_event_update": 55,
     "email_rsvp_magic_link": 454,
-    "email_rsvp_second_signup": 153,
+    "email_rsvp_second_signup": 153
 }
 ```
 
-For the fields array, you can add the following types:
 Im Rahmen des "fields"-Arrays können folgende Typen (`type`) genutzt werden:
 * **text**: Stellt ein normales Eingabefeld vom Typ Text dar.
 * **number**: Stellt ein Eingabefeld vom Typ Zahl dar.
@@ -140,12 +139,12 @@ Neben dem type, können folgende Attribute zugefügt werden:
 
 ```json
 {
-    "success": "RSVP block created",
+    "success": "RSVP template created",
     "id": "67"
 }
 ```
 
-Die id aus einer erfolgreichen Rückmeldung kannst du für weitere Schritte verwenden - bspw. im Zuge der Erstellung eines neuen Events.
+Die ID aus einer erfolgreichen Rückmeldung kannst du für weitere Schritte verwenden - bspw. im Zuge der Erstellung eines neuen Events.
 
 <br />
 

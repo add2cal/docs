@@ -13,7 +13,7 @@ GET /event/all
 
 Gibt eine Liste mit den IDs aller verfügbaren Events zurück.
 
-## 1 Event lesen
+## Ein Event lesen
 
 ```
 GET /event/:prokey
@@ -24,56 +24,54 @@ Beim Abrufen eines Events sind keine zusätzlichen Parameter möglich. Es wird l
 ### Mögliche Response
 
 ```json
-[
+{
+  "status": "published",
+  "dates": [
     {
-        "status": "published",
-        "dates": [
-            {
-                "name": "Termin 1",
-                "startDate": "2024-11-14",
-                "endDate": null,
-                "timeZone": "Europe/Berlin",
-                "organizer_name": "",
-                "organizer_email": "",
-                "description": "<p>Eine kurze Beschreibung.</p>",
-                "location": "Nirgends"
-            },
-            {
-                "name": "Termin 2",
-                "startDate": "2024-11-15",
-                "endDate": null,
-                "timeZone": "Europe/Berlin",
-                "organizer_name": "",
-                "organizer_email": ""
-            }
-        ],
-        "title_event_series": "Dummy Terminreihe",
-        "simplified_recurrence": true,
-        "recurrence": null,
-        "recurrence_interval": null,
-        "recurrence_count": null,
-        "recurrence_byDay": null,
-        "recurrence_byMonthDay": null,
-        "recurrence_byMonth": null,
-        "recurrence_weekstart": null,
-        "recurrence_simple_type": null,
-        "layout": null,
-        "landingpage": null,
-        "iCalFileName": null,
-        "rsvp": false,
-        "rsvp_block": null,
-        "cta": true,
-        "cta_block": 74,
-        "hideButton": false,
-        "distribution": true,
-        "sequence": "10",
-        "date_created": "2024-11-01T12:57:25.983Z",
-        "date_updated": "2024-11-02T18:20:56.152Z",
-        "event_group": {
-            "prokey": "803a96ac-aaaa-2222-bbbb-6fb191041543"
-        }
+      "name": "Termin 1",
+      "startDate": "2024-11-14",
+      "endDate": null,
+      "timeZone": "Europe/Berlin",
+      "organizer_name": "",
+      "organizer_email": "",
+      "description": "<p>Eine kurze Beschreibung.</p>",
+      "location": "Nirgends"
+    },
+    {
+      "name": "Termin 2",
+      "startDate": "2024-11-15",
+      "endDate": null,
+      "timeZone": "Europe/Berlin",
+      "organizer_name": "",
+      "organizer_email": ""
     }
-]
+  ],
+  "title_event_series": "Dummy Terminreihe",
+  "simplified_recurrence": true,
+  "recurrence": null,
+  "recurrence_interval": null,
+  "recurrence_count": null,
+  "recurrence_byDay": null,
+  "recurrence_byMonthDay": null,
+  "recurrence_byMonth": null,
+  "recurrence_weekstart": null,
+  "recurrence_simple_type": null,
+  "layout": null,
+  "landingpage": null,
+  "iCalFileName": null,
+  "rsvp": false,
+  "rsvp_block": null,
+  "cta": true,
+  "cta_block": 74,
+  "hideButton": false,
+  "distribution": true,
+  "sequence": "10",
+  "date_created": "2024-11-01T12:57:25.983Z",
+  "date_updated": "2024-11-02T18:20:56.152Z",
+  "event_group": {
+    "prokey": "803a96ac-aaaa-2222-bbbb-6fb191041543"
+  }
+}
 ```
 
 <br />
@@ -88,12 +86,12 @@ Um ein neues Event zu erstellen, musst du mindestens die folgenden Felder im Bod
 
 ```json
 {
-    "event_group": "prokey-der-event-gruppe", // wird bei Erstellung einer Gruppe als "id" zurückgegeben; auch über die UI der Anwendung einsehbar
-    "dates": [{
-        "name": "Titel des Termins",
-        "startDate": "2024-12-24",
-        "timeZone": "America/Los_Angeles" // nicht verpflichtend, aber strengstens empfohlen
-    }],
+  "event_group": "prokey-der-event-gruppe", // wird bei Erstellung einer Gruppe als "id" zurückgegeben; auch über die UI der Anwendung einsehbar
+  "dates": [{
+    "name": "Titel des Termins",
+    "startDate": "2024-12-24",
+    "timeZone": "America/Los_Angeles" // nicht verpflichtend, aber strengstens empfohlen
+  }],
 }
 ```
 
@@ -113,42 +111,42 @@ Weiterhin ist es nicht erlaubt, den Status eines Events über die API zu ändern
 
 ```json
 {
-    "event_group": "prokey-der-event-gruppe",
-    "dates": [{
-        "name": "Titel des Termins",
-        "description": "<p>Eine Event-Beschreibung</p>", // erlaubt <p>, <strong>, <em>, <u>, <h1>, <h2>, <h3>, <h4>, <ul>, <ol>, <li>, <a>
-        "startDate": "2024-12-24",
-        "startTime": "14:45",
-        "endDate": "2024-12-24",
-        "endTime": "16:15",
-        "timeZone": "America/Los_Angeles",
-        "location": "World Wide Web",
-        "status": "CONFIRMED", // oder "TENTATIVE" oder "CANCELLED"
-        "availability": "free", // oder "busy"
-        "organizer_name": "Jack",
-        "organizer_email": "jack.frost@email.com",
-        "attendee_name": "Santa",
-        "attendee_email": "santa.claus@north.pole"
-    }],
-    "title_event_series": "Titel für eine Terminreihe bei >1 Terminen",
-    "simplified_recurrence": true, // false setzen, wenn das "recurrence"-Feld genutzt werden soll. Dieses muss eine RRULE beinhalten; true, wenn stattdessen die übrigen recurrence-Felder genutzt werden sollen
-    "recurrence": "RRULE:...",
-    "recurrence_simple_type": "daily", // oder: "weekly", "monthly", "yearly",
-    "recurrence_interval": 1,
-    "recurrence_byDay": "2MO,TU", // Beispiel für den zweiten Montag und jeden Dienstag
-    "recurrence_byMonth": "1,2,12", // Beispiel für Jan, Feb und Dec
-    "recurrence_byMonthDay": "3,23", // Beispiel für den 3ten und 23ten Tag des Monats
-    "recurrence_count": 10, // Beispiel: 10x wiederholen
-    "recurrence_weekstart": "MO", // Beispiel für Montag
-    "layout": "id-eines-style-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
-    "landingpage": "id-eines-landingpage-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
-    "iCalFileName": "überschreibt den ics-Dateinamen",
-    "rsvp": true,
-    "rsvp_block": "id-eines-rsvp-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung eines RSVP-Blocks über die API
-    "cta": true,
-    "cta_block": "id-eines-cta-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
-    "hideButton": false,
-    "distribution": true,
+  "event_group": "prokey-der-event-gruppe",
+  "dates": [{
+    "name": "Titel des Termins",
+    "description": "<p>Eine Event-Beschreibung</p>", // erlaubt <p>, <strong>, <em>, <u>, <h1>, <h2>, <h3>, <h4>, <ul>, <ol>, <li>, <a>
+    "startDate": "2024-12-24",
+    "startTime": "14:45",
+    "endDate": "2024-12-24",
+    "endTime": "16:15",
+    "timeZone": "America/Los_Angeles",
+    "location": "World Wide Web",
+    "status": "CONFIRMED", // oder "TENTATIVE" oder "CANCELLED"
+    "availability": "free", // oder "busy"
+    "organizer_name": "Jack",
+    "organizer_email": "jack.frost@email.com",
+    "attendee_name": "Santa",
+    "attendee_email": "santa.claus@north.pole"
+  }],
+  "title_event_series": "Titel für eine Terminreihe bei >1 Terminen",
+  "simplified_recurrence": true, // false setzen, wenn das "recurrence"-Feld genutzt werden soll. Dieses muss eine RRULE beinhalten; true, wenn stattdessen die übrigen recurrence-Felder genutzt werden sollen
+  "recurrence": "RRULE:...",
+  "recurrence_simple_type": "daily", // oder: "weekly", "monthly", "yearly",
+  "recurrence_interval": 1,
+  "recurrence_byDay": "2MO,TU", // Beispiel für den zweiten Montag und jeden Dienstag
+  "recurrence_byMonth": "1,2,12", // Beispiel für Jan, Feb und Dec
+  "recurrence_byMonthDay": "3,23", // Beispiel für den 3ten und 23ten Tag des Monats
+  "recurrence_count": 10, // Beispiel: 10x wiederholen
+  "recurrence_weekstart": "MO", // Beispiel für Montag
+  "layout": "id-eines-style-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
+  "landingpage": "id-eines-landingpage-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
+  "iCalFileName": "überschreibt den ics-Dateinamen",
+  "rsvp": true,
+  "rsvp_block": "id-eines-rsvp-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung eines RSVP-Blocks über die API
+  "cta": true,
+  "cta_block": "id-eines-cta-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
+  "hideButton": false,
+  "distribution": true
 }
 ```
 
@@ -156,8 +154,8 @@ Weiterhin ist es nicht erlaubt, den Status eines Events über die API zu ändern
 
 ```json
 {
-    "success": "Created",
-    "id": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
+  "success": "Created",
+  "id": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
 }
 ```
 

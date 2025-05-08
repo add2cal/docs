@@ -13,7 +13,7 @@ GET /group/all
 
 Gibt eine Liste mit den IDs aller verfügbaren Gruppen zurück.
 
-## 1 Gruppe lesen
+## Eine Gruppe lesen
 
 ```
 GET /group/:prokey
@@ -26,33 +26,31 @@ Die Antwort enthält mehr Felder, als du vielleicht erwartest, da eine Gruppe mi
 ### Mögliche Response
 
 ```json
-[
+{
+  "name": "Meine Events",
+  "status": "published",
+  "internal_note": null,
+  "subscription": "no",
+  "subscription_cal_url": null,
+  "layout": null,
+  "landingpage": null,
+  "cta": false,
+  "cta_block": null,
+  "date_updated": "2023-11-24T15:05:14.079Z",
+  "date_created": "2023-11-24T15:05:13.007Z",
+  "events": [
     {
-        "name": "Meine Events",
-        "status": "published",
-        "internal_note": null,
-        "subscription": "no",
-        "subscription_cal_url": null,
-        "layout": null,
-        "landingpage": null,
-        "cta": false,
-        "cta_block": null,
-        "date_updated": "2023-11-24T15:05:14.079Z",
-        "date_created": "2023-11-24T15:05:13.007Z",
-        "events": [
-            {
-                "prokey": [
-                    "31a17cce-bbbb-4ee3-99bb-6144c6a3aaaa" // beachte, dass der prokey Teil eines Arrays ist, auch wenn es immer nur 1 pro Ereignis geben kann
-                ]
-            },
-            {
-                "prokey": [
-                    "31a17cce-cccc-4ee3-99bb-6144c6a3bbbb"
-                ]
-            }
-        ]
+      "prokey": [
+        "31a17cce-bbbb-4ee3-99bb-6144c6a3aaaa" // beachte, dass der prokey Teil eines Arrays ist, auch wenn es immer nur 1 pro Ereignis geben kann
+      ]
+    },
+    {
+      "prokey": [
+        "31a17cce-cccc-4ee3-99bb-6144c6a3bbbb"
+      ]
     }
-]
+  ]
+}
 ```
 
 <br />
@@ -67,7 +65,7 @@ Um eine neue Gruppe zu erstellen, musst du mindestens das Feld "name" im Body an
 
 ```json
 {
-    "name": "Name der Event-Gruppe", // gewöhnlich nur für die interne Übersicht; im Fall der Kalender-Abonnement-Funktion aber auch öffentlich sichtbar!
+  "name": "Name der Event-Gruppe" // gewöhnlich nur für die interne Übersicht; im Fall der Kalender-Abonnement-Funktion aber auch öffentlich sichtbar!
 }
 ```
 
@@ -77,14 +75,14 @@ Beachte, dass du bei der Erstellung einer Gruppe keine Events hinzufügen kannst
 
 ```json
 {
-    "name": "Name der Event-Gruppe",
-    "internal_note": null, // ein optionaler einfacher String
-    "subscription": "no", // kann "no" oder "external" lauten - letzteres erfordert eine subscription_cal_url
-    "subscription_cal_url": null, // url zu einem externen Kalender. Muss mit "http" beginnen! Endet gewöhnlich mit ".ics"
-    "layout": "id-eines-style-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
-    "landingpage": "id-eines-landingpage-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
-    "cta": true,
-    "cta_block": "id-eines-cta-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
+  "name": "Name der Event-Gruppe",
+  "internal_note": null, // ein optionaler einfacher String
+  "subscription": "no", // kann "no" oder "external" lauten - letzteres erfordert eine subscription_cal_url
+  "subscription_cal_url": null, // url zu einem externen Kalender. Muss mit "http" beginnen! Endet gewöhnlich mit ".ics"
+  "layout": "id-eines-style-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
+  "landingpage": "id-eines-landingpage-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
+  "cta": true,
+  "cta_block": "id-eines-cta-blocks" // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
 }
 ```
 
@@ -92,8 +90,8 @@ Beachte, dass du bei der Erstellung einer Gruppe keine Events hinzufügen kannst
 
 ```json
 {
-    "success": "Created",
-    "id": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
+  "success": "Created",
+  "id": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
 }
 ```
 

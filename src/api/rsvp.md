@@ -4,7 +4,7 @@
 ::: info Mind the difference!
 This is about the RSVP template blocks.
 
-A functional RSVP form consists of 2 base elements. Such an RSVP template block, holding the data about the structure of the form, as well as an [event](/api/events.html), which defines the underlying date.
+A functional RSVP form consists of 2 base elements. Such a template block, holding the data about the structure of the form, as well as an [event](/api/events.html), which defines the underlying date.
 :::
 
 ## Get all RSVP templates
@@ -15,52 +15,52 @@ GET /rsvp-block/all
 
 Gets a list with the ids of all available RSVP template blocks.
 
-## Get 1 RSVP template
+## Get one RSVP template
 
 ```
 GET /rsvp-block/:id
 ```
 
-Reading an rsvp block does not allow for any additional parameters. It only takes the id in the request url and simply provides you with all data for a specific template block.
+Reading a specific RSVP block does not allow for any additional parameters. It only takes the id in the request url and simply provides you with all data for this one.
 
 ### Potential response
 
 ```json
 {
-    "name": "Demo RSVP Block",
-    "max": 50,
-    "maxpp": 2,
-    "expires": "2024-12-31T14:29:01.000Z",
-    "maybe_option": true,
-    "initial_confirmation": false,
-    "doi": false,
-    "headline": "Join the Add to Calendar User Community!",
-    "text": "<p>Discover the next level tooling for Add to Calendar Buttons, RSVP, and more. <strong>Made for you! </strong>🫵</p>",
-    "fields": [
-        {
-            "type": "hidden",
-            "name": "hidden_field",
-            "label": "",
-            "required": true,
-            "default": "some hidden information"
-        },
-        {
-            "type": "checkbox",
-            "name": "required_check",
-            "label": "a required check",
-            "required": true,
-            "default": false
-        }
-    ],
-    "email_rsvp_doi": 34,
-    "email_rsvp_thank_you": 33,
-    "email_rsvp_signup_confirmation": 763,
-    "email_rsvp_change_confirmation": 434,
-    "email_rsvp_event_update": 55,
-    "email_rsvp_magic_link": 454,
-    "email_rsvp_second_signup": 153,
-    "date_updated": "2023-12-09T14:54:27.586Z",
-    "date_created": "2023-11-19T08:43:16.180Z",
+  "name": "Demo RSVP Block",
+  "max": 50,
+  "maxpp": 2,
+  "expires": "2024-12-31T14:29:01.000Z",
+  "maybe_option": true,
+  "initial_confirmation": false,
+  "doi": false,
+  "headline": "Join the Add to Calendar User Community!",
+  "text": "<p>Discover the next level tooling for Add to Calendar Buttons, RSVP, and more. <strong>Made for you! </strong>🫵</p>",
+  "fields": [
+    {
+      "type": "hidden",
+      "name": "hidden_field",
+      "label": "",
+      "required": true,
+      "default": "some hidden information"
+    },
+    {
+      "type": "checkbox",
+      "name": "required_check",
+      "label": "a required check",
+      "required": true,
+      "default": false
+    }
+  ],
+  "email_rsvp_doi": 34,
+  "email_rsvp_thank_you": 33,
+  "email_rsvp_signup_confirmation": 763,
+  "email_rsvp_change_confirmation": 434,
+  "email_rsvp_event_update": 55,
+  "email_rsvp_magic_link": 454,
+  "email_rsvp_second_signup": 153,
+  "date_updated": "2023-12-09T14:54:27.586Z",
+  "date_created": "2023-11-19T08:43:16.180Z"
 }
 ```
 
@@ -76,7 +76,7 @@ Creating a new RSVP template block requires you to at least provide the "name" f
 
 ```json
 {
-    "name": "Name of the item", // only internal
+  "name": "Name of the item" // only internal
 }
 ```
 
@@ -84,39 +84,39 @@ Creating a new RSVP template block requires you to at least provide the "name" f
 
 ```json
 {
-    "name": "Demo RSVP Block",
-    "max": 50, // max amount of seats; defaults to unlimited
-    "maxpp": 2, // max seats per sign-up; defaults to 1
-    "expires": "2024-12-31T14:29:01.000Z", // an optional expiration date as ISO 8601 UTC datetime
-    "maybe_option": true,
-    "initial_confirmation": false, // if true, the initial sign-up will always be "confirmed"
-    "doi": false, // if true, each user will need to confirm his email
-    "headline": "Join the Add to Calendar User Community!",
-    "text": "<p>Discover the next level tooling for Add to Calendar Buttons, RSVP, and more. <strong>Made for you! </strong>🫵</p>", // allowing for <p>, <strong>, <em>, <u>, <h1>, <h2>, <h3>, <h4>, <ul>, <ol>, <li>, <a>
-    "fields": [ // see notes below for details
-        {
-            "type": "text",
-            "name": "additional_info",
-            "label": "Additional note",
-            "required": false,
-            "placeholder": "Type here...",
-            "default": "Call me maybe"
-        },
-        {
-            "type": "checkbox",
-            "name": "required_check",
-            "label": "a required check",
-            "required": true,
-            "default": false
-        }
-    ],
-    "email_rsvp_doi": 34, // the id of an email template can be seen from the url, when opening it in the web app
-    "email_rsvp_thank_you": 33,
-    "email_rsvp_signup_confirmation": 763,
-    "email_rsvp_change_confirmation": 434,
-    "email_rsvp_event_update": 55,
-    "email_rsvp_magic_link": 454,
-    "email_rsvp_second_signup": 153,
+  "name": "Demo RSVP Block",
+  "max": 50, // max amount of seats; defaults to unlimited
+  "maxpp": 2, // max seats per sign-up; defaults to 1
+  "expires": "2024-12-31T14:29:01.000Z", // an optional expiration date as ISO 8601 UTC datetime
+  "maybe_option": true,
+  "initial_confirmation": false, // if true, the initial sign-up will always be "confirmed"
+  "doi": false, // if true, each user will need to confirm his email
+  "headline": "Join the Add to Calendar User Community!",
+  "text": "<p>Discover the next level tooling for Add to Calendar Buttons, RSVP, and more. <strong>Made for you! </strong>🫵</p>", // allowing for <p>, <strong>, <em>, <u>, <h1>, <h2>, <h3>, <h4>, <ul>, <ol>, <li>, <a>
+  "fields": [ // see notes below for details
+    {
+      "type": "text",
+      "name": "additional_info",
+      "label": "Additional note",
+      "required": false,
+      "placeholder": "Type here...",
+      "default": "Call me maybe"
+    },
+    {
+      "type": "checkbox",
+      "name": "required_check",
+      "label": "a required check",
+      "required": true,
+      "default": false
+    }
+  ],
+  "email_rsvp_doi": 34, // the id of an email template can be seen from the url, when opening it in the web app
+  "email_rsvp_thank_you": 33,
+  "email_rsvp_signup_confirmation": 763,
+  "email_rsvp_change_confirmation": 434,
+  "email_rsvp_event_update": 55,
+  "email_rsvp_magic_link": 454,
+  "email_rsvp_second_signup": 153
 }
 ```
 
@@ -139,8 +139,8 @@ Besides the type, fields take the following attributes:
 
 ```json
 {
-    "success": "RSVP block created",
-    "id": "67"
+  "success": "RSVP template created",
+  "id": "67"
 }
 ```
 
