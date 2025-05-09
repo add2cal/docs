@@ -27,6 +27,7 @@ Reading a specific webhook does not allow for any additional parameters. It only
   "payload_url": "https://webhook-endpoint.your-domain.com",
   "trigger": "create",
   "trigger_element": "rsvp_answer",
+  "prokey_filter": "abcdef12-3456-4789-8bcd-ef0123456789",
   "header": [
     {
       "key": "secret",
@@ -48,7 +49,7 @@ Reading a specific webhook does not allow for any additional parameters. It only
 POST /webhook
 ```
 
-Creating a new webhook requires you to set most of the fields. **Only body and header are optional!**
+Creating a new webhook requires you to set most of the fields. **Only `prokey_filter`, `body`, and `header` are optional!**
 
 ### Potential request with all fields
 
@@ -60,6 +61,7 @@ Creating a new webhook requires you to set most of the fields. **Only body and h
   "payload_url": "https://webhook-endpoint.your-domain.com", // the endpoint where we send the data to
   "trigger": "create", // options: create, update, delete
   "trigger_element": "rsvp_answer", // options: rsvp_answer, event, event_group, style, rsvp_template, cta_template, landingpage_template
+  "prokey_filter": "abcdef12-3456-4789-8bcd-ef0123456789", // for rsvp answers, you can use this to filter for a specific event
   "header": [ // additional fields that get added to the header (usually some authentication token)
     {
       "key": "secret",

@@ -26,6 +26,7 @@ Beim Abrufen eines bestimmten Webhooks sind keine zusätzlichen Parameter mögli
   "payload_url": "https://webhook-endpoint.your-domain.de",
   "trigger": "create",
   "trigger_element": "rsvp_answer",
+  "prokey_filter": "abcdef12-3456-4789-8bcd-ef0123456789",
   "header": [
     {
       "key": "secret",
@@ -47,7 +48,7 @@ Beim Abrufen eines bestimmten Webhooks sind keine zusätzlichen Parameter mögli
 POST /webhook
 ```
 
-Für die Erstellung eines neuen Webhooks müssen die meisten Felder angegeben werden. **Nur `body` und `header` sind optional!**
+Für die Erstellung eines neuen Webhooks müssen die meisten Felder angegeben werden. **Nur `prokey_filter`, `body` und `header` sind optional!**
 
 ### Möglicher Request mit allen Feldern
 
@@ -59,6 +60,7 @@ Für die Erstellung eines neuen Webhooks müssen die meisten Felder angegeben we
   "payload_url": "https://webhook-endpoint.your-domain.de", // der Endpunkt, an den wir die Daten senden
   "trigger": "create", // Optionen: create, update, delete
   "trigger_element": "rsvp_answer", // Optionen: rsvp_answer, event, event_group, style, rsvp_template, cta_template, landingpage_template
+  "prokey_filter": "abcdef12-3456-4789-8bcd-ef0123456789", // Bei RSVP-Antworten kann hierüber auf ein bestimmtes Event gefiltert werden
   "header": [ // zusätzliche Felder, die dem Header hinzugefügt werden (normalerweise ein Authentifizierungstoken)
     {
       "key": "secret",
