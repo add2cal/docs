@@ -87,7 +87,7 @@ Providing the proKey of the respective event, you can get a list of all connecte
 ```json
 [
   {
-    "id": "id-of-the-answer-1",
+    "id": "abcdef12-3456-4789-8bcd-ef0123456788",
     "status": "undecided",
     "email": "john.doe@email.com",
     "amount": 1,
@@ -96,11 +96,12 @@ Providing the proKey of the respective event, you can get a list of all connecte
       "first_name": "John",
       "last_name": "Doe"
     },
+    "prokey": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa",
     "date_created": "2023-12-07T08:58:47.510Z",
     "date_updated": "2023-12-09T16:46:24.381Z"
   },
   {
-    "id": "id-of-the-answer-2",
+    "id": "abcdef12-3456-4789-8bcd-ef0123456789",
     "status": "confirmed",
     "email": "jane.doe@email.com",
     "amount": 2,
@@ -109,6 +110,7 @@ Providing the proKey of the respective event, you can get a list of all connecte
       "first_name": "Jane",
       "last_name": "Doe"
     },
+    "prokey": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaab",
     "date_created": "2023-11-21T15:54:09.823Z",
     "date_updated": "2023-12-03T19:30:00.314Z"
   }

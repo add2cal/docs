@@ -87,7 +87,7 @@ Indem du den proKey des jeweiligen Events angibst, kannst du eine Liste aller ve
 ```json
 [
   {
-    "id": "id-der-rueckmeldung-1",
+    "id": "abcdef12-3456-4789-8bcd-ef0123456788",
     "status": "undecided",
     "email": "max.muster@email.com",
     "amount": 1,
@@ -96,11 +96,12 @@ Indem du den proKey des jeweiligen Events angibst, kannst du eine Liste aller ve
       "first_name": "Max",
       "last_name": "Muster"
     },
+    "prokey": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa",
     "date_created": "2023-12-07T08:58:47.510Z",
     "date_updated": "2023-12-09T16:46:24.381Z"
   },
   {
-    "id": "id-der-rueckmeldung-2",
+    "id": "abcdef12-3456-4789-8bcd-ef0123456789",
     "status": "confirmed",
     "email": "eva.muster@email.com",
     "amount": 2,
@@ -109,6 +110,7 @@ Indem du den proKey des jeweiligen Events angibst, kannst du eine Liste aller ve
       "first_name": "Eva",
       "last_name": "Muster"
     },
+    "prokey": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaab",
     "date_created": "2023-11-21T15:54:09.823Z",
     "date_updated": "2023-12-03T19:30:00.314Z"
   }
