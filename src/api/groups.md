@@ -5,13 +5,19 @@
 Styles are referenced with the key "layout".
 :::
 
-## Get all groups
+## Get all/latest groups
 
 ```
 GET /group/all
 ```
 
 Gets a list with the ids of all available groups.
+
+```
+GET /group/latest
+```
+
+Gets the latest group.
 
 ## Get one group
 

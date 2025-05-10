@@ -1,12 +1,18 @@
 # Call-to-Action-Template-API
 
-## Alle CTA-Templates listen
+## Alle/Neueste CTA-Templates listen
 
 ```
 GET /cta-block/all
 ```
 
 Gibt eine Liste mit den IDs aller verfügbaren CTA-Template-Blöcke zurück.
+
+```
+GET /cta-block/latest
+```
+
+Gibt den neuesten CTA-Template-Block zurück.
 
 ## Ein CTA-Template lesen
 

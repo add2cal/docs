@@ -6,13 +6,19 @@ Diese Seite behandelt lediglich Landingpage-Templates.
 Eine funktionale Landingpage besteht aus 2 Grundelementen. Einem solchen Template, das die Daten über Struktur und Stil der Seite enthält, sowie einem [Event](/de/api/events.html) oder einer [Abonnement-Gruppe](/de/api/groups.html), welche die zugrundeliegenden Termine definiert.
 :::
 
-## Alle Landingpage-Templates listen
+## Alle/Neueste Landingpage-Templates listen
 
 ```
 GET /landingpage/all
 ```
 
 Gibt eine Liste mit den IDs aller verfügbaren Landingpage-Templates zurück.
+
+```
+GET /landingpage/latest
+```
+
+Gibt das neueste Landingpage-Template zurück.
 
 ## Ein Landingpage-Template lesen
 

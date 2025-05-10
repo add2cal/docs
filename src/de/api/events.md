@@ -5,13 +5,19 @@
 Styles werrden auf API-Ebene als "layout" bezeichnet.
 :::
 
-## Alle Events listen
+## Alle/Neueste Events listen
 
 ```
 GET /event/all
 ```
 
 Gibt eine Liste mit den IDs aller verfügbaren Events zurück.
+
+```
+GET /event/latest
+```
+
+Gibt das neueste Event zurück.
 
 ## Ein Event lesen
 

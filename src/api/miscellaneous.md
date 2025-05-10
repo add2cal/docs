@@ -77,7 +77,7 @@ Retrieves a list of all set up available custom domains as well as the global de
 ## List RSVP replies
 
 ```
-GET /rsvp-answers/:id
+GET /rsvp-answers/:prokey
 ```
 
 Providing the proKey of the respective event, you can get a list of all connected RSVP answers/replies.
@@ -115,4 +115,20 @@ Providing the proKey of the respective event, you can get a list of all connecte
     "date_updated": "2023-12-03T19:30:00.314Z"
   }
 ]
+```
+
+### Get latest response
+
+You can also only pull the latest one via:
+
+```
+GET /rsvp-answers/:prokey/latest
+```
+
+### Get latest response overall
+
+Or the latest over all prokeys:
+
+```
+GET /rsvp-answers/latest
 ```

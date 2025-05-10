@@ -1,12 +1,18 @@
 # Webhook-API
 
-## Alle Webhooks listen
+## Alle/Neueste Webhooks listen
 
 ```
 GET /webhook/all
 ```
 
-Gibt eine Liste mit den IDs aller verfügbaren Styles zurück.
+Gibt eine Liste mit den IDs aller verfügbaren Webhooks zurück.
+
+```
+GET /webhook/latest
+```
+
+Gibt den neuesten Webhook zurück.
 
 ## Einen Webhook lesen
 

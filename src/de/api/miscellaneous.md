@@ -77,7 +77,7 @@ Erhalte eine Liste aller eingerichteten verfügbaren Custom Domains sowie die gl
 ## RSVP-Rückmeldungen listen
 
 ```
-GET /rsvp-answers/:id
+GET /rsvp-answers/:prokey
 ```
 
 Indem du den proKey des jeweiligen Events angibst, kannst du eine Liste aller verbundenen RSVP-Rückmeldungen erhalten.
@@ -116,3 +116,20 @@ Indem du den proKey des jeweiligen Events angibst, kannst du eine Liste aller ve
   }
 ]
 ```
+
+### Neueste Antwort für ProKey aufrufen
+
+Du kannst ausschließlich die neueste Antwort mit dem Stichwort "latest" abrufen:
+
+```
+GET /rsvp-answers/:prokey/latest
+```
+
+### Neueste globale Antwort aufrufen
+
+Wenn du den ProKey weg lässt, gilt die Abfrage global über alle ProKeys.
+
+```
+GET /rsvp-answers/latest
+```
+

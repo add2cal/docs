@@ -5,13 +5,19 @@
 Styles werrden auf API-Ebene als "layout" bezeichnet.
 :::
 
-## Alle Gruppen listen
+## Alle/Neueste Gruppen listen
 
 ```
 GET /group/all
 ```
 
 Gibt eine Liste mit den IDs aller verfügbaren Gruppen zurück.
+
+```
+GET /group/latest
+```
+
+Gibt die neueste Gruppe zurück.
 
 ## Eine Gruppe lesen
 

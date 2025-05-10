@@ -7,13 +7,19 @@ This is about the RSVP template blocks.
 A functional RSVP form consists of 2 base elements. Such a template block, holding the data about the structure of the form, as well as an [event](/api/events.html), which defines the underlying date.
 :::
 
-## Get all RSVP templates
+## Get all/latest RSVP templates
 
 ```
 GET /rsvp-block/all
 ```
 
 Gets a list with the ids of all available RSVP template blocks.
+
+```
+GET /rsvp-block/latest
+```
+
+Gets the latest RSVP template block.
 
 ## Get one RSVP template
 

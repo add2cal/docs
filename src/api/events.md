@@ -5,13 +5,19 @@
 Styles are referenced with the key "layout".
 :::
 
-## Get all events
+## Get all/latest events
 
 ```
 GET /event/all
 ```
 
 Gets a list with the ids of all available events.
+
+```
+GET /event/latest
+```
+
+Gets the latest event.
 
 ## Get one event
 

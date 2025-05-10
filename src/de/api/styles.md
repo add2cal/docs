@@ -1,12 +1,18 @@
 # Style-API
 
-## Alle Styles listen
+## Alle/Neueste Styles listen
 
 ```
 GET /style/all
 ```
 
 Gibt eine Liste mit den IDs aller verfügbaren Styles zurück.
+
+```
+GET /style/latest
+```
+
+Gibt den neuesten Style zurück.
 
 ## Einen Style lesen
 

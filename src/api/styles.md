@@ -1,13 +1,19 @@
 
 # Style API
 
-## Get all Styles
+## Get all/latest Styles
 
 ```
 GET /style/all
 ```
 
 Gets a list with the ids of all available styles.
+
+```
+GET /style/latest
+```
+
+Gets the latest style.
 
 ## Get one Style
 

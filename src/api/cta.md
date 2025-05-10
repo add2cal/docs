@@ -1,13 +1,20 @@
 
 # Call to Action Template API
 
-## Get all CTA templates
+## Get all/latest CTA templates
 
 ```
 GET /cta-block/all
 ```
 
 Gets a list with the ids of all available CTA template blocks.
+
+
+```
+GET /cta-block/latest
+```
+
+Gets the latest CTA template blocks.
 
 ## Get one CTA template
 

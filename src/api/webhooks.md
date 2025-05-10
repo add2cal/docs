@@ -1,13 +1,19 @@
 
 # Webhook API
 
-## Get all Webhooks
+## Get all/latest Webhooks
 
 ```
 GET /webhook/all
 ```
 
 Gets a list with the ids of all available webhooks.
+
+```
+GET /webhook/latest
+```
+
+Gets the latest webhook.
 
 ## Get one Webhook
 

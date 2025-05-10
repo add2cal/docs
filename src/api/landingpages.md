@@ -7,13 +7,19 @@ This is about the Landingpage template.
 A functional Landingpage consists of 2 base elements. Such a template block, holding the data about the structure and style of the page, as well as an [event](/api/events.html) or [subscription group](/api/groups.html), which defines the underlying date(s).
 :::
 
-## Get all Landingpage templates
+## Get all/latest Landingpage templates
 
 ```
 GET /landingpage/all
 ```
 
 Gets a list with the ids of all available landingpage templates.
+
+```
+GET /landingpage/latest
+```
+
+Gets the latest landingpage template.
 
 ## Get one Landingpage template
 
