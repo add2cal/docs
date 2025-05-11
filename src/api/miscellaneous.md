@@ -3,7 +3,7 @@
 ## Retrieve ics file body
 
 ```
-GET /ics/:id
+GET /ics/:prokey
 ```
 
 Providing the proKey of the respective event, you can get the body for the ics file.

@@ -3,7 +3,7 @@
 ## ics-Datei-Inhalt abrufen
 
 ```
-GET /ics/:id
+GET /ics/:prokey
 ```
 
 Indem du den proKey des jeweiligen Events angibst, kannst du den "Body" der zugehörigen ics-Datei abrufen.
