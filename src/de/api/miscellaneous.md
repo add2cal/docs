@@ -13,6 +13,11 @@ Nutze dies, um die ics-Datei in deinem System zu erstellen - ohne Abhängigkeit 
 ### Mögliche Response
 
 ```json
+[
+  "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-
+  (...)
+  \r\nEND:VEVENT\r\nEND:VCALENDAR"
+]
 ```
 
 Ergänez den Query-Parameter `responseType` mit Wert `object`, um den Inhalt als Objekt zu erhalten (beinhaltet auch den Namen des jeweiligen Events, bzw. der Event-Serie, sofern diese über 1 ics-File ausgeliefert werden kann).
@@ -24,6 +29,14 @@ GET /ics/:prokey?responseType=object
 ### Mögliche Response
 
 ```json
+[
+  {
+    "name": "Event-Titel",
+    "ics": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-
+    (...)
+    \r\nEND:VEVENT\r\nEND:VCALENDAR"
+  }
+]
 ```
 
 ## Custom Domains abrufen

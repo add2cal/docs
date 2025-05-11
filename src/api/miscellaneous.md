@@ -13,6 +13,11 @@ Use this to create the ics file on your side without relying on any auto-generat
 ### Potential response
 
 ```json
+[
+  "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-
+  (...)
+  \r\nEND:VEVENT\r\nEND:VCALENDAR"
+]
 ```
 
 Add the query param `responseType` with value `object` to retrieve the content as object (will also include the name; or the event series title, if those events can all be included in one single ics file).
@@ -24,6 +29,14 @@ GET /ics/:prokey?responseType=object
 ### Potential response
 
 ```json
+[
+  {
+    "name": "Event Title",
+    "ics": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-
+    (...)
+    \r\nEND:VEVENT\r\nEND:VCALENDAR"
+  }
+]
 ```
 
 ## Get custom domains
