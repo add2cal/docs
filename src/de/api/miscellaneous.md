@@ -10,6 +10,22 @@ Indem du den proKey des jeweiligen Events angibst, kannst du den "Body" der zuge
 
 Nutze dies, um die ics-Datei in deinem System zu erstellen - ohne Abhängigkeit zur Generierung auf unserer Seite (was dazu führt, dass die ics-Datei auf einem öffentlich erreichbaren Storage abgelegt wird).
 
+### Mögliche Response
+
+```json
+```
+
+Ergänez den Query-Parameter `responseType` mit Wert `object`, um den Inhalt als Objekt zu erhalten (beinhaltet auch den Namen des jeweiligen Events, bzw. der Event-Serie, sofern diese über 1 ics-File ausgeliefert werden kann).
+
+```
+GET /ics/:prokey?responseType=object
+```
+
+### Mögliche Response
+
+```json
+```
+
 ## Custom Domains abrufen
 
 ```

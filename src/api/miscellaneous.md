@@ -10,6 +10,22 @@ Providing the proKey of the respective event, you can get the body for the ics f
 
 Use this to create the ics file on your side without relying on any auto-generation on our side (which would result in an ics file, placed on a public storage).
 
+### Potential response
+
+```json
+```
+
+Add the query param `responseType` with value `object` to retrieve the content as object (will also include the name; or the event series title, if those events can all be included in one single ics file).
+
+```
+GET /ics/:prokey?responseType=object
+```
+
+### Potential response
+
+```json
+```
+
 ## Get custom domains
 
 ```
