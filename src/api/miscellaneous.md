@@ -32,7 +32,7 @@ GET /ics/:prokey?responseType=object
 [
   {
     "name": "Event Title",
-    "icsFile": "https://event.caldn.net/abcdef12-3456-4789-8bcd-ef0123456788/event.ics",
+    "icsFile": "https://event.caldn.net/abcdef12-3456-4789-8bcd-ef0123456788/event.ics", // nur, wenn keine dynamischen Termine existieren (wie bspw. "today+2")
     "icsBody": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-
     (...)
     \r\nEND:VEVENT\r\nEND:VCALENDAR"
