@@ -45,16 +45,8 @@ The response holds more fields than you might expect, as a group can be combined
   "date_updated": "2023-11-24T15:05:14.079Z",
   "date_created": "2023-11-24T15:05:13.007Z",
   "events": [
-    {
-      "prokey": [
-        "31a17cce-bbbb-4ee3-99bb-6144c6a3aaaa" // mind that the prokey is part of an array, even it can only always be 1 per event
-      ]
-    },
-    {
-      "prokey": [
-        "31a17cce-cccc-4ee3-99bb-6144c6a3bbbb"
-      ]
-    }
+    "31a17cce-bbbb-4ee3-99bb-6144c6a3aaaa",
+    "31a17cce-cccc-4ee3-99bb-6144c6a3bbbb"
   ]
 }
 ```

@@ -45,16 +45,8 @@ Die Antwort enthält mehr Felder, als du vielleicht erwartest, da eine Gruppe mi
   "date_updated": "2023-11-24T15:05:14.079Z",
   "date_created": "2023-11-24T15:05:13.007Z",
   "events": [
-    {
-      "prokey": [
-        "31a17cce-bbbb-4ee3-99bb-6144c6a3aaaa" // beachte, dass der prokey Teil eines Arrays ist, auch wenn es immer nur 1 pro Ereignis geben kann
-      ]
-    },
-    {
-      "prokey": [
-        "31a17cce-cccc-4ee3-99bb-6144c6a3bbbb"
-      ]
-    }
+    "31a17cce-bbbb-4ee3-99bb-6144c6a3aaaa",
+    "31a17cce-cccc-4ee3-99bb-6144c6a3bbbb"
   ]
 }
 ```
