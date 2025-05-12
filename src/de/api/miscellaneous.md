@@ -20,7 +20,7 @@ Nutze dies, um die ics-Datei in deinem System zu erstellen - ohne Abhängigkeit 
 ]
 ```
 
-Ergänez den Query-Parameter `responseType` mit Wert `object`, um den Inhalt als Objekt zu erhalten (beinhaltet auch den Namen des jeweiligen Events, bzw. der Event-Serie, sofern diese über 1 ics-File ausgeliefert werden kann).
+Ergänez den Query-Parameter `responseType` mit Wert `object`, um den Inhalt als Objekt zu erhalten (beinhaltet auch die Pfade zu den generierten Dateien sowie den Namen des jeweiligen Events, bzw. der Event-Serie, sofern diese über 1 ics-File ausgeliefert werden kann).
 
 ```
 GET /ics/:prokey?responseType=object
@@ -32,7 +32,8 @@ GET /ics/:prokey?responseType=object
 [
   {
     "name": "Event-Titel",
-    "ics": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-
+    "icsFile": "https://event.caldn.net/abcdef12-3456-4789-8bcd-ef0123456788/event.ics",
+    "icsBody": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-
     (...)
     \r\nEND:VEVENT\r\nEND:VCALENDAR"
   }

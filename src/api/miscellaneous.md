@@ -20,7 +20,7 @@ Use this to create the ics file on your side without relying on any auto-generat
 ]
 ```
 
-Add the query param `responseType` with value `object` to retrieve the content as object (will also include the name; or the event series title, if those events can all be included in one single ics file).
+Add the query param `responseType` with value `object` to retrieve the content as object (will also include the ics file addresses as well as the name; or the event series title, if those events can all be included in one single ics file).
 
 ```
 GET /ics/:prokey?responseType=object
@@ -32,7 +32,8 @@ GET /ics/:prokey?responseType=object
 [
   {
     "name": "Event Title",
-    "ics": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-
+    "icsFile": "https://event.caldn.net/abcdef12-3456-4789-8bcd-ef0123456788/event.ics",
+    "icsBody": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-
     (...)
     \r\nEND:VEVENT\r\nEND:VCALENDAR"
   }
