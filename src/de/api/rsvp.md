@@ -116,7 +116,7 @@ Um einen neuen RSVP-Template-Block zu erstellen, musst du mindestens das Feld "n
             "default": false
         }
     ],
-    "email_rsvp_doi": 34, // die ID eines E-Mail-Templates ist aus der URL ersichtlic, wenn du das Template in der Web App aufrufst
+    "email_rsvp_doi": 34, // die ID eines E-Mail-Templates ist aus der URL ersichtlich, wenn du das Template in der Web App aufrufst
     "email_rsvp_thank_you": 33,
     "email_rsvp_signup_confirmation": 763,
     "email_rsvp_change_confirmation": 434,

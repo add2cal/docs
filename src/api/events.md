@@ -144,13 +144,13 @@ Additionally, the API does not allow to set the status of an event - it will alw
   "recurrence_byMonthDay": "3,23", // example for the 3rd and 23rd day of the month
   "recurrence_count": 10, // example: repeat 10 times
   "recurrence_weekstart": "MO", // example for Monday
-  "layout": "id-of-a-style-template", // take the id from the url in the application
-  "landingpage": "id-of-a-landingpage-template", // take the id from the url in the application
+  "layout": "id-of-a-style-template", // take the id from the url in the application or the response when creating one via API
+  "landingpage": "id-of-a-landingpage-template", // take the id from the url in the application or the response when creating one via API
   "iCalFileName": "overriding the ics file name",
   "rsvp": true,
-  "rsvp_block": "id-of-an-rsvp-block", // take the id from the url in the application or the response when creating an rsvp block via API
+  "rsvp_block": "id-of-an-rsvp-block", // take the id from the url in the application or the response when creating one via API
   "cta": true,
-  "cta_block": "id-of-a-cta-block", // take the id from the url in the application
+  "cta_block": "id-of-a-cta-block", // take the id from the url in the application or the response when creating one via API
   "hideButton": false,
   "distribution": true
 }

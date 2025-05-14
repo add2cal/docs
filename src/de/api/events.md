@@ -144,13 +144,13 @@ Weiterhin ist es nicht erlaubt, den Status eines Events über die API zu ändern
   "recurrence_byMonthDay": "3,23", // Beispiel für den 3ten und 23ten Tag des Monats
   "recurrence_count": 10, // Beispiel: 10x wiederholen
   "recurrence_weekstart": "MO", // Beispiel für Montag
-  "layout": "id-eines-style-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
-  "landingpage": "id-eines-landingpage-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
+  "layout": "id-eines-style-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung über die API
+  "landingpage": "id-eines-landingpage-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung über die API
   "iCalFileName": "überschreibt den ics-Dateinamen",
   "rsvp": true,
-  "rsvp_block": "id-eines-rsvp-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung eines RSVP-Blocks über die API
+  "rsvp_block": "id-eines-rsvp-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung über die API
   "cta": true,
-  "cta_block": "id-eines-cta-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
+  "cta_block": "id-eines-cta-blocks", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung über die API
   "hideButton": false,
   "distribution": true
 }

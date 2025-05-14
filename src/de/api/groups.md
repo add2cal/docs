@@ -77,10 +77,10 @@ Beachte, dass du bei der Erstellung einer Gruppe keine Events hinzufügen kannst
   "internal_note": null, // ein optionaler einfacher String
   "subscription": "no", // kann "no" oder "external" lauten - letzteres erfordert eine subscription_cal_url
   "subscription_cal_url": null, // url zu einem externen Kalender. Muss mit "http" beginnen! Endet gewöhnlich mit ".ics"
-  "layout": "id-eines-style-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
-  "landingpage": "id-eines-landingpage-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
+  "layout": "id-eines-style-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung über die API
+  "landingpage": "id-eines-landingpage-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung über die API
   "cta": true,
-  "cta_block": "id-eines-cta-blocks" // diese ID findest du in der URL des entsprechenden Elements in der Anwendung
+  "cta_block": "id-eines-cta-blocks" // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung über die API
 }
 ```
 
