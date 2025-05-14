@@ -138,7 +138,8 @@ Creating a new style requires you to at least provide the "name" and "options" f
 
 ```json
 {
-  "success": "Style created",
+  "status": "success",
+  "message": "created",
   "id": "67"
 }
 ```

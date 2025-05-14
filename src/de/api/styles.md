@@ -137,7 +137,8 @@ Für die Erstellung eines neuen Styles müssen mindestens die Felder "name" und 
 
 ```json
 {
-  "success": "Style created",
+  "status": "success",
+  "message": "created",
   "id": "67"
 }
 ```

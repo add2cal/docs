@@ -99,7 +99,8 @@ Dies kann nur über unsere Web-App erfolgen.
 
 ```json
 {
-  "success": "Landingpage template created",
+  "status": "success",
+  "message": "created",
   "id": "67"
 }
 ```

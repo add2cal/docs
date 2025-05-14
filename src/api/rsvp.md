@@ -145,7 +145,8 @@ Besides the type, fields take the following attributes:
 
 ```json
 {
-  "success": "RSVP template created",
+  "status": "success",
+  "message": "created",
   "id": "67"
 }
 ```

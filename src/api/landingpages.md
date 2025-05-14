@@ -100,7 +100,8 @@ This can only be done via our web app.
 
 ```json
 {
-  "success": "Landingpage template created",
+  "status": "success",
+  "message": "created",
   "id": "67"
 }
 ```

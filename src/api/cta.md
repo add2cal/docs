@@ -128,7 +128,8 @@ Besides the type, fields take the following attributes:
 
 ```json
 {
-  "success": "CTA template created",
+  "status": "success",
+  "message": "created",
   "id": "67"
 }
 ```

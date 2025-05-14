@@ -93,7 +93,8 @@ Du kannst auch deine eigenen Felder definieren und einzelne Felder als Wert verw
 
 ```json
 {
-  "success": "Webhook created",
+  "status": "success",
+  "message": "created",
   "id": "67"
 }
 ```

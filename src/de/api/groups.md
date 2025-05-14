@@ -88,8 +88,9 @@ Beachte, dass du bei der Erstellung einer Gruppe keine Events hinzufügen kannst
 
 ```json
 {
-  "success": "Created",
-  "id": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
+  "status": "success",
+  "message": "created",
+  "prokey": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
 }
 ```
 

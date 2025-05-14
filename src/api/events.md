@@ -160,8 +160,9 @@ Additionally, the API does not allow to set the status of an event - it will alw
 
 ```json
 {
-  "success": "Created",
-  "id": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
+  "status": "success",
+  "message": "created",
+  "prokey": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
 }
 ```
 

@@ -94,7 +94,8 @@ Check the web app for more details on which fields are available for which trigg
 
 ```json
 {
-  "success": "Webhook created",
+  "status": "success",
+  "message": "created",
   "id": "67"
 }
 ```

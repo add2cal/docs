@@ -145,8 +145,9 @@ Neben dem type, können folgende Attribute zugefügt werden:
 
 ```json
 {
-    "success": "RSVP template created",
-    "id": "67"
+  "status": "success",
+  "message": "created",
+  "id": "67"
 }
 ```
 

@@ -126,7 +126,8 @@ Neben dem type, können folgende Attribute zugefügt werden:
 
 ```json
 {
-  "success": "CTA template created",
+  "status": "success",
+  "message": "created",
   "id": "67"
 }
 ```
