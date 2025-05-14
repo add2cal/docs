@@ -92,7 +92,7 @@ Creating a new event requires you to at least provide the following fields in th
 
 ```json
 {
-  "event_group": "prokey-of-event-group", // gets returned as "id", when creating a group; also visible in the application
+  "event_group": "prokey-of-event-group", // gets returned, when creating a group; also visible in the application
   "dates": [{
     "name": "Title of the date",
     "startDate": "2024-12-24",

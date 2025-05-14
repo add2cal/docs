@@ -92,7 +92,7 @@ Um ein neues Event zu erstellen, musst du mindestens die folgenden Felder im Bod
 
 ```json
 {
-  "event_group": "prokey-der-event-gruppe", // wird bei Erstellung einer Gruppe als "id" zurückgegeben; auch über die UI der Anwendung einsehbar
+  "event_group": "prokey-der-event-gruppe", // wird bei Erstellung einer Gruppe zurückgegeben; auch über die UI der Anwendung einsehbar
   "dates": [{
     "name": "Titel des Termins",
     "startDate": "2024-12-24",
