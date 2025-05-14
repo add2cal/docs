@@ -94,9 +94,7 @@ Mind that you cannot add events on group creation. **You can only link events to
 }
 ```
 
-**The id from a successful creation is the proKey of the new group.**
-
-You can use this for further processing (incl. creating events within this group).
+You can use the ProKey for further processing (incl. creating events within this group).
 
 <br />
 

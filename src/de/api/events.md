@@ -166,9 +166,7 @@ Weiterhin ist es nicht erlaubt, den Status eines Events über die API zu ändern
 }
 ```
 
-**Die id aus einer erfolgreichen Rückmeldung ist der proKey des neuen Events.**
-
-Du kannst diese für weitere Schritte sowie diverse Maßnahmen nutzen:
+Du kannst den ProKey für weitere Schritte sowie diverse Maßnahmen nutzen:
 
 * Wir generieren automatisch eine Landingpage, die du teilen kannst. Die URL baut sich wie folgt auf: `https://caldn.net/:prokey`.
 * In den meisten Fällen erstellen wir automatisch eine ics-Datei. Du kannst diese via `https://event.caldn.net/:prokey/event.ics` herunterladen. Beachten hierbei folgende Besonderheiten:

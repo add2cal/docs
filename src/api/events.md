@@ -166,9 +166,7 @@ Additionally, the API does not allow to set the status of an event - it will alw
 }
 ```
 
-**The id from a successful creation is the proKey of your new event.**
-
-You can use this for further processing and several additional measures:
+You can use the ProKey for further processing and several additional measures:
 
 * We automatically set up a landingpage you can use. Its url would be `https://caldn.net/:prokey`.
 * In most cases, we auto-create an ics file for you. You can download it from `https://event.caldn.net/:prokey/event.ics`. Mind the specialties here:

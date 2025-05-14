@@ -94,9 +94,7 @@ Beachte, dass du bei der Erstellung einer Gruppe keine Events hinzufügen kannst
 }
 ```
 
-**Die id aus einer erfolgreichen Rückmeldung ist der proKey der neuen Gruppe.**
-
-Du kannst diese für weitere Schritte nutzen (inkl. der Erstellung von neuen Events innerhalb der Gruppe).
+Du kannst den ProKey für weitere Schritte nutzen (inkl. der Erstellung von neuen Events innerhalb der Gruppe).
 
 <br />
 
