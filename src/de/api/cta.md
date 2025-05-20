@@ -26,6 +26,7 @@ Beim Abrufen eines bestimmten CTA-Blocks sind keine zusätzlichen Parameter mög
 
 ```json
 {
+  "id": 67,
   "name": "Newsletter Beispiel CTA",
   "type": "form",
   "headline": "🥰 Melde dich noch schnell für unseren Newsletter an",

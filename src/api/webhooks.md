@@ -27,6 +27,7 @@ Reading a specific webhook does not allow for any additional parameters. It only
 
 ```json
 {
+  "id": 67,
   "name": "API generated Webhook",
   "active": true,
   "method": "POST",

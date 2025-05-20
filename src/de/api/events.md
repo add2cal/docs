@@ -76,7 +76,8 @@ Beim Abrufen eines Events sind keine zusätzlichen Parameter möglich. Es wird l
   "date_updated": "2024-11-02T18:20:56.152Z",
   "event_group": {
     "prokey": "803a96ac-aaaa-2222-bbbb-6fb191041543"
-  }
+  },
+  "prokey": ["99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"]
 }
 ```
 

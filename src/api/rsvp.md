@@ -33,6 +33,7 @@ Reading a specific RSVP block does not allow for any additional parameters. It o
 
 ```json
 {
+  "id": 67,
   "name": "Demo RSVP Block",
   "max": 50,
   "maxpp": 2,

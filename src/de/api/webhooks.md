@@ -26,6 +26,7 @@ Beim Abrufen eines bestimmten Webhooks sind keine zusätzlichen Parameter mögli
 
 ```json
 {
+  "id": 67,
   "name": "API-generierter Webhook",
   "active": true,
   "method": "POST",

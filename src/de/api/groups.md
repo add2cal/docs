@@ -33,6 +33,7 @@ Die Antwort enthält mehr Felder, als du vielleicht erwartest, da eine Gruppe mi
 
 ```json
 {
+  "prokey": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa",
   "name": "Meine Events",
   "status": "published",
   "internal_note": null,

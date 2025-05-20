@@ -28,6 +28,7 @@ Reading a specific CTA block does not allow for any additional parameters. It on
 
 ```json
 {
+  "id": 67,
   "name": "Newsletter Dummy CTA",
   "type": "form",
   "headline": "🥰 Next: Sign up for our Newsletter",

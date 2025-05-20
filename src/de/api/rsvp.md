@@ -33,40 +33,41 @@ Beim Abrufen eines RSVP-Blocks sind keine zusätzlichen Parameter möglich. Es w
 
 ```json
 {
-    "name": "Demo RSVP Block",
-    "max": 50,
-    "maxpp": 2,
-    "expires": "2024-12-31T14:29:01.000Z",
-    "maybe_option": true,
-    "initial_confirmation": false,
-    "doi": false,
-    "headline": "Join the Add to Calendar User Community!",
-    "text": "<p>Entdecke die Event-Tools der nächsten Generation - Add to Calendar Buttons, RSVP und mehr. <strong>Für dich gemacht! </strong>🫵</p>",
-    "fields": [
-        {
-            "type": "hidden",
-            "name": "hidden_field",
-            "label": "",
-            "required": true,
-            "default": "ein paar versteckte Informationen"
-        },
-        {
-            "type": "checkbox",
-            "name": "required_check",
-            "label": "Ein verpflichtender Check",
-            "required": true,
-            "default": false
-        }
-    ],
-    "email_rsvp_doi": 34,
-    "email_rsvp_thank_you": 33,
-    "email_rsvp_signup_confirmation": 763,
-    "email_rsvp_change_confirmation": 434,
-    "email_rsvp_event_update": 55,
-    "email_rsvp_magic_link": 454,
-    "email_rsvp_second_signup": 153,
-    "date_updated": "2023-12-09T14:54:27.586Z",
-    "date_created": "2023-11-19T08:43:16.180Z"
+  "id": 67,
+  "name": "Demo RSVP Block",
+  "max": 50,
+  "maxpp": 2,
+  "expires": "2024-12-31T14:29:01.000Z",
+  "maybe_option": true,
+  "initial_confirmation": false,
+  "doi": false,
+  "headline": "Join the Add to Calendar User Community!",
+  "text": "<p>Entdecke die Event-Tools der nächsten Generation - Add to Calendar Buttons, RSVP und mehr. <strong>Für dich gemacht! </strong>🫵</p>",
+  "fields": [
+    {
+      "type": "hidden",
+      "name": "hidden_field",
+      "label": "",
+      "required": true,
+      "default": "ein paar versteckte Informationen"
+    },
+    {
+      "type": "checkbox",
+      "name": "required_check",
+      "label": "Ein verpflichtender Check",
+      "required": true,
+      "default": false
+    }
+  ],
+  "email_rsvp_doi": 34,
+  "email_rsvp_thank_you": 33,
+  "email_rsvp_signup_confirmation": 763,
+  "email_rsvp_change_confirmation": 434,
+  "email_rsvp_event_update": 55,
+  "email_rsvp_magic_link": 454,
+  "email_rsvp_second_signup": 153,
+  "date_updated": "2023-12-09T14:54:27.586Z",
+  "date_created": "2023-11-19T08:43:16.180Z"
 }
 ```
 
@@ -82,7 +83,7 @@ Um einen neuen RSVP-Template-Block zu erstellen, musst du mindestens das Feld "n
 
 ```json
 {
-    "name": "Name des Elements" // nur für interne Nutzung relevant
+  "name": "Name des Elements" // nur für interne Nutzung relevant
 }
 ```
 
@@ -90,39 +91,39 @@ Um einen neuen RSVP-Template-Block zu erstellen, musst du mindestens das Feld "n
 
 ```json
 {
-    "name": "Demo RSVP Block",
-    "max": 50, // maximale Anzahl von Slots/Plätzen; Standardwert: unbegrenzt
-    "maxpp": 2, // maximale Anzahl an Slots pro Anmeldung; Standardwert ist 1
-    "expires": "2024-12-31T14:29:01.000Z", // ein optionales Ablaufdatum als ISO 8601 UTC datetime
-    "maybe_option": true,
-    "initial_confirmation": false, // falls true wird die initiale Anmeldung stets als "confirmed" gewertet
-    "doi": false, // falls true muss jeder Nutzer zunächst seine E-Mail bestätigen
-    "headline": "Join the Add to Calendar User Community!",
-    "text": "<p>Entdecke die Event-Tools der nächsten Generation - Add to Calendar Buttons, RSVP und mehr. <strong>Für dich gemacht! </strong>🫵</p>", // erlaubt <p>, <strong>, <em>, <u>, <h1>, <h2>, <h3>, <h4>, <ul>, <ol>, <li>, <a>
-    "fields": [ // Details hierzu findest du unter dem Code-Block
-        {
-            "type": "text",
-            "name": "additional_info",
-            "label": "Zusätzliche Nachricht",
-            "required": false,
-            "placeholder": "Hier einfügen...",
-            "default": "Ruf mich doch mal an"
-        },
-        {
-            "type": "checkbox",
-            "name": "required_check",
-            "label": "Ein verpflichtender Check",
-            "required": true,
-            "default": false
-        }
-    ],
-    "email_rsvp_doi": 34, // die ID eines E-Mail-Templates ist aus der URL ersichtlich, wenn du das Template in der Web App aufrufst
-    "email_rsvp_thank_you": 33,
-    "email_rsvp_signup_confirmation": 763,
-    "email_rsvp_change_confirmation": 434,
-    "email_rsvp_event_update": 55,
-    "email_rsvp_magic_link": 454,
-    "email_rsvp_second_signup": 153
+  "name": "Demo RSVP Block",
+  "max": 50, // maximale Anzahl von Slots/Plätzen; Standardwert: unbegrenzt
+  "maxpp": 2, // maximale Anzahl an Slots pro Anmeldung; Standardwert ist 1
+  "expires": "2024-12-31T14:29:01.000Z", // ein optionales Ablaufdatum als ISO 8601 UTC datetime
+  "maybe_option": true,
+  "initial_confirmation": false, // falls true wird die initiale Anmeldung stets als "confirmed" gewertet
+  "doi": false, // falls true muss jeder Nutzer zunächst seine E-Mail bestätigen
+  "headline": "Join the Add to Calendar User Community!",
+  "text": "<p>Entdecke die Event-Tools der nächsten Generation - Add to Calendar Buttons, RSVP und mehr. <strong>Für dich gemacht! </strong>🫵</p>", // erlaubt <p>, <strong>, <em>, <u>, <h1>, <h2>, <h3>, <h4>, <ul>, <ol>, <li>, <a>
+  "fields": [ // Details hierzu findest du unter dem Code-Block
+    {
+      "type": "text",
+      "name": "additional_info",
+      "label": "Zusätzliche Nachricht",
+      "required": false,
+      "placeholder": "Hier einfügen...",
+      "default": "Ruf mich doch mal an"
+    },
+    {
+      "type": "checkbox",
+      "name": "required_check",
+      "label": "Ein verpflichtender Check",
+      "required": true,
+      "default": false
+    }
+  ],
+  "email_rsvp_doi": 34, // die ID eines E-Mail-Templates ist aus der URL ersichtlich, wenn du das Template in der Web App aufrufst
+  "email_rsvp_thank_you": 33,
+  "email_rsvp_signup_confirmation": 763,
+  "email_rsvp_change_confirmation": 434,
+  "email_rsvp_event_update": 55,
+  "email_rsvp_magic_link": 454,
+  "email_rsvp_second_signup": 153
 }
 ```
 

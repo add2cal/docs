@@ -33,6 +33,7 @@ Reading a specific landingpage template does not allow for any additional parame
 
 ```json
 {
+  "id": 67,
   "name": "RSVP LP",
   "header_image": null,
   "title": "",

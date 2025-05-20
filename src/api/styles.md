@@ -27,6 +27,7 @@ Reading a specific style does not allow for any additional parameters. It only t
 
 ```json
 {
+  "id": 67,
   "name": "Dummy Style",
   "options": [
     "apple",

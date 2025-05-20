@@ -32,6 +32,7 @@ Beim Abrufen eines bestimmten Landingpage-Templates sind keine zusätzlichen Par
 
 ```json
 {
+  "id": 67,
   "name": "RSVP LP",
   "header_image": null,
   "title": "",

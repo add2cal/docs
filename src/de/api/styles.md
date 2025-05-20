@@ -26,6 +26,7 @@ Beim Abrufen eines bestimmten Styles sind keine zusätzlichen Parameter möglich
 
 ```json
 {
+  "id": 67,
   "name": "Beispiel Style",
   "options": [
     "apple",

@@ -33,6 +33,7 @@ The response holds more fields than you might expect, as a group can be combined
 
 ```json
 {
+  "prokey": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa",
   "name": "My events",
   "status": "published",
   "internal_note": null,
