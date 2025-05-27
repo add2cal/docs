@@ -77,7 +77,7 @@ Beim Abrufen eines Events sind keine zusätzlichen Parameter möglich. Es wird l
   "event_group": {
     "prokey": "803a96ac-aaaa-2222-bbbb-6fb191041543"
   },
-  "prokey": ["99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"]
+  "prokey": "99ec3e7f-ef04-bbbb-a3d7-e30736faaaaa"
 }
 ```
 
