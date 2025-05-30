@@ -58,13 +58,13 @@ Load the script by adding the following script tag to the head section of your w
 The script will be loaded in a non-blocking way.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button" async defer></script>
 ```
 
 For the smaller unstyled version, it would be:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2/dist/atcb-unstyle.min.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button/dist/atcb-unstyle.min.js" async defer></script>
 ```
 
 ## Using it via NPM

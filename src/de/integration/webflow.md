@@ -12,7 +12,7 @@ Für die Integration des Add to Calendar Buttons oder RSVP Formulars mit Webflow
 * Kopiere den folgenden Code und füge ihn im `<head>`-Textfeld ein.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button" async defer></script>
 ```
 
 ## Schritt 2: Erstelle ein Custom Element

@@ -8,7 +8,7 @@ Load the script via the jsDelivr CDN.
 You can place the respective script tag anywhere on your page. We recommend the `<head>` area. It loads async and also gets put to the end of the loading process automatically.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button" async defer></script>
 ```
 
 ## Step 2: Use it

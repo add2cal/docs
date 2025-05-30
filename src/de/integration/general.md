@@ -57,13 +57,13 @@ Lade das Skript, indem du den folgenden Script-Tag zum Head-Bereich deiner Webse
 Das Skript wird auf nicht blockierende Weise geladen.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button" async defer></script>
 ```
 
 Bei Nutzung der kleineren Unstyled-Version wäre dies:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2/dist/atcb-unstyle.min.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button/dist/atcb-unstyle.min.js" async defer></script>
 ```
 
 ## Verwendung via npm

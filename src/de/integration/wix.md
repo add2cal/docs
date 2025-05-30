@@ -25,7 +25,7 @@ Für die Integration des Add to Calendar Buttons oder RSVP Formulars muss das "B
 * Du solltest die Option erhalten, dein Skript von einer Server-URL oder einer Velo-Datei zu laden.
 * Du wählst "Server-URL" aus und nutzt die jsDelivr-URL wie im allgemeinen Teil der Doku beschrieben:
 ```
-https://cdn.jsdelivr.net/npm/add-to-calendar-button@2
+https://cdn.jsdelivr.net/npm/add-to-calendar-button
 ```
 * Scrolle anschließend im Panel nach unten und ändere das Feld "Tag-Name" zu `add-to-calendar-button`.
 

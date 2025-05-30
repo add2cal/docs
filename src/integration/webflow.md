@@ -12,7 +12,7 @@ When integrating Add to Calendar Buttons or RSPV forms with Webflow, you need to
 * Copy the following code snippet and put it into the `<head>` input.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button" async defer></script>
 ```
 
 ## Step 2: Create a Custom Element

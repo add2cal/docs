@@ -26,7 +26,7 @@ When integrating Add to Calendar Buttons or RSPV forms with your Wix website, yo
 * You should be given the option to load your script from a server url or a velo file.
 * You would select "Server URL" and use the file from jsDelivr as described in the general part of this documentation:
 ```
-https://cdn.jsdelivr.net/npm/add-to-calendar-button@2
+https://cdn.jsdelivr.net/npm/add-to-calendar-button
 ```
 * Next, scroll down in the panel and change the "Tag name" field to `add-to-calendar-button`.
 
