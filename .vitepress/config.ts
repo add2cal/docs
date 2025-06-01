@@ -48,14 +48,14 @@ export default {
     root: {
       label: 'English',
       lang: 'en',
-      title: "Add to Calendar Docs",
-      description: "Official Add to Calendar PRO Documentation",
+      title: "Add to Calendar PRO Docs",
+      description: "Official Add to Calendar PRO Documentation. Add to Calendar Buttons, RSVP Management, ics file generation, and more. Via App, API, and Plugins.",
     },
     de: {
       label: 'German',
       lang: 'de',
-      title: "Add to Calendar Doku",
-      description: "Offizielle Add to Calendar PRO Dokumentation",
+      title: "Add to Calendar PRO Dokumentation",
+      description: "Offizielle Add to Calendar PRO Dokumentation. Add to Calendar Buttons, RSVP Management, und viels mehr. Via App, API und Plugins.",
       themeConfig: {
         sidebar: [
           { text: 'Erste Schritte', link: '/de/index' },
@@ -171,11 +171,11 @@ export default {
   },
 
   head: [
-    [ 'meta', { name: 'author', content: 'Add to Calendar' },],
-    [ 'meta', { name: 'publisher', content: 'Add to Calendar' },],
+    [ 'meta', { name: 'author', content: 'Add to Calendar PRO' },],
+    [ 'meta', { name: 'publisher', content: 'Add to Calendar PRO' },],
     [ 'meta', { name: 'robots', content: 'index, follow' },],
     [ 'meta', { property: 'og:type', content: 'website' },],
-    [ 'meta', { property: 'og:site_name', content: 'Add to Calendar Docs' },],
+    [ 'meta', { property: 'og:site_name', content: 'Add to Calendar PRO Docs' },],
     [ 'meta', { property: 'og:image', content: '/fb.png' },],
     [ 'meta', { name: 'twitter:card', content: 'summary_large_image' },],
     [ 'meta', { name: 'twitter:site', content: 'https://docs.add-to-calendar-pro.com' },],
