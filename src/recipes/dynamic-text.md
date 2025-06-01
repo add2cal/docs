@@ -33,7 +33,7 @@ It should also use the name in the description as well, starting with "Hi John".
 
 We are showing an Add-to-Calendar Button inside a protected (logged in user) area on our **website** - that's, how we know the name there.
 
-Additionally, we are sending an **email** to the user, where we point him to the event's **landingpage**. We know the user's name when sending the email, but not on the landingpage as this is hosted by Add to Calendar PRO (but that won't be a problem).
+Additionally, we are sending an **email** to the user, where we point him to the event's **landing page**. We know the user's name when sending the email, but not on the landing page as this is hosted by Add to Calendar PRO (but that won't be a problem).
 
 ### The Event
 
@@ -60,7 +60,7 @@ This puts the information into the button at runtime. It could look like this in
 
 #### Email:
 
-When sending the email, we use the link to the landingpage `https://caldn.net/the-ProKey-of-our-event`, but we add the customVar information as query parameter. 
+When sending the email, we use the link to the landing page `https://caldn.net/the-ProKey-of-our-event`, but we add the customVar information as query parameter. 
 
 Mind that you need to encode this to work within a url! You can use a free online encoder like [urlencoder.io](https://www.urlencoder.io/).
 
@@ -78,6 +78,6 @@ https://caldn.net/1b39d497-bf14-45ed-b9af-2cfab5c1231a?customVar=%7B%22firstname
 
 **That's it.**
 
-When the user clicks the link, the landingpage also fills the placeholder with the provided information. Of course, it always makes sense to test this, before putting it into production!
+When the user clicks the link, the landing page also fills the placeholder with the provided information. Of course, it always makes sense to test this, before putting it into production!
 
 Enjoy! 😊

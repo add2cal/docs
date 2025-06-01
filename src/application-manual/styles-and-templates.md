@@ -9,9 +9,9 @@ While you can create them right during event creation, you can also do this at t
 
 As it might be obvious already, styles define the look and feel of your published elements. They, however, also account for usability and UX - like which calendar providers are available for an Add to Calendar Button.
 
-Templates exist for RSVP forms and emails, Call to Action (CTA) screens, as well as landingpages.
+Templates exist for RSVP forms and emails, Call to Action (CTA) screens, as well as landing pages.
 
-While RSVP forms, landingpage templates, CTA screens, and styles can be linked to events; emails can be linked to RSVP forms.
+While RSVP forms, landing page templates, CTA screens, and styles can be linked to events; emails can be linked to RSVP forms.
 
 ::: info Build your world!
 The Add to Calendar system is structured in way to offer you a maximum of flexibilty when it comes to you building your specific setup.
@@ -45,7 +45,7 @@ In case you are building an RSVP form, using an RSVP remplate is mandatory as it
 
 The same applies for Call to Action templates.
 
-Email and Landingpage templates, on the other hand, are rather optional. If you do not work with them, our default will be delivered. Using them gives you the power to customize all details of your user's journey.
+Email and landing page templates, on the other hand, are rather optional. If you do not work with them, our default will be delivered. Using them gives you the power to customize all details of your user's journey.
 
 [Open in the app ❯](https://app.add-to-calendar-pro.com/templates)
 
@@ -107,14 +107,14 @@ Test your email via the button on the very right side of the page! It sends an e
 Mind that here you can only define a custom FROM name and set your custom reply-to address.  
 To define the sender email address, you need to set this up globally at the settings page.
 
-### Landingpage
+### Landing page
 
-Landingpage templates are basically additional configurations for the auto-generated landingpages for your events.
+Landing page templates are basically additional configurations for the auto-generated landing pages for your events.
 
-Those landingpages can be used to share your event on social media or anywhere else. They also come into play, when you use our email links or proxy the Add to Calendar Button (required for analytics). In those cases, especially if something goes wrong (we do some pre-checks with the requested calendar provider), we show some guidance to the user - with the landingpage style.
-For the RSVP case, any communication, like DOI, the user editing his response, etc., uses this landingpage layout as well.
+Those landing pages can be used to share your event on social media or anywhere else. They also come into play, when you use our email links or proxy the Add to Calendar Button (required for analytics). In those cases, especially if something goes wrong (we do some pre-checks with the requested calendar provider), we show some guidance to the user - with the landing page style.
+For the RSVP case, any communication, like DOI, the user editing his response, etc., uses this landing page layout as well.
 
-As you see, there is a big chance, your users are getting in contact with your event's or RSVP's landingpage.
+As you see, there is a big chance, your users are getting in contact with your event's or RSVP's landing page.
 
 With a respective template, linkable to an event/group, you can customize this page.
 

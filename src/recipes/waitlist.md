@@ -40,13 +40,13 @@ You can also export them as csv or JSON. 💪
 
 ## 🏠 Using it stand-alone
 
-As each event comes with its own landingpage, our form comes with one as well.
+As each event comes with its own landing page, our form comes with one as well.
 
 You find the url right at the event page after creation as usual.
 
 *Since we excluded all date information, this page looks slightly different as it only displays the signup form.*
 
-By adding a landingpage template to the used event, you can still customize this landingpage. For example, you can add some intro text, an additional headline, change colors, and so on.
+By adding a landing page template to the used event, you can still customize this landing page. For example, you can add some intro text, an additional headline, change colors, and so on.
 
 You can then share this page wherever you want and easily collect information.
 

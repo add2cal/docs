@@ -38,7 +38,7 @@ Once a group has events attached, you can no longer change this, since it change
 
 In the subscription case, you won't see this table, but the style and CTA inputs, which you already know from the creation.
 
-At the very top, you either only see the ProKey to copy (non-subscription case) or a complete summary with everything you need for sharing and integration purposes. From email links to your auto-created landingpage and more. Here, you also find the link to the **analytics** dashboard for this event group.
+At the very top, you either only see the ProKey to copy (non-subscription case) or a complete summary with everything you need for sharing and integration purposes. From email links to your auto-created landing page and more. Here, you also find the link to the **analytics** dashboard for this event group.
 
 ## The event
 
@@ -76,10 +76,10 @@ In all cases, you can always check the result at the dynamic preview.
 Once created, you can always update the event on the detail page.
 There, you basically find the same structure as on creation.
 
-At the very top, you find a complete summary with everything you need for sharing and integration purposes. From email links to your auto-created landingpage and more. Here, you also find the link to the [analytics](/application-manual/analytics.html) dashboard for this event. This would be the overview of RSVP sign-ups in the RSVP case or analytics about when and how often people saved an event to their calendars (in the non-RSVP case).
+At the very top, you find a complete summary with everything you need for sharing and integration purposes. From email links to your auto-created landing page and more. Here, you also find the link to the [analytics](/application-manual/analytics.html) dashboard for this event. This would be the overview of RSVP sign-ups in the RSVP case or analytics about when and how often people saved an event to their calendars (in the non-RSVP case).
 
 Also at the top, you have the option to set an event to private. 
-This will block the auto-generation of a landingpage and ics file, but will still allow you to generate ics files via API or use a button with [dynamic date properties in WordPress](/integration/wordpress.html#dynamic-connections).
+This will block the auto-generation of a landing page and ics file, but will still allow you to generate ics files via API or use a button with [dynamic date properties in WordPress](/integration/wordpress.html#dynamic-connections).
 
 ::: warning Mind Auto-Adjustments
 Depending on what you select as well as different cases on the user side, we automatically adjust some details. For example, when you create a recurring event, some calendar types will not show up, as not all do support this feature (in an Add to Calendar Button scope).

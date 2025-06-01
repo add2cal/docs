@@ -36,7 +36,7 @@ When you are clear about your goals, start building it!
 * Give it an internal name you can easily identify.
 * The expiration date makes sure that nobody can sign up after you collected and processed the last candidate.
 * Limiting the number of attendees is not always necessary, but usually the case for real-world events.
-* We recommend to also set a custom headline and intro text, so the users know what this is about. Depending on where you want to host the form, you can also add this information on your website or the landingpage (see below) instead.
+* We recommend to also set a custom headline and intro text, so the users know what this is about. Depending on where you want to host the form, you can also add this information on your website or the landing page (see below) instead.
 * Finally, add fields for all the information you want the users to add.
 * Validate the result immediately at the preview on the right-hand side! 😍
 
@@ -56,7 +56,7 @@ Now, let's get to the core of everything - the event!
 * Go to the event overview and create a new event.
 * At the very top, activate the RSVP type.
 * You can also drop the Add to Calendar Button functionality here. This way, we will not show any Add to Calendar Buttons at the form after the signup.
-* Also mind the event distribution switch. When active, we show the date and details on the landingpage and also send an ics file to the user via email. When inactive, you would have a pure signup form, which is not bound to any date and time at all.
+* Also mind the event distribution switch. When active, we show the date and details on the landing page and also send an ics file to the user via email. When inactive, you would have a pure signup form, which is not bound to any date and time at all.
 * Next select or specify a group. This is basically a container for the event. It can be helpful to organize multiple RSVP events in a meaningful way.
 * The date setup speaks for itself.
 * Finally, at the bottom, you select your already set up RSVP template and style.
@@ -79,29 +79,29 @@ However, it still uses the default email templates. Nothing wrong with that! It 
 * Repeat this for all different types.
 * Email templates get linked to the RSVP template. So, get back to it and select the email templates at the respective dropdowns.
 
-## ✨ Enrich the landingpage
+## ✨ Enrich the landing page
 
-In case you want to make use of the automated landingpages, you should definitely customize this as well.
+In case you want to make use of the automated landing pages, you should definitely customize this as well.
 
-Even if not, you should be aware that when users want to edit their reply, they will get directed to a small management site, which uses the landingpage style as well.
+Even if not, you should be aware that when users want to edit their reply, they will get directed to a small management site, which uses the landing page style as well.
 
-* Go to the Landingpage section at the [templates page](https://app.add-to-calendar-pro.com/templates#landingpage).
+* Go to the landing page section at the [templates page](https://app.add-to-calendar-pro.com/templates#landingpage).
 * Create a new one.
 * Customize it.
 * Save it.
-* The landingpage template gets linked to your event. So, get back to your event and select the landingpage at the respective dropdown.
-* The landingpage gets tested best by visiting the actual landingpage. You can find the link at the very top of the event detail page.
+* The landing page template gets linked to your event. So, get back to your event and select the landing page at the respective dropdown.
+* The landing page gets tested best by visiting the actual landing page. You can find the link at the very top of the event detail page.
 
 ## 📣 Share and integrate it
 
-You can now already easily share the landingpage basically everywhere and collect your first signups.
+You can now already easily share the landing page basically everywhere and collect your first signups.
 
 The integration on your own website works the same way as you would integrate an Add to Calendar Button. Check the [integration documentation](/integration.html) for more guidance on that part. The element automatically adapts to the RSVP type.
 
 ::: tip
 You can prefill the attendee for the RSVP on the source code level by adding the "attendee" attribute to the HTML element. Mind the format "name|email".
 
-When sharing the landingpage, you can do the same by adding `?attendee=name|email` to the landingpage url. Ideally, you already encode this data with a tool like [urlencoder.io](https://www.urlencoder.io/), which would lead to a more stable query like `?attendee%3Dname%7Cemail`.
+When sharing the landing page, you can do the same by adding `?attendee=name|email` to the landing page url. Ideally, you already encode this data with a tool like [urlencoder.io](https://www.urlencoder.io/), which would lead to a more stable query like `?attendee%3Dname%7Cemail`.
 :::
 
 ## 🔎 Track it

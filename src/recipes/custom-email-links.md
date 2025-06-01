@@ -20,7 +20,7 @@ This can be a simple text, an image, or event basic HTML. Anything that can be m
 
 ## Mind the right target
 
-You can send users to your event's landingpage, where they then can save the event to whatever calendar type fits them best; or you can already offer specific types within the email.
+You can send users to your event's landing page, where they then can save the event to whatever calendar type fits them best; or you can already offer specific types within the email.
 
 For both cases, you find the hyperlinks at the top of each event in the app, right above the mentioned prepared email buttons.
 

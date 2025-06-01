@@ -7,7 +7,7 @@ outline: [2,3]
 For regular events, we track when users save them to their calendars.
 
 ::: warning To be more precise...
-We track the initiation of the save process via clicks at the landingpage, from email direct links, and from Add to Calendar Buttons with active Proxy option. The actual save can not be tracked, since it happens in the calendar app.
+We track the initiation of the save process via clicks at the landing page, from email direct links, and from Add to Calendar Buttons with active Proxy option. The actual save can not be tracked, since it happens in the calendar app.
 :::
 
 We also only do this for regular events, not for RSVP setups. In the RSVP case, we show the replies instead (enough tracking needed).

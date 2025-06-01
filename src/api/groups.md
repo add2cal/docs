@@ -79,7 +79,7 @@ Mind that you cannot add events on group creation. **You can only link events to
   "subscription": "no", // can be "no" or "external" - the latter one requires a subscription_cal_url
   "subscription_cal_url": null, // url to an external calendar. Needs to start with "http"! Usually ends with ".ics"
   "layout": "id-of-a-style-template", // take the id from the url in the application or the response when creating one via API
-  "landingpage": "id-of-a-landingpage-template", // take the id from the url in the application or the response when creating one via API
+  "landingpage": "id-of-a-landing-page-template", // take the id from the url in the application or the response when creating one via API
   "cta": true,
   "cta_block": "id-of-a-cta-block" // take the id from the url in the application or the response when creating one via API
 }

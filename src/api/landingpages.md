@@ -1,33 +1,33 @@
 
-# Landingpage Template API
+# Landing Page Template API
 
 ::: info Mind the difference!
-This is about the Landingpage template.
+This is about the landing page template.
 
-A functional Landingpage consists of 2 base elements. Such a template block, holding the data about the structure and style of the page, as well as an [event](/api/events.html) or [subscription group](/api/groups.html), which defines the underlying date(s).
+A functional landing page consists of 2 base elements. Such a template block, holding the data about the structure and style of the page, as well as an [event](/api/events.html) or [subscription group](/api/groups.html), which defines the underlying date(s).
 :::
 
-## Get all/latest Landingpage templates
+## Get all/latest landing page templates
 
 ```
 GET /landingpage/all
 ```
 
-Gets a list with the ids of all available landingpage templates.
+Gets a list with the ids of all available landing page templates.
 
 ```
 GET /landingpage/latest
 ```
 
-Gets the latest landingpage template.
+Gets the latest landing page template.
 
-## Get one Landingpage template
+## Get one landing page template
 
 ```
 GET /landingpage/:id
 ```
 
-Reading a specific landingpage template does not allow for any additional parameters. It only takes the id in the request url and simply provides you with all data for this one.
+Reading a specific landing page template does not allow for any additional parameters. It only takes the id in the request url and simply provides you with all data for this one.
 
 ### Potential response
 
@@ -57,13 +57,13 @@ Reading a specific landingpage template does not allow for any additional parame
 
 <br />
 
-## Add a Landingpage template
+## Add a landing page template
 
 ```
 POST /landingpage
 ```
 
-Creating a new landingpage template requires you to at least provide the "name" field in the body.
+Creating a new landing page template requires you to at least provide the "name" field in the body.
 
 ```json
 {
@@ -111,17 +111,17 @@ The id from a successful creation can be used for further processing, like using
 
 <br />
 
-## Update a Landingpage template
+## Update a landing page template
 
 ```
 PATCH /landingpage/:id
 ```
 
-Updating a landingpage template follows the same rules as creating one.
+Updating a landing page template follows the same rules as creating one.
 
 <br />
 
-## Delete a Landingpage template
+## Delete a landing page template
 
 ```
 DELETE /landingpage/:id
@@ -132,5 +132,5 @@ Deleting a landinpgage template is simple. Only provide the prokey and it gets r
 **Be careful with this call!**
 
 ::: warning This does not delete events or groups!
-They remain active, but will then use the generic default landingpage template instead.
+They remain active, but will then use the generic default landing page template instead.
 :::

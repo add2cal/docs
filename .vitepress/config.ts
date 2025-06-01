@@ -261,7 +261,7 @@ export default {
           { text: 'Styles', link: '/api/styles' },
           { text: 'RSVP Templates', link: '/api/rsvp' },
           { text: "CTA Templates", link: '/api/cta' },
-          { text: "Landingpage Templates", link: '/api/landingpages' },
+          { text: "Landing Page Templates", link: '/api/landingpages' },
           { text: 'Webhooks', link: '/api/webhooks' },
           { text: 'Miscellaneous', link: '/api/miscellaneous' },
         ]

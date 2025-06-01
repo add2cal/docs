@@ -8,7 +8,7 @@ In some cases, you maybe do not have your own dedicated event website. Or you ne
 
 **Good news!** 🥳
 
-With every event on Add to Calendar PRO, you automatically receive a dedicated landingpage.
+With every event on Add to Calendar PRO, you automatically receive a dedicated landing page.
 
 This is mainly for easy sharing of your event, but it can be customized and extended to become your main event website!
 
@@ -18,14 +18,14 @@ This is mainly for easy sharing of your event, but it can be customized and exte
 
 * You need to create your event (obvious).
 * This event needs to be linked to a style (at the event setting).
-* This event also needs to be linked to a landingpage template (at the event setting).
+* This event also needs to be linked to a landing page template (at the event setting).
 * With the enterprise plan, you can also use your own domain, which should be set up at this point in time.
 
 ## ✨ Customization
 
-The customization happens mainly at the landingpage template level. However, the button style also affects the landingpage style slightly. For example, box corners won't get rounded with a flat style.
+The customization happens mainly at the landing page template level. However, the button style also affects the landing page style slightly. For example, box corners won't get rounded with a flat style.
 
-At the landingpage template, you can start by setting a title and intro text.
+At the landing page template, you can start by setting a title and intro text.
 
 Based on your event setup, there are a lot of additional features at the event block itself - like the event description, date and time, or the whole inline RSVP form.
 Therefore, the intro text is "only" an additional text block you can use to enrich the user's experience.

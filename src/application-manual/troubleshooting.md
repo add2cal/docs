@@ -28,7 +28,7 @@ The events we push:
 
 ## Tracking does not seem to work
 
-We track the initiation of the save process via clicks at the landingpage, from email direct links, and from Add to Calendar Buttons with active `Proxy` option. If the `Proxy` option is not set at the style, while you are using the Add to Calendar Button outside of the auto-generated landingpage, clicks cannot be tracked.
+We track the initiation of the save process via clicks at the landing page, from email direct links, and from Add to Calendar Buttons with active `Proxy` option. If the `Proxy` option is not set at the style, while you are using the Add to Calendar Button outside of the auto-generated landing page, clicks cannot be tracked.
 
 Another case would be when you share the generated ics file directly - we cannot track this either.
 
@@ -48,7 +48,7 @@ This is basically necessary for things like email links or even the Add to Calen
 
 If you do not want this to happen - because, for example, you put sensitive information into the event details - you can set an event (or group) to private. Click the flap on the top of the big box at the beginning of the details page.
 
-A private event has no public ics file or landingpage. The Add to Calendar Button will also not work as it requires to pull the information via the web. However, you can still [generate ics files via our API](/api/miscellaneous.html#retrieve-ics-file-body). 
+A private event has no public ics file or landing page. The Add to Calendar Button will also not work as it requires to pull the information via the web. However, you can still [generate ics files via our API](/api/miscellaneous.html#retrieve-ics-file-body). 
 
 This makes it an ideal case for [dynamic checkout flows](/recipes/dynamic-checkout.html) with sensitive information!
 
@@ -66,7 +66,7 @@ To achieve this, you would need to duplicate your event and connect the 2 events
 
 ## Social preview image not updating
 
-When sharing a link to the landingpage, we automatically generate a preview image, which displays the event details. This helps to spread the word more prominently.
+When sharing a link to the landing page, we automatically generate a preview image, which displays the event details. This helps to spread the word more prominently.
 
 At each update, this image gets updated as well. However, external tools and websites usually cache this image, which makes it not updating immediately. Some refresh there cache only after 7 days, if at all.
 

@@ -18,12 +18,12 @@ The hierarchy looks likes this:
       |  └─ Email template per RSVP email type *(optional)*
       ├─ CTA template *(optional)*
       ├─ Style *(optional)*
-      └─ Landingpage template *(optional)*
+      └─ Landing page template *(optional)*
 ```
 
 You will face this hierarchy during the creation of element. Still, within the app, they are organized a little different, in order to make them easily accessible - see the main navigation (Events - Styles - Templates).
 
-*Styles, CTA-, and Landingpage templates can be also related to a group, if the group is set up as subscription.*
+*Styles, CTA-, and landing page templates can be also related to a group, if the group is set up as subscription.*
 
 Webhooks, Team, and Settings are additional elements, which are described here as well.
 
@@ -61,7 +61,7 @@ All events you create, can be linked to an event with just one click. This makes
 *Bascially, "Styles" are also templates. We differentiate, because they play a more vital role, but that's all.*
 
 ::: info Mind that there are some exceptions.
-Landingpages and RSVP emails are also partly styled within the respective template blocks and not only by the *style*!
+Landing pages and RSVP emails are also partly styled within the respective template blocks and not only by the *style*!
 :::
 
 ## Templates
@@ -93,13 +93,13 @@ When setting them, you overwrite the default emails, that we send for any RSVP i
 
 You can also adjust the look of the email within the template.
 
-### Landingpages
+### Landing pages
 
-For every event, we automatically generate a nice responsive landingpage for it.
+For every event, we automatically generate a nice responsive landing page for it.
 
 This makes it easy to share your RSVP or event on social media and beyond.
 
-By creating a [landingpage template](/application-manual/styles-and-templates.html#landingpages), you can adjust the look as well as additional content of this landingpage.
+By creating a [landing page template](/application-manual/styles-and-templates.html#landingpages), you can adjust the look as well as additional content of this landing page.
 Link this template to the event/group and you are done.
 
 ## Webhooks

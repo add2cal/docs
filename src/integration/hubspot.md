@@ -3,7 +3,7 @@
 
 ## Intro
 
-When building a website or landingpage at HubSpot, there are a lot of limitations in place.
+When building a website or landing page at HubSpot, there are a lot of limitations in place.
 
 **Good news: It is still possible and not difficult to integrate an Add to Calendar Button or RSVP form!**
 
@@ -36,8 +36,8 @@ Like this:
 
 <br /><br />
 
-::: tip Special Case: Landingpage
-At landingpages, you usually cannot add global header HTML and in some cases cannot edit the rich text source code too.
+::: tip Special Case: Landing Page
+At landing pages, you usually cannot add global header HTML and in some cases cannot edit the rich text source code too.
 
 Use the video element and add the above code blocks to the embed code input.
 :::

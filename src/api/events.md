@@ -144,7 +144,7 @@ Additionally, the API does not allow to set the status of an event - it will alw
   "recurrence_count": 10, // example: repeat 10 times
   "recurrence_weekstart": "MO", // example for Monday
   "layout": "id-of-a-style-template", // take the id from the url in the application or the response when creating one via API
-  "landingpage": "id-of-a-landingpage-template", // take the id from the url in the application or the response when creating one via API
+  "landingpage": "id-of-a-landing-page-template", // take the id from the url in the application or the response when creating one via API
   "iCalFileName": "overriding the ics file name",
   "rsvp": true,
   "rsvp_block": "id-of-an-rsvp-block", // take the id from the url in the application or the response when creating one via API
@@ -167,7 +167,7 @@ Additionally, the API does not allow to set the status of an event - it will alw
 
 You can use the ProKey for further processing and several additional measures:
 
-* We automatically set up a landingpage you can use. Its url would be `https://caldn.net/:prokey`.
+* We automatically set up a landing page you can use. Its url would be `https://caldn.net/:prokey`.
 * In most cases, we auto-create an ics file for you. You can download it from `https://event.caldn.net/:prokey/event.ics`. Mind the specialties here:
   * We are not able to generate a file, if you are using dynamic dates like "today+4" (you can still use the link option for "ical" below);
   * We are not able to generate a file for RSVP forms - here, we generate them dynamically for each attendee and send personalized ones within the confirmation emails;
