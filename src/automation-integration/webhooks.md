@@ -1,10 +1,18 @@
-# Making use of the integrated Webhooks
+# Making use of the integrated Webhooks and API
 
 You can use webhooks to ping any other service or system, when things change at your Add to Calendar PRO events.
 
 Per default, we send all data of the trigger element as JSON object with the key "element_data"; but you can also specify very custom payloads.
 
 [Open in the app ❯](https://app.add-to-calendar-pro.com/webhooks)
+
+<br />
+
+::: tip Create/Update items via API
+To create or update items at Add to Calendar PRO from another system, you can use the documented API endpoints.
+
+[Check the documentation here ❯](/api/introduction.html)
+:::
 
 ## Potential Use Cases
 
