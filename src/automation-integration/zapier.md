@@ -132,7 +132,7 @@ Simply create a new event at Add to Calendar PRO via our Zapier app whenever a n
 <div style="position:relative;z-index:0;">
   <zapier-workflow
     client-id="v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx"
-    theme="light"
+    :theme="theme"
     intro-copy-display="hide"
     manage-zaps-display="hide"
     guess-zap-display="show"
@@ -142,30 +142,33 @@ Simply create a new event at Add to Calendar PRO via our Zapier app whenever a n
   ></zapier-workflow>
 </div>
 
-<script>
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const theme = ref('light');
+let observer = null;
+
+onMounted(() => {
   if (typeof document !== 'undefined') {
-    function updateZapierTheme() {
-      const isDarkMode = document.documentElement.classList.contains('dark');
-      const zapierWorkflow = document.getElementById('zapier-workflow');
-      if (zapierWorkflow) {
-        zapierWorkflow.setAttribute('theme', isDarkMode ? 'dark' : 'light');
+    theme.value = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+  }
+  observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        if (typeof document !== 'undefined') {
+          theme.value = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        }
       }
     }
-    
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', updateZapierTheme);
-    } else {
-      updateZapierTheme();
-    }
-
-    const observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.attributeName === 'class') {
-          updateZapierTheme();
-        }
-      });
-    });
-
+  });
+  if (typeof document !== 'undefined') {
     observer.observe(document.documentElement, { attributes: true });
   }
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>

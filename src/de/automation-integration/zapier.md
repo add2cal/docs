@@ -142,30 +142,33 @@ Erstelle einfach ein neues Event bei Add to Calendar PRO über unsere Zapier-App
   ></zapier-workflow>
 </div>
 
-<script>
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const theme = ref('light');
+let observer = null;
+
+onMounted(() => {
   if (typeof document !== 'undefined') {
-    function updateZapierTheme() {
-      const isDarkMode = document.documentElement.classList.contains('dark');
-      const zapierWorkflow = document.getElementById('zapier-workflow');
-      if (zapierWorkflow) {
-        zapierWorkflow.setAttribute('theme', isDarkMode ? 'dark' : 'light');
+    theme.value = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+  }
+  observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        if (typeof document !== 'undefined') {
+          theme.value = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        }
       }
     }
-    
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', updateZapierTheme);
-    } else {
-      updateZapierTheme();
-    }
-
-    const observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.attributeName === 'class') {
-          updateZapierTheme();
-        }
-      });
-    });
-
+  });
+  if (typeof document !== 'undefined') {
     observer.observe(document.documentElement, { attributes: true });
   }
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
