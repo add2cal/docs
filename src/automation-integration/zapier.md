@@ -144,23 +144,24 @@ Simply create a new event at Add to Calendar PRO via our Zapier app whenever a n
 
 <script>
   if (typeof document !== 'undefined') {
-    document.addEventListener('DOMContentLoaded', function() {
+    function updateZapierTheme() {
       const isDarkMode = document.documentElement.classList.contains('dark');
       const zapierWorkflow = document.getElementById('zapier-workflow');
       if (zapierWorkflow) {
         zapierWorkflow.setAttribute('theme', isDarkMode ? 'dark' : 'light');
       }
-    });
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateZapierTheme);
+    } else {
+      updateZapierTheme();
+    }
 
-    // Listen for theme changes
     const observer = new MutationObserver(function(mutations) {
       mutations.forEach(function(mutation) {
         if (mutation.attributeName === 'class') {
-          const isDarkMode = document.documentElement.classList.contains('dark');
-          const zapierWorkflow = document.getElementById('zapier-workflow');
-          if (zapierWorkflow) {
-            zapierWorkflow.setAttribute('theme', isDarkMode ? 'dark' : 'light');
-          }
+          updateZapierTheme();
         }
       });
     });
