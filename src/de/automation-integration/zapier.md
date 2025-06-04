@@ -95,6 +95,11 @@ Du kannst die folgenden Actions nutzen:
   Diese Daten werden typischerweise als Anhang in einer E-Mail verwendet.  
   Beachte, dass dies nicht für dynamische Zeiten funktioniert (wie "today+2")!
 
+::: tip Einzelne Felder löschen
+Wenn du ein Element aktualisierst, wird durch ein leeres Feld dessen Wert nicht entfernt, da leere Felder von Zapier ignoriert werden.
+Du kannst Informationen entfernen, indem du `$$CLEAR$$` als Wert für das Feld eingibst, das du löschen möchtest.
+:::
+
 ## Typische Anwendungsfälle
 
 ### RSVP-Verwaltung
