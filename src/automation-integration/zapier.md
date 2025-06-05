@@ -1,12 +1,5 @@
 ---
 outline: [2,3]
-head:
-  - - script
-    - type: module
-      src: https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js
-  - - link
-    - rel: stylesheet
-      href: https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css
 ---
 
 # Automate Flows with Zapier
@@ -132,48 +125,4 @@ Simply create a new event at Add to Calendar PRO via our Zapier app whenever a n
 
 ## Explore the possibilities!
 
-<br />
-
-<div style="position:relative;z-index:0;">
-  <zapier-workflow
-    client-id="v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx"
-    :theme="theme"
-    intro-copy-display="hide"
-    manage-zaps-display="hide"
-    guess-zap-display="show"
-    app-search-bar-display="show"
-    zap-create-from-scratch-display="show"
-    id="zapier-workflow"
-  ></zapier-workflow>
-</div>
-
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-
-const theme = ref('light');
-let observer = null;
-
-onMounted(() => {
-  if (typeof document !== 'undefined') {
-    theme.value = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-  }
-  observer = new MutationObserver((mutationsList) => {
-    for (const mutation of mutationsList) {
-      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-        if (typeof document !== 'undefined') {
-          theme.value = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-        }
-      }
-    }
-  });
-  if (typeof document !== 'undefined') {
-    observer.observe(document.documentElement, { attributes: true });
-  }
-});
-
-onUnmounted(() => {
-  if (observer) {
-    observer.disconnect();
-  }
-});
-</script>
+[See examples and templates rigth within the app ❯](https://app.add-to-calendar-pro.com/use-zapier)
