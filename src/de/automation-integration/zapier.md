@@ -4,7 +4,7 @@ outline: [2,3]
 
 # Flows mit Zapier automatisieren
 
-Mit unserer [offiziellen Zapier-App](https://zapier.com/apps/add-to-calendar-pro) kannst du ganz einfach Add to Calendar PRO Trigger überwachen oder entsprechende Aktionen innerhalb von Zapier ausführen!
+Mit unserer [offiziellen Zapier-App](https://zapier.com/apps/add-to-calendar-pro?utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx) kannst du ganz einfach Add to Calendar PRO Trigger überwachen oder entsprechende Aktionen innerhalb von Zapier ausführen!
 
 Du findest die App direkt in Zapier, wenn du einen Zap erstellst.
 
@@ -32,23 +32,23 @@ Im Fall von Add to Calendar PRO mit Zapier könnte dies Folgendes sein:
   - Eine neue RSVP-Antwort wurde erstellt.  
   Allgemein oder für eine bestimmte Veranstaltung.  
   Dies ist vielleicht der häufigste Fall.  
-  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee)
+  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
   - Eine RSVP-Antwort wurde aktualisiert.  
-  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_rsvp_answer)
+  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_rsvp_answer&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
 - Events:
   - Ein neues Event wurde erstellt.  
-  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_event)
+  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_event&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
   - Ein Event wurde aktualisiert.  
-  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_event)
+  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_event&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
   - Ein Event wurde gelöscht.  
-  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=deleted_event)
+  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=deleted_event&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
 - Event-Gruppen:
   - Eine neue Event-Gruppe wurde erstellt.  
-  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_group)
+  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_group&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
   - Eine Event-Gruppe wurde aktualisiert.  
-  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_group)
+  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_group&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
   - Eine Event-Gruppe wurde gelöscht.  
-  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=deleted_group)
+  [Diesen Zap verwenden ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=deleted_group&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
 
 ### Actions
 
@@ -106,7 +106,7 @@ Du könntest sogar zusätzliche E-Mail-Flows auslösen.
 
 Wenn du die Event-Distribution bei einem RSVP-Event deaktivierst, wird es zu einem einfachen Anmeldeformular (vergleichbar mit der [Wartelisten-Anleitung](/de/recipes/waitlist.html)).
 
-Verwende den "neue RSVP-Antwort"-Trigger, um diese Anmeldungen direkt in ein CRM-System wie [Salesforce](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=SalesforceCLIAPI@latest&steps[1][action]=create_lead), [Hubspot](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=HubSpotCLIAPI@latest&steps[1][action]=contactCreate), [Pipedrive](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=PipedriveCLIAPI@latest&steps[1][action]=create_lead) oder ZOHO zu übertragen.
+Verwende den "neue RSVP-Antwort"-Trigger, um diese Anmeldungen direkt in ein CRM-System wie [Salesforce](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=SalesforceCLIAPI@latest&steps[1][action]=create_lead&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx), [Hubspot](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=HubSpotCLIAPI@latest&steps[1][action]=contactCreate&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx), [Pipedrive](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=PipedriveCLIAPI@latest&steps[1][action]=create_lead&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx) oder ZOHO zu übertragen.
 
 ### Dynamischer Checkout
 

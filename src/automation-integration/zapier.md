@@ -4,7 +4,7 @@ outline: [2,3]
 
 # Automate Flows with Zapier
 
-You can easily listen for Add to Calendar PRO triggers or execute respective actions within Zapier with our [official Zapier app](https://zapier.com/apps/add-to-calendar-pro)!
+You can easily listen for Add to Calendar PRO triggers or execute respective actions within Zapier with our [official Zapier app](https://zapier.com/apps/add-to-calendar-pro?utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)!
 
 You can find it directly from within Zapier when creating a zap.
 
@@ -32,23 +32,23 @@ In the Add to Calendar PRO with Zapier case, this could be the following:
   - A new RSVP answer got created.  
   Generally or for a specific event.  
   This is the maybe most common case.  
-  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee)
+  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
   - An RSVP answer got updated.  
-  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_rsvp_answer)
+  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_rsvp_answer&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
 - Events:
   - A new event got created.  
-  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_event)
+  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_event&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
   - An event got updated.  
-  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_event)
+  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_event&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
   - An event got deleted.  
-  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=deleted_event)
+  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=deleted_event&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
 - Event Groups:
   - A new event group got created.  
-  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_group)
+  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_group&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
   - An event group got updated.  
-  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_group)
+  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=updated_group&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
   - An event group got deleted.  
-  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=deleted_group)
+  [Use this zap ❯](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=deleted_group&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx)
 
 ### Actions
 
@@ -106,7 +106,7 @@ You could even trigger additional email flows.
 
 If you disable the event distribution at an RSVP event, it becomes a simple signup form (compare to the [waitlist recipe](/recipes/waitlist.html)).
 
-Use the "new RSVP answer" trigger to push those signups directly into a CRM system like [Salesforce](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=SalesforceCLIAPI@latest&steps[1][action]=create_lead), [Hubspot](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=HubSpotCLIAPI@latest&steps[1][action]=contactCreate), [Pipedrive](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=PipedriveCLIAPI@latest&steps[1][action]=create_lead), or ZOHO.
+Use the "new RSVP answer" trigger to push those signups directly into a CRM system like [Salesforce](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=SalesforceCLIAPI@latest&steps[1][action]=create_lead&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx), [Hubspot](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=HubSpotCLIAPI@latest&steps[1][action]=contactCreate&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx), [Pipedrive](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=PipedriveCLIAPI@latest&steps[1][action]=create_lead&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx), or ZOHO.
 
 ### Dynamic checkout
 
