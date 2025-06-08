@@ -24,6 +24,12 @@ Those things are public by nature. Everybody with a respective link can retrieve
 
 In the following guide, we also highlight the process with a private event.
 :::
+::: tip Even easier with Zapier!
+Alternatively, you can use our Zapier template for Shopify: [click here](https://zapier.com/apps/email/integrations/shopify/255643741/send-outbound-emails-with-add-to-calendar-pro-events-for-new-shopify-orders).
+
+Of course, this also works for other shop systems, as long as they can be connected via Zapier.  
+You can easily adapt the template to your use case.
+:::
 
 ## 🧱 Setting it up
 

@@ -24,6 +24,13 @@ Diese Dinge sind von Natur aus "öffentlich" zugänglich. Jeder mit dem entsprec
 In der folgenden Anleitung zeigen wir auch den Prozess-Fluß mit einem privaten Event.
 :::
 
+::: tip Noch einfacher mit Zapier!
+Alternativ kannst du unser Zapier-Template für Shopify benutzen: [hier klicken](https://zapier.com/apps/email/integrations/shopify/255643741/send-outbound-emails-with-add-to-calendar-pro-events-for-new-shopify-orders).
+
+Natürlich funktioniert dies auch für andere Shopsysteme, solange sie über Zapier angebunden werden können.  
+Das Template kannst du bequem an deinen Case anpassen.
+:::
+
 ## 🧱 Einrichtung
 
 Die Einrichtung dieses Ablaufs erfordert etwas mehr Arbeit, da du dies in deine bestehenden Backend-Abläufe integrieren musst!
