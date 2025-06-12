@@ -1,9 +1,12 @@
 // https://vitepress.dev/reference/site-config
+import llmstxt from 'vitepress-plugin-llms';
+
 export default {  
   mpa: false, // https://vitepress.dev/guide/mpa-mode
   srcDir: './src',
   vite: {
     publicDir: '../public',
+    plugins: [llmstxt()]
   },
   appearance: true,
 
