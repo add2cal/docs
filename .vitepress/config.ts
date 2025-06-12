@@ -6,7 +6,7 @@ export default {
   srcDir: './src',
   vite: {
     publicDir: '../public',
-    plugins: [llmstxt()]
+    plugins: [llmstxt({title: 'Add to Calendar PRO Documentation, covering the App, API, Automation, the integration with various frameworks, as well as recipes and guides. All one needs to know to get started with state-of-the-art Add to Calendar Buttons, RSVP forms, and smart event landing pages.'})],
   },
   appearance: true,
 
