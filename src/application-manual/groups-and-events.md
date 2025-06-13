@@ -40,6 +40,8 @@ In the subscription case, you won't see this table, but the style and CTA inputs
 
 At the very top, you either only see the ProKey to copy (non-subscription case) or a complete summary with everything you need for sharing and integration purposes. From email links to your auto-created landing page and more. Here, you also find the link to the **analytics** dashboard for this event group.
 
+At the bottom, you find the action bar with multiple options and information.
+
 ## The event
 
 An **event** is defined by its date, location, and other details. It is the core data element for everything you want to do at Add to Calendar PRO.
@@ -78,9 +80,10 @@ There, you basically find the same structure as on creation.
 
 At the very top, you find a complete summary with everything you need for sharing and integration purposes. From email links to your auto-created landing page and more. Here, you also find the link to the [analytics](/application-manual/analytics.html) dashboard for this event. This would be the overview of RSVP sign-ups in the RSVP case or analytics about when and how often people saved an event to their calendars (in the non-RSVP case).
 
-Also at the top, you have the option to set an event to private. 
-This will block the auto-generation of a landing page and ics file, but will still allow you to generate ics files via API or use a button with [dynamic date properties in WordPress](/integration/wordpress.html#dynamic-connections).
-
 ::: warning Mind Auto-Adjustments
 Depending on what you select as well as different cases on the user side, we automatically adjust some details. For example, when you create a recurring event, some calendar types will not show up, as not all do support this feature (in an Add to Calendar Button scope).
 :::
+
+At the bottom, you find the action bar with multiple options and information.  
+Here (via the 3-dot button), you also have the option to set an event to private. 
+This will block the auto-generation of a landing page and ics file, but will still allow you to generate ics files via API or use a button with [dynamic date properties in WordPress](/integration/wordpress.html#dynamic-connections).

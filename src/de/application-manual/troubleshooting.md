@@ -46,7 +46,7 @@ Standardmäßig sind die Eventdaten und die ics-Datei für jeden verfügbar, der
 
 Dies ist für Funktionen wie E-Mail-Links oder den Add-to-Calendar-Button notwendig, um ordnungsgemäß zu funktionieren.
 
-Wenn du nicht möchtest, dass dies geschieht - zum Beispiel, weil du sensible Informationen in die Eventdetails einfügst - kannst du ein Event (oder eine Gruppe) auf privat setzen. Klicke dazu auf die Klappe oben am großen Kasten zu Beginn der Detailseite.
+Wenn du nicht möchtest, dass dies geschieht - zum Beispiel, weil du sensible Informationen in die Eventdetails einfügst - kannst du ein Event (oder eine Gruppe) auf privat setzen. Klicke dazu auf den 3-Punkte-Button in der Aktionsleiste am Ende der Event-Detailseite und im Anschluss auf den entsprechenden Button.
 
 Ein privates Event hat keine öffentliche ics-Datei oder Landingpage. Der Add-to-Calendar-Button funktioniert ebenfalls nicht, da er die Informationen über das Web abrufen muss. Du kannst jedoch weiterhin [ics-Dateien über unsere API generieren](/de/api/miscellaneous.html#retrieve-ics-file-body).
 

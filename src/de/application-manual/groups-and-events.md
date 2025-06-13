@@ -79,9 +79,10 @@ Dort findest du im Grunde die gleiche Struktur wie bei der Erstellung selbst vor
 
 Ganz oben findest du eine Zusammenfassung mit allem, was du für das Teilen und die Integration benötigst. Von E-Mail-Links bis zu deiner automatisch erstellten Landingpage und mehr. Hier findest du auch den Link zum Analytics-Dashboard für dieses Event. Das wäre die Übersicht über RSVP-Anmeldungen im RSVP-Fall oder [Statistiken](/de/application-manual/analytics.html) darüber, wann und wie oft Personen ein Event zu ihren Kalendern hinzugefügt haben (im Nicht-RSVP-Fall).
 
-Ebenfalls an oberster Stelle findest du die Option, ein Event als privat zu markieren. 
-Dies blockiert die automatische Generierung einer Landingpage und ICS-Datei, aber erlaubt dir weiterhin ICS-Dateien über die API zu generieren oder einen Button mit [dynamischen Datumseigenschaften in WordPress](/de/integration/wordpress.html#dynamische-verbindungen) zu verwenden.
-
 ::: warning Beachte automatische Anpassungen
 Je nachdem, was du auswählst sowie je nach Nutzer-Situation, passen wir automatisch manche Details an. Beispiel: Wenn du ein wiederkehrendes Event erstellst, werden einige Kalendertypen nicht angezeigt, da nicht alle diese Funktion unterstützen (im Rahmen eines Add-to-Calendar-Buttons).
 :::
+
+Am Ende der Seite findest du die Aktionsleiste, welche weitere Informationen und Aktionsmöglichkeiten bereit stellt.  
+Dort (über den 3-Punkte-Button) findest du auch die Option, ein Event als privat zu markieren. 
+Dies blockiert die automatische Generierung einer Landingpage und ICS-Datei, aber erlaubt dir weiterhin ICS-Dateien über die API zu generieren oder einen Button mit [dynamischen Datumseigenschaften in WordPress](/de/integration/wordpress.html#dynamische-verbindungen) zu verwenden.
