@@ -4,7 +4,7 @@
 ::: info Achte auf die Details!
 Diese Seite behandelt lediglich RSVP-Template-Blöcke.
 
-Ein funktionierendes RSVP-Formular besteht aus 2 Grundelementen. Einen solchen RSVP-Template-Block, der die Informationen zur Strukture des Formulars beinhaltet, sowie ein [Event](/de/api/events.html), das den eigentlichen Termin definiert.
+Ein funktionierendes RSVP-Formular besteht aus 2 Grundelementen. Einen solchen RSVP-Template-Block, der die Informationen zur Strukture des Formulars beinhaltet, sowie ein [Event](/de/api/events), das den eigentlichen Termin definiert.
 :::
 
 ## Alle/Neueste RSVP-Templates listen

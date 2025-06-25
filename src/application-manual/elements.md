@@ -39,7 +39,7 @@ They are the core of everything you build with Add to Calendar PRO. This might b
 
 *(Except for the case, where you want to offer a calendar subscription with an external calendar. Since the event are basically outside of our system, you would directly start with an event group.)*
 
-[Learn more &raquo;](/application-manual/groups-and-events.html#events)
+[Learn more &raquo;](/application-manual/groups-and-events#events)
 
 ## Groups
 
@@ -47,11 +47,11 @@ They are the core of everything you build with Add to Calendar PRO. This might b
 
 It can be used for structuring and organize all of your data, or to link to an external calendar instead of individual events. When creating a new event, you will be asked to specify a group to place it in (or to create a new group).
 
-[Learn more &raquo;](/application-manual/groups-and-events.html#groups)
+[Learn more &raquo;](/application-manual/groups-and-events#groups)
 
 ## Styles
 
-[Styles](/application-manual/styles-and-templates.html#styles) define the look and feel of all public elements.
+[Styles](/application-manual/styles-and-templates#styles) define the look and feel of all public elements.
 
 They can be created directly when creating a new event.
 
@@ -73,13 +73,13 @@ All templates can also be directly created during event creation, but their cent
 
 ### RSVP
 
-An [RSVP template](/application-manual/styles-and-templates.html#rsvp) defines RSVP functionality, like expiration, limitations, or fields.
+An [RSVP template](/application-manual/styles-and-templates#rsvp) defines RSVP functionality, like expiration, limitations, or fields.
 
 Connect this to an event, while activating the RSVP option, and you turn the Add-to-Calendar-Button into a fully functional RSVP form.
 
 ### CTA
 
-A [Call-to-Action (CTA)](/application-manual/styles-and-templates.html#cta) is quite similar to the RSVP template.
+A [Call-to-Action (CTA)](/application-manual/styles-and-templates#cta) is quite similar to the RSVP template.
 
 It can be also linked to an event and will show up after users added the event to their calendar. It can be a slogan, sharing options, some link to another product/website/event, or even a form (e.g. Newsletter signup).
 
@@ -87,7 +87,7 @@ Create the functionality here, link it to your event, and it will automatically 
 
 ### Emails
 
-[Email templates](/application-manual/styles-and-templates.html#emails) can be linked to an RSVP template.
+[Email templates](/application-manual/styles-and-templates#emails) can be linked to an RSVP template.
 
 When setting them, you overwrite the default emails, that we send for any RSVP interaction of the user (like Double-Opt-In, confirmation, etc.).
 
@@ -99,16 +99,16 @@ For every event, we automatically generate a nice responsive landing page for it
 
 This makes it easy to share your RSVP or event on social media and beyond.
 
-By creating a [landing page template](/application-manual/styles-and-templates.html#landingpages), you can adjust the look as well as additional content of this landing page.
+By creating a [landing page template](/application-manual/styles-and-templates#landingpages), you can adjust the look as well as additional content of this landing page.
 Link this template to the event/group and you are done.
 
 ## Webhooks
 
-With [webhooks](/automation-integration/webhooks.html), you can easily push information to other services, whenever something important happens with your RSVP or event (except for users saving events to their calendar - this needs to be tracked differently).
+With [webhooks](/automation-integration/webhooks), you can easily push information to other services, whenever something important happens with your RSVP or event (except for users saving events to their calendar - this needs to be tracked differently).
 
 ## Team Members
 
-You can invite your colleagues to your [team](/application-manual/team.html) and work on stuff together.
+You can invite your colleagues to your [team](/application-manual/team) and work on stuff together.
 
 **No worries, there is no limitation on seats!**
 
@@ -116,4 +116,4 @@ within the "Team" section, you can manage the invites and roles.
 
 ## Settings
 
-While the [settings](/application-manual/settings.html) are mainly about your account, the look of the application, and your license, some parts also affect your projects. For example, you can upload a logo, which then is also used at the email templates as footer image.
+While the [settings](/application-manual/settings) are mainly about your account, the look of the application, and your license, some parts also affect your projects. For example, you can upload a logo, which then is also used at the email templates as footer image.

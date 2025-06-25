@@ -4,7 +4,7 @@ outline: [2,3]
 
 # Working with RSVP Forms
 
-At the [Application Manual](/application-manual/styles-and-templates.html#rsvp) we already introduced the RSVP template blocks, which are essential for creating an RSVP event.
+At the [Application Manual](/application-manual/styles-and-templates#rsvp) we already introduced the RSVP template blocks, which are essential for creating an RSVP event.
 
 In this recipe, we want to guide you through a typical RSVP setup process to make your life easier.
 
@@ -20,7 +20,7 @@ Before you start creating any element, you should write down the base details fo
 
 * Do you need to limit the number of attendees?
 * Is it one event or many?
-* Is it event-bound at all or do you simply want to create a general signup form (see the ["Waitlist" recipe](/recipes/waitlist.html) for that case)?
+* Is it event-bound at all or do you simply want to create a general signup form (see the ["Waitlist" recipe](/recipes/waitlist) for that case)?
 * Where do you want to show the form?
 * What data do you need to ask for?
 * Should people be able to answer with "no" or "maybe"?
@@ -96,7 +96,7 @@ Even if not, you should be aware that when users want to edit their reply, they 
 
 You can now already easily share the landing page basically everywhere and collect your first signups.
 
-The integration on your own website works the same way as you would integrate an Add to Calendar Button. Check the [integration documentation](/integration.html) for more guidance on that part. The element automatically adapts to the RSVP type.
+The integration on your own website works the same way as you would integrate an Add to Calendar Button. Check the [integration documentation](/integration) for more guidance on that part. The element automatically adapts to the RSVP type.
 
 ::: tip
 You can prefill the attendee for the RSVP on the source code level by adding the "attendee" attribute to the HTML element. Mind the format "name|email".
@@ -118,7 +118,7 @@ At the bottom, you find options to export this data as JSON or CSV file.
 
 If you want to go one step further, you can link it with your other systems, like your CRM.
 
-Use our [Webhook functionality](/automation-integration/webhooks.html) to push data automatically to other places.
+Use our [Webhook functionality](/automation-integration/webhooks) to push data automatically to other places.
 
 1. Navigate to the [webhook page](https://app.add-to-calendar-pro.com/webhooks).
 2. Create a new one.

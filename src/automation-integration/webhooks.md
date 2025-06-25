@@ -11,7 +11,7 @@ Per default, we send all data of the trigger element as JSON object with the key
 ::: tip Create/Update items via API
 To create or update items at Add to Calendar PRO from another system, you can use the documented API endpoints.
 
-[Check the documentation here ❯](/api/introduction.html)
+[Check the documentation here ❯](/api/introduction)
 :::
 
 ## Potential Use Cases

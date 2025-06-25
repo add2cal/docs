@@ -6,7 +6,7 @@ outline: [2,3]
 
 In manchen Fällen möchtest du dein Event für jeden Benutzer individuell leicht anpassen.
 
-Hierbei sprechen wir nicht über benutzerspezifische Ereignisse, die bspw. beim Checkout-Prozess auftreten können ([siehe entsprechende Seite hierzu &raquo;](/de/recipes/dynamic-checkout.html))!
+Hierbei sprechen wir nicht über benutzerspezifische Ereignisse, die bspw. beim Checkout-Prozess auftreten können ([siehe entsprechende Seite hierzu &raquo;](/de/recipes/dynamic-checkout))!
 
 Es geht eher um Events, bei denen du bestimmte Felder, wie den Titel oder die Beschreibung, auf die Nutzer zuschneiden möchtest (für den persönlichen Touch).
 

@@ -3,7 +3,7 @@
 
 ## Step 0: Pick the right solution
 
-You can simply load the Add to Calendar Button script via CDN and integrate as described at the default [HTML guide](/integration/html.html).  
+You can simply load the Add to Calendar Button script via CDN and integrate as described at the default [HTML guide](/integration/html).  
 However, this some at some cost and you would need to take precaution to only load and render it on the client.
 
 We recommend to use the React wrapper npm package, create a custom JSX component, and then integrate this component with `client:only="react"` attribute.

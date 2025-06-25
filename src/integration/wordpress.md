@@ -42,7 +42,7 @@ Alternatively, you can also use the shortcode `[add-to-calendar-button]` and add
 ## Overriding settings
 
 You can override some attributes of the button via the respective input field. 
-Check [the respective section at the general integration guide](/integration/general.html#overwrite-settings) for more information on that.
+Check [the respective section at the general integration guide](/integration/general#overwrite-settings) for more information on that.
 
 ## Dynamic connections
 
@@ -90,7 +90,7 @@ You can use this scheme for the following information:
 ::: warning As pointed out at the general integration guide, overriding core information (like the date) leads to a data mismatch, as the automatically generated landing page and ics file are not aware of your WordPress data!
 :::
 
-You can circumvent this by setting the [event to private](/application-manual/groups-and-events.html#detail-page-1), which will not auto-generate a landing page or ics file. 
+You can circumvent this by setting the [event to private](/application-manual/groups-and-events#detail-page-1), which will not auto-generate a landing page or ics file. 
 The button will then not use a pre-built ics file, but instead generate one on the fly.
 
 This comes with the downside, that you need to deal with worse compatibility (for example, Chrome on iOS does not like dynamic ics generation) and are not able to track saving events.

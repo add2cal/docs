@@ -38,7 +38,7 @@ Sie sind der Kern von allem, was du mit Add to Calendar PRO erstellst. Das mag o
 
 *(Ausgenommen der Fall, wo du ein Kalender-Abonnement mit einem externen Kalender anbieten möchtest. Da die Events im Grunde außerhalb unseres Systems liegen, würdest du direkt mit einer Eventgruppe beginnen.)*
 
-[Mehr erfahren &raquo;](/de/application-manual/groups-and-events.html#events)
+[Mehr erfahren &raquo;](/de/application-manual/groups-and-events#events)
 
 ## Gruppen
 
@@ -46,11 +46,11 @@ Sie sind der Kern von allem, was du mit Add to Calendar PRO erstellst. Das mag o
 
 Sie kann verwendet werden, um alle deine Termine zu strukturieren und zu organisieren, oder um auf einen externen Kalender zu verlinken, anstatt auf einzelne Events. Wenn du ein neues Event erstellst, wirst du gefragt, in welcher Gruppe du es platzieren möchtest (oder ob du eine neue Gruppe erstellen möchtest).
 
-[Mehr erfahren &raquo;](/de/application-manual/groups-and-events.html#groups)
+[Mehr erfahren &raquo;](/de/application-manual/groups-and-events#groups)
 
 ## Styles
 
-[Styles](/de/application-manual/styles-and-templates.html#styles) definieren den Look aller öffentlichen Elemente.
+[Styles](/de/application-manual/styles-and-templates#styles) definieren den Look aller öffentlichen Elemente.
 
 Sie können direkt bei der Erstellung eines neuen Events erstellt werden.
 
@@ -72,13 +72,13 @@ Alle Templates können auch direkt bei der Eventerstellung erstellt werden. Ihr 
 
 ### RSVP
 
-Ein [RSVP-Template](/de/application-manual/styles-and-templates.html#rsvp) definiert RSVP-Funktionalitäten wie Ablaufdatum, Limitationen oder zusätzliche Angaben/Felder.
+Ein [RSVP-Template](/de/application-manual/styles-and-templates#rsvp) definiert RSVP-Funktionalitäten wie Ablaufdatum, Limitationen oder zusätzliche Angaben/Felder.
 
 Verbinde diese mit einem Event, während du die RSVP-Option aktivierst, und du verwandelst den Add-to-Calendar-Button in ein voll funktionsfähiges RSVP-Formular.
 
 ### CTA
 
-Ein [Call-to-Action (CTA)](/de/application-manual/styles-and-templates.html#cta) ist einem RSVP-Template sehr ähnlich.
+Ein [Call-to-Action (CTA)](/de/application-manual/styles-and-templates#cta) ist einem RSVP-Template sehr ähnlich.
 
 Er kann auch mit einem Event verknüpft werden und wird angezeigt, nachdem Benutzer das Event zu ihrem Kalender hinzugefügt haben. Es kann ein Slogan, "Teilen"-Buttons, ein Link zu einem anderen Produkt/einer anderen Webseite/einem anderen Event oder sogar ein Formular (z. B. Newsletter-Anmeldung) sein.
 
@@ -86,7 +86,7 @@ Erstelle hier die Funktionalität, verlinke sie mit deinem Event, und der CTA wi
 
 ### E-Mails
 
-[E-Mail-Templates](/de/application-manual/styles-and-templates.html#emails) können mit einem RSVP-Template verknüpft werden.
+[E-Mail-Templates](/de/application-manual/styles-and-templates#emails) können mit einem RSVP-Template verknüpft werden.
 
 Wenn du sie definierst, überschreibst du die Standard-E-Mails, die wir für jede RSVP-Interaktion des Benutzers senden (wie Double-Opt-In, Bestätigung usw.).
 
@@ -98,16 +98,16 @@ Für jedes Event generieren wir automatisch eine ansprechende, responsive Landin
 
 Dies erleichtert das Teilen deines RSVPs oder Events in sozialen Medien und darüber hinaus.
 
-Indem du ein [Landingpage-Template](/de/application-manual/styles-and-templates.html#landingpages) erstellst, kannst du das Aussehen sowie zusätzliche Inhalte dieser Landingpage anpassen.
+Indem du ein [Landingpage-Template](/de/application-manual/styles-and-templates#landingpages) erstellst, kannst du das Aussehen sowie zusätzliche Inhalte dieser Landingpage anpassen.
 Verknüpfe das Template mit dem Event/Gruppe und du bist fertig.
 
 ## Webhooks
 
-Mit [Webhooks](/de/automation-integration/webhooks.html) kannst du Informationen problemlos an andere Dienste weiterleiten, wann immer etwas Wichtiges mit deinem RSVP oder Event passiert (außer, wenn Benutzer Events in ihren Kalender speichern - dies muss anders getrackt werden).
+Mit [Webhooks](/de/automation-integration/webhooks) kannst du Informationen problemlos an andere Dienste weiterleiten, wann immer etwas Wichtiges mit deinem RSVP oder Event passiert (außer, wenn Benutzer Events in ihren Kalender speichern - dies muss anders getrackt werden).
 
 ## Teammitglieder
 
-Du kannst deine Kolleginnen und Kollegen zu deinem [Team](/de/application-manual/team.html) einladen und gemeinsam an Projekten arbeiten.
+Du kannst deine Kolleginnen und Kollegen zu deinem [Team](/de/application-manual/team) einladen und gemeinsam an Projekten arbeiten.
 
 **Keine Sorge, es gibt keine Begrenzung in der Anzahl, bzw. entstehen keine Kosten durch mehr Mitglieder!**
 
@@ -115,4 +115,4 @@ Im Abschnitt "Team" kannst du die Einladungen und Rollen verwalten.
 
 ## Einstellungen
 
-Während die [Einstellungen](/de/application-manual/settings.html) hauptsächlich deinen Account, das Aussehen der Anwendung und deine Lizenz betreffen, beeinflussen einige Teile auch deine Projekte. Zum Beispiel kannst du ein Logo hochladen, das dann auch in den E-Mail-Templates als Abbinder verwendet wird.
+Während die [Einstellungen](/de/application-manual/settings) hauptsächlich deinen Account, das Aussehen der Anwendung und deine Lizenz betreffen, beeinflussen einige Teile auch deine Projekte. Zum Beispiel kannst du ein Logo hochladen, das dann auch in den E-Mail-Templates als Abbinder verwendet wird.

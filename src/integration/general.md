@@ -43,7 +43,7 @@ There are only 2 steps necessary to get RSVP forms and buttons showing up in you
 
 We automatically generate a proKey for every event you create. You can find it at the very top of the respective event page.
 
-When you [create an event via our API](/api/events.html#add-an-event), you will receive the proKey as response.
+When you [create an event via our API](/api/events#add-an-event), you will receive the proKey as response.
 
 ::: warning It's client-side only!
 Mind that the button only works on the client-side.

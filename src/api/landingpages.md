@@ -4,7 +4,7 @@
 ::: info Mind the difference!
 This is about the landing page template.
 
-A functional landing page consists of 2 base elements. Such a template block, holding the data about the structure and style of the page, as well as an [event](/api/events.html) or [subscription group](/api/groups.html), which defines the underlying date(s).
+A functional landing page consists of 2 base elements. Such a template block, holding the data about the structure and style of the page, as well as an [event](/api/events) or [subscription group](/api/groups), which defines the underlying date(s).
 :::
 
 ## Get all/latest landing page templates

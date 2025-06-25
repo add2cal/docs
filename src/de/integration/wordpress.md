@@ -43,7 +43,7 @@ Alternativ kannst du auch den Shortcode `[add-to-calendar-button]` verwenden und
 
 Du kannst einige Attribute des Buttons über das entsprechende Eingabefeld überschreiben.
 
-Weitere Informationen findest du in der [allgemeinen Integrations-Anleitung](/de/integration/general.html#einstellungen-uberschreiben).
+Weitere Informationen findest du in der [allgemeinen Integrations-Anleitung](/de/integration/general#einstellungen-uberschreiben).
 
 ## Dynamische Verbindungen
 
@@ -91,7 +91,7 @@ Du kannst dieses Schema für die folgenden Informationen verwenden:
 ::: warning Wie in der allgemeinen Anleitung erwähnt, führt das Überschreiben von Termin-Informationen (wie dem Startdatum) zu einem Daten-Konflikt, da die automatisch generierte Landingpage und ics-Datei nichts von deinen WordPress-Daten wissen!
 :::
 
-Du kannst dieses Problem umgehen, indem du das [Event als privat markierst](/de/application-manual/groups-and-events.html#detail-seite-1), wodurch keine Landingpage oder ics-Datei erzeugt. 
+Du kannst dieses Problem umgehen, indem du das [Event als privat markierst](/de/application-manual/groups-and-events#detail-seite-1), wodurch keine Landingpage oder ics-Datei erzeugt. 
 Der Button wird dann nicht mit einer vorgebauten ics-Datei arbeiten, sondern diese beim Aufruf dynamisch erzeugen.
 
 Dies birgt leider den Nachteil, dass du eine schlechtere Kompatibilität akzeptieren musst (bspw. unterstützt Chrome auf iOS keine dynamische ics-Generierung) und dass du keine Event-Speichervorgänge tracken kannst. 

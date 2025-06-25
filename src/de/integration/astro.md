@@ -3,7 +3,7 @@
 
 ## Schritt 0: Wähle das beste Vorgehen
 
-Du kannst einfach das Add to Calendar Button Skript via CDN laden und so wie in der [allgemeinen HTML-Anleitung](/de/integration/html.html) beschrieben integrieren.  
+Du kannst einfach das Add to Calendar Button Skript via CDN laden und so wie in der [allgemeinen HTML-Anleitung](/de/integration/html) beschrieben integrieren.  
 Hierbei muss du darauf achten, dass das Ganze nur client-seitig geschieht. Zudem ist dieser Weg nicht ganz ideal.
 
 Wir empfehlen die Nutzung des React-Wrapper npm-Packages, die Erstellung einer benutzerdefinierten JSX-Komponente und die Integration dieser Komponente mit dem Attribut `client:only="react"`.

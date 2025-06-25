@@ -4,7 +4,7 @@ outline: [2,3]
 
 # Mit RSVP-Formularen arbeiten
 
-Im [App Handbuch](/de/application-manual/styles-and-templates.html#rsvp) haben wir bereits die RSVP-Template-Blöcke vorgestellt, die für die Erstellung eines RSVP-Events unerlässlich sind.
+Im [App Handbuch](/de/application-manual/styles-and-templates#rsvp) haben wir bereits die RSVP-Template-Blöcke vorgestellt, die für die Erstellung eines RSVP-Events unerlässlich sind.
 
 In dieser Anleitung möchten wir dich durch den typischen Einrichtungsprozess eines RSVP mit Add to Calendar PRO führen, um dir das Leben zu erleichtern.
 
@@ -20,7 +20,7 @@ Bevor du irgendein Element erstellst, solltest du die Grunddaten deines Projekts
 
 * Musst du die Anzahl der Teilnehmer begrenzen?
 * Ist es eine Veranstaltung oder mehrere?
-* Ist es überhaupt an ein Datum gebunden oder möchtest du einfach ein allgemeines Anmeldeformular erstellen (siehe ["Warteliste"-Anleitung](/de/recipes/waitlist.html) für diesen Fall)?
+* Ist es überhaupt an ein Datum gebunden oder möchtest du einfach ein allgemeines Anmeldeformular erstellen (siehe ["Warteliste"-Anleitung](/de/recipes/waitlist) für diesen Fall)?
 * Wo möchtest du das Formular anzeigen?
 * Welche Daten musst du abfragen?
 * Sollen die Leute mit "nein" oder "vielleicht" antworten können?
@@ -96,7 +96,7 @@ Falls du dies nicht planst, solltest du wissen, dass, wenn Benutzer ihre Antwort
 
 Du kannst jetzt bereits ganz einfach die Landingpage überall teilen und deine ersten Anmeldungen sammeln.
 
-Die Integration auf deiner eigenen Webseite funktioniert genauso, wie du einen Add to Calendar Button integrieren würdest. Schau dir die [Integrations-Dokumentation](/de/integration.html) für eine genauere Anleitung für deinen Tech-Stack an. Das Element selbst passt sich automatisch dem RSVP-Typ an.
+Die Integration auf deiner eigenen Webseite funktioniert genauso, wie du einen Add to Calendar Button integrieren würdest. Schau dir die [Integrations-Dokumentation](/de/integration) für eine genauere Anleitung für deinen Tech-Stack an. Das Element selbst passt sich automatisch dem RSVP-Typ an.
 
 ::: tip
 Du kannst den Teilnehmer für den RSVP auf Quellcode-Ebene vorbefüllen, indem du das "attendee"-Attribut dem HTML-Element hinzufügst. Beachte das Format "name|email".
@@ -118,7 +118,7 @@ Unten auf der Seite findest du Buttons, worüber du diese Daten als JSON- oder C
 
 Wenn du noch einen Schritt weiter gehen möchtest, kannst du es mit deinen anderen Systemen, wie deinem CRM, verknüpfen.
 
-Nutze unsere [Webhook-Funktionalität](/de/automation-integration/webhooks.html), um Daten automatisch an andere Stellen zu pushen.
+Nutze unsere [Webhook-Funktionalität](/de/automation-integration/webhooks), um Daten automatisch an andere Stellen zu pushen.
 
 1. Navigiere zur [Webhook-Seite](https://app.add-to-calendar-pro.com/de/webhooks).
 2. Erstelle einen neuen Eintrag.

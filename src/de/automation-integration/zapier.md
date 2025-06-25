@@ -10,7 +10,7 @@ Du findest die App direkt in Zapier, wenn du einen Zap erstellst.
 
 ## Zapier mit Add to Calendar PRO verbinden
 
-Um Zapier mit Add to Calendar PRO zu verbinden, musst du zuerst einen [neuen API-Schlüssel](/de/application-manual/settings.html#api-keys) erstellen.
+Um Zapier mit Add to Calendar PRO zu verbinden, musst du zuerst einen [neuen API-Schlüssel](/de/application-manual/settings#api-keys) erstellen.
 
 1. Gehe zu `Einstellungen` und wähle den Tab `Technisches`.
 2. Dort findest du den Bereich `API-Keys`.
@@ -57,7 +57,7 @@ Die Zapier-App führt dich mit dynamischen Feldern und automatisch ausgefüllten
 Dies funktioniert, indem im Hintergrund unsere gut dokumentierte API verwendet wird.
 
 ::: warning Beachte die Limits!
-Da dies auf unserer API basiert, gelten unsere [API-Limits](/de/api/introduction.html#rate-limiting) entsprechend.  
+Da dies auf unserer API basiert, gelten unsere [API-Limits](/de/api/introduction#rate-limiting) entsprechend.  
 Normalerweise wirst du diese nie erreichen. Falls doch, kontaktiere uns, damit wir eine bessere Lösung finden!
 :::
 
@@ -104,7 +104,7 @@ Du könntest sogar zusätzliche E-Mail-Flows auslösen.
 
 ### Lead-Generierungsformulare
 
-Wenn du die Event-Distribution bei einem RSVP-Event deaktivierst, wird es zu einem einfachen Anmeldeformular (vergleichbar mit der [Wartelisten-Anleitung](/de/recipes/waitlist.html)).
+Wenn du die Event-Distribution bei einem RSVP-Event deaktivierst, wird es zu einem einfachen Anmeldeformular (vergleichbar mit der [Wartelisten-Anleitung](/de/recipes/waitlist)).
 
 Verwende den "neue RSVP-Antwort"-Trigger, um diese Anmeldungen direkt in ein CRM-System wie [Salesforce](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=SalesforceCLIAPI@latest&steps[1][action]=create_lead&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx), [Hubspot](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=HubSpotCLIAPI@latest&steps[1][action]=contactCreate&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx), [Pipedrive](https://api.zapier.com/v1/embed/add-to-calendar-pro/create?steps[0][app]=App224587CLIAPI@latest&steps[0][action]=new_rsvp_attendee&steps[1][app]=PipedriveCLIAPI@latest&steps[1][action]=create_lead&utm_source=partner&utm_medium=embed&utm_campaign=wfe_fze&entry-point-location=partner_embed&referer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&referrer=https%3A%2F%2Fdocs.add-to-calendar-pro.com&client-id=v08oVVLLq6aY9241XuXc6tsG9UTjdvrZF5ffcAQx) oder ZOHO zu übertragen.
 

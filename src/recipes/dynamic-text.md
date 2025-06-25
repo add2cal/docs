@@ -6,7 +6,7 @@ outline: [2,3]
 
 In some cases, you might want to tailor your event to each user.
 
-Here, we are not talking about user-specific events, that might occur at checkout flows ([see recipe for that &raquo;](/recipes/dynamic-checkout.html))!
+Here, we are not talking about user-specific events, that might occur at checkout flows ([see recipe for that &raquo;](/recipes/dynamic-checkout))!
 
 This is rather about 1 event, which should have a dynamic title or description to feel more personalized to the users.
 

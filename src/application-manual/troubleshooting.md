@@ -5,7 +5,7 @@
 
 We automatically track the most important metrics for you!
 
-This would be signups (and all related details) for the RSVP and the "event saves" for the Add to Calendar Buttons (see [details](/application-manual/analytics.html)).
+This would be signups (and all related details) for the RSVP and the "event saves" for the Add to Calendar Buttons (see [details](/application-manual/analytics)).
 
 We are not automatically tracking any additional data as this would usually go deeper into some darker areas (in terms of data privacy).
 
@@ -48,9 +48,9 @@ This is basically necessary for things like email links or even the Add to Calen
 
 If you do not want this to happen - because, for example, you put sensitive information into the event details - you can set an event (or group) to private. Click the 3-dot-butto at the bottom action bar and hit the respective button afterwards.
 
-A private event has no public ics file or landing page. The Add to Calendar Button will also not work as it requires to pull the information via the web. However, you can still [generate ics files via our API](/api/miscellaneous.html#retrieve-ics-file-body). 
+A private event has no public ics file or landing page. The Add to Calendar Button will also not work as it requires to pull the information via the web. However, you can still [generate ics files via our API](/api/miscellaneous#retrieve-ics-file-body). 
 
-This makes it an ideal case for [dynamic checkout flows](/recipes/dynamic-checkout.html) with sensitive information!
+This makes it an ideal case for [dynamic checkout flows](/recipes/dynamic-checkout) with sensitive information!
 
 ## The Add to Calendar Button dropdown is behind other elements
 

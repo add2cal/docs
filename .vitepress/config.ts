@@ -9,6 +9,7 @@ export default {
     plugins: [llmstxt({title: 'Add to Calendar PRO Documentation, covering the App, API, Automation, the integration with various frameworks, as well as recipes and guides. All one needs to know to get started with state-of-the-art Add to Calendar Buttons, RSVP forms, and smart event landing pages.'})],
   },
   appearance: true,
+  cleanUrls: true,
 
   sitemap: {
     hostname: 'https://docs.add-to-calendar-pro.com',
@@ -36,7 +37,7 @@ export default {
   transformPageData(pageData) {
     const canonicalUrl = `https://docs.add-to-calendar-pro.com/${pageData.relativePath}`
       .replace(/index\.md$/, '')
-      .replace(/\.md$/, '.html')
+      .replace(/\.md$/, '')
 
     pageData.frontmatter.head ??= []
     pageData.frontmatter.head.push([

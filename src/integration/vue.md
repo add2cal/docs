@@ -26,7 +26,7 @@ Vue works extremely well with Web Components.
 However, you might notice a warning in the browser console.
 To get rid of this, you need to provide a little bit more information to the compiler options.
 
-This can go into your `vite.config.js` or other places depending on your setup. Check the official Vue documentation for more details: [Click here](https://vuejs.org/guide/extras/web-components.html#using-custom-elements-in-vue).
+This can go into your `vite.config.js` or other places depending on your setup. Check the official Vue documentation for more details: [Click here](https://vuejs.org/guide/extras/web-components#using-custom-elements-in-vue).
 
 ```javascript
 // vite.config.js or vite.config.ts

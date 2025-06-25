@@ -11,7 +11,7 @@ Standardmäßig senden wir alle Daten des Trigger-Elements als JSON-Objekt mit d
 ::: tip Erstelle/Aktualisiere Elemente via API
 Um Elemente in Add to Calendar PRO von einem anderen System aus zu erstellen oder zu aktualisieren, kannst du die dokumentierten API-Endpunkte nutzen.
 
-[Zur Dokumentation geht es hier ❯](/de/api/introduction.html)
+[Zur Dokumentation geht es hier ❯](/de/api/introduction)
 :::
 
 ## Mögliche Use Cases

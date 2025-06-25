@@ -42,7 +42,7 @@ Es sind nur 2 Schritte notwendig, um RSVP-Formulare und Buttons in deiner Anwend
 
 Wir generieren automatisch einen proKey für jedes von dir erstellte Event. Du kannst ihn ganz oben auf der jeweiligen Eventseite finden.
 
-Wenn du ein [Event über unsere API erstellst](/de/api/events.html#event-erstellen), erhältst du den proKey als Response.
+Wenn du ein [Event über unsere API erstellst](/de/api/events#event-erstellen), erhältst du den proKey als Response.
 
 ::: Warnung Client only!
 Bedenke, dass der Button nur auf Seite des "Clients" funktioniert.

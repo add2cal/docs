@@ -3,7 +3,7 @@
 ::: info Achte auf die Details!
 Diese Seite behandelt lediglich Landingpage-Templates.
 
-Eine funktionale Landingpage besteht aus 2 Grundelementen. Einem solchen Template, das die Daten über Struktur und Stil der Seite enthält, sowie einem [Event](/de/api/events.html) oder einer [Abonnement-Gruppe](/de/api/groups.html), welche die zugrundeliegenden Termine definiert.
+Eine funktionale Landingpage besteht aus 2 Grundelementen. Einem solchen Template, das die Daten über Struktur und Stil der Seite enthält, sowie einem [Event](/de/api/events) oder einer [Abonnement-Gruppe](/de/api/groups), welche die zugrundeliegenden Termine definiert.
 :::
 
 ## Alle/Neueste Landingpage-Templates listen

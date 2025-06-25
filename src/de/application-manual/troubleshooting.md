@@ -5,7 +5,7 @@
 
 Wir verfolgen automatisch die wichtigsten Metriken für dich!
 
-Das wären Anmeldungen (und alle damit verbundenen Details) für RSVP-Formulare und die "Event-Speicherungen" für die Add to Calendar Buttons (siehe [Details hier](/de/application-manual/analytics.html)).
+Das wären Anmeldungen (und alle damit verbundenen Details) für RSVP-Formulare und die "Event-Speicherungen" für die Add to Calendar Buttons (siehe [Details hier](/de/application-manual/analytics)).
 
 Wir verfolgen keine zusätzlichen Daten automatisch, da dies normalerweise tiefer in dunklere Bereiche (in Bezug auf Datenschutz) gehen würde.
 
@@ -48,9 +48,9 @@ Dies ist für Funktionen wie E-Mail-Links oder den Add-to-Calendar-Button notwen
 
 Wenn du nicht möchtest, dass dies geschieht - zum Beispiel, weil du sensible Informationen in die Eventdetails einfügst - kannst du ein Event (oder eine Gruppe) auf privat setzen. Klicke dazu auf den 3-Punkte-Button in der Aktionsleiste am Ende der Event-Detailseite und im Anschluss auf den entsprechenden Button.
 
-Ein privates Event hat keine öffentliche ics-Datei oder Landingpage. Der Add-to-Calendar-Button funktioniert ebenfalls nicht, da er die Informationen über das Web abrufen muss. Du kannst jedoch weiterhin [ics-Dateien über unsere API generieren](/de/api/miscellaneous.html#retrieve-ics-file-body).
+Ein privates Event hat keine öffentliche ics-Datei oder Landingpage. Der Add-to-Calendar-Button funktioniert ebenfalls nicht, da er die Informationen über das Web abrufen muss. Du kannst jedoch weiterhin [ics-Dateien über unsere API generieren](/de/api/miscellaneous#retrieve-ics-file-body).
 
-Das macht es zu einem idealen Fall für [dynamische Checkout-Flows](/de/recipes/dynamic-checkout.html) mit sensiblen Informationen!
+Das macht es zu einem idealen Fall für [dynamische Checkout-Flows](/de/recipes/dynamic-checkout) mit sensiblen Informationen!
 
 ## Das Dropdown des Add to Calendar Buttons verschwindet hinter anderen Elementen
 
