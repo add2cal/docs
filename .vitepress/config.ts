@@ -1,7 +1,8 @@
 // https://vitepress.dev/reference/site-config
 import llmstxt from 'vitepress-plugin-llms';
+import { defineConfig, HeadConfig } from 'vitepress';
 
-export default {  
+export default defineConfig({
   mpa: false, // https://vitepress.dev/guide/mpa-mode
   srcDir: './src',
   vite: {
@@ -35,15 +36,28 @@ export default {
   },
 
   transformPageData(pageData) {
+    pageData.frontmatter.head ??= [];
+
+    // add canonical URL
     const canonicalUrl = `https://docs.add-to-calendar-pro.com/${pageData.relativePath}`
       .replace(/index\.md$/, '')
-      .replace(/\.md$/, '')
-
-    pageData.frontmatter.head ??= []
+      .replace(/\.md$/, '');
     pageData.frontmatter.head.push([
       'link',
       { rel: 'canonical', href: canonicalUrl }
     ])
+
+    // push hreflang and x-default links
+    const canonicalUrlWithoutLang = canonicalUrl.replace(/\/de\//, '/');
+    const adjustedRelativePath = pageData.relativePath
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '')
+      .replace(/de\//, '');
+    pageData.frontmatter.head.push(
+      ['link', { rel: 'alternate', hreflang: 'en', href: canonicalUrlWithoutLang }],
+      ['link', { rel: 'alternate', hreflang: 'de', href: 'https://docs.add-to-calendar-pro.com/de/' + adjustedRelativePath }],
+      ['link', { rel: 'alternate', hreflang: 'x-default', href: canonicalUrlWithoutLang }]
+    );
   },
 
   lastUpdated: true,
@@ -360,4 +374,4 @@ export default {
       }
     }
   }
-}
+});
