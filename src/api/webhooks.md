@@ -116,6 +116,11 @@ PATCH /webhook/:id
 
 Updating a webhook follows the same rules as creating one.
 
+**Specialties when updating:**
+- Fields you send are updated.  
+- Fields you do not send stay as they are.
+- Set a field to `null` and it gets cleared.
+
 <br />
 
 ## Delete a Webhook

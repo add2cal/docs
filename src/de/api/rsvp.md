@@ -164,6 +164,14 @@ PATCH /rsvp-block/:id
 
 Die Aktualisierung eines RSVP-Template-Blocks folgt den gleichen Regeln wie die Erstellung eines neuen.
 
+**Besonderheiten bei der Aktualisierung:**
+- Felder, die du sendest, werden aktualisiert.
+- Felder, die du nicht sendest, bleiben unverändert.
+- Setze ein Feld auf `null`, um es zu löschen.
+- Der Wert/das Array des `fields`-Felds wird als 1 Wert bewertet. Was auch immer du angibst (wenn du es angibst), überschreibt alle (!) Unterelemente.
+
+<br />
+
 ::: warning Beachte die Datenstruktur
 Wenn du das Template für ein aktives RSVP-Formular änderst, ändert sich die Datenstruktur.
 

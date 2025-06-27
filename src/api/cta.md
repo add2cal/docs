@@ -147,6 +147,12 @@ PATCH /cta-block/:id
 
 Updating a CTA template block follows the same rules as creating one.
 
+**Specialties when updating:**
+- Fields you send are updated.  
+- Fields you do not send stay as they are.
+- Set a field to `null` and it gets cleared.
+- The value/array of the `fields` field is evaluated as 1 value. Whatever you provide (if you provide it), overrides all (!) sub-items.
+
 <br />
 
 ## Delete a CTA template

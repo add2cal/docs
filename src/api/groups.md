@@ -107,6 +107,13 @@ PATCH /group/:prokey
 
 Updating a group follows the same rules as creating one.
 
+**Specialties when updating:**
+- Fields you send are updated.  
+- Fields you do not send stay as they are.
+- Set a field to `null` and it gets cleared.
+
+<br />
+
 ::: warning Limitations
 You can only change the subscription setting as long as there are no events linked to the group!
 

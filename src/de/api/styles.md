@@ -154,6 +154,11 @@ PATCH /style/:id
 
 Die Aktualisierung eines Styles folgt denselben Regeln wie die Erstellung eines neuen.
 
+**Besonderheiten bei der Aktualisierung:**
+- Felder, die du sendest, werden aktualisiert.
+- Felder, die du nicht sendest, bleiben unverändert.
+- Setze ein Feld auf `null`, um es zurückzusetzen.
+
 <br />
 
 ## Style löschen

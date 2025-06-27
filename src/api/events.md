@@ -185,7 +185,15 @@ PATCH /event/:prokey
 
 Updating an event follows the same rules as creating one.
 
-The only important difference: The `event_group` field is not allowed.
+**Specialties when updating:**
+- The `event_group` field is not allowed.
+- Fields you send are updated.  
+- Fields you do not send stay as they are.
+- Set a field to `null` and it gets cleared.
+- The individual dates within the `dates` field are sensitive to its order. For example, if you want to update the name of date 2 (out of 2), you would also need to provide at least 1 field for date 1.
+- If you want to remove a date from the `dates` field, you need to clear all of its values (making them `null`).
+
+<br />
 
 ::: warning Limitations
 For the status, mind that if an event gets set to draft on the application UI, you cannot publish it via API!

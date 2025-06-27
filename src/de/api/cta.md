@@ -145,6 +145,12 @@ PATCH /cta-block/:id
 
 Die Aktualisierung eines CTA-Template-Blocks folgt denselben Regeln wie die Erstellung eines neuen.
 
+**Besonderheiten bei der Aktualisierung:**
+- Felder, die du sendest, werden aktualisiert.
+- Felder, die du nicht sendest, bleiben unverändert.
+- Setze ein Feld auf `null`, um es zu löschen.
+- Der Wert/Array des `fields`-Felds wird als 1 Wert betrachtet. Was immer du auch angibst (wenn du es angibst), überschreibt alle (!) Unterelemente.
+
 <br />
 
 ## CTA-Template löschen

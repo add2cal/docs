@@ -107,6 +107,13 @@ PATCH /group/:prokey
 
 Die Aktualisierung einer Gruppe folgt den gleichen Regeln wie die Erstellung einer neuen.
 
+**Besonderheiten beim Aktualisieren:**
+- Felder, die du sendest, werden aktualisiert.  
+- Felder, die du nicht sendest, bleiben unverändert.
+- Setze ein Feld auf `null`, um es zu löschen.
+
+<br />
+
 ::: warning Einschränkungen
 Die "subscription"-Einstellung lässt sich nur ändern, solange noch keine Events mit der Gruppe verknüpft sind!
 

@@ -185,7 +185,15 @@ PATCH /event/:prokey
 
 Die Aktualisierung eines Events folgt den gleichen Regeln wie die Erstellung eines neuen.
 
-Der einzig wichtige Unterschied: Das `event_group`-Feld ist hier nicht erlaubt.
+**Besonderheiten bei Aktualisierungen:**
+- Das Feld `event_group` ist nicht erlaubt.
+- Felder, die du sendest, werden aktualisiert.
+- Felder, die du nicht sendest, bleiben unverändert.
+- Setze ein Feld auf `null`, um es zu löschen.
+- Die einzelnen Termine im `dates`-Feld sind sensitiv gegenüber der Reihenfolge. Wenn du beispielsweise den Namen von Termin 2 (von insgesamt 2) aktualisieren möchtest, müsstest du auch mindestens 1 Feld für Termin 1 angeben.
+- Wenn du einen Termin aus dem `dates`-Feld entfernen möchtest, musst du alle seine Werte auf `null` setzen.
+
+<br />
 
 ::: warning Einschränkungen
 Beachte, dass du den Status über die Anwendungs-Oberfläche auf "Entwurf", über die API aber nicht auf "Veröffentlicht" setzen kannst!
