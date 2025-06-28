@@ -17,6 +17,14 @@ All following call schemes assume this base to be prepended.
 The API is rate limited at 80 requests per second.  
 If this does not work for your, please contact us and tell us about your case.
 
+## GET Limit
+
+When reading multiple items at once (using the `all` endpoint or with RSVP answers), the number of items returned is limited.
+
+You will receive a maximum of 2,000 RSVP answers at once. For all other elements, the limit is 800.
+
+Use the query param `page` to get more (if applicable). Like with `?page=2` to get events 801-1,600.
+
 ## Methods
 
 The API accepts the methods GET, POST, PATCH, and DELETE.  

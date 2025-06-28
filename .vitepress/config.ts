@@ -134,6 +134,7 @@ export default defineConfig({
               { text: 'RSVP-Templates', link: '/de/api/rsvp' },
               { text: "CTA-Templates", link: '/de/api/cta' },
               { text: "Landingpage-Templates", link: '/de/api/landingpages' },
+              { text: 'E-Mail-Templates', link: '/de/api/email-templates' },
               { text: 'Webhooks', link: '/de/api/webhooks' },
               { text: 'Verschiedenes', link: '/de/api/miscellaneous' },
             ]
@@ -280,6 +281,7 @@ export default defineConfig({
           { text: 'RSVP Templates', link: '/api/rsvp' },
           { text: "CTA Templates", link: '/api/cta' },
           { text: "Landing Page Templates", link: '/api/landingpages' },
+          { text: 'Email Templates', link: '/api/email-templates' },
           { text: 'Webhooks', link: '/api/webhooks' },
           { text: 'Miscellaneous', link: '/api/miscellaneous' },
         ]
