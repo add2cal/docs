@@ -20,13 +20,13 @@ GET /email-template/:type
 Ruft eine Liste mit den IDs und Namen aller verfügbaren E-Mail-Template eines bestimmten Typs ab.
 
 **Verfügbare Typen:**
-- email_rsvp_doi
-- email_rsvp_thank_you
-- email_rsvp_signup_confirmation
-- email_rsvp_change_confirmation
-- email_rsvp_event_update
-- email_rsvp_magic_link
-- email_rsvp_second_signup
+- rsvp_doi
+- rsvp_thank_you
+- rsvp_signup_confirmation
+- rsvp_change_confirmation
+- rsvp_event_update
+- rsvp_magic_link
+- rsvp_second_signup
 
 ## Das neueste E-Mail-Template abrufen
 
