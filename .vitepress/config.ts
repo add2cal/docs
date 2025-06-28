@@ -145,6 +145,7 @@ export default defineConfig({
             items: [
               { text: 'Webhooks', link: '/de/automation-integration/webhooks' },
               { text: 'Zapier', link: '/de/automation-integration/zapier' },
+              { text: 'Pipedream', link: '/de/automation-integration/pipedream' },
               { text: 'n8n', link: '/de/automation-integration/n8n' },
               { text: 'Make', link: '/de/automation-integration/make' },
             ]
@@ -292,6 +293,7 @@ export default defineConfig({
         items: [
           { text: 'Webhooks', link: '/automation-integration/webhooks' },
           { text: 'Zapier', link: '/automation-integration/zapier' },
+          { text: 'Pipedream', link: '/automation-integration/pipedream' },
           { text: 'n8n', link: '/automation-integration/n8n' },
           { text: 'Make', link: '/automation-integration/make' },
         ]
