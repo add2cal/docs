@@ -88,6 +88,8 @@ Du kannst die folgenden Actions nutzen:
   Diese Daten werden typischerweise als Anhang in einer E-Mail verwendet.  
   Beachte, dass dies nicht für dynamische Zeiten funktioniert (wie "today+2")!
 
+<br />
+
 ::: tip Einzelne Felder löschen
 Wenn du ein Element aktualisierst, wird durch ein leeres Feld dessen Wert nicht entfernt, da leere Felder von Zapier ignoriert werden.
 Du kannst Informationen entfernen, indem du `$$CLEAR$$` als Wert für das Feld eingibst, das du löschen möchtest.
@@ -110,7 +112,7 @@ Verwende den "neue RSVP-Antwort"-Trigger, um diese Anmeldungen direkt in ein CRM
 
 ### Dynamischer Checkout
 
-Da die Zapier App es dir ermöglicht, Events zu erstellen und deren ICS-Dateiinformationen abzurufen, kannst du ganz einfach funktionale Kalenderevents und/oder Einladungen zu jedem anderen Zap hinzufügen, den du bereits hast.
+Da die Zapier-App es dir ermöglicht, Events zu erstellen und deren ICS-Dateiinformationen abzurufen, kannst du ganz einfach funktionale Kalenderevents und/oder Einladungen zu jedem anderen Zap hinzufügen, den du bereits hast.
 
 Stelle dir einen Zap vor, bei dem du eine E-Mail-Journey startest, nachdem jemand ein Produkt von dir gekauft hat.  
 Erstelle einfach ein Event, rufe die ICS-Daten ab und verwende sie in jeder beliebigen E-Mail.

@@ -88,6 +88,8 @@ You can control the following actions:
   This is then typically used as an attachment within an email.  
   Mind that this is not working for dynamic dates (like "today+2")!
 
+<br />
+
 ::: tip Removing data fields
 When updating an item, simply making one field empty would not remove its content, as empty fields are ignored by Zapier.  
 You can still remove information, by writing `$$CLEAR$$` as value for the field you want to remove.
