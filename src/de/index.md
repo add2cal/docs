@@ -1,4 +1,6 @@
 ---
+title: Willkommen im Dokumentations-Bereich
+description: Entdecke die komplette Add to Calendar PRO Welt. Lerne Zum-Kalender-Hinzufügen-Buttons, RSVP-Formulare und Landing Pages effektiv zu nutzen.
 next: false
 lastUpdated: false
 ---

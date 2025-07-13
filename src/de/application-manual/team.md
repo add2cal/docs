@@ -1,3 +1,7 @@
+---
+title: Team verwalten
+description: Verwalte Teamkollaboration in Add to Calendar PRO. Lade Mitglieder ein, weise Rollen zu und kontrolliere Zugang zu Kalenderprojekten.
+---
 
 # Team verwalten
 

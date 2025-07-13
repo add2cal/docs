@@ -1,4 +1,6 @@
 ---
+title: Working with RSVP Forms
+description: Complete guide to creating RSVP forms with Add to Calendar PRO. Learn to set up event registration, manage responses, and customize forms.
 outline: [2,3]
 ---
 

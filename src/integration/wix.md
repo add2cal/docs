@@ -1,3 +1,7 @@
+---
+title: How to use Buttons and RSVP Forms with Wix.com
+description: Integrate Add to Calendar PRO with Wix websites. Step-by-step guide for adding calendar buttons and RSVP forms to Wix sites.
+---
 
 # How to use Buttons and RSVP Forms with Wix.com
 

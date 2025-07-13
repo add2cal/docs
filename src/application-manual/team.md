@@ -1,3 +1,7 @@
+---
+title: Managing your Team
+description: Manage team collaboration in Add to Calendar PRO. Invite members, assign roles, and control access to your event projects.
+---
 
 # Managing your Team
 

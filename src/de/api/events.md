@@ -1,3 +1,7 @@
+---
+title: Event-API
+description: Erstelle, lese, aktualisiere und lösche Events über die Add to Calendar PRO API für Kalender-Buttons und RSVP-Formulare.
+---
 
 # Event-API
 

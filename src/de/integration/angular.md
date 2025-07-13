@@ -1,3 +1,7 @@
+---
+title: Wie man die Buttons und RSVP-Formulare in Angular nutzt
+description: Integriere Add to Calendar PRO mit Angular-Anwendungen. Vollständige Anleitung für Kalender-Buttons und RSVP-Formulare in Angular-Projekten.
+---
 
 # Wie man die Buttons und RSVP-Formulare in Angular nutzt
 

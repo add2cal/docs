@@ -1,4 +1,9 @@
-# API
+---
+title: API-Übersicht
+description: Entdecke die Add to Calendar PRO REST-API für nahtlose Integration von Kalender-Buttons, ics-Dateien und RSVP-Management.
+---
+
+# API-Übersicht
 
 Wir bieten eine einfache REST-Schnittstelle zum Erstellen und Lesen von Elementen an.
 

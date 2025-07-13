@@ -1,4 +1,6 @@
 ---
+title: Das Speichern im Kalender tracken
+description: Verfolge und analysiere, wie Nutzer deine Events in ihren Kalendern speichern. Überwache Engagement mit integrierten Analytics.
 outline: [2,3]
 ---
 

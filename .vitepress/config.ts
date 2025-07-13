@@ -1,6 +1,6 @@
 // https://vitepress.dev/reference/site-config
 import llmstxt from 'vitepress-plugin-llms';
-import { defineConfig, HeadConfig } from 'vitepress';
+import { defineConfig, HeadConfig, resolveConfig } from 'vitepress';
 
 export default defineConfig({
   mpa: false, // https://vitepress.dev/guide/mpa-mode
@@ -58,6 +58,19 @@ export default defineConfig({
       ['link', { rel: 'alternate', hreflang: 'de', href: 'https://docs.add-to-calendar-pro.com/de/' + adjustedRelativePath }],
       ['link', { rel: 'alternate', hreflang: 'x-default', href: canonicalUrlWithoutLang }]
     );
+
+    // push dynamic title and description
+    const minTitle = 'Add to Calendar PRO Docs';
+    const title = pageData.frontmatter.title + ' | ' + minTitle || minTitle;
+    const description = pageData.frontmatter.description || 'Official Add to Calendar PRO Documentation. Add to Calendar Buttons, RSVP Management, ics file generation, and more. Via App, API, and Plugins.';
+    pageData.frontmatter.head.push(
+      ['meta', { name: 'description', content: description }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }]
+    );
+    
   },
 
   lastUpdated: true,

@@ -1,4 +1,6 @@
 ---
+title: Use Variables to adjust Event Text per User
+description: Personalize event content with dynamic variables. Learn to create custom event titles and descriptions for individual users.
 outline: [2,3]
 ---
 

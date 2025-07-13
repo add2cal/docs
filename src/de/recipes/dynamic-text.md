@@ -1,4 +1,6 @@
 ---
+title: Nutze Variabeln, um Event-Texte je Nutzer anzupassen
+description: Personalisiere Event-Inhalte mit dynamischen Variablen. Lerne, individuelle Event-Titel und Beschreibungen für einzelne Nutzer zu erstellen.
 outline: [2,3]
 ---
 

@@ -1,4 +1,6 @@
 ---
+title: Create custom Email Links for your Event
+description: Generate custom email links for events with Add to Calendar PRO. Create beautiful, branded email integration for your events.
 outline: [2,3]
 ---
 

@@ -1,3 +1,7 @@
+---
+title: Events API
+description: Learn how to create, read, update, and delete events via Add to Calendar PRO's API for seamless event management and RSVP user flows.
+---
 
 # Events API
 

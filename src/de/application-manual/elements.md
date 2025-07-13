@@ -1,5 +1,7 @@
 ---
 outline: [2,3]
+title: Elemente
+description: Entdecke die Kernelemente von Add to Calendar PRO. Lerne wie Bausteine für perfekte Event-Marketing und RSVP-Lösungen zusammenarbeiten.
 ---
 
 # Elemente

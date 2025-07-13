@@ -1,4 +1,6 @@
 ---
+title: Newsletter effizient promoten
+description: Bewirb deinen Newsletter effektiv mit Add to Calendar PRO. Kombiniere Event-Marketing mit Strategien für Abonnentenwachstum.
 outline: [2,3]
 ---
 

@@ -1,3 +1,7 @@
+---
+title: Flows mit Make automatisieren
+description: Verbinde Add to Calendar PRO mit der Make-Automatisierungsplattform. Offizielle Integration kommt bald, nutze Webhooks in der Zwischenzeit.
+---
 
 # Flows mit Make automatisieren
 

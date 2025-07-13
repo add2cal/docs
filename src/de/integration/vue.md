@@ -1,3 +1,7 @@
+---
+title: Wie man die Buttons und RSVP-Formulare in Vue 3 nutzt
+description: Integriere Add to Calendar PRO mit Vue 3-Anwendungen. Vollständige Anleitung für Kalender-Buttons und RSVP-Formulare in Vue-Projekten.
+---
 
 # Wie man die Buttons und RSVP-Formulare in Vue 3 nutzt
 

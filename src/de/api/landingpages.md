@@ -1,3 +1,8 @@
+---
+title: Landingpage-Template-API
+description: Verwalte Landingpage-Templates über die Add to Calendar PRO API. Erstelle ansprechende Event-Websites und Landing-Pages.
+---
+
 # Landingpage-Template-API
 
 ::: info Achte auf die Details!

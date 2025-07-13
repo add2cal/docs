@@ -1,3 +1,7 @@
+---
+title: E-Mail-Template API
+description: Verwalte E-Mail-Templates über die Add to Calendar PRO API. Lese verfügbare Templates für dynamische Integration.
+---
 
 # E-Mail-Template API
 

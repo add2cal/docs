@@ -1,4 +1,6 @@
 ---
+title: Integriere es in deine Website oder Web-App
+description: Integriere Add to Calendar PRO Buttons und RSVP-Formulare in jede Website oder Web-App. Einfache Integrationsanleitungen für alle Plattformen.
 next: false
 lastUpdated: false
 ---

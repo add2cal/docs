@@ -1,3 +1,7 @@
+---
+title: How to use Buttons and RSVP Forms with HubSpot
+description: Integrate Add to Calendar PRO with HubSpot CRM. Add calendar buttons and RSVP forms to your HubSpot marketing workflows.
+---
 
 # How to use Buttons and RSVP Forms with HubSpot
 

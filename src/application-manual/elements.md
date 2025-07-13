@@ -1,4 +1,6 @@
 ---
+title: Elements to discover
+description: Discover Add to Calendar PRO's core elements. Learn how building blocks work together for perfect event sharing and RSVP management.
 outline: [2,3]
 ---
 

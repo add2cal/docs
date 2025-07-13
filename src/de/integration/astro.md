@@ -1,3 +1,7 @@
+---
+title: Wie man die Buttons und RSVP-Formulare mit Astro nutzt
+description: Integriere Add to Calendar PRO mit Astro-Anwendungen. Vollständige Anleitung für Kalender-Buttons und RSVP-Formulare in Astro-Projekten.
+---
 
 # Wie man die Buttons und RSVP-Formulare mit Astro nutzt
 

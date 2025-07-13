@@ -1,3 +1,7 @@
+---
+title: How to integrate Buttons and RSVP Forms with React
+description: Integrate Add to Calendar PRO with React applications. Complete guide for calendar buttons and RSVP forms in React projects.
+---
 
 # How to integrate Buttons and RSVP Forms with React
 

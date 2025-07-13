@@ -1,4 +1,6 @@
 ---
+title: Add to Calendar Buttons in a dynamic Checkout
+description: Integrate calendar buttons into dynamic checkout flows. Perfect for appointment booking and time-bound product sales.
 outline: [2,3]
 ---
 

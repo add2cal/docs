@@ -1,4 +1,6 @@
 ---
+title: Create a Waitlist for your Product or Event Launch
+description: Build waitlists for product and event launches with Add to Calendar PRO. Create signup forms without specific dates for pre-launch marketing.
 outline: [2,3]
 ---
 

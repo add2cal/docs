@@ -1,3 +1,8 @@
+---
+title: Verschiedenes
+description: Lerne ics-Dateien, RSVP-Antworten und mehr über die Add to Calendar PRO API abzurufen.
+---
+
 # Verschiedenes
 
 ## ics-Datei-Inhalt abrufen

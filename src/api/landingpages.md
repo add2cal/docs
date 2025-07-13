@@ -1,3 +1,7 @@
+---
+title: Landing Page Template API
+description: Learn how to create, read, update, and delete event landing page templates via Add to Calendar PRO's API for the use with events and RSVP forms.
+---
 
 # Landing Page Template API
 

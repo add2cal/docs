@@ -1,3 +1,7 @@
+---
+title: Wie man die Buttons und RSVP-Formulare in React nutzt
+description: Integriere Add to Calendar PRO mit React-Anwendungen. Vollständige Anleitung für Kalender-Buttons und RSVP-Formulare in React-Projekten.
+---
 
 # Wie man die Buttons und RSVP-Formulare in React nutzt
 

@@ -1,3 +1,7 @@
+---
+title: Event-Gruppen-API
+description: Verwalte Event-Gruppen über die Add to Calendar PRO API. Erstelle Container für Events und Kalender-Abonnements.
+---
 
 # Event-Gruppen-API
 

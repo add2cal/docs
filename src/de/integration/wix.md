@@ -1,3 +1,7 @@
+---
+title: Wie man die Buttons und RSVP-Formulare auf Wix.com nutzt
+description: Integriere Add to Calendar PRO mit Wix-Websites. Schritt-für-Schritt-Anleitung für Kalender-Buttons und RSVP-Formulare auf Wix-Seiten.
+---
 
 # Wie man die Buttons und RSVP-Formulare auf Wix.com nutzt
 

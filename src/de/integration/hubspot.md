@@ -1,3 +1,7 @@
+---
+title: Wie man die Buttons und RSVP-Formulare mit HubSpot nutzt
+description: Integriere Add to Calendar PRO mit HubSpot CRM. Füge Kalender-Buttons und RSVP-Formulare zu deinen HubSpot-Marketing-Workflows hinzu.
+---
 
 # Wie man die Buttons und RSVP-Formulare mit HubSpot nutzt
 

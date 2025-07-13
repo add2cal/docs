@@ -1,4 +1,6 @@
 ---
+title: Eine Warteliste für deinen Produkt- oder Event-Launch
+description: Erstelle Wartelisten für Produkt- oder Event-Launches mit Add to Calendar PRO. Sammle Interesse vor der offiziellen Ankündigung.
 outline: [2,3]
 ---
 

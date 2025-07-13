@@ -1,3 +1,7 @@
+---
+title: RSVP Template API
+description: Learn how to create, read, update, and delete RSVP templates via Add to Calendar PRO's API to automate your event and RSVP management.
+---
 
 # RSVP Template API
 

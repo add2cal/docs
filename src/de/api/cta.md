@@ -1,3 +1,8 @@
+---
+title: Call-to-Action-Template-API
+description: Verwalte CTA-Templates über die Add to Calendar PRO API. Erstelle benutzerdefinierte Formulare und Call-to-Action-Blöcke.
+---
+
 # Call-to-Action-Template-API
 
 ## Alle/Neueste CTA-Templates listen

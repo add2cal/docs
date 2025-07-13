@@ -1,4 +1,6 @@
 ---
+title: Add to Calendar Buttons in einem dynamischen Checkout-Prozess
+description: Integriere Kalender-Buttons in dynamische Checkout-Flows. Perfekt für Terminbuchungen und zeitgebundene Produktverkäufe.
 outline: [2,3]
 ---
 # Add to Calendar Buttons in einem dynamischen Checkout-Prozess

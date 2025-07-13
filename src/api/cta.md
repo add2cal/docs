@@ -1,3 +1,7 @@
+---
+title: Call to Action Template API
+description: Integrate Call to Action templates with Add to Calendar PRO's API to enhance your event marketing.
+---
 
 # Call to Action Template API
 

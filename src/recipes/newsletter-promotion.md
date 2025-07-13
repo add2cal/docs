@@ -1,4 +1,6 @@
 ---
+title: Promoting your Newsletter efficiently
+description: Promote your newsletter effectively with Add to Calendar PRO. Combine event marketing with subscriber growth strategies.
 outline: [2,3]
 ---
 

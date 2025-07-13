@@ -1,3 +1,7 @@
+---
+title: Troubleshooting
+description: Solve common issues with Add to Calendar PRO. Find answers to frequently asked questions and troubleshooting steps.
+---
 
 # Troubleshooting
 

@@ -1,3 +1,7 @@
+---
+title: Style API
+description: Create, read, update, and delete styles via Add to Calendar PRO's API for calendar buttons, event landing pages, and RSVP forms.
+---
 
 # Style API
 

@@ -1,4 +1,6 @@
 ---
+title: Integrate it
+description: Integrate Add to Calendar PRO buttons and RSVP forms with any frontend tech stack. Easy integration guides for all platforms.
 next: false
 lastUpdated: false
 ---

@@ -1,3 +1,8 @@
+---
+title: Style-API
+description: Erstelle, lese, aktualisiere und lösche Styles über die Add to Calendar PRO API für Kalender-Buttons und Event-Landing-Pages.
+---
+
 # Style-API
 
 ## Alle/Neueste Styles listen

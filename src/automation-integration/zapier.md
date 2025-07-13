@@ -1,4 +1,6 @@
 ---
+title: Automate Flows with Zapier
+description: Connect Add to Calendar PRO with Zapier automation. Listen for triggers and execute actions with our official Zapier integration app.
 outline: [2,3]
 ---
 

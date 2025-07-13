@@ -1,4 +1,6 @@
 ---
+title: Nutze die Buttons und RSVP-Formulare mit deinem Tech Stack
+description: Lerne Add to Calendar PRO mit jedem Tech Stack zu integrieren. Vollständige Implementierungsanleitung für Kalender-Buttons und RSVP-Formulare.
 outline: [2,3]
 ---
 # Nutze die Buttons und RSVP-Formulare mit deinem Tech Stack

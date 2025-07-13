@@ -1,3 +1,8 @@
+---
+title: Miscellaneous
+description: Learn how to retrieve ics files, RSVP replies, and more via Add to Calendar PRO's API.
+---
+
 # Miscellaneous
 
 ## Retrieve ics file body

@@ -1,4 +1,6 @@
 ---
+title: Settings
+description: Configure your Add to Calendar PRO account settings. Manage licensing, branding, and application preferences from the settings panel.
 outline: [2,3]
 ---
 

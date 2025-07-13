@@ -1,4 +1,6 @@
 ---
+title: Erstelle individuelle E-Mail-Links für dein Event
+description: Generiere individuelle E-Mail-Links für Events mit Add to Calendar PRO. Erstelle schöne, gebrandete E-Mail-Integration für deine Events.
 outline: [2,3]
 ---
 

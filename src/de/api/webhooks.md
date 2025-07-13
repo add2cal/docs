@@ -1,3 +1,8 @@
+---
+title: Webhook-API
+description: Erstelle, lese, aktualisiere und lösche Webhooks über die Add to Calendar PRO API für automatisierte Event-Marketing-Flows.
+---
+
 # Webhook-API
 
 ## Alle/Neueste Webhooks listen

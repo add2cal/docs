@@ -1,3 +1,8 @@
+---
+title: API-Authentifizierung
+description: Authentifiziere dich mit Add to Calendar PRO API-Keys. Erstelle und verwende API-Keys für sicheren Zugang zu unseren Services.
+---
+
 # API-Authentifizierung
 
 Um deine Aufrufe zu authentifizieren, musst du zunächst einen API-Schlüssel in den Organisations-Einstellungen der Anwendung erstellen.

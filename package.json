@@ -22,6 +22,7 @@
     "dev": "vitepress dev",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview --port 6789"
+    "docs:preview": "vitepress preview --port 6789",
+    "check:frontmatter": "node check_frontmatter.js"
   }
 }

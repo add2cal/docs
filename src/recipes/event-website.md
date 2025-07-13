@@ -1,4 +1,6 @@
 ---
+title: Your dedicated Event Website
+description: Create beautiful event websites effortlessly with Add to Calendar PRO. Build dedicated landing pages with no budget or time constraints.
 outline: [2,3]
 ---
 

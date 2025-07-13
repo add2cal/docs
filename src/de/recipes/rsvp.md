@@ -1,4 +1,6 @@
 ---
+title: Mit RSVP-Formularen arbeiten
+description: Vollständige Anleitung zum Erstellen von RSVP-Formularen mit Add to Calendar PRO. Lerne Event-Anmeldungen einzurichten und zu verwalten.
 outline: [2,3]
 ---
 

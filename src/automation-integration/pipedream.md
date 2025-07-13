@@ -1,4 +1,6 @@
 ---
+title: Automate Flows with Pipedream
+description: Connect Add to Calendar PRO with Pipedream workflows. Listen for triggers and execute actions with our official Pipedream integration.
 outline: [2,3]
 ---
 

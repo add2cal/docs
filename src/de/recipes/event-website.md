@@ -1,4 +1,6 @@
 ---
+title: Deine Event-Webseite ohne Zusatzaufwand
+description: Erstelle mühelos schöne Event-Webseiten mit Add to Calendar PRO. Baue dedizierte Landing Pages ohne Budget- oder Zeitbeschränkungen.
 outline: [2,3]
 ---
 

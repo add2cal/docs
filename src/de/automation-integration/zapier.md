@@ -1,4 +1,6 @@
 ---
+title: Flows mit Zapier automatisieren
+description: Verbinde Add to Calendar PRO mit Zapier-Automatisierung. Nutze Trigger und Aktionen mit unserer offiziellen Zapier-App.
 outline: [2,3]
 ---
 

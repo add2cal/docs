@@ -1,3 +1,8 @@
+---
+title: Making use of the integrated Webhooks and API
+description: Use webhooks to ping external services when Add to Calendar PRO events change. Send custom payloads and integrate with any system.
+---
+
 # Making use of the integrated Webhooks and API
 
 You can use webhooks to ping any other service or system, when things change at your Add to Calendar PRO events.

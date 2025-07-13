@@ -1,3 +1,7 @@
+---
+title: Groups API
+description: Learn how to create, read, update, and delete event groups via Add to Calendar PRO's API for seamless event management and RSVP user flows.
+---
 
 # Groups API
 

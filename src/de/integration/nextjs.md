@@ -1,3 +1,7 @@
+---
+title: Wie man die Buttons und RSVP-Formulare mit Next.js nutzt
+description: Integriere Add to Calendar PRO mit Next.js-Anwendungen. Vollständige Anleitung für Kalender-Buttons und RSVP-Formulare in Next.js-Projekten.
+---
 
 # Wie man die Buttons und RSVP-Formulare mit Next.js nutzt
 

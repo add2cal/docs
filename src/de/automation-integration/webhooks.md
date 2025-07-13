@@ -1,3 +1,8 @@
+---
+title: Integrierte Webhooks und API nutzen
+description: Nutze Webhooks um externe Services zu benachrichtigen, wenn sich Add to Calendar PRO Events ändern. Sende benutzerdefinierte Payloads.
+---
+
 # Integrierte Webhooks und API nutzen
 
 Du kannst Webhooks verwenden, um einen anderen Dienst oder System zu benachrichtigen, wenn sich etwas bei deinen Add to Calendar PRO Events ändert.

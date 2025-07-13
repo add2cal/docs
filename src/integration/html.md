@@ -1,3 +1,7 @@
+---
+title: How to integrate Buttons and RSVP Forms with simple HTML/JavaScript
+description: Integrate Add to Calendar PRO with HTML and JavaScript. Simple CDN-based integration for calendar buttons and RSVP forms.
+---
 
 # How to integrate Buttons and RSVP Forms with simple HTML/JavaScript
 

@@ -1,3 +1,7 @@
+---
+title: Wie man die Buttons und RSVP-Formulare in Svelte nutzt
+description: Integriere Add to Calendar PRO mit Svelte-Anwendungen. Vollständige Anleitung für Kalender-Buttons und RSVP-Formulare in Svelte-Projekten.
+---
 
 # Wie man die Buttons und RSVP-Formulare in Svelte nutzt
 

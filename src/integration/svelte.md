@@ -1,3 +1,7 @@
+---
+title: How to integrate Buttons and RSVP Forms with Svelte
+description: Integrate Add to Calendar PRO with Svelte applications. Complete guide for calendar buttons and RSVP forms in Svelte projects.
+---
 
 # How to integrate Buttons and RSVP Forms with Svelte
 

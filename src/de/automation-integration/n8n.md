@@ -1,3 +1,7 @@
+---
+title: Flows mit n8n automatisieren
+description: Verbinde Add to Calendar PRO mit der n8n-Automatisierungsplattform. Offizielle Integration kommt bald, nutze Webhooks in der Zwischenzeit.
+---
 
 # Flows mit n8n automatisieren
 

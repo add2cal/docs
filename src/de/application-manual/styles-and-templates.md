@@ -1,4 +1,6 @@
 ---
+title: Styles und Templates
+description: Meistere Styles und Templates in Add to Calendar PRO. Konfiguriere visuelles Design und Funktionalität effizient über Events hinweg.
 outline: [2,3]
 ---
 

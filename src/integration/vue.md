@@ -1,3 +1,7 @@
+---
+title: How to integrate Buttons and RSVP Forms with Vue 3
+description: Integrate Add to Calendar PRO with Vue 3 applications. Complete guide for calendar buttons and RSVP forms in Vue projects.
+---
 
 # How to integrate Buttons and RSVP Forms with Vue 3
 

@@ -1,4 +1,6 @@
 ---
+title: Using Buttons and RSVP Forms with your Tech Stack
+description: Learn to integrate Add to Calendar PRO with any tech stack. Complete implementation guide for calendar buttons and RSVP forms.
 outline: [2,3]
 ---
 # Using Buttons and RSVP Forms with your Tech Stack

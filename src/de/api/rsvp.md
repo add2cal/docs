@@ -1,3 +1,7 @@
+---
+title: RSVP-Template-API
+description: Verwalte RSVP-Templates über die Add to Calendar PRO API. Erstelle Anmeldeformulare mit benutzerdefinierten Feldern und Logik.
+---
 
 # RSVP-Template-API
 

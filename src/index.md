@@ -1,4 +1,6 @@
 ---
+title: Welcome to our Documentation
+description: Discover the complete Add to Calendar PRO world. Learn to integrate add to calendar buttons, RSVP forms, and landing pages into your flows.
 next: false
 lastUpdated: false
 ---

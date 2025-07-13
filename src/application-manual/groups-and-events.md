@@ -1,4 +1,6 @@
 ---
+title: Groups and Events
+description: Learn how event groups and events work in Add to Calendar PRO. Organize your calendar integrations with containers and individual events.
 outline: [2,3]
 ---
 

@@ -1,3 +1,7 @@
+---
+title: Fehlerbehebung
+description: Löse häufige Probleme mit Add to Calendar PRO. Finde Antworten auf oft gestellte Fragen und Fehlerbehebungsschritte.
+---
 
 # Fehlerbehebung
 

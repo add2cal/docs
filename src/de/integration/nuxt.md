@@ -1,3 +1,7 @@
+---
+title: Wie man die Buttons und RSVP-Formulare mit Nuxt 3 nutzt
+description: Integriere Add to Calendar PRO mit Nuxt 3-Anwendungen. Vollständige Anleitung für Kalender-Buttons und RSVP-Formulare in Nuxt-Projekten.
+---
 
 # Wie man die Buttons und RSVP-Formulare mit Nuxt 3 nutzt
 

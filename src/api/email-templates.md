@@ -1,3 +1,7 @@
+---
+title: Email Template API
+description: Learn how to use Add to Calendar PRO's Email Template API. Customize the whole RSVP user journey for higher success rates.
+---
 
 # Email Template API
 

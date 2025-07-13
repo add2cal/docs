@@ -1,3 +1,7 @@
+---
+title: How to integrate Buttons and RSVP Forms with Next.js
+description: Integrate Add to Calendar PRO with Next.js applications. Complete guide for calendar buttons and RSVP forms in Next.js projects.
+---
 
 # How to integrate Buttons and RSVP Forms with Next.js
 

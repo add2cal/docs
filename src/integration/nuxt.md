@@ -1,3 +1,7 @@
+---
+title: How to integrate Buttons and RSVP Forms with Nuxt 3
+description: Integrate Add to Calendar PRO with Nuxt 3 applications. Complete guide for calendar buttons and RSVP forms in Nuxt projects.
+---
 
 # How to integrate Buttons and RSVP Forms with Nuxt 3
 

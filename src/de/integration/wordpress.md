@@ -1,4 +1,6 @@
 ---
+title: Wie man die Buttons und RSVP-Formulare in WordPress nutzt
+description: Integriere Add to Calendar PRO mit WordPress über unser offizielles Plugin. Schritt-für-Schritt-Anleitung für Kalender-Buttons und RSVP-Formulare.
 outline: [2,3]
 ---
 

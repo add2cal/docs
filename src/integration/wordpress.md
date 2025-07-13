@@ -1,4 +1,6 @@
 ---
+title: How to use Buttons and RSVP Forms with WordPress
+description: Integrate Add to Calendar PRO with WordPress using our official plugin. Step-by-step guide for calendar buttons and RSVP forms.
 outline: [2,3]
 ---
 

@@ -1,4 +1,6 @@
 ---
+title: Einstellungen
+description: Konfiguriere deine Add to Calendar PRO Kontoeinstellungen. Verwalte Lizenzierung, Branding und Anwendungseinstellungen.
 outline: [2,3]
 ---
 

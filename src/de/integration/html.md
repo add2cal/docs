@@ -1,3 +1,7 @@
+---
+title: Wie man die Buttons und RSVP-Formulare mit simplem HTML/JavaScript nutzt
+description: Integriere Add to Calendar PRO mit HTML und JavaScript. Einfache CDN-basierte Integration für Kalender-Buttons und RSVP-Formulare.
+---
 
 # Wie man die Buttons und RSVP-Formulare mit simplem HTML/JavaScript nutzt
 

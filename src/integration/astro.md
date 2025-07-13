@@ -1,3 +1,7 @@
+---
+title: How to integrate Buttons and RSVP Forms with Astro
+description: Integrate Add to Calendar PRO with Astro applications. Complete guide for calendar buttons and RSVP forms in Astro projects.
+---
 
 # How to integrate Buttons and RSVP Forms with Astro
 
