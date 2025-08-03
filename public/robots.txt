@@ -1,2 +1,4 @@
 User-agent:*
 Allow:/
+
+Sitemap: https://docs.add-to-calendar-pro.com/sitemap.xml
