@@ -4,36 +4,17 @@ description: Lerne Add to Calendar PRO mit jedem Tech Stack zu integrieren. Voll
 outline: [2,3]
 ---
 # Nutze die Buttons und RSVP-Formulare mit deinem Tech Stack
+Unsere Add to Calendar Buttons und RSVP-Formulare lassen sich ganz einfach mit praktisch jedem Tech Stack integrieren.  
+Die Einrichtung mit den Standardeinstellungen ist innerhalb von 1 Minute erledigt. Details kannst du anschließend nach Belieben anpassen.
 
-## Wichtige Überlegungen
-
-Es gibt 3 Dinge, die vor der Implementierung zu beachten, bzw. deinerseits zu prüfen sind.
-
-### 1. Paket/Plugin vs. CDN
-
-Ob du das Skript als Teil deines Kernsystems verwalten möchtest - über deine üblichen Paket-/Plugin-Flows; oder ob du es lieber über einen Script-Tag von einem externen CDN laden möchtest.
-
-Es gibt Vor- und Nachteile für beide Ansätze und es liegt ganz bei dir, was du bevorzugst. Im Zweifelsfall geht es um Bequemlichkeit und darum, was du gewohnt bist. Bedenke, dass die Verwendung als Modul von dir verlangt, es manuell aktuell zu halten!
-
-### 2. Bundle-Size
-
-Wie wichtig dir die Bundle-Size ist, wenn du das Skript als npm-Paket verwendest.
-
-Wenn du das Skript in seiner Standard-Variante verwendest, fragst du dich vielleicht, ob du die Größe des Skripts reduzieren kannst. Aufgrund der Natur des Skripts ist dies (z. B. Tree-Shaking) nicht direkt möglich.
-Du kannst jedoch stattdessen die unstyle-Version laden, um CSS-Daten zu sparen, die du nicht benötigst. Bei diesem Ansatz musst du sicherstellen, dass Events in der App mit einem Style verknüpft sind UND bei diesem die Option "Load Async" aktiv ist. Dies stellt sicher, dass der Stil asynchron über das jsDelivr CDN geladen wird (stelle sicher, dass dies bei potenziellen CORS-Einstellungen erlaubt ist).
-
-### 3. User Flow
-
-Ob du Links und Dateien über das Skript auf der Client-Seite generieren lassen oder ob du unseren Proxy-Service verwenden möchtest.
-
-Im ersten Fall werden die Links zu den Kalendern direkt im Browser dynamisch generiert. Auch die ics-Datei wird auf diese Weise dynamisch erstellt. Dies ist der schnellste Ansatz (aus Sicht des Benutzers). Allerdings wird die ics-Generierung bei einigen Systemen blockiert und falls ein Kalenderanbieter offline geht oder interne Probleme hat, kann der Benutzer kein Event speichern.  
-Bei Verwendung des Proxys werden Links und Dateien auf unserer Seite generiert und der Benutzer wird zuerst zu uns umgeleitet. Sollte etwas nicht funktionieren, können wir den Benutzer damit auch darüber informieren und Alternativen sowie Anleitungen anbieten. Dies ist daher der stabilere Weg, für den Benutzer aber etwas langsamer.
-
-Du kannst die Proxy-Einstellung über einen Style verwalten, den du mit dem Event (oder Event-Gruppe) verbindest. Wenn kein Style definiert ist, verwendet wir standardmäßig die Proxy-Option.
+::: tip Wie du starten solltest
+Wir empfehlen, im Menü nach deinem Tech Stack zu suchen und von dort aus zu beginnen.  
+Lies den Rest dieser Seite für ausführlichere Details und Optionen zur Anpassung.
+:::
 
 ## Allgemeiner Workflow
 
-Es sind nur 2 Schritte notwendig, um RSVP-Formulare und Buttons in deiner Anwendung anzuzeigen.
+Es sind nur 2 Schritte notwendig, um RSVP-Formulare und Add to Calendar Buttons in deiner Anwendung oder auf deiner Webseite anzuzeigen.
 
 1. Lade das Skript (durch Importieren des Pakets, Laden des Skripts über CDN oder über ein Plugin).
 2. Platziere ein `<add-to-calendar-button>`-Tag dort, wo du das Element anzeigen möchtest, und füge den proKey als Attribut hinzu.
@@ -95,6 +76,32 @@ import 'add-to-calendar-button/unstyle';
 Für einige Systeme (wie WordPress) bieten wir offizielle Plugins an.
 
 Normalerweise findest du diese in den entsprechenden Stores. Überprüfe allerdings unbedingt die jeweilige Seite in dieser Dokumentation für Details und um keine falschen (oder gar schädlichen) Inhalte zu installieren.
+
+## Wichtige Überlegungen
+
+Es gibt 3 Dinge, die vor der Implementierung zu beachten, bzw. deinerseits zu prüfen sind.
+
+### 1. Paket/Plugin vs. CDN
+
+Ob du das Skript als Teil deines Kernsystems verwalten möchtest - über deine üblichen Paket-/Plugin-Flows; oder ob du es lieber über einen Script-Tag von einem externen CDN laden möchtest.
+
+Es gibt Vor- und Nachteile für beide Ansätze und es liegt ganz bei dir, was du bevorzugst. Im Zweifelsfall geht es um Bequemlichkeit und darum, was du gewohnt bist. Bedenke, dass die Verwendung als Modul von dir verlangt, es manuell aktuell zu halten!
+
+### 2. Bundle-Size
+
+Wie wichtig dir die Bundle-Size ist, wenn du das Skript als npm-Paket verwendest.
+
+Wenn du das Skript in seiner Standard-Variante verwendest, fragst du dich vielleicht, ob du die Größe des Skripts reduzieren kannst. Aufgrund der Natur des Skripts ist dies (z. B. Tree-Shaking) nicht direkt möglich.
+Du kannst jedoch stattdessen die unstyle-Version laden, um CSS-Daten zu sparen, die du nicht benötigst. Bei diesem Ansatz musst du sicherstellen, dass Events in der App mit einem Style verknüpft sind UND bei diesem die Option "Load Async" aktiv ist. Dies stellt sicher, dass der Stil asynchron über das jsDelivr CDN geladen wird (stelle sicher, dass dies bei potenziellen CORS-Einstellungen erlaubt ist).
+
+### 3. User Flow
+
+Ob du Links und Dateien über das Skript auf der Client-Seite generieren lassen oder ob du unseren Proxy-Service verwenden möchtest.
+
+Im ersten Fall werden die Links zu den Kalendern direkt im Browser dynamisch generiert. Auch die ics-Datei wird auf diese Weise dynamisch erstellt. Dies ist der schnellste Ansatz (aus Sicht des Benutzers). Allerdings wird die ics-Generierung bei einigen Systemen blockiert und falls ein Kalenderanbieter offline geht oder interne Probleme hat, kann der Benutzer kein Event speichern.  
+Bei Verwendung des Proxys werden Links und Dateien auf unserer Seite generiert und der Benutzer wird zuerst zu uns umgeleitet. Sollte etwas nicht funktionieren, können wir den Benutzer damit auch darüber informieren und Alternativen sowie Anleitungen anbieten. Dies ist daher der stabilere Weg, für den Benutzer aber etwas langsamer.
+
+Du kannst die Proxy-Einstellung über einen Style verwalten, den du mit dem Event (oder Event-Gruppe) verbindest. Wenn kein Style definiert ist, verwendet wir standardmäßig die Proxy-Option.
 
 ## Einstellungen überschreiben
 

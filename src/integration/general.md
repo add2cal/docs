@@ -5,36 +5,17 @@ outline: [2,3]
 ---
 # Using Buttons and RSVP Forms with your Tech Stack
 
-## Things to consider
+Our Add to Calendar Buttons and RSVP forms can be easily integrated with basically every tech stack.  
+Getting things up and running with the default can be done within 1 minute. Fine-tune details afterwards if you want to.
 
-There are 3 important things to consider before implementing.
-
-### 1. Package/Plugin vs. CDN
-
-Whether you want the script to be part of your core, managed via your usual package/plugin flows - or whether you want to load it via a script tag from an external CDN.
-
-There are Pros and Cons for both approaches and it is completely up to you what you prefer. In doubt, it is about convenience and what you are used to. Mind that using it as a module requires you to keep it up-to-date manually!
-
-### 2. Bundle Size
-
-How important bundle size is to you, if you use the script as npm package.
-
-If you are using the script in its plain version, you might wonder whether you can reduze the size of the script. Due to the nature of the script, this (e.g. tree-shaking) is not directly possible.
-However, you can load the unstyle version instead to save on css data you do not need. With this approach, you would need to make sure that events in the app are linked to a style AND at this style, the "load async" option is active. This makes sure the style gets loaded async via the jsDelivr CDN (make sure this is allowed at potential CORS settings).
-
-### 3. User Flow
-
-If you want links and files to be generated via the script on the client side or whether you want to use our Proxy service.
-
-The first case will generate the links to the calendar sites dynamically directly in the browser. It will also generate the ics file that way. This is the fastest approach (from a user's perspective). However, ics generation gets blocked at some systems and if a calendar provider goes offline or has interal problems, the user will not be able to save an event.  
-With the proxy, links and files get generated on our side and the user gets redirected to to us first.  
-This way, when something does not work, we can tell the user about it and offer alternatives and guidance. It is more stable, but a little slower for the user.
-
-You can control this setting at a style, which you then link to your event or group. If no style is set, the proxy will be the default.
+::: tip Where to start
+We recommend to look for your tech stack in the menu and start from there.  
+Read the rest of this page for more in-depth details and options to tweak things.
+:::
 
 ## General workflow
 
-There are only 2 steps necessary to get RSVP forms and buttons showing up in your application.
+There are only 2 steps necessary to get RSVP forms and Add to Calendar Buttons showing up in your application or on your website.
 
 1. Load the script (via importing the package, loading the script via CDN, or via a plugin).
 2. Place an `<add-to-calendar-button>` tag where you want the element to show up and add the proKey as attribute to it.
@@ -96,6 +77,33 @@ import 'add-to-calendar-button/unstyle';
 For some systems (like WordPress), we provide official plugins.
 
 Usually, you can find them in the respective stores; but check the respective page in this documentation for details and to make sure you do not install wrong or malicious code.
+
+## Things to consider
+
+There are 3 important things to consider before implementing.
+
+### 1. Package/Plugin vs. CDN
+
+Whether you want the script to be part of your core, managed via your usual package/plugin flows - or whether you want to load it via a script tag from an external CDN.
+
+There are Pros and Cons for both approaches and it is completely up to you what you prefer. In doubt, it is about convenience and what you are used to. Mind that using it as a module requires you to keep it up-to-date manually!
+
+### 2. Bundle Size
+
+How important bundle size is to you, if you use the script as npm package.
+
+If you are using the script in its plain version, you might wonder whether you can reduze the size of the script. Due to the nature of the script, this (e.g. tree-shaking) is not directly possible.
+However, you can load the unstyle version instead to save on css data you do not need. With this approach, you would need to make sure that events in the app are linked to a style AND at this style, the "load async" option is active. This makes sure the style gets loaded async via the jsDelivr CDN (make sure this is allowed at potential CORS settings).
+
+### 3. User Flow
+
+If you want links and files to be generated via the script on the client side or whether you want to use our Proxy service.
+
+The first case will generate the links to the calendar sites dynamically directly in the browser. It will also generate the ics file that way. This is the fastest approach (from a user's perspective). However, ics generation gets blocked at some systems and if a calendar provider goes offline or has interal problems, the user will not be able to save an event.  
+With the proxy, links and files get generated on our side and the user gets redirected to to us first.  
+This way, when something does not work, we can tell the user about it and offer alternatives and guidance. It is more stable, but a little slower for the user.
+
+You can control this setting at a style, which you then link to your event or group. If no style is set, the proxy will be the default.
 
 ## Overwrite settings
 
