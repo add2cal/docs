@@ -121,6 +121,11 @@ Wie du siehst, ist es sehr wahrscheinlich, dass deine Benutzer mit der Landingpa
 Mit einem entsprechenden Template, das mit einem Event/Gruppe verknüpft werden kann, kannst du diese Seite anpassen.
 
 Du kannst die automatisch generierte Überschrift ändern, etwas Einführungstext hinzufügen, Farben definieren und Meta/SEO-Inhalte optimieren.
+::: tip Teile einen RSVP-Termin
+Für RSVP-Events zeigt die Landingpage das Anmeldeformular an.  
+Wenn du möchtest, dass die Landingpage stattdessen einen „Add to Calendar"-Button anzeigt, füge den query `type=share` hinzu (z.B. `https://caldn.net/prokey-of-your-event?type=share`).  
+Beachte, dass dies nur funktioniert, wenn die Event-Distribution nicht auf false gesetzt ist!
+:::
 
 ### Call to Action (CTA)
 

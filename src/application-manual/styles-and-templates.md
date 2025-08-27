@@ -116,11 +116,17 @@ Landing page templates are basically additional configurations for the auto-gene
 Those landing pages can be used to share your event on social media or anywhere else. They also come into play, when you use our email links or proxy the Add to Calendar Button (required for analytics). In those cases, especially if something goes wrong (we do some pre-checks with the requested calendar provider), we show some guidance to the user - with the landing page style.
 For the RSVP case, any communication, like DOI, the user editing his response, etc., uses this landing page layout as well.
 
-As you see, there is a big chance, your users are getting in contact with your event's or RSVP's landing page.
+As you see, there is a big chance your users are getting in contact with your event's or RSVP's landing page.
 
 With a respective template, linkable to an event/group, you can customize this page.
 
 You can change the auto-generated headline, add some intro text, define colors, and optimize meta/SEO content.
+
+::: tip Share the date with RSVP
+For RSVP events, the landingpage will show the signup form.  
+If you want to make the landingpage show an Add to Calendar Button instead, add the query `type=share` (e.g. `https://caldn.net/prokey-of-your-event?type=share`).  
+Mind that this only works if event distribution is not set to false!
+:::
 
 ### Call to Action (CTA)
 
