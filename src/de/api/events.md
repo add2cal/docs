@@ -9,13 +9,31 @@ description: Erstelle, lese, aktualisiere und lösche Events über die Add to Ca
 Styles werrden auf API-Ebene als "layout" bezeichnet.
 :::
 
-## Alle/Neueste Events listen
+## Alle Events listen
 
 ```
 GET /event/all
 ```
 
 Gibt eine Liste mit den IDs aller verfügbaren Events zurück.
+
+```
+GET /event/all?from=:timestamp&to=:timestamp
+```
+
+Filtert die Ergebnisse optional nach Zeit. Benutze "from", "to" oder beide parameter.
+
+Erlaubte Werte:
+* `now` (nutzt die aktuelle Server-Zeit).
+* Ein valider UTC ISO Datetime String ohne Millisekunden (Bsp.: `2025-11-03T20:06:27Z`)
+
+<br />
+
+::: info
+Bei sich wiederholenden Events oder Event mit mehreren Terminen wird der früheste Start und das späteste Ende über alle Termine hinweg für die Filterung herangezogen.
+:::
+
+## Das neueste Event lesen
 
 ```
 GET /event/latest

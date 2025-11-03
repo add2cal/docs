@@ -9,13 +9,31 @@ description: Learn how to create, read, update, and delete events via Add to Cal
 Styles are referenced with the key "layout".
 :::
 
-## Get all/latest events
+## Get all events
 
 ```
 GET /event/all
 ```
 
 Gets a list with the ids of all available events.
+
+```
+GET /event/all?from=:timestamp&to=:timestamp
+```
+
+Optionally filter the entries by time. Use "from", "to", or both parameters.
+
+Allowed values:
+* `now` (to use the current server time).
+* a valid UTC ISO datetime without milliseconds (like `2025-11-03T20:06:27Z`)
+
+<br />
+
+::: info
+For recurring or multi-date events, the earliest start and latest end across all dates are used for filtering.
+:::
+
+## Get the latest event
 
 ```
 GET /event/latest
