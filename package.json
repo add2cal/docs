@@ -16,7 +16,7 @@
   "homepage": "https://docs.add-to-calendar-pro.com/",
   "devDependencies": {
     "vitepress": "^1.6.4",
-    "vitepress-plugin-llms": "^1.12.1"
+    "vitepress-plugin-llms": "^1.13.2"
   },
   "scripts": {
     "dev": "vitepress dev",
@@ -24,5 +24,9 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview --port 6789",
     "check:frontmatter": "node check_frontmatter.js"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true,
+    "fsevents@2.3.3": true
   }
 }

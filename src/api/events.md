@@ -18,12 +18,12 @@ GET /event/all
 Gets a list with the ids of all available events.
 
 ```
-GET /event/all?from=:timestamp&to=:timestamp
+GET /event/all?from=:timestamp&to=:timestamp&group=:group-prokey
 ```
 
-Optionally filter the entries by time. Use "from", "to", or both parameters.
+Optionally filter the entries by time and group. Use "from", "to", "group" - or all three parameters.
 
-Allowed values:
+Allowed values for datetimes:
 * `now` (to use the current server time).
 * a valid UTC ISO datetime without milliseconds (like `2025-11-03T20:06:27Z`)
 
