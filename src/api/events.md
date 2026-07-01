@@ -15,10 +15,10 @@ Styles are referenced with the key "layout".
 GET /event/all
 ```
 
-Gets a list with the ids of all available events.
+Gets a list with the ids, prokeys, and labels (generated string for identification) of all available events.
 
 ```
-GET /event/all?from=:timestamp&to=:timestamp&group=:group-prokey
+GET /event/all?from=:timestamp&to=:timestamp&group=:group-prokey&dates=:boolean
 ```
 
 Optionally filter the entries by time and group. Use "from", "to", "group" - or all three parameters.
@@ -26,6 +26,8 @@ Optionally filter the entries by time and group. Use "from", "to", "group" - or 
 Allowed values for datetimes:
 * `now` (to use the current server time).
 * a valid UTC ISO datetime without milliseconds (like `2025-11-03T20:06:27Z`)
+
+Optionally also get the dates object per item by adding `dates=true` to the query.
 
 <br />
 
@@ -39,7 +41,7 @@ For recurring or multi-date events, the earliest start and latest end across all
 GET /event/latest
 ```
 
-Gets the latest event.
+Gets the latest event. Id, prokey, label, and optional dates object (if query param is given; see above).
 
 ## Get one event
 

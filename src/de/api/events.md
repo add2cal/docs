@@ -15,10 +15,10 @@ Styles werrden auf API-Ebene als "layout" bezeichnet.
 GET /event/all
 ```
 
-Gibt eine Liste mit den IDs aller verfügbaren Events zurück.
+Gibt eine Liste mit den IDs, Prokey und Label (auto-generierte Zusammenfassung) aller verfügbaren Events zurück.
 
 ```
-GET /event/all?from=:timestamp&to=:timestamp&group=:group-prokey
+GET /event/all?from=:timestamp&to=:timestamp&group=:group-prokey&dates=:boolean
 ```
 
 Filtert die Ergebnisse optional nach Zeit und Gruppe. Benutze "from", "to", "group" - oder alle drei Parameter.
@@ -26,6 +26,8 @@ Filtert die Ergebnisse optional nach Zeit und Gruppe. Benutze "from", "to", "gro
 Erlaubte Werte für Timestamps:
 * `now` (nutzt die aktuelle Server-Zeit).
 * Ein valider UTC ISO Datetime String ohne Millisekunden (Bsp.: `2025-11-03T20:06:27Z`)
+
+Ergänzt zusätzlich das Dates-Objekt je Eintrag, wenn der Query-Paramter `dates=true` gesetzt wird.
 
 <br />
 
@@ -39,7 +41,7 @@ Bei sich wiederholenden Events oder Event mit mehreren Terminen wird der frühes
 GET /event/latest
 ```
 
-Gibt das neueste Event zurück.
+Gibt das neueste Event zurück. Id, Prokey, Label und optional das Dates-Objekt (sofern als Query-Paramerter gegeben; siehe oben).
 
 ## Ein Event lesen
 
