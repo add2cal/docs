@@ -16,7 +16,7 @@
   "homepage": "https://docs.add-to-calendar-pro.com/",
   "devDependencies": {
     "vitepress": "^1.6.4",
-    "vitepress-plugin-llms": "^1.13.2"
+    "vitepress-plugin-llms": "^1.13.3"
   },
   "scripts": {
     "dev": "vitepress dev",
