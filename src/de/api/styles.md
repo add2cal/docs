@@ -67,7 +67,6 @@ Beim Abrufen eines bestimmten Styles sind keine zusätzlichen Parameter möglich
   "forceOverlay": false,
   "styleLight": null,
   "styleDark": null,
-  "load_async": false,
   "optionsMobile": null,
   "optionsIOS": null,
   "date_created": "2024-10-09T17:23:46.421Z",
@@ -133,7 +132,6 @@ Für die Erstellung eines neuen Styles müssen mindestens die Felder "name" und 
     "--base-font-size-l": "14px"
   },
   "styleDark": null, // Überschreibe CSS-Einstellungen, die nur für den Dark-Mode gelten
-  "load_async": false, // Lädt den Button asynchron - zeigt zuerst einen Platzhalter an
   "optionsMobile": null, // Gib alternative Optionen an, die für mobile Geräte verwendet werden
   "optionsIOS": null // Gib alternative Optionen an, die für iOS-Geräte verwendet werden; wenn gesetzt, zielt "optionsMobile" nur auf Android
 }

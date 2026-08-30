@@ -80,7 +80,7 @@ Usually, you can find them in the respective stores; but check the respective pa
 
 ## Things to consider
 
-There are 3 important things to consider before implementing.
+There are 2 important things to consider before implementing.
 
 ### 1. Package/Plugin vs. CDN
 
@@ -88,14 +88,7 @@ Whether you want the script to be part of your core, managed via your usual pack
 
 There are Pros and Cons for both approaches and it is completely up to you what you prefer. In doubt, it is about convenience and what you are used to. Mind that using it as a module requires you to keep it up-to-date manually!
 
-### 2. Bundle Size
-
-How important bundle size is to you, if you use the script as npm package.
-
-If you are using the script in its plain version, you might wonder whether you can reduze the size of the script. Due to the nature of the script, this (e.g. tree-shaking) is not directly possible.
-However, you can load the unstyle version instead to save on css data you do not need. With this approach, you would need to make sure that events in the app are linked to a style AND at this style, the "load async" option is active. This makes sure the style gets loaded async via the jsDelivr CDN (make sure this is allowed at potential CORS settings).
-
-### 3. User Flow
+### 2. User Flow
 
 If you want links and files to be generated via the script on the client side or whether you want to use our Proxy service.
 

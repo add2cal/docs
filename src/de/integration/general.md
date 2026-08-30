@@ -79,7 +79,7 @@ Normalerweise findest du diese in den entsprechenden Stores. Überprüfe allerdi
 
 ## Wichtige Überlegungen
 
-Es gibt 3 Dinge, die vor der Implementierung zu beachten, bzw. deinerseits zu prüfen sind.
+Es gibt 2 Dinge, die vor der Implementierung zu beachten, bzw. deinerseits zu prüfen sind.
 
 ### 1. Paket/Plugin vs. CDN
 
@@ -87,14 +87,7 @@ Ob du das Skript als Teil deines Kernsystems verwalten möchtest - über deine �
 
 Es gibt Vor- und Nachteile für beide Ansätze und es liegt ganz bei dir, was du bevorzugst. Im Zweifelsfall geht es um Bequemlichkeit und darum, was du gewohnt bist. Bedenke, dass die Verwendung als Modul von dir verlangt, es manuell aktuell zu halten!
 
-### 2. Bundle-Size
-
-Wie wichtig dir die Bundle-Size ist, wenn du das Skript als npm-Paket verwendest.
-
-Wenn du das Skript in seiner Standard-Variante verwendest, fragst du dich vielleicht, ob du die Größe des Skripts reduzieren kannst. Aufgrund der Natur des Skripts ist dies (z. B. Tree-Shaking) nicht direkt möglich.
-Du kannst jedoch stattdessen die unstyle-Version laden, um CSS-Daten zu sparen, die du nicht benötigst. Bei diesem Ansatz musst du sicherstellen, dass Events in der App mit einem Style verknüpft sind UND bei diesem die Option "Load Async" aktiv ist. Dies stellt sicher, dass der Stil asynchron über das jsDelivr CDN geladen wird (stelle sicher, dass dies bei potenziellen CORS-Einstellungen erlaubt ist).
-
-### 3. User Flow
+### 2. User Flow
 
 Ob du Links und Dateien über das Skript auf der Client-Seite generieren lassen oder ob du unseren Proxy-Service verwenden möchtest.
 

@@ -67,7 +67,6 @@ Reading a specific style does not allow for any additional parameters. It only t
   "forceOverlay": false,
   "styleLight": null,
   "styleDark": null,
-  "load_async": false,
   "optionsMobile": null,
   "optionsIOS": null,
   "date_created": "2024-10-09T17:23:46.421Z",
@@ -133,7 +132,6 @@ Creating a new style requires you to at least provide the "name" and "options" f
     "--base-font-size-l": "14px",
   },
   "styleDark": null, // override css settings, which only apply to the dark mode version
-  "load_async": false, // load the button in an async way - will show a placeholder first
   "optionsMobile": null, // specify alternative options, which get used for mobile devices
   "optionsIOS": null // specify alternative options, which get used for iOS devices; if set, "optionsMobile" will only target Android
 }
