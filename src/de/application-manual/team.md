@@ -1,55 +1,53 @@
 ---
-title: Team verwalten
-description: Verwalte Teamkollaboration in Add to Calendar PRO. Lade Mitglieder ein, weise Rollen zu und kontrolliere Zugang zu Kalenderprojekten.
+title: Team-Mitglieder einladen und verwalten
+description: Lade Kollegen ein, vergib Admin- oder Mitgliederrechte, erneuere Einladungen und entferne Zugriffe ohne Verlust der gemeinsamen Events.
+outline: [2,3]
 ---
 
-# Team verwalten
+# Team-Mitglieder einladen und verwalten
 
-Du kannst so viele Personen zu dein Team einladen, wie du möchtest!
+Dein Team arbeitet in einer gemeinsamen Organisation mit deren Events, Styles und Templates. Mitglieder sind nicht auf einzelne Gruppen beschränkt. Du kannst Kollegen ohne zusätzliche Kosten pro Sitz einladen.
 
-**Dies kostet dich keinen einzigen Euro mehr!** Unserer Wettbewerber müssen uns dafür hassen...
+[Team in der App öffnen](https://app.add-to-calendar-pro.com/de/team)
 
-## Rollen & Rechte
+## Die passende Rolle wählen
 
-Teammitglieder arbeiten innerhalb derselben Organisation und können auf alle Elemente zugreifen - wie Events, Styles oder Templates.
+| Rolle | Zugriff |
+| :--- | :--- |
+| **Mitglied** | Bearbeitet Events, Styles und Templates der Organisation. |
+| **Admin** | Verwaltet zusätzlich Team-Zugriffe, Organisation, Lizenz und API-Keys. |
 
-Es gibt 2 Rollen:
+Die Mitgliederrolle eignet sich für Personen, die Veranstaltungen organisieren. Gib Adminrechte an Personen, die für Zugänge oder Kontoverwaltung verantwortlich sind.
 
-* Admin
-* Mitglied (Standard)
+## Eine Person einladen
 
-Der einzige Unterschied: Mitglieder können das Team, die LIzenz, die Organisation und API-Schlüssel nicht verwalten.
+1. Öffne als Admin **Team**.
+2. Trage unter **Team-Mitglied einladen** die E-Mail-Adresse ein.
+3. Wähle **Einladung senden**.
+4. Bitte die Person, die E-Mail zu öffnen und die Einladung anzunehmen.
 
-## Die Übersicht
+Einladungen verfallen nach **7 Tagen**. Bis zur Annahme zeigt die Tabelle **Eingeladen**. Über **Einladung erneut senden** neben der Person erzeugst du bei Bedarf eine neue Einladung.
 
-Auf der Teamseite erhältst du einen Überblick über die Personen, die Zugang zu deiner Organisation haben.
+Meldet die App, dass die Person bereits zu einer anderen Organisation gehört, versende nicht wiederholt dieselbe Einladung. Klärt zuerst das gewünschte Konto und kontaktiert bei Bedarf den Support.
 
-Neben dem Namen (und der E-Mail-Adresse oder dem Einladungs-Status) findest du ihre Rolle, ob sie die Zwei-Faktor-Authentifizierung (TFA) nutzen und wann sie das letzte Mal eingeloggt waren.
+## Die Team-Tabelle prüfen
 
-Diese Informationen helfen dir, dein Team in Bezug auf Nutzung und Sicherheit zu verwalten.
+Die Tabelle zeigt Name/E-Mail, Rolle, **TFA** und **Letzter Zugriff**. Bei eingeladenen Personen erscheint stattdessen die Einladungsinformation.
 
-Ganz rechts neben jedem Benutzer findest du Aktionsbuttons, um deren Rolle zu ändern oder sie zu löschen.
+TFA bedeutet Zwei-Faktor-Authentifizierung. Bei einem Google- oder GitHub-Login zeigt die App den externen Anbieter statt eines appinternen TFA-Status. Die Sicherheit dieses Logins wird beim Anbieter verwaltet.
 
-[In der App öffnen ❯](https://app.add-to-calendar-pro.com/de/team)
+Prüfe die Übersicht, wenn Kollegen hinzukommen, Zuständigkeiten wechseln oder jemand das Team verlässt.
 
-## Teammitglieder einladen
+## Eine Rolle ändern
 
-Das Einladungsformular befindet sich unterhalb der Übersichtstabelle und erfordert lediglich eine gültige E-Mail-Adresse.
+Nutze als Admin **Zum Admin ernennen** oder **Adminrechte entfernen** neben einem anderen aktiven Mitglied. Deine eigene Zeile zeigt **Das bist du** statt dieser Aktionen.
 
-Bei der Einladung erhält der jeweilige Benutzer eine E-Mail, die bestätigt werden muss. **Der Einladungslink ist 7 Tage gültig!**
+Wenn du die Administration übergeben möchtest, ernenne zuerst ein anderes aktives Mitglied zum Admin. Bitte danach einen anderen Admin um die Änderung deiner eigenen Rolle.
 
-Du kannst die Einladung über den entsprechenden Button neben dem Benutzer in der Übersichtstabelle erneut senden, sofern dies nötig ist.
+## Zugriff entfernen
 
-## Rollen ändern
+Entferne zuerst die Adminrechte, falls die Person Admin ist. Nutze danach die Löschaktion an ihrer Mitgliederzeile und bestätige.
 
-Du kannst einen Benutzer ganz einfach über die Teamübersichtsseite über den entsprechenden Button herauf- oder herabstufen.
+Events und Templates gehören zur Organisation. Das Entfernen eines Kollegen löscht deshalb nicht diese gemeinsamen Inhalte, sondern seinen Team-Zugriff. Du kannst ihn später erneut einladen.
 
-Du kannst dich sogar selbst herabstufen - aber nur, wenn es mindestens einen weiteren Admin gibt.
-
-**Sei dir bewusst, dass andere Admins dich ebenfalls herabstufen können!**
-
-## Teammitglieder entfernen
-
-Um eine Person aus dem Team zu entfernen, musst du einfach auf das Mülleimer-Symbol neben dem Benutzer klicken und die Benachrichtigung bestätigen.
-
-Da keine Elemente an eine bestimmte Person, sondern nur an die Organisation gebunden sind, besteht in diesem Prozess kein großes Risiko. Du kannst Personen jederzeit erneut einladen.
+Das Löschen deines eigenen Kontos ist eine andere Aktion unter **Einstellungen → Benutzer**. Bist du der letzte verbleibende Nutzer, kann dabei die gesamte Organisation samt Daten gelöscht werden. Siehe [Kontoeinstellungen](/de/application-manual/settings).

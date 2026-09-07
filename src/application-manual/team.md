@@ -1,55 +1,53 @@
 ---
-title: Managing your Team
-description: Manage team collaboration in Add to Calendar PRO. Invite members, assign roles, and control access to your event projects.
+title: Invite and Manage Team Members
+description: Invite colleagues, assign admin or member access, resend invitations, and remove access while keeping your organization’s events.
+outline: [2,3]
 ---
 
-# Managing your Team
+# Invite and Manage Team Members
 
-You can invite as many people to your team as you want!
+Your team shares one organization and its events, styles, and templates. Team members are not restricted to individual groups. You can invite colleagues without a per-seat charge.
 
-**This comes at no additional cost!** Our competitors must hate us for this...
+[Open Team in the app](https://app.add-to-calendar-pro.com/team)
 
-## Roles & Rights
+## Choose the appropriate role
 
-Team members work within the same organization and can access all elements, like events, styles or templates.
+| Role | Access |
+| :--- | :--- |
+| **Member** | Works with the organization's events, styles, and templates. |
+| **Admin** | Also manages team access, organization settings, the plan, and API keys. |
 
-There are 2 roles:
+Use Member for people who organize events. Give Admin access to people responsible for access or account administration.
 
-* Admin
-* Member (default)
+## Invite someone
 
-The only difference between: Members cannot manage the team, the plan, the organization, and API keys.
+1. As an admin, open **Team**.
+2. Enter the person's email under **Invite team member**.
+3. Choose **Send invite**.
+4. Ask them to open the invitation email and complete acceptance.
 
-## The Overview
+Invitations expire after **7 days**. Until accepted, the table shows **Invited**. Use **Re-send invite** beside that person if they need a fresh invitation.
 
-At the Team page, you get an overview of the people having access to your organization.
+If the app reports that the user already belongs to another organization, do not keep resending the same invite. Check which account they want to use and contact support if you need help resolving access.
 
-Next to the name (and email address or invited status), you find their role, whether they are using 2-Factor-Authentication (TFA) and when they logged in the last time.
+## Review the team table
 
-Those information help you to manage your team in terms of usage and security.
+The table shows the name/email, role, **TFA** status, and **Last Access**. For invited people, it shows invitation information instead of a normal login history.
 
-On the very right side of each user, you find action buttons to change their role or delete them.
+TFA means two-factor authentication. For a Google or GitHub login, the app shows the external provider rather than an app-managed TFA status; security for that login is managed with the provider.
 
-[Open in the app ❯](https://app.add-to-calendar-pro.com/team)
+Use this overview when colleagues join, change responsibilities, or leave.
 
-## Inviting Team Members
+## Change a role
 
-The invitation form is below the overview table and simply requires a valid email address.
+As an admin, use **Make admin** or **Remove admin rights** beside another active team member. Your own row is marked **This is you** instead of offering those actions.
 
-On invitation, the respective user receives an email that needs to be confirmed. **This email expires after 7 days!**
+If you need to hand over administration, promote another active member first. Ask another admin to change your role when needed.
 
-You can re-send the invite via the respective button next to the user in the overview table
+## Remove someone's access
 
-## Changing Roles
+Remove admin rights first if the person is an admin. Then use the delete action beside their member row and confirm the removal.
 
-You can easily upgrade or downgrade a user from the Team overview page via the respective button next to the targeted user.
+Events and templates belong to the organization, so removing a colleague does not delete those shared items. It removes their team access. You can invite them again later if needed.
 
-You can even downgrade yourself, but only if there is at least 1 other admin.
-
-**Be aware that other admins can downgrade you as well!**
-
-## Removing Team Members
-
-To remove a person from the team, you simply need to click the trash can icon next to the user and confirm the notification.
-
-As there are no elements linked to a specific person, but only the organization, there is no big risk in that process. You can re-invite people anytime.
+Deleting your own account is a different action under **Settings → User**. If you are the last remaining user, that can delete the organization and all its data. See [Account settings](/application-manual/settings).

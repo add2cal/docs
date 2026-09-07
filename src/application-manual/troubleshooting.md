@@ -1,89 +1,59 @@
 ---
-title: Troubleshooting
-description: Solve common issues with Add to Calendar PRO. Find answers to frequently asked questions and troubleshooting steps.
+title: Fix Common Event and RSVP Problems
+description: Find practical solutions for missing events, unpublished changes, full RSVP forms, email issues, and website display problems.
+outline: [2,3]
 ---
 
-# Troubleshooting
+# Fix Common Event and RSVP Problems
 
-## How can I track user interaction
+Start by opening the event in the app and checking its published landing page. This helps distinguish an event-setting problem from a website integration problem.
 
-We automatically track the most important metrics for you!
+## I cannot find an event
 
-This would be signups (and all related details) for the RSVP and the "event saves" for the Add to Calendar Buttons (see [details](/application-manual/analytics)).
+Clear the search, group/date filters, and **Hide past events**. Try **Table View**: date-free forms and dynamic dates do not appear in Calendar View.
 
-We are not automatically tracking any additional data as this would usually go deeper into some darker areas (in terms of data privacy).
+If it is still missing, confirm you are in the correct organization. Ask a colleague whether the event was moved or deleted before creating a duplicate.
 
-However, we prepared a lot for you here as well!
+## My changes are not visible
 
-1. We push the latest event into the attribute `atcb-last-event` at the `<add-to-calendar-button>` element. It holds the event and respective trigger (schema: "EVENT:TRIGGER"; example: "openList:atcb-btn-1").
-2. We are pushing this data also into the "Data Layer". This, for example, can be directly used with Google Analytics to follow all events.
+Check whether you saved a draft but have not selected **Publish**. After publishing, allow **3–10 minutes** for changes to reach the delivery systems, then reload the public page.
 
-The events we push:
+If a style or template change is missing, check that the event uses that item and that the event does not have unpublished draft changes. An already downloaded calendar file or imported calendar entry does not necessarily update with your published page.
 
-* initialization
-* openList
-* closeList
-* openCalendarLink
-* openSingletonLink
-* openSubEventLink
-* success
+## My button or RSVP form does not open
 
-*(You can try this by playing with the button on our website and putting "dataLayer" into the JavaScript console.)*
+Check that the event is published, public, and associated with an active plan. **Set private** stops the public button and RSVP flow as well as delivery of the pre-built calendar file.
 
-## Tracking does not seem to work
+Open the landing page. If that works but the website does not, give your website team the ProKey, affected page URL, and your [integration guide](/integration/general). Check whether the style's **Past Date Handling** hides or disables an old event.
 
-We track the initiation of the save process via clicks at the landing page, from email direct links, and from Add to Calendar Buttons with active `Proxy` option. If the `Proxy` option is not set at the style, while you are using the Add to Calendar Button outside of the auto-generated landing page, clicks cannot be tracked.
+## The RSVP form is closed or full
 
-Another case would be when you share the generated ics file directly - we cannot track this either.
+Open its RSVP template and check **Expiration Date**, **Max. Total Signups**, and **Max. Attendees per Signup**. Pending email confirmations reserve places temporarily, even when the visible confirmed count is lower. See [RSVP status and counts](/application-manual/managing-rsvp).
 
-The actual save can also not be tracked, since it happens in the calendar app and we are no hacker spies 😉.
+## A registration or email is missing
 
-## How can I make the RSVP form span the full width
+Ask the attendee to check the address they entered and their spam folder. With double opt-in enabled, submitting the form is only the first step: the email link must be confirmed within 30 minutes.
 
-The inline RSVP form adapts to its surrounding container.
+Unconfirmed entries disappear after approximately 20–30 minutes. The person can register again if registration is still open. For a custom sender problem, ask your administrator to check **Settings → Technical → Email Sender Address**.
 
-This usually already leads to it taking all the available width. Based on the used css, however, you might want to add something like `style="width:100%;"` to this container. For example, if the container uses a flexbox, explictly specifying the width is mandatory.
+## Calendar choices or analytics are missing
 
-## How can I make sure there is no data publicly available on the internet
+Calendar options depend on the event type and device. Unsupported choices are hidden. Subscription calendars, for example, offer fewer options on some devices.
 
-Per default, the event data and ics file are available to everybody who knows the link to it. We encourage search engines to not pick it up, but cannot guarantee this.
+For missing save-click statistics, check the published style's **Proxy** setting and the report's date range. Direct calendar-file downloads are not tracked, and a save click does not prove the final calendar save. See [Analytics](/application-manual/analytics).
 
-This is basically necessary for things like email links or even the Add to Calendar Button to work properly.
+## A website element covers the calendar menu
 
-If you do not want this to happen - because, for example, you put sensitive information into the event details - you can set an event (or group) to private. Click the 3-dot-button at the bottom action bar and hit the respective button afterwards.
+Enable **Force Overlay** in the connected style and test again. For an inline RSVP form that is too narrow, ask your website team to check the width of its surrounding container.
 
-A private event has no public ics file or landing page. The Add to Calendar Button will also not work as it requires to pull the information via the web. However, you can still [generate ics files via our API](/api/miscellaneous#retrieve-ics-file-body). 
+## Public data and private events {#how-can-i-make-sure-there-is-no-data-publicly-available-on-the-internet}
 
-This makes it an ideal case for [dynamic checkout flows](/recipes/dynamic-checkout) with sensitive information!
+Public event links can be forwarded. A landing page password does not protect direct calendar files. To stop public delivery, use **Set private** on the event; this also disables its button and RSVP form. For confidential workflows using individually generated calendar files only, see the technical [Dynamic Checkout guide](/recipes/dynamic-checkout).
 
-## The Add to Calendar Button dropdown is behind other elements
+## My social preview still shows old information {#social-preview}
 
-The dropdown gets rendered next to the button element with a higher z index.
+First open the landing page to confirm the published information is correct. Social platforms can cache older preview images and text. Use the platform's preview-refresh tool if available; repeated changes in PRO cannot force every platform to refresh immediately.
 
-When your page layout defines a new ["stacking context"](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) later on the page, this might be rendered at a higher level.
+## Get help with a specific problem
 
-You can either optimize your layout or activate the `forceOverlay` option at the style of your Add to Calendar Button. This option will render the button above everything else in a rather brutal way (from a technical perspective).
-
-## I want to use the same Add to Calendar Button with 2 styles
-
-To achieve this, you would need to duplicate your event and connect the 2 events with the different styles.
-
-## Social preview image not updating
-
-When sharing a link to the landing page, we automatically generate a preview image, which displays the event details. This helps to spread the word more prominently.
-
-At each update, this image gets updated as well. However, external tools and websites usually cache this image, which makes it not updating immediately. Some refresh there cache only after 7 days, if at all.
-
-Even doing everything possible from our side (like completely changing the image url each time), we have no direct control over those external services and platforms.
-
-_What you can do in those cases:_
-
-* **Facebook/Meta**: Go to the Facebook debugger at [developers.facebook.com/tools/debug/](https://developers.facebook.com/tools/debug/) and enter the url you are sharing. If you see the old information, you can click the "scrape again" button and it should update.
-* **X/Twitter**: X does not offer an option to manually refresh. Instead, you can add a query parameter to you url. This way, X thinks it's a new one and crawls again. Simply add something like `?i=1` at the end of your url. You can change the number multiple times to force a refresh.
-
-## My IDE throws TypeScript warnings
-
-This can happen in rare cases, where types got not yet loaded. Sometimes it takes a restart of the IDE or the computer.
-
-If the issue is still present, you can set the [skipLibCheck](https://www.typescriptlang.org/tsconfig#skipLibCheck) in your `tsconfig` to `false`, which should disable it.
-Please also open a new issue at our GitHub repo ["add-to-calendar-button"](https://github.com/add2cal/add-to-calendar-button/issues/new/choose) or send us an email, so we can have a check too.
+Use **Get Help** in the app. Include the event/group name or ProKey, the public page URL, what you expected, what happened, and your browser/device. Mention whether the issue also happens on the hosted landing page. Do not include passwords, API keys, or private attendee-management links.

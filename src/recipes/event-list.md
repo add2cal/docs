@@ -11,7 +11,7 @@ You can use the Add to Calendar Button web component to turn an Add to Calendar 
 The list is generated automatically from the events in that group. It includes year and month navigation, links to the individual event landing pages, and optional Add to Calendar actions.
 
 ::: tip Looking for all settings?
-This recipe focuses on getting the list online. See the [Event List reference](/application-manual/event-list) for every configuration option, layout behavior, interaction rule, limitation, and CSS part.
+This recipe focuses on getting the list online. See the [Event List reference](/integration/event-list) for every configuration option, layout behavior, interaction rule, limitation, and CSS part.
 :::
 
 ## 1. Prepare an event group
@@ -180,4 +180,4 @@ Recurring events are currently not fully supported by the event list. The list d
 
 Events are assigned to the month and year of their start date. If an event spans into a later year, it is also represented in January of the year in which it ends.
 
-For the full date logic, all configuration fields, styling hooks, and interaction combinations, continue with the [Event List reference](/application-manual/event-list).
+For the full date logic, all configuration fields, styling hooks, and interaction combinations, continue with the [Event List reference](/integration/event-list).

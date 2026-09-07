@@ -1,40 +1,51 @@
 ---
-title: Tracking landing page views and event saves
-description: Track and analyze how users save your events to their calendars. Monitor engagement and success with built-in analytics.
+title: Understand Event Analytics
+description: Read calendar save clicks, landing page views, date ranges, and campaign information in Add to Calendar PRO analytics.
 outline: [2,3]
 ---
 
-# Tracking user interactions
+# Understand Event Analytics
 
-## Events being saved to calendars
+Use **Statistic** to understand how people interact with a shared event. For RSVP attendance, use the separate [RSVP Answers dashboard](/application-manual/managing-rsvp).
 
-For regular events, we track when users save them to their calendars.
+## Open the report
 
-::: warning To be more precise...
-We track the initiation of the save process via clicks at the landing page, from email direct links, and from Add to Calendar Buttons with active Proxy option. The actual save can not be tracked, since it happens in the calendar app.
-:::
+1. Find the event in **Events**.
+2. Open its **Statistic** action from the overview or the event summary.
+3. Choose a **Timespan**, such as the last 7, 30, or 90 days, or a custom range.
+4. Choose whether to group the results by days or months where available.
+5. Hover over a chart to inspect individual values.
 
-We also only do this for regular events, not for RSVP setups. In the RSVP case, we show the replies instead (enough tracking needed).
+Subscription groups also have a statistics view. Check the event or group name before comparing results so you are looking at the intended sharing item.
 
-## Landing page views
+## What a save means
 
-We also track the hits/views of your landingpages.
+**Saves** measures the start of the calendar-saving process: a click on a calendar option. It does **not** confirm that the person completed the final save inside their calendar app.
 
-This also includes the country of the user, a potential referrer, as well as UTM params. 
-This data cannot be linked to any specific individual. Therefore, you do not need to be worried about and data privacy issues!
+Tracked entry points include the landing page, provided email links, and website buttons using a style with **Proxy** enabled. A directly shared `.ics` file does not provide this tracking.
 
-For UTM parameters, you can add the following to any URL linking to your landingpages and we will keep track.
+Calendar providers appear separately so you can see which options people choose. In a multi-date event, a suffix such as `google-2` identifies the second date's Google Calendar action. Do not treat these separate actions as a count of unique attendees.
 
-* utm_source
-* utm_medium
-* utm_campaign
-* utm_term
-* utm_content
+## Read landing page views
 
-## Where to find this info
+**Landing Page Views** shows visits to the hosted page. The report also offers country, referrer, and campaign information when available.
 
-You will get to those statistics via the respective event - either at the event overview page or at an event's detail page (at the very top via the `statistic` button).
+A view is not a registration or a calendar save. One person may visit more than once. Some visitors arrive without a usable referrer or campaign tag, so an empty source does not automatically indicate a tracking fault.
 
-At this analytics page, you can see the number of saves per calendar provider for a specific time span as well as the landing page's data. You can easily change the time you want to check data for, switch between different visualization types and hover the graphics to get more information.
+## Compare campaigns with UTM tags
 
-When we are looking at a multi-date-event, where the user needs to save multiple events, those events are split up with a number suffix - like `google-2` for the second date, saved with the Google Calendar option.
+Add campaign tags to the landing page link you share. For example:
+
+```text
+https://caldn.net/YOUR-PROKEY?utm_source=newsletter&utm_medium=email&utm_campaign=autumn-workshop
+```
+
+Use consistent names so campaigns remain easy to compare. Supported fields are `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, and `utm_content`. When a link already contains `?`, add another parameter with `&`.
+
+Use campaign names rather than personal details in these URLs. The report helps compare traffic sources; it is not an attendee identification tool.
+
+## If the numbers look wrong
+
+Check the selected time range and whether you opened the correct event or group. For missing website-button saves, check the **Proxy** setting in the event's published style. Then make a test click through the same link your audience uses.
+
+For confirmed attendance and downloadable guest lists, use [Manage RSVP responses](/application-manual/managing-rsvp). For more website interaction tracking, ask your website team to use the Button's tracking options rather than interpreting a save click as attendance.

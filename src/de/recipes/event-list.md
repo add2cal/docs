@@ -11,7 +11,7 @@ Mit der Add to Calendar Button Web Component kannst du eine Add to Calendar PRO 
 Die Liste wird automatisch aus den Events dieser Gruppe erzeugt. Sie enthält eine Jahres- und Monatsauswahl, Links zu den individuellen Event-Landingpages und optionale Add-to-Calendar-Aktionen.
 
 ::: tip Du suchst alle Einstellungen?
-Diese Anleitung konzentriert sich darauf, die Event-Liste online zu bringen. In der [Referenz zur Event-Liste](/de/application-manual/event-list) findest du alle Konfigurationsoptionen, Layouts, Interaktionsregeln, Einschränkungen und CSS Parts.
+Diese Anleitung konzentriert sich darauf, die Event-Liste online zu bringen. In der [Referenz zur Event-Liste](/de/integration/event-list) findest du alle Konfigurationsoptionen, Layouts, Interaktionsregeln, Einschränkungen und CSS Parts.
 :::
 
 ## 1. Eine Event-Gruppe vorbereiten
@@ -180,4 +180,4 @@ Wiederkehrende Events werden von der Event-Liste derzeit nicht vollständig unte
 
 Events werden dem Monat und Jahr ihres Startdatums zugeordnet. Wenn ein Event bis in ein späteres Jahr reicht, wird es zusätzlich im Januar des Endjahres dargestellt.
 
-Die vollständige Datumslogik, alle Konfigurationsfelder, Styling-Schnittstellen und Interaktionskombinationen findest du in der [Referenz zur Event-Liste](/de/application-manual/event-list).
+Die vollständige Datumslogik, alle Konfigurationsfelder, Styling-Schnittstellen und Interaktionskombinationen findest du in der [Referenz zur Event-Liste](/de/integration/event-list).

@@ -1,40 +1,51 @@
 ---
-title: Event-Speicherung und Landingpage-Aufrufe tracken
-description: Verfolge und analysiere, wie Nutzer deine Events in ihren Kalendern speichern. Überwache Engagement mit integrierten Analytics.
+title: Event-Statistiken verstehen
+description: Verstehe Kalender-Klicks, Landingpage-Aufrufe, Zeiträume und Kampagneninformationen in den Statistiken von Add to Calendar PRO.
 outline: [2,3]
 ---
 
-# Nutzerinteraktionen tracken
+# Event-Statistiken verstehen
 
-## Das Speichern im Kalender
+Die **Statistik** zeigt, wie Menschen mit deinem geteilten Event interagieren. Für Teilnahmezusagen nutzt du die separate [RSVP-Antwortenübersicht](/de/application-manual/managing-rsvp).
 
-Für Events tracken wir, wann Benutzer sie in ihren Kalendern speichern.
+## Den Bericht öffnen
 
-::: warning Um genauer zu sein...
-Wir erfassen die Initiierung des Speicher-Prozess über Klicks auf der Landingpage, E-Mail-Direktlinks und Add to Calendar Buttons mit aktiver Proxy-Option. Die tatsächliche Speicherung kann leider nicht erfasst werden, da diese in der Kalendar-App des Nutzer abläuft.
-:::
+1. Finde das Event unter **Events**.
+2. Öffne **Statistik** in der Übersicht oder in der Zusammenfassung des Events.
+3. Wähle einen **Zeitraum**, etwa die letzten 7, 30 oder 90 Tage, oder einen eigenen Bereich.
+4. Gruppiere die Ergebnisse nach Tagen oder Monaten, soweit verfügbar.
+5. Bewege den Mauszeiger über eine Grafik, um Einzelwerte zu sehen.
 
-Wir tracken nur Events über Add to Calendar Buttons, nicht für RSVP-Setups. Im RSVP-Fall gibt es eine ausführliche Übersichtsseite zu den gegebenen Antworten (genug Tracking).
+Auch Abonnement-Gruppen haben eine Statistikansicht. Prüfe vor Vergleichen den Event- oder Gruppennamen, damit du die richtigen Daten betrachtest.
 
-## Landingpage-Aufrufe
+## Was eine Speicherung bedeutet
 
-Wir erfassen auch die Seitenaufrufe deiner Landingpages.
+**Speicherungen** zählt den Beginn des Speichervorgangs: einen Klick auf eine Kalender-Option. Der Wert bestätigt **nicht**, dass jemand den letzten Speicherschritt in seiner Kalender-App abgeschlossen hat.
 
-Dabei werden unter anderem das Land des Nutzers, eine mögliche Verweisquelle (Referrer) sowie UTM-Parameter erfasst. 
-Diese Daten sind nicht personenbezogen und lassen sich keiner einzelnen Person zuordnen - du musst dir daher keine Sorgen um den Datenschutz machen.
+Erfasst werden Aktionen auf der Landingpage, über bereitgestellte E-Mail-Links und über Website-Buttons mit aktiver **Proxy**-Option im Style. Eine direkt geteilte `.ics`-Datei liefert diese Messung nicht.
 
-Bzgl. der UTM-Parameter kannst du nachfolgende an jede URL zu deinen Landingpages anhängen; wir tracken sie automatisch:
+Kalenderanbieter erscheinen getrennt, damit du die genutzten Optionen vergleichen kannst. Bei mehreren Terminen bezeichnet ein Zusatz wie `google-2` die Google-Kalender-Aktion zum zweiten Termin. Solche einzelnen Aktionen sind keine Anzahl eindeutiger Teilnehmer.
 
-* utm_source
-* utm_medium
-* utm_campaign
-* utm_term
-* utm_content
+## Landingpage-Aufrufe einordnen
 
-## Wo man diese Infos findet
+**Landingpage-Aufrufe** zeigt Besuche der gehosteten Seite. Zusätzlich gibt es Informationen zu Land, Referrer und Kampagnen, soweit verfügbar.
 
-Zu diesen Statistiken gelangst du über das jeweilige Event - entweder auf der Übersichtsseite oder der Detailseite des jeweiligen Events (ganz oben über den `Statistik`-Button).
+Ein Aufruf ist weder eine Anmeldung noch eine Kalenderspeicherung. Eine Person kann mehrfach kommen. Manche Besuche enthalten keinen brauchbaren Referrer oder Kampagnentag. Eine fehlende Quelle bedeutet deshalb nicht automatisch einen Messfehler.
 
-Auf dieser Analytics-Seite kannst du die Anzahl der Speicherungen pro Kalenderanbieter sowie Landingpage-Aufrufe für einen bestimmten Zeitraum sehen. Du kannst den Zeitraum, für den du Daten überprüfen möchtest, nach Bedarf ändern; zwischen verschiedenen Visualisierungstypen wechseln und weitere Informationen erhalten, indem du über die Grafik hoverst.
+## Kampagnen mit UTM-Tags vergleichen
 
-Wenn wir ein Multi-Date-Event betrachten, bei dem der Benutzer mehrere Termine speichern muss, werden diese mit einer Nummernendung aufgeteilt - bspw. `google-2` für das zweite Datum, gespeichert mit der Google Kalender-Option.
+Ergänze Kampagnentags am geteilten Landingpage-Link. Zum Beispiel:
+
+```text
+https://caldn.net/DEIN-PROKEY?utm_source=newsletter&utm_medium=email&utm_campaign=herbst-workshop
+```
+
+Nutze einheitliche Namen, damit du Kampagnen vergleichen kannst. Unterstützt werden `utm_source`, `utm_medium`, `utm_campaign`, `utm_term` und `utm_content`. Enthält der Link schon ein `?`, ergänzt du weitere Parameter mit `&`.
+
+Trage Kampagnennamen statt personenbezogener Angaben in die URL ein. Der Bericht vergleicht Besucherquellen und dient nicht zur Identifizierung einzelner Teilnehmer.
+
+## Wenn Zahlen unerwartet sind
+
+Prüfe Zeitraum und ausgewähltes Event beziehungsweise Gruppe. Fehlen Klicks auf Website-Buttons, kontrolliere **Proxy** im veröffentlichten Style. Teste anschließend denselben Link, den dein Publikum verwendet.
+
+Für bestätigte Teilnahme und herunterladbare Gästelisten nutze [RSVP-Antworten verwalten](/de/application-manual/managing-rsvp). Für zusätzliche Website-Messungen kann dein Webseiten-Team die Tracking-Optionen des Buttons nutzen. Ein Kalender-Klick sollte nicht als Teilnahme interpretiert werden.

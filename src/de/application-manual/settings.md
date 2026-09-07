@@ -1,68 +1,65 @@
 ---
-title: Einstellungen
-description: Konfiguriere deine Add to Calendar PRO Kontoeinstellungen. Verwalte Lizenzierung, Branding und Anwendungseinstellungen.
+title: Konto und Organisation einstellen
+description: Pflege dein Profil, sichere deinen Zugang und finde Einstellungen für Rechnungen, API-Keys, E-Mail-Absender und eigene Domains.
 outline: [2,3]
 ---
 
-# Einstellungen
+# Konto und Organisation einstellen
 
-Du gelangst zu den Einstellungen über das Zahnradsymbol in der Seitenleiste/dem Menü.
+Über das Zahnrad im Menü erreichst du **Einstellungen**. Wähle **Benutzer**, **Organisation**, **Technisches** oder **Lizenz**, je nachdem, was du ändern möchtest.
 
-[In der App öffnen ❯](https://app.add-to-calendar-pro.com/de/settings)
+[Einstellungen in der App öffnen](https://app.add-to-calendar-pro.com/de/settings)
 
-Die Seite besteht aus 4 Unterseiten:
+## Benutzer-Einstellungen
 
-* Benutzer
-* Organisation
-* Technisches
-* Pro Lizenz
+Ändere Name, Anrede/Pronomen, Zeitzone und bevorzugtes helles oder dunkles Theme. Die Konto-Zeitzone hilft bei der Datumsanzeige in der App. Prüfe beim Erstellen zusätzlich die eigene Zeitzone des Events.
 
-## Benutzereinstellungen
+Lasse **Hinweise ausblenden** während der Einarbeitung deaktiviert. **E-Mail-Benachrichtigungen** betrifft Produktneuigkeiten und Marketing, nicht die RSVP-Nachrichten an deine Teilnehmer.
 
-Hier kannst du die Einstellungen für dein Benutzerkonto ändern.
+### Login und E-Mail-Adresse
 
-Das beinhaltet deinen Namen, Anmeldeinformationen sowie Sicherheitsmaßnahmen wie die Zwei-Faktor-Authentifizierung.
+Die Login-Adresse kann nicht direkt bearbeitet werden. Lade für eine neue Adresse ein weiteres [Team-Mitglied](/de/application-manual/team) ein, nimm die Einladung an und prüfe dessen Rechte, bevor du das alte Konto entfernst.
 
-Du kannst auch deine lokale Zeitzone und das Theme für die Anwendung ändern.
+Bei einem Passwort-Login meldet dich **Passwort ändern** ab und sendet eine E-Mail mit einem Link zum Zurücksetzen. Bei Google oder GitHub verwaltest du den Login beim jeweiligen Anbieter.
 
-Über den Switch "Hinweise ausblenden" kannst du entscheiden, ob du hilfreiche In-App-Hinweise sehen möchtest oder lieber mit einer reduzierten Oberfläche arbeitest (wenn du bereits mit der Anwendung vertraut bist).
+### Zwei-Faktor-Authentifizierung
 
-Hier kannst du auch dein Konto löschen, falls du dich entscheidest, unser Angebot zu verlassen (**wir würden uns in diesem Fall über Feedback per E-Mail freuen!**).
+Öffne bei einem Passwort-Konto **Zwei-Faktor-Authentifizierung**, gib dein Passwort ein, scanne den QR-Code mit deiner Authenticator-App und bestätige mit deren erzeugtem Code. Behalte für künftige Anmeldungen den Zugriff auf diese App.
 
-## Organisationseinstellungen
+## Organisation
 
-Da die Anwendung dafür konzipiert ist, im Team zu arbeiten, ist dein Konto mit einer Organisation verknüpft. Du kannst ein Benutzerkonto löschen, während du eine Organisation und alle erstellten Daten behältst. Es sind keine wichtigen Daten mit einem Benutzer verknüpft. Alles ist stattdessen an deine Organisation gebunden.
+Admins können Organisationsname, Rechnungs-E-Mail, Adresse, USt-ID und Logo ändern. Das Logo kann in zugehörigen E-Mails erscheinen. Prüfe die Rechnungsangaben vor einem Kauf.
 
-Die Organisation fungiert auch als Identität für alle Rechnungs- und Zahlungsdetails. Daher solltest du diese Daten aktuell halten.
-
-Du kannst auch dein Logo hochladen, das dann bei allen zugehörigen E-Mails angezeigt wird.
-
-Wenn du den letzten Benutzer löschst, werden die Organisation und alle Daten ebenfalls gelöscht.
+Events und andere Inhalte gehören der Organisation, nicht ihrer ursprünglichen Erstellerin oder ihrem Ersteller. Deshalb können Kollegen weiterarbeiten, wenn jemand das Team verlässt.
 
 ## Technisches
 
-### API-Keys
+Diesen Bereich verwalten Admins. Du brauchst ihn normalerweise nur für Verbindungen zu anderen Diensten oder einen eigenen E-Mail-Versand.
 
-Auf dieser Seite kannst du deine API-Keys erstellen und verwalten.
+### API-Keys {#api-keys}
 
-Beim Erstellen eines neuen Keys kannst du festlegen, dass dieser ewig gültig ist oder zu einem bestimmten Zeitpunkt abläuft.
+Wähle **Neuer API-Key**, vergib einen verständlichen Namen, wähle **Read** oder **Read & Write** und bei Bedarf ein Ablaufdatum. Erlaube nur den Zugriff, den der verbundene Dienst benötigt.
 
-Du kannst einen Schlüssel auch jederzeit vorübergehend deaktivieren oder ganz löschen.
+Kopiere den Key in dessen Verbindungseinstellungen. Du kannst ihn vorübergehend deaktivieren oder dauerhaft löschen; beides betrifft Integrationen, die ihn verwenden. Technische Details stehen in der [API-Authentifizierungsanleitung](/de/api/auth). Ein API-Key gehört nie in einen öffentlichen Website-Button. Dieser verwendet einen ProKey.
 
 ### E-Mail-Absender
 
-Du kannst festlegen, von welcher E-Mail-Adresse RSVP-Nachrichten versendet werden sollen.  
-Nutze eine unserer beiden vordefinierten Adressen oder deine eigene Adresse. Letzteres erfordert einen eigenen SMTP-Server, den du ebenfalls hier spezifizieren kannst.
+Wähle eine angebotene Versandadresse oder ein eigenes Profil. Für ein eigenes Profil benötigst du SMTP-Daten deines E-Mail-Anbieters. Bitte eure E-Mail-Administration, diese einzutragen und zu prüfen.
 
-Den Namen, der als Absender angezeigt wird, kann zusätzlich je E-Mail-Template angepasst werden.
+Das Ändern der Absender-Adresse setzt die SMTP-Einstellungen zurück. Anzeigename und Antwortadresse lassen sich separat in den [E-Mail-Templates](/de/application-manual/email-templates) einstellen.
 
-## Pro-Lizenz-Einstellungen
+### Eigene Domain
 
-Hier siehst du deine aktuelle Lizenz und die verfügbaren monatlichen Events (auch in der Seitenleiste angezeigt).
+Wenn deine Organisation eigene Domains nutzen kann, zeigt Technisches den globalen Standard. Im [Landingpage-Template](/de/application-manual/landing-pages) kannst du eine verfügbare seitenspezifische Domain wählen. Kontaktiere bei Fragen zur Einrichtung den Support.
 
-Wenn du noch keine Lizenz hast, kannst du diese hier kaufen.
+## Lizenz
 
-Wenn du eine aktive Lizenz hast, kannst du dein Abonnement am Ende dieser Seite auch kündigen - oder deine Zahlungsdetails aktualisieren.
+Prüfe aktuelle Lizenz, Verlängerungsdatum und verfügbare monatliche Events. Die Kaufverwaltung öffnet Paddle, wo du Rechnungen findest und Zahlungsmittel änderst. Maßgeblich für aktuelle Preise sind die Angaben in der App.
 
-Für Regular- und Enterprise-Lizenzen kannst du die Auto-Scale-Option aktivieren. Mit dieser Option aktiviert, wirst du nie ohne monatliche Events sein, da sie automatisch auf Pay-per-Use-Basis nachgekauft werden.
-Weitere Details dazu findest du auf dieser Seite oder im FAQ auf unserer Homepage.
+Mit **Auto-Scale** kannst du, soweit verfügbar, nach Verbrauch des Kontingents weitere Events erstellen. Dafür entstehen zusätzliche Nutzungskosten. Das Deaktivieren verhindert weitere automatische Zusatzkäufe, kündigt aber nicht die Lizenz.
+
+Eine Kündigung ist sofort oder zum Ende des Abrechnungszeitraums möglich. Lies die gewählte Option vor der Bestätigung: Eine sofortige Kündigung beendet auch den Zugang sofort.
+
+## Eigenes Konto löschen
+
+Der Gefahrenbereich befindet sich unter Benutzer. Bleiben andere Personen, stelle vorher sicher, dass jemand anderes Admin ist. Als letzter Nutzer löschst du auch Organisation und Daten dauerhaft. Die App kann verlangen, zuerst ein aktives Abonnement zu kündigen.

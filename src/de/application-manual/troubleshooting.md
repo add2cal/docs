@@ -1,89 +1,59 @@
 ---
-title: Fehlerbehebung
-description: Löse häufige Probleme mit Add to Calendar PRO. Finde Antworten auf oft gestellte Fragen und Fehlerbehebungsschritte.
+title: Häufige Probleme mit Events und RSVP lösen
+description: Finde Hilfe bei fehlenden Events, unveröffentlichten Änderungen, vollen Formularen, E-Mail-Problemen und der Website-Darstellung.
+outline: [2,3]
 ---
 
-# Fehlerbehebung
+# Häufige Probleme mit Events und RSVP lösen
 
-## Wie kann ich Benutzerinteraktion nachverfolgen?
+Öffne zuerst das Event in der App und prüfe seine veröffentlichte Landingpage. So lässt sich leichter unterscheiden, ob eine Event-Einstellung oder die Website-Integration betroffen ist.
 
-Wir verfolgen automatisch die wichtigsten Metriken für dich!
+## Ich finde ein Event nicht
 
-Das wären Anmeldungen (und alle damit verbundenen Details) für RSVP-Formulare und die "Event-Speicherungen" für die Add to Calendar Buttons (siehe [Details hier](/de/application-manual/analytics)).
+Entferne Such-, Gruppen- und Datumsfilter sowie **Vergangene Events ausblenden**. Probiere die **Tabellen-Ansicht**: Formulare ohne Termin und dynamische Daten erscheinen nicht in der Kalenderansicht.
 
-Wir verfolgen keine zusätzlichen Daten automatisch, da dies normalerweise tiefer in dunklere Bereiche (in Bezug auf Datenschutz) gehen würde.
+Prüfe bei Bedarf die Organisation, in der du angemeldet bist. Frage Kollegen, ob das Event verschoben oder gelöscht wurde, bevor du es doppelt anlegst.
 
-Wir haben jedoch auch hier einiges für dich vorbereitet!
+## Meine Änderungen sind nicht sichtbar
 
-1. Wir fügen das neueste Ereignis als Attribut `atcb-last-event` dem `<add-to-calendar-button>` Element hinzu. Es enthält dabei das Ereignis und den jeweiligen Trigger (Schema: "EVENT:TRIGGER"; Beispiel: "openList:atcb-btn-1").
-2. Wir pushen diese Daten auch in den "Data Layer". Dies kann zum Beispiel direkt mit Google Analytics verwendet werden, um alle Ereignisse zu verfolgen.
+Prüfe, ob du nur einen Entwurf gespeichert und noch nicht **Veröffentlichen** gewählt hast. Warte nach der Veröffentlichung **3–10 Minuten** und lade die öffentliche Seite erneut.
 
-Die Ereignisse, die wir pushen:
+Fehlt eine Style- oder Template-Änderung, prüfe die Verknüpfung im Event und mögliche unveröffentlichte Entwurfsänderungen. Eine schon heruntergeladene Kalenderdatei oder ein importierter Kalendereintrag aktualisiert sich nicht zwingend zusammen mit der Seite.
 
-* initialization
-* openList
-* closeList
-* openCalendarLink
-* openSingletonLink
-* openSubEventLink
-* success
+## Button oder RSVP-Formular öffnen sich nicht
 
-*(Du kannst dies ausprobieren, indem du mit dem Button auf unserer Webseite spielst und "dataLayer" in die JavaScript-Konsole eingibst.)*
+Prüfe, ob das Event veröffentlicht und öffentlich ist und eine aktive Lizenz besteht. Privatsetzen beendet den öffentlichen Button- und RSVP-Ablauf sowie die Bereitstellung der vorgefertigten Kalenderdatei.
 
-## Das Tracking scheint nicht zu funktionieren
+Öffne die Landingpage. Funktioniert diese, aber nicht die Webseite, gib deinem Webseiten-Team ProKey, betroffene URL und [Integrationsanleitung](/de/integration/general). Prüfe auch, ob **Verhalten nach Ablauf** im Style ein altes Event verbirgt oder deaktiviert.
 
-Wir erfassen die Initiierung des Speicher-Prozess über Klicks auf der Landingpage, E-Mail-Direktlinks und Add to Calendar Buttons mit aktiver `Proxy`-Option. Wenn die `Proxy` Option nicht im Style gesetzt ist, während du den Add to Calendar Button außerhalb der automatisch generierten Landingpage verwendest, können Klicks nicht nachverfolgt werden.
+## Das RSVP-Formular ist geschlossen oder voll
 
-Wenn du die generierte ics-Datei direkt teilst können wir dies ebenfalls nicht nachverfolgen.
+Prüfe im RSVP-Template **Ablaufdatum**, **Max. Zusagen gesamt** und **Max. Teilnehmer pro Zusage**. Ausstehende E-Mail-Bestätigungen reservieren vorübergehend Plätze, selbst wenn die sichtbare bestätigte Anzahl niedriger ist. Siehe [RSVP-Status und Teilnehmerzahlen](/de/application-manual/managing-rsvp).
 
-Das eigentliche Speichern kann auch nicht nachverfolgt werden, da dies in der Kalender-App passiert und wir keine Hacker-Spione sind 😉.
+## Eine Anmeldung oder E-Mail fehlt
 
-## Wie kann ich das RSVP-Formular die volle Breite einnehmen lassen
+Bitte den Teilnehmer, eingegebene Adresse und Spamordner zu prüfen. Mit Double-Opt-In ist das Absenden nur der erste Schritt: Der E-Mail-Link muss innerhalb von 30 Minuten bestätigt werden.
 
-Das Inline-RSVP-Formular passt sich an den umgebenden Container an.
+Unbestätigte Einträge verschwinden nach ungefähr 20–30 Minuten. Solange die Anmeldung offen ist, kann sich die Person erneut anmelden. Bei Problemen mit einem eigenen Absender prüft euer Admin **Einstellungen → Technisches → E-Mail-Absender**.
 
-Das führt normalerweise bereits dazu, dass es die gesamte verfügbare Breite einnimmt. Abhängig vom verwendeten CSS musst du jedoch möglicherweise etwas wie `style="width:100%;"` zu diesem Container hinzufügen. Wenn der Container zum Beispiel ein Flexbox verwendet, ist das Angeben der Breite (`width`) obligatorisch.
+## Kalender-Optionen oder Statistikwerte fehlen
 
-## Wie kann ich sicherstellen, dass keine Daten öffentlich im Internet verfügbar sind
+Kalender-Optionen hängen vom Event-Typ und Gerät ab. Nicht unterstützte Optionen werden ausgeblendet. Abonnement-Kalender bieten auf manchen Geräten beispielsweise weniger Auswahl.
 
-Standardmäßig sind die Eventdaten und die ics-Datei für jeden verfügbar, der den Link dazu kennt. Wir ermutigen Suchmaschinen, diese nicht aufzurufen, können dies jedoch nicht garantieren.
+Für fehlende Kalender-Klicks prüfe **Proxy** im veröffentlichten Style und den Zeitraum des Berichts. Direkte Kalenderdatei-Downloads werden nicht erfasst. Ein Klick beweist außerdem nicht die abschließende Speicherung. Siehe [Statistiken](/de/application-manual/analytics).
 
-Dies ist für Funktionen wie E-Mail-Links oder den Add-to-Calendar-Button notwendig, um ordnungsgemäß zu funktionieren.
+## Andere Website-Elemente verdecken die Kalender-Auswahl
 
-Wenn du nicht möchtest, dass dies geschieht - zum Beispiel, weil du sensible Informationen in die Eventdetails einfügst - kannst du ein Event (oder eine Gruppe) auf privat setzen. Klicke dazu auf den 3-Punkte-Button in der Aktionsleiste am Ende der Event-Detailseite und im Anschluss auf den entsprechenden Button.
+Aktiviere **Overlay erzwingen** im verbundenen Style und teste erneut. Ist ein eingebettetes RSVP-Formular zu schmal, bitte dein Webseiten-Team, die Breite des umgebenden Bereichs zu prüfen.
 
-Ein privates Event hat keine öffentliche ics-Datei oder Landingpage. Der Add-to-Calendar-Button funktioniert ebenfalls nicht, da er die Informationen über das Web abrufen muss. Du kannst jedoch weiterhin [ics-Dateien über unsere API generieren](/de/api/miscellaneous#retrieve-ics-file-body).
+## Öffentliche Daten und private Events {#how-can-i-make-sure-there-is-no-data-publicly-available-on-the-internet}
 
-Das macht es zu einem idealen Fall für [dynamische Checkout-Flows](/de/recipes/dynamic-checkout) mit sensiblen Informationen!
+Öffentliche Event-Links können weitergegeben werden. Ein Landingpage-Passwort schützt keine direkten Kalenderdateien. Wenn du die öffentliche Bereitstellung beenden möchtest, nutze **Privat setzen** beim Event; dadurch werden auch Button und RSVP-Formular deaktiviert. Für vertrauliche Abläufe mit ausschließlich individuell erzeugten Kalenderdateien findest du technische Schritte unter [Dynamic Checkout](/de/recipes/dynamic-checkout).
 
-## Das Dropdown des Add to Calendar Buttons verschwindet hinter anderen Elementen
+## Die Social-Vorschau zeigt alte Angaben {#social-preview}
 
-Das Dropdown wird direkt nach dem Button-Element mit einem höheren z-Index gerendert.
+Öffne zuerst die Landingpage und prüfe die veröffentlichten Angaben. Social-Media-Plattformen können ältere Bilder und Texte zwischenspeichern. Nutze, falls vorhanden, das Vorschau-Aktualisierungswerkzeug der Plattform. Wiederholte Änderungen in PRO erzwingen nicht bei jedem Anbieter eine sofortige Aktualisierung.
 
-Wenn dein Seitenlayout später auf der Seite einen neuen ["Stacking Context"](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) definiert, kann dieser den Button überlagern.
+## Hilfe für ein konkretes Problem
 
-Du kannst entweder dein Layout optimieren oder die `forceOverlay` Option im Style deines Add to Calendar Buttons aktivieren. Diese Option wird den Button auf eine eher brutale Weise (aus technischer Sicht) über allem anderen platzieren.
-
-## Ich möchte denselben Add to Calendar Button mit 2 Styles verwenden
-
-Um dies zu erreichen, musst du dein Event duplizieren und die 2 Events mit den verschiedenen Styles verbinden.
-
-## Das Vorschaubild in sozialen Medien aktualisiert sich nicht
-
-Wenn ein Link zur Landingpage geteilt wird, generieren wir automatisch ein Vorschaubild, das die Veranstaltungsdetails anzeigt. Dies hilft dabei, das Event prominenter zu bewerben.
-
-Bei jedem Update wird dieses Bild ebenfalls aktualisiert. Allerdings cachen externe Tools und Websites dieses Bild normalerweise, was dazu führt, dass es sich nicht sofort aktualisiert. Einige Portale erneuern ihren Cache erst nach 7 Tagen, wenn überhaupt.
-
-Selbst wenn wir alles Mögliche von unserer Seite aus tun (wie zum Beispiel die Bild-URL jedes Mal komplett zu ändern), haben wir keine direkte Kontrolle über diese externen Dienste und Plattformen.
-
-_Was du in solchen Fällen tun kannst:_
-
-* **Facebook/Meta**: Gehe zum Facebook-Debugger unter [developers.facebook.com/tools/debug/](https://developers.facebook.com/tools/debug/) und gib die URL ein, die du teilst. Wenn du die alten Informationen siehst, kannst du auf den Button "Erneut scrapen" klicken, und es sollte sich aktualisieren.
-* **X/Twitter**: X bietet keine Option zum manuellen erneuern der Daten. Du kannst aber einen Trick anwenden, indem du einen Query-Parameter an deine URL anfügst. Auf diese Weise denkt X, dass du eine neue URL teilst, die erneut geprüft werden muss. Füge einfach etwas wie `?i=1` am Ende deiner URL hinzu. Du kannst die Nummer mehrmals ändern, um ein Auffrischen zu erzwingen.
-
-## Meine IDE zeigt TypeScript-Warnings
-
-Das kann in seltenen Fällen passieren, wenn die Typen noch nicht sauber geladen und verarbeitet wurden. Manchmal hilft ein Neustart der IDE oder des Computers.
-
-Wenn das Problem weiterhin besteht, kannst du in der `tsconfig`-Datei [skipLibCheck](https://www.typescriptlang.org/tsconfig#skipLibCheck) auf `false` setzen, was die Warnung verhindern sollte.
-Bitte eröffne auch einen neuen Issue in unserem GitHub-Repo ["add-to-calendar-button"](https://github.com/add2cal/add-to-calendar-button/issues/new/choose) oder sende uns eine E-Mail, damit wir das Problem genauer prüfen können.
+Nutze **Hilfe** in der App. Nenne Event-/Gruppenname oder ProKey, öffentliche URL, erwartetes und tatsächliches Verhalten sowie Browser und Gerät. Beschreibe, ob das Problem auch auf der gehosteten Landingpage auftritt. Sende keine Passwörter, API-Keys oder privaten Links zur Teilnehmerverwaltung.

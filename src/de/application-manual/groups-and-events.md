@@ -1,90 +1,50 @@
 ---
-title: Gruppen und Events
-description: Lerne wie Event-Gruppen und Events in Add to Calendar PRO funktionieren. Organisiere deine Kalender-Integrationen mit Containern und Events.
+title: Events organisieren und verwalten
+description: Finde und gruppiere Events, veröffentliche Änderungen und verstehe Entwürfe, Privatsphäre, Kopien sowie das Löschen von Events.
 outline: [2,3]
 ---
 
-# Gruppen und Events
+# Events organisieren und verwalten
 
-Eine **Event-Gruppe** ist eine Art Container für ein oder mehrere **Events**.
-Diese Elemente sind der Kern jedwedes Vorhabens.
+Unter **Events** verwaltest du Kalender-Events und RSVP-Anmeldungen. Wechsle zwischen der Event-Übersicht und **Gruppen**, um einzelne Events oder ihre gemeinsamen Bereiche zu bearbeiten.
 
-Du findest beide über den Punkt "Events" im Menü.
+[Events in der App öffnen](https://app.add-to-calendar-pro.com/de)
 
-Auf der Übersichtsseite kannst du über den Toggle-Switch zwischen den beiden Hierarchie-Ebenen wechseln.
+## Ein Event finden {#events}
 
-[In der App öffnen ❯](https://app.add-to-calendar-pro.com/de)
+Nutze die Suche, den Gruppenfilter und die Datumsfilter, um die Übersicht einzugrenzen. Fehlt ein älteres Event, prüfe **Vergangene Events ausblenden** und entferne die Filter, bevor du erneut suchst.
 
-## Die Event-Gruppe
+Die **Tabellen-Ansicht** zeigt Events als Zeilen. In der **Kalender-Ansicht** kannst du nach Tag, Woche oder Monat blättern. Formulare ohne festen Termin und dynamische Daten wie „today“ erscheinen nur in der Tabelle.
 
-Sie kann zur Strukturierung und Organisation deiner Daten genutzt oder mit einem externen Kalender verknüpft werden.
-Letzteres erzeugt einen Button, über den man einen Kalender abonnieren kann. Entsprechend kannst du Styles und CTAs in diesem Fall direkt mit der Gruppe verknüpfen.
+Bei wiederkehrenden Events oder mehreren Terminen berücksichtigt der Datumsfilter den frühesten Beginn und das späteste Ende aller Termine. Öffne das Event, um die einzelnen Termine zu prüfen.
 
-### Erstellung
+## Events in Gruppen organisieren {#groups}
 
-Die Erstellung einer Gruppe ist ziemlich einfach, da nicht viele Informationen benötigt werden - vor allem, wenn du kein Kalendar-Abonnement anlegst.
+Wähle einen aussagekräftigen Gruppennamen wie „Kundenschulungen“. Erkläre den Zweck bei Bedarf in der **Internen Notiz**. Diese Notiz ist für dein Team, nicht für deine Besucher.
 
-Du kannst das Feld **"Interne Notiz"** für individuelle Informationen nutzen. Dies hat keinen Einfluss auf irgendeine Funktionalität. Wenn du im Team arbeitest, kann dies aber nützlich sein, um bspw. Hintegrund-Informationen zur Gruppe festzuhalten.
+Wähle bei einem normalen organisatorischen Bereich **Kalender-Abonnement → Nein**. Für einen fortlaufenden Kalender nutze die Anleitung zu [Kalender-Abonnements](/de/application-manual/calendar-subscriptions). Eine [öffentliche Event-Liste](/de/application-manual/event-list) ist eine zusätzliche Möglichkeit, Events auf deiner Webseite zu zeigen.
 
-Legt du ein Kalender-Abonnement an, so kannst du diesem einen **Style** sowie ein **Call-to-Action-Element** zuweisen.
-Zur Visualisierung des Ganzen gibt es eine entsprechende Vorschau.
+Zum Verschieben öffnest du das Event und wählst **Gruppe wechseln** in den zusätzlichen Aktionen. Das Event, die bisherige und die neue Gruppe müssen veröffentlicht sein. Gruppen mit externem Kalender können keine Events aufnehmen. Für Abonnements aus Gruppen-Events gelten weitere Voraussetzungen.
 
-[In der App öffnen ❯](https://app.add-to-calendar-pro.com/de/create-group)
+## Änderungen speichern und veröffentlichen
 
-### Detail-Seite
+1. Öffne das Event und bearbeite die gewünschten Felder.
+2. Prüfe die Vorschau, insbesondere Termine und verknüpfte Templates.
+3. Wähle **Entwurf speichern**, um deine Änderungen zu sichern.
+4. Wähle **Veröffentlichen**, sobald die gespeicherten Änderungen für Besucher bereit sind.
 
-Auf der Detail-Seite einer Gruppe werden alle damit verbundenen Events in einer Tabelle angezeigt. Eine Gruppe kann damit auch ein guter Startpunkt für eine gefilterte Event-Übersicht sein.
+Ein gespeicherter Entwurf ist noch keine Veröffentlichung. Verwende den Entwurfsstatus nicht, um bereits verteilte Informationen zurückzuziehen. Veröffentlichte Änderungen können **3–10 Minuten** benötigen, bis sie überall sichtbar sind.
 
-::: warning Beachte!
-Sobald eine Gruppe Events beinhaltet, kann diese Option nicht mehr geändert werden, da sich damit die Kernfunktionalität der Gruppe ändert.
-:::
+Bei einem RSVP-Event mit Antworten und aktiver Event-Distribution kannst du beim Veröffentlichen zusätzlich die Teilnehmer informieren. Diese Option versendet eine E-Mail zum Update. Sie garantiert nicht, dass ein bereits importierter Kalendereintrag automatisch aktualisiert wird.
 
-Im Kalendar-Abonnement-Fall siehst du anstelle dieser Übersicht die Style- und CTA-Felder samt Vorschau, die du bereits aus der Erstellung der Gruppe kennst.
+## Ein Event kopieren oder zurückziehen
 
-Ganz oben siehst du entweder nur den Prokey zum Kopieren (im Fall ohne Abonnement) oder eine komplette Zusammenfassung mit allem, was du für das Teilen und die Integration benötigst. Von E-Mail-Links bis zu deiner automatisch erstellten Landingpage und mehr. An dieser Stelle findest du ebenfalls den Link zum Analytics/**Statistik**-Dashboard für diese Event-Gruppe.
+Über die Kopieraktion kannst du ein neues Event mit vorhandenen Einstellungen beginnen. Prüfe dessen Termine, verbundene Templates und neue Links vor der Veröffentlichung.
 
-## Das Event
+### Öffentlich und privat {#detail-seite-1}
 
-Ein **Event** wird durch einen bestimmten Termin und weitere beschreibende Parameter definiert. Es ist das Kern-Element von allem, was du mit Add to Calendar PRO entwickelst.
+In den zusätzlichen Aktionen kannst du das Event **Privat setzen**. Dadurch endet die öffentliche Bereitstellung der Event-Daten und vorgefertigten Kalenderdatei; verbundene Buttons und RSVP-Formulare funktionieren ebenfalls nicht mehr. Bereits heruntergeladene Dateien werden nicht zurückgerufen. Mit **Öffentlich machen** machst du das Event wieder verfügbar.
 
-Bei einem Event kann sich bspw. um ein Ganztags-Event, einen wiederholenden Termin oder auch mehrere Termine (Termin-Reihe) handeln. Darüber hinaus kannst du allerdings noch viel mehr Details definieren (bspw. einen Organisator) definieren.
+### Bewusst löschen
 
-Mit einem Event lassen sich Styles, RSVPs und CTAs verknüpfen, um entsprechende Funktionalitäten zu aktivieren.
-
-### Erstellung
-
-Ein neues Event kann über die Übersichtsseite oder innerhalb einer Event-Gruppe erfolgen.
-
-Zu Beginn definierst du die Art des Events.
-Hierbei geht es im Wesentlichen um:
-
-* **RSVP**: Ob du das Event mit einem RSVP-Formular nutzen möchtest oder nicht.
-* **Event-Distribution**: Wenn du das Element als RSVP nutzt, ob du möchtest, dass das Event (Datum und Details) an den Nutzer übermittelt wird oder ob du nur ein einfaches Anmeldeformular möchtest (bei dem du die zugrundeliegenden Eventdetails nicht anzeigen möchtest).
-* **Add-to-Calendar-Button**: Ob du einen "Zum Kalender hinzufügen"-Button für das Event erstellen möchtest. Wenn du dich zusätzlich für RSVP entscheidest, wirkt sich dies auch darauf aus, ob wir einen solchen Button nach der Anmeldung des Nutzers anzeigen.
-* **Call to Action (CTA)**: Ob nach dem Speichern eines Events über den Add-to-Calendar-Button ein CTA-Screen angezeigt werden soll.
-
-Als Nächstes definierst du die Termin-Daten.
-Dies ist grundsätzlich recht selbsterklärend.
-
-Du kannst mehrere Termin-Blöcke erstellen, um ein Multi-Date-event zu kreieren (z.B. wenn das Event aus 2 Teilen besteht) oder eine Wiederholungslogik erstellen.
-
-Schließlich kannst du, abhängig von dem, was du zuvor angegeben hast, einen Style, RSVP-Formular und CTA-Element für das Event definieren.
-
-In allen Fällen kannst du das Ergebnis immer in der dynamischen Vorschau überprüfen.
-
-[In der App öffnen ❯](https://app.add-to-calendar-pro.com/de/group/create-group/create-event)
-
-### Detail-Seite
-
-Sobald erstellt, kannst du das Event jederzeit auf der Detailseite aktualisieren.
-Dort findest du im Grunde die gleiche Struktur wie bei der Erstellung selbst vor.
-
-Ganz oben findest du eine Zusammenfassung mit allem, was du für das Teilen und die Integration benötigst. Von E-Mail-Links bis zu deiner automatisch erstellten Landingpage und mehr. Hier findest du auch den Link zum Analytics-Dashboard für dieses Event. Das wäre die Übersicht über RSVP-Anmeldungen im RSVP-Fall oder [Statistiken](/de/application-manual/analytics) darüber, wann und wie oft Personen ein Event zu ihren Kalendern hinzugefügt haben (im Nicht-RSVP-Fall).
-
-::: warning Beachte automatische Anpassungen
-Je nachdem, was du auswählst sowie je nach Nutzer-Situation, passen wir automatisch manche Details an. Beispiel: Wenn du ein wiederkehrendes Event erstellst, werden einige Kalendertypen nicht angezeigt, da nicht alle diese Funktion unterstützen (im Rahmen eines Add-to-Calendar-Buttons).
-:::
-
-Am Ende der Seite findest du die Aktionsleiste, welche weitere Informationen und Aktionsmöglichkeiten bereit stellt.  
-Dort (über den 3-Punkte-Button) findest du auch die Option, ein Event als privat zu markieren. 
-Dies blockiert die automatische Generierung einer Landingpage und ICS-Datei, aber erlaubt dir weiterhin ICS-Dateien über die API zu generieren oder einen Button mit [dynamischen Datumseigenschaften in WordPress](/de/integration/wordpress#dynamische-verbindungen) zu verwenden.
+Das Löschen eines Events kann nicht rückgängig gemacht werden. Beim Löschen einer Gruppe werden auch ihre Events gelöscht; deren Integrationen funktionieren anschließend nicht mehr. Löschst du in der Kalenderansicht einen angezeigten Termin eines Events mit mehreren Terminen, wird das **gesamte Event** gelöscht.

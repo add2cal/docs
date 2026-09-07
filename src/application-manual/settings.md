@@ -1,68 +1,65 @@
 ---
-title: Settings
-description: Configure your Add to Calendar PRO account settings. Manage licensing, branding, and application preferences from the settings panel.
+title: Manage Account and Organization Settings
+description: Update your profile, secure your account, manage billing, and find API, sender email, and custom domain settings.
 outline: [2,3]
 ---
 
-# Settings
+# Manage Account and Organization Settings
 
-You get to the settings via the cog wheel icon in the sidebar/menu.
+Open the cog icon in the menu to reach **Settings**. Use **User**, **Organization**, **Technical**, or **Plan** depending on what you want to change.
 
-[Open in the app ❯](https://app.add-to-calendar-pro.com/settings)
-
-The seetings consist of 4 sub pages:
-
-* User
-* Organization
-* Technical
-* Pro Plan
+[Open Settings in the app](https://app.add-to-calendar-pro.com/settings)
 
 ## User settings
 
-Here, you can change the settings for your user account.
+Update your name, salutation/pronouns, time zone, and preferred light or dark theme. The account time zone helps display dates inside the app; check the event's own time zone separately when creating an event.
 
-This includes your name, login credentials, as well as security measures like Two-Factor Authentication.
+Leave **Hide Hints** off while learning the app. **Email updates** controls product news and marketing communication, not the messages your attendees receive through RSVP.
 
-You can also change your local time zone and the theme for the application.
+### Login and email address
 
-Via the "Hide Hints" toggle button, you can decide whether you want to see some in-app guidance or rather work with a cleaner interface (when you are already used to the application).
+Your login email cannot be edited directly. To use another address, invite it as a new [team member](/application-manual/team), accept the invitation, and make sure it has the access you need before removing the old account.
 
-Here, you can also delete your account, in case you decide to leave our offering (**we would love to get some feedback via email in this case!**).
+For a password login, **Change Password** logs you out and sends an email with a reset link. If you use Google or GitHub, manage that login with the respective provider.
+
+### Two-factor authentication
+
+For a password-based account, open **Two-Factor Authentication**, enter your password, scan the displayed QR code with your authenticator app, and enter its generated code to finish activation. Keep access to that authenticator for future logins.
 
 ## Organization settings
 
-As the application is built to be worked with as a team, your account is linked to an organization. You can delete a user account, while keeping an organization and all created data. There is no important data linked to a user. It is all bound to your organization instead.
+Admins can update the organization name, billing email, address, VAT ID, and logo. The logo can appear in related emails. Keep billing information accurate before making a purchase.
 
-The organization also acts as identify for any invoice and payment details. Therefore, you should keep this data up to date.
-
-You can also upload your logo, which then will appear on any related emails.
-
-When you delete the last user, the organization and all data will get deleted as well.
+Events and other content belong to the organization, not to the person who created them. This is why colleagues can continue working after another team member leaves.
 
 ## Technical
 
-### API Keys
+This area is managed by admins. You usually only need it when connecting another service or customizing how emails are sent.
 
-At this page and section, you create and manage your API keys.
+### API Keys {#api-keys}
 
-When creating a new key, you can make it last forever or expire at a specific point in time.
+Choose **New API Key**, enter a recognizable name, select **Read** or **Read & Write**, and optionally set an expiration date. Use only the access needed by the connected service.
 
-You can also always temporarily disable a key or delete it.
+Copy the key into that service's connection settings. You can disable a key temporarily or delete it permanently; either action affects integrations using it. Follow the existing [API authentication guide](/api/auth) for technical instructions. Never put an API key into a public website button; that uses a ProKey instead.
 
 ### Email Sender Address
 
-You can specify which address should be used to send any RSVP emails.  
-Use one of our 2 defaults or define your own address (which requires your own SMTP server to be specified).
+Choose a provided sending address or a custom profile. A custom profile requires your email provider's SMTP details. Ask your email administrator to enter and check those settings.
 
-You can additionally specify a custom FROM name (not the email address) per email template.
+Changing the sender address resets the SMTP settings. Displayed **From Name** and **Reply to** addresses can be set separately in [email templates](/application-manual/email-templates).
 
-## Pro Plan settings
+### Custom domain
 
-Here, you see you current license and available monthly events (also shown in the side bar).
+When your organization has custom-domain capacity, Technical shows its global default domain. A [landing page template](/application-manual/landing-pages) can select an available page-specific domain. Contact support if you need help with domain setup.
 
-When you don't have a plan yet, you can purchase it here.
+## Plan settings
 
-When you have an active plan, you can also cancel your subscription at the bottom of this page - or update your payment details.
+Check your current plan, renewal date, and available monthly events. **Manage Purchases** opens Paddle to view invoices and update payment details. Use the amounts shown in the app for current pricing.
 
-For Regular and Enterprise plans, you can activate the auto-scale option. With this enabled, you will never run out of monthly events, since they get auto-purchased on a pay-per-use basis.
-Find more details about that at this page or the FAQ at our homepage.
+Where available, **Auto-Scale** lets you create additional events after using your allowance, with extra usage charges. Disabling it prevents further automatic extras; it does not cancel the plan.
+
+Cancellation offers immediate termination or termination at the end of the billing period. Read the selected option before confirming: immediate cancellation also ends access immediately.
+
+## Delete your account
+
+The **Danger Zone** is under User settings. If others remain, ensure another person is an admin first. If you are the last user, deletion also permanently removes the organization and its data. The app may require you to cancel an active subscription first.
