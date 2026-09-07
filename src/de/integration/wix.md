@@ -75,4 +75,3 @@ Das liegt daran, dass Wix das Element sowohl im Editor als auch in der Vorschau 
 Sobald du deine Seite veröffentlichst, sieht auf der Live-Website alles wieder gut aus! 😊
 
 ![Live](/screenshots/wix-public.png)
-

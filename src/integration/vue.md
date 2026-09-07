@@ -21,31 +21,26 @@ Import the module into the component, where you want to use the button.
 import 'add-to-calendar-button';
 ```
 
-## Step 3: Optimize the Vue config
+## Step 3: Register the custom element
 
-Theoretically, this was already it.
+Merge this compiler setting into your existing configuration so Vue recognizes the Web Component.
 
-Vue works extremely well with Web Components.
+```typescript
+// vite.config.ts
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-However, you might notice a warning in the browser console.
-To get rid of this, you need to provide a little bit more information to the compiler options.
-
-This can go into your `vite.config.js` or other places depending on your setup. Check the official Vue documentation for more details: [Click here](https://vuejs.org/guide/extras/web-components#using-custom-elements-in-vue).
-
-```javascript
-// vite.config.js or vite.config.ts
-
-compilerOptions: {
-  isCustomElement: (tag) => tag.includes('-')
-}
-```
-
-In case the Add to Calendar Button is the only Web Component in your project, you could also be a little bit more explicit here.
-
-```javascript
-compilerOptions: {
-  isCustomElement: (tag) => tag === 'add-to-calendar-button'
-}
+export default defineConfig({
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag === 'add-to-calendar-button',
+        },
+      },
+    }),
+  ],
+});
 ```
 
 ## Step 4: Use it
@@ -56,20 +51,31 @@ Start using it by adding a `<add-to-calendar-button prokey="prokey-of-your-event
 
 ## Bring your own button
 
-Alternatively, you can also trigger the button or form programmatically via the atcb_action function. Mind that this will force a modal to appear.
+Open the button or form as a modal from a click handler. The dynamic import runs in the browser when clicked. Pass the trigger element for focus handling.
 
-When working with the npm package, you would need to import the atcb_action first:
+```vue
+<script setup>
+async function openEvent(event) {
+  const trigger = event.currentTarget;
+  const { atcb_action } = await import('add-to-calendar-button');
+  atcb_action({ prokey: 'prokey-of-your-event' }, trigger);
+}
+</script>
 
-```javascript
-import { atcb_action } from "add-to-calendar-button";
+<template>
+  <button @click="openEvent">Open event</button>
+</template>
 ```
 
-You should also provide a HTML element as second parameter. Event it is optional, it optimizes the UX; especially for keyboard navigation.
+## Styles and languages
 
-In the following example, we also use this element as trigger onClick:
+The npm package includes only the default style and English by default. Import every additional style and language selected in the PRO app for your buttons and RSVP forms:
 
 ```javascript
-const button = document.getElementById('my-custom-button');
-button.addEventListener('click', () => atcb_action({ prokey: "prokey-of-your-event"}, button));
-
+import 'add-to-calendar-button/styles/3d';
+import 'add-to-calendar-button/i18n/de';
 ```
+
+Place these imports alongside the core import or in a shared setup module.
+
+Alternatively, load styles and languages dynamically from jsDelivr by setting `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` on the element. Apply the same strategy to custom triggers; the option is named `styleSource` in `atcb_action`.

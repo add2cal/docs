@@ -12,6 +12,10 @@ Wir empfehlen, im Menü nach deinem Tech Stack zu suchen und von dort aus zu beg
 Lies den Rest dieser Seite für ausführlichere Details und Optionen zur Anpassung.
 :::
 
+::: warning Bestehende v2-Integration aktualisieren?
+Die [V3 Migrationsanleitung](/de/integration/migration-guide-v2-to-v3) erklärt das Update deines Skripts oder npm-Pakets und das Laden von Styles und Sprachen.
+:::
+
 ## Allgemeiner Workflow
 
 Es sind nur 2 Schritte notwendig, um RSVP-Formulare und Add to Calendar Buttons in deiner Anwendung oder auf deiner Webseite anzuzeigen.
@@ -27,11 +31,8 @@ Wir generieren automatisch einen prokey für jedes von dir erstellte Event. Du k
 
 Wenn du ein [Event über unsere API erstellst](/de/api/events#event-erstellen), erhältst du den prokey als Response.
 
-::: Warnung Client only!
-Bedenke, dass der Button nur auf Seite des "Clients" funktioniert.
-Daher kann das Rendern auf dem Server (z. B. mittels SSR oder SSG-Prerendering) zu unerwartetem Verhalten führen.
-
-Je nach Framework solltest du deiner Komponente entsprechende Auszeichnungen, wie `<ClientOnly></ClientOnly>` (Nuxt) oder `use client` (React) zufügen.
+::: tip Browser-Initialisierung und SSR
+Das Hauptpaket registriert die interaktive Web Component im Browser. Bei Nuxt kannst du dafür ein Client-Plugin verwenden; bei Next.js eine Client-Komponente. Version 3 bietet zusätzlich einen separaten SSR-Einstieg zum Vorab-Rendern einer Button-Hülle. Siehe [SSR mit PRO](#ssr-mit-pro).
 :::
 
 ## Verwendung via CDN
@@ -43,11 +44,7 @@ Das Skript wird auf nicht blockierende Weise geladen.
 <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button" async defer></script>
 ```
 
-Bei Nutzung der kleineren Unstyled-Version wäre dies:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button/dist/atcb-unstyle.min.js" async defer></script>
-```
+Styles und Sprachen werden bei Bedarf automatisch vom CDN nachgeladen. Nutze das Hauptskript; frühere Unstyled-Builds sind in v3 nur noch Kompatibilitätslösungen.
 
 ## Verwendung via npm
 
@@ -63,11 +60,14 @@ Importiere das Modul in deinem Projekt/Komponente:
 import 'add-to-calendar-button';
 ```
 
-..., bzw für die Unstyled-Version:
+Das Paket enthält standardmäßig nur den Standard-Style und Englisch. Importiere zusätzlich benötigte Styles und Sprachen:
 
 ```javascript
-import 'add-to-calendar-button/unstyle';
+import 'add-to-calendar-button/styles/3d';
+import 'add-to-calendar-button/i18n/de';
 ```
+
+Alternativ kann deine IT `style-source` für dynamisches Laden von jsDelivr oder deinem eigenen Hosting setzen. Die [V3 Migrationsanleitung](/de/integration/migration-guide-v2-to-v3) erklärt die Strategien. Frühere `/unstyle`- und `/no-pro`-Imports sollten durch den Haupteinstieg ersetzt werden.
 
 *Je nach Framework/Library musst du möglicherweise kleinere Anpassungen an der jeweiligen Konfiguration vornehmen.*
 
@@ -76,6 +76,22 @@ import 'add-to-calendar-button/unstyle';
 Für einige Systeme (wie WordPress) bieten wir offizielle Plugins an.
 
 Normalerweise findest du diese in den entsprechenden Stores. Überprüfe allerdings unbedingt die jeweilige Seite in dieser Dokumentation für Details und um keine falschen (oder gar schädlichen) Inhalte zu installieren.
+
+## SSR mit PRO
+
+Der separate Einstieg `add-to-calendar-button/ssr` kann eine Button-Hülle vorab rendern. Für über einen `prokey` verwaltete Daten nutze `atcb_generate_ssr_html_async` auf dem Server. Die Funktion lädt die PRO-Konfiguration, bevor sie das HTML erzeugt:
+
+```javascript
+import { atcb_generate_ssr_html_async } from 'add-to-calendar-button/ssr';
+
+const html = await atcb_generate_ssr_html_async({
+  prokey: 'prokey-deines-events',
+});
+```
+
+Übergib ausschließlich das von dieser Funktion erzeugte HTML an die HTML-Ausgabe deines Frameworks. Lade anschließend das Hauptpaket im Browser, um die Hülle zu aktivieren. Die SSR-Hülle ersetzt nicht die Initialisierung der vollständigen Interaktion und RSVP-Formulare im Browser. Plane auch die Fehlerbehandlung für das Laden der PRO-Konfiguration ein.
+
+Die offiziellen Anleitungen für [Next.js](https://add-to-calendar-button.com/use-with-nextjs), [Astro](https://add-to-calendar-button.com/use-with-astro), [Nuxt](https://add-to-calendar-button.com/use-with-nuxt) und [Svelte](https://add-to-calendar-button.com/use-with-svelte) zeigen die framework-spezifische HTML-Ausgabe und Browser-Aktivierung. Ersetze dort die synchrone Erzeugung mit lokalen Event-Daten durch den asynchronen PRO-Aufruf oben in deinem serverseitigen Datenfluss. In Nuxt muss die vorhandene SSR-Hülle beim Hydrieren erhalten bleiben; nutze dafür die dort gezeigte Direktive statt `v-html`.
 
 ## Wichtige Überlegungen
 

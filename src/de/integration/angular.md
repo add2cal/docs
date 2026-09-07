@@ -25,6 +25,23 @@ import 'add-to-calendar-button';
 
 Damit Angular sauber mit Web Components arbeitet, musst du das **CUSTOM_ELEMENTS_SCHEMA** importieren und den **@NgModule/@Component**-Block entsprechend aktualisieren.
 
+Für eine Standalone-Komponente:
+
+```typescript
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import 'add-to-calendar-button';
+
+@Component({
+  selector: 'app-event-button',
+  standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  template: '<add-to-calendar-button prokey="prokey-deines-events"></add-to-calendar-button>',
+})
+export class EventButtonComponent {}
+```
+
+Bei einer NgModule-Anwendung ergänze das Schema im zuständigen Modul:
+
 ```typescript
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 //(...)
@@ -73,3 +90,16 @@ Je nach Konfiguration könnte der Datenfluss nach dem ersten Rendern des Buttons
 ```javascript
 <add-to-calendar-button [attr.prokey]="deineProkeyVariable"></add-to-calendar-button>
 ```
+
+## Styles und Sprachen
+
+Das npm-Paket enthält standardmäßig nur den Standard-Style und Englisch. Importiere alle weiteren Styles und Sprachen, die du in der PRO App für deine Buttons und RSVP-Formulare auswählst:
+
+```javascript
+import 'add-to-calendar-button/styles/3d';
+import 'add-to-calendar-button/i18n/de';
+```
+
+Füge die Imports neben dem Hauptimport oder in einem gemeinsamen Setup-Modul ein.
+
+Alternativ kannst du Styles und Sprachen dynamisch von jsDelivr laden, indem du `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` am Element setzt. Dieselbe Strategie gilt für eigene Trigger; in `atcb_action` heißt die Option `styleSource`.

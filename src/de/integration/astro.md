@@ -5,66 +5,57 @@ description: Integriere Add to Calendar PRO mit Astro-Anwendungen. Vollständige
 
 # Wie man die Buttons und RSVP-Formulare mit Astro nutzt
 
-## Schritt 0: Wähle die richtige Architektur
-
-Du kannst die Web-Komponente direkt dort verwenden, wo du sie brauchst, oder indirekt über eine Komponente (wie z. B. add-to-calendar.astro, die auf der jeweiligen Seite importiert wird).
-
-Wir empfehlen den direkten Ansatz, wenn du nur 1 Element nutzt. Bei mehr als 1 Element empfiehlt sich die Hilfs-Komponente.
-
-Nachfolgend beschreiben wir den Weg über die Hilfs-Komponente. Wenn du sie direkt einsetzt, erstelle einfach keine Komponente, sondern füge den `<add-to-calendar-button />`-Code direkt dort ein, wo du ihn benötigst.
-
 ## Schritt 1: npm-Installation
-
-Installiere das Paket aus der npm-Registry.
 
 ```bash
 npm install add-to-calendar-button
 ```
 
-## Schritt 2: Erstelle die Komponente
+## Schritt 2: Gemeinsame Komponente erstellen
 
-Erstelle eine neue Komponente `add-to-calendar.astro` (üblicherweise unter `./src/components/`).
+Lege `src/components/add-to-calendar.astro` an. Die Props stehen im Astro-Frontmatter; das normale `<script>` lädt das Paket im Browser.
 
-## Schritt 3: Definiere die Props
-
-Definiere die Props der Komponente. Dies sollte mindestens der Prokey sein.
-
-```tsx
+```astro
+---
 import type { AddToCalendarButtonType } from 'add-to-calendar-button';
 
 interface Props {
-  prokey: AddToCalendarButtonType['prokey'];
-} 
+  prokey: NonNullable<AddToCalendarButtonType['prokey']>;
+}
 
-const { prokey } = Astro.props as Props;
-```
+const { prokey } = Astro.props;
+---
 
-## Schritt 4: Füge das Script hinzu
+<add-to-calendar-button prokey={prokey}></add-to-calendar-button>
 
-Füge hinzu:
-
-```html
-<add-to-calendar-button prokey={prokey} />
-```
-
-Gefolgt von:
-
-```html
 <script>
   import 'add-to-calendar-button';
 </script>
 ```
 
-## Schritt 5: Nutze die Komponente
-
-Auf jeder anderen Seite (oder Komponente) importierst und nutzt du sie nun.
-
-```tsx
-import AddToCalendarButton from "../components/add-to-calendar-button.astro"; // passe den Pfad an deine Projektstruktur an
-```
-
-<br />
+## Schritt 3: Komponente verwenden
 
 ```astro
-<AddToCalendarButton prokey="prokey-of-your-event" />
+---
+import AddToCalendarButton from '../components/add-to-calendar.astro';
+---
+
+<AddToCalendarButton prokey="prokey-deines-events" />
 ```
+
+## Styles und Sprachen
+
+Das npm-Paket enthält standardmäßig nur den Standard-Style und Englisch. Importiere alle weiteren Styles und Sprachen, die du in der PRO App für deine Buttons und RSVP-Formulare auswählst:
+
+```javascript
+import 'add-to-calendar-button/styles/3d';
+import 'add-to-calendar-button/i18n/de';
+```
+
+Füge die Imports in den Browser-`<script>`-Block deiner Astro-Komponente ein.
+
+Alternativ kannst du Styles und Sprachen dynamisch von jsDelivr laden, indem du `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` am Element setzt. Dieselbe Strategie gilt für eigene Trigger; in `atcb_action` heißt die Option `styleSource`.
+
+## Optional: Serverseitiges Rendering
+
+Das Paket bietet einen separaten SSR-Einstieg für eine vorgerenderte Button-Hülle. Für PRO-Daten nutze die asynchrone Variante auf dem Server. Die vollständige Interaktion und RSVP-Formulare werden weiterhin im Browser initialisiert. Siehe [SSR mit PRO](/de/integration/general#ssr-mit-pro) und die [Button Astro Anleitung](https://add-to-calendar-button.com/use-with-astro).

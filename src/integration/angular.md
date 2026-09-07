@@ -25,6 +25,23 @@ import 'add-to-calendar-button';
 
 To make Angular work properly with the Web Component, you need to import the **CUSTOM_ELEMENTS_SCHEMA** and update the **@NgModule** or **@Component** block respectively.
 
+For a standalone component:
+
+```typescript
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import 'add-to-calendar-button';
+
+@Component({
+  selector: 'app-event-button',
+  standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  template: '<add-to-calendar-button prokey="prokey-of-your-event"></add-to-calendar-button>',
+})
+export class EventButtonComponent {}
+```
+
+For an NgModule application, add the schema to the module declaring your component:
+
 ```typescript
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 //(...)
@@ -73,3 +90,16 @@ Based on your setup, the data flow might happen after the first rendering of the
 ```javascript
 <add-to-calendar-button [attr.prokey]="yourProkeyVar"></add-to-calendar-button>
 ```
+
+## Styles and languages
+
+The npm package includes only the default style and English by default. Import every additional style and language selected in the PRO app for your buttons and RSVP forms:
+
+```javascript
+import 'add-to-calendar-button/styles/3d';
+import 'add-to-calendar-button/i18n/de';
+```
+
+Place these imports alongside the core import or in a shared setup module.
+
+Alternatively, load styles and languages dynamically from jsDelivr by setting `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` on the element. Apply the same strategy to custom triggers; the option is named `styleSource` in `atcb_action`.
