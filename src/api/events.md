@@ -49,7 +49,7 @@ Gets the latest event. Id, prokey, label, and optional dates object (if query pa
 GET /event/:prokey
 ```
 
-Reading a sepcific event does not allow for any additional parameters. It only takes the proKey in the request url and simply provides you with all data for this one.
+Reading a sepcific event does not allow for any additional parameters. It only takes the prokey in the request url and simply provides you with all data for this one.
 
 ### Potential response
 
@@ -189,7 +189,7 @@ Additionally, the API does not allow to set the status of an event - it will alw
 }
 ```
 
-You can use the ProKey for further processing and several additional measures:
+You can use the Prokey for further processing and several additional measures:
 
 * We automatically set up a landing page you can use. Its url would be `https://caldn.net/:prokey`.
 * In most cases, we auto-create an ics file for you. You can download it from `https://event.caldn.net/:prokey/event.ics`. Mind the specialties here:

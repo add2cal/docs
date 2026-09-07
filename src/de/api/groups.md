@@ -29,7 +29,7 @@ Gibt die neueste Gruppe zurück.
 GET /group/:prokey
 ```
 
-Beim Abrufen einer Event-Gruppe sind keine zusätzlichen Parameter möglich. Es wird lediglich der proKey in der Anfrage-URL benötigt, um alle Daten für ein bestimmtes Element zu erhalten.
+Beim Abrufen einer Event-Gruppe sind keine zusätzlichen Parameter möglich. Es wird lediglich der prokey in der Anfrage-URL benötigt, um alle Daten für ein bestimmtes Element zu erhalten.
 
 Die Antwort enthält mehr Felder, als du vielleicht erwartest, da eine Gruppe mit einem Kalender-Abonnement und dadurch auch mit einem Style und CTA-Template kombiniert werden kann.
 
@@ -43,6 +43,7 @@ Die Antwort enthält mehr Felder, als du vielleicht erwartest, da eine Gruppe mi
   "internal_note": null,
   "subscription": "no",
   "subscription_cal_url": null,
+  "public_event_overview": true,
   "layout": null,
   "landingpage": null,
   "cta": false,
@@ -80,8 +81,9 @@ Beachte, dass du bei der Erstellung einer Gruppe keine Events hinzufügen kannst
 {
   "name": "Name der Event-Gruppe",
   "internal_note": null, // ein optionaler einfacher String
-  "subscription": "no", // kann "no" oder "external" lauten - letzteres erfordert eine subscription_cal_url
+  "subscription": "no", // kann "no", "children" oder "external" lauten - letzteres erfordert eine subscription_cal_url
   "subscription_cal_url": null, // url zu einem externen Kalender. Muss mit "http" beginnen! Endet gewöhnlich mit ".ics"
+  "public_event_overview": true, // falls true, verwandelt sich ein mit dem Prokey der Gruppe genutzter Add to Calendar Button in eine Übersichtsliste aller enthaltener Events
   "layout": "id-eines-style-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung über die API
   "landingpage": "id-eines-landingpage-templates", // diese ID findest du in der URL des entsprechenden Elements in der Anwendung oder in der Response bei Erstellung über die API
   "cta": true,
@@ -99,7 +101,7 @@ Beachte, dass du bei der Erstellung einer Gruppe keine Events hinzufügen kannst
 }
 ```
 
-Du kannst den ProKey für weitere Schritte nutzen (inkl. der Erstellung von neuen Events innerhalb der Gruppe).
+Du kannst den Prokey für weitere Schritte nutzen (inkl. der Erstellung von neuen Events innerhalb der Gruppe).
 
 <br />
 
@@ -134,6 +136,6 @@ Beachte, dass du den Status über die Anwendungs-Oberfläche auf "Entwurf", übe
 DELETE /group/:prokey
 ```
 
-Das Löschen einer Gruppe ist einfach. Gib hierzu lediglich den proKey an und die Gruppe sowie alle verbundenen Events sind verschwunden.
+Das Löschen einer Gruppe ist einfach. Gib hierzu lediglich den prokey an und die Gruppe sowie alle verbundenen Events sind verschwunden.
 
 **Sei bei diesem Aufruf sehr vorsichtig!**

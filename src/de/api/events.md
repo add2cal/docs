@@ -49,7 +49,7 @@ Gibt das neueste Event zurück. Id, Prokey, Label und optional das Dates-Objekt 
 GET /event/:prokey
 ```
 
-Beim Abrufen eines Events sind keine zusätzlichen Parameter möglich. Es wird lediglich der proKey in der Anfrage-URL benötigt, um alle Daten für ein bestimmtes Element zu erhalten.
+Beim Abrufen eines Events sind keine zusätzlichen Parameter möglich. Es wird lediglich der prokey in der Anfrage-URL benötigt, um alle Daten für ein bestimmtes Element zu erhalten.
 
 ### Mögliche Response
 
@@ -189,7 +189,7 @@ Weiterhin ist es nicht erlaubt, den Status eines Events über die API zu ändern
 }
 ```
 
-Du kannst den ProKey für weitere Schritte sowie diverse Maßnahmen nutzen:
+Du kannst den Prokey für weitere Schritte sowie diverse Maßnahmen nutzen:
 
 * Wir generieren automatisch eine Landingpage, die du teilen kannst. Die URL baut sich wie folgt auf: `https://caldn.net/:prokey`.
 * In den meisten Fällen erstellen wir automatisch eine ics-Datei. Du kannst diese via `https://event.caldn.net/:prokey/event.ics` herunterladen. Beachten hierbei folgende Besonderheiten:
@@ -237,6 +237,6 @@ Für jedes 5te Update ziehen wir zudem 1 Event-Credit ab, um Missbrauch vorzubeu
 DELETE /event/:prokey
 ```
 
-Das Löschen eines Events ist einfach. Gib hierzu lediglich den proKey an und das Event ist verschwunden.
+Das Löschen eines Events ist einfach. Gib hierzu lediglich den prokey an und das Event ist verschwunden.
 
 **Sei bei diesem Aufruf sehr vorsichtig!**

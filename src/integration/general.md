@@ -18,15 +18,15 @@ Read the rest of this page for more in-depth details and options to tweak things
 There are only 2 steps necessary to get RSVP forms and Add to Calendar Buttons showing up in your application or on your website.
 
 1. Load the script (via importing the package, loading the script via CDN, or via a plugin).
-2. Place an `<add-to-calendar-button>` tag where you want the element to show up and add the proKey as attribute to it.
+2. Place an `<add-to-calendar-button>` tag where you want the element to show up and add the prokey as attribute to it.
 
 ```html
-<add-to-calendar-button proKey="prokey-of-your-event"></add-to-calendar-button>
+<add-to-calendar-button prokey="prokey-of-your-event"></add-to-calendar-button>
 ```
 
-We automatically generate a proKey for every event you create. You can find it at the very top of the respective event page.
+We automatically generate a prokey for every event you create. You can find it at the very top of the respective event page.
 
-When you [create an event via our API](/api/events#add-an-event), you will receive the proKey as response.
+When you [create an event via our API](/api/events#add-an-event), you will receive the prokey as response.
 
 ::: warning It's client-side only!
 Mind that the button only works on the client-side.

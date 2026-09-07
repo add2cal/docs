@@ -31,11 +31,11 @@ Simply use the "Block" within the WordPress Gutenberg Block Editor.
 
 * Add a new block and search for "Add to Calendar Button".
 * Click at the appearing button.
-* Add the proKey at the input on the right side "Block" settings.
+* Add the prokey at the input on the right side "Block" settings.
 
 ### B: Shortcode
 
-Alternatively, you can also use the shortcode `[add-to-calendar-button]` and add the proKey directly to it:
+Alternatively, you can also use the shortcode `[add-to-calendar-button]` and add the prokey directly to it:
 
 ```
 [add-to-calendar-button prokey="prokey-of-your-event"]

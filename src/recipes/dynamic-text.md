@@ -51,18 +51,18 @@ Additionally, we are sending an **email** to the user, where we point him to the
 At our website, we include the button with the following code:
 
 ```
-<add-to-calendar-button proKey="the-ProKey-of-our-event" customVar='{"firstname": "dynamic-value-from-the-backend", "lastname": "dynamic-value-from-the-backend"}'></add-to-calendar-button>
+<add-to-calendar-button prokey="the-Prokey-of-our-event" customVar='{"firstname": "dynamic-value-from-the-backend", "lastname": "dynamic-value-from-the-backend"}'></add-to-calendar-button>
 ```
 
 This puts the information into the button at runtime. It could look like this in the end:
 
 ```
-<add-to-calendar-button proKey="1b39d497-bf14-45ed-b9af-2cfab5c1231a" customVar='{"firstname": "John", "lastname": "Doe"}'></add-to-calendar-button>
+<add-to-calendar-button prokey="1b39d497-bf14-45ed-b9af-2cfab5c1231a" customVar='{"firstname": "John", "lastname": "Doe"}'></add-to-calendar-button>
 ```
 
 #### Email:
 
-When sending the email, we use the link to the landing page `https://caldn.net/the-ProKey-of-our-event`, but we add the customVar information as query parameter. 
+When sending the email, we use the link to the landing page `https://caldn.net/the-Prokey-of-our-event`, but we add the customVar information as query parameter. 
 
 Mind that you need to encode this to work within a url! You can use a free online encoder like [urlencoder.io](https://www.urlencoder.io/).
 

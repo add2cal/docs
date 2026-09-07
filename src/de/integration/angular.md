@@ -38,7 +38,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 ## Schritt 4: Loslegen
 
-Beginne mit der Nutzung, indem du einen `<add-to-calendar-button proKey="prokey-deines-events"></add-to-calendar-button>` Tag in deinen Quellcode einfügst.
+Beginne mit der Nutzung, indem du einen `<add-to-calendar-button prokey="prokey-deines-events"></add-to-calendar-button>` Tag in deinen Quellcode einfügst.
 
 <br />
 
@@ -58,7 +58,7 @@ Im folgenden Beispiel nutzen wir dieses Element auch als Trigger bei Klick:
 
 ```javascript
 const button = document.getElementById('my-custom-button');
-button.addEventListener('click', () => atcb_action({ proKey: "prokey-deines-events"}, button));
+button.addEventListener('click', () => atcb_action({ prokey: "prokey-deines-events"}, button));
 
 ```
 
@@ -71,5 +71,5 @@ Um Daten an ein spezifisches Attribut zu binden, musst du die Syntax [attr.PARAM
 Je nach Konfiguration könnte der Datenfluss nach dem ersten Rendern des Buttons erfolgen. Das ist kein Problem, aber du könntest Fehler in der Konsole sehen, wenn du im Debug-Modus bist, die behaupten, dass Daten fehlen. Beachte aus diesem Grund, dass das "Binding" der "identifier"-Option nicht funktionieren würde.
 
 ```javascript
-<add-to-calendar-button [attr.proKey]="deineProKeyVariable"></add-to-calendar-button>
+<add-to-calendar-button [attr.prokey]="deineProkeyVariable"></add-to-calendar-button>
 ```

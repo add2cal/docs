@@ -60,7 +60,7 @@ The setup of this flow requires some more work as you will need to weave this in
 3. Create an API key (at the organization settings page).
 4. Create an event group (with subscription set to "no"), which will hold all future events.
 5. Read the [API documentation about event creation](/api/events#add-an-event).
-6. At your backend, create a function, which creates an event via the Add to Calendar PRO API based on the data you have for the user. Use the ids of the new style and landing page to link them to the new event. We recommend to also set the organizer and attendee in this case (at some systems, this adds the event automatically to the user's calendar, as soon as an email with the ics file is opened)! _Set the event to private if necessary._ The response includes an id, which is the ProKey of the event.
+6. At your backend, create a function, which creates an event via the Add to Calendar PRO API based on the data you have for the user. Use the ids of the new style and landing page to link them to the new event. We recommend to also set the organizer and attendee in this case (at some systems, this adds the event automatically to the user's calendar, as soon as an email with the ics file is opened)! _Set the event to private if necessary._ The response includes an id, which is the Prokey of the event.
 7. With regular events:
    1. Use this id to pull and add the generated ics file when sending a confirmation email.
    2. Use this id to add Add to Calendar links at this confirmation email.

@@ -54,7 +54,7 @@ vue: {
 
 ## Schritt 4: Loslegen
 
-Beginne mit der Nutzung, indem du einen `<add-to-calendar-button proKey="prokey-deines-events"></add-to-calendar-button>` Tag in deinen Quellcode einfügst.
+Beginne mit der Nutzung, indem du einen `<add-to-calendar-button prokey="prokey-deines-events"></add-to-calendar-button>` Tag in deinen Quellcode einfügst.
 
 <br />
 
@@ -74,6 +74,6 @@ Im folgenden Beispiel nutzen wir dieses Element auch als Trigger bei Klick:
 
 ```javascript
 const button = document.getElementById('my-custom-button');
-button.addEventListener('click', () => atcb_action({ proKey: "prokey-deines-events"}, button));
+button.addEventListener('click', () => atcb_action({ prokey: "prokey-deines-events"}, button));
 
 ```

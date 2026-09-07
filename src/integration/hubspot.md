@@ -23,12 +23,12 @@ Copy and paste the following code block:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button" async defer></script>
-<script type="text/javascript" async defer>document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll(".add-to-calendar-pro-frame");e.forEach(e=>{let t=e.innerHTML.trim(),a=t.match(/^[a-z0-9\-]+$/);if(a){let r=document.createElement("add-to-calendar-button");r.setAttribute("proKey",a[0]),e.parentNode.replaceChild(r,e)}})});</script>
+<script type="text/javascript" async defer>document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll(".add-to-calendar-pro-frame");e.forEach(e=>{let t=e.innerHTML.trim(),a=t.match(/^[a-z0-9\-]+$/);if(a){let r=document.createElement("add-to-calendar-button");r.setAttribute("prokey",a[0]),e.parentNode.replaceChild(r,e)}})});</script>
 ```
 
 ## Step 2: Use it
 
-You can now add your buttons and forms by creating `<div></div>` elements in the source code of a rich text input or video embed code, where you add the class name "add-to-calendar-pro-frame" and the proKey as innerHTML.
+You can now add your buttons and forms by creating `<div></div>` elements in the source code of a rich text input or video embed code, where you add the class name "add-to-calendar-pro-frame" and the prokey as innerHTML.
 
 We also recommend a wrapper to optimize the positioning.
 

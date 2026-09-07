@@ -40,7 +40,7 @@ Once a group has events attached, you can no longer change this, since it change
 
 In the subscription case, you won't see this table, but the style and CTA inputs, which you already know from the creation.
 
-At the very top, you either only see the ProKey to copy (non-subscription case) or a complete summary with everything you need for sharing and integration purposes. From email links to your auto-created landing page and more. Here, you also find the link to the **analytics** dashboard for this event group.
+At the very top, you either only see the Prokey to copy (non-subscription case) or a complete summary with everything you need for sharing and integration purposes. From email links to your auto-created landing page and more. Here, you also find the link to the **analytics** dashboard for this event group.
 
 At the bottom, you find the action bar with multiple options and information.
 

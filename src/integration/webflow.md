@@ -23,7 +23,7 @@ When integrating Add to Calendar Buttons or RSPV forms with Webflow, you need to
 
 * Back at the designer, create a new custom element.
 * For the tag name (under "Settings" at the new element), use `add-to-calendar-button`.
-* Add a new attribute to the element. The name should be "proKey". The value would be the proKey you want to use.
+* Add a new attribute to the element. The name should be "prokey". The value would be the prokey you want to use.
 * That's it. Publish and test.
 
 <br /><br />

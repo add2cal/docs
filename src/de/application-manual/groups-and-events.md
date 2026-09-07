@@ -41,7 +41,7 @@ Sobald eine Gruppe Events beinhaltet, kann diese Option nicht mehr geändert wer
 
 Im Kalendar-Abonnement-Fall siehst du anstelle dieser Übersicht die Style- und CTA-Felder samt Vorschau, die du bereits aus der Erstellung der Gruppe kennst.
 
-Ganz oben siehst du entweder nur den ProKey zum Kopieren (im Fall ohne Abonnement) oder eine komplette Zusammenfassung mit allem, was du für das Teilen und die Integration benötigst. Von E-Mail-Links bis zu deiner automatisch erstellten Landingpage und mehr. An dieser Stelle findest du ebenfalls den Link zum Analytics/**Statistik**-Dashboard für diese Event-Gruppe.
+Ganz oben siehst du entweder nur den Prokey zum Kopieren (im Fall ohne Abonnement) oder eine komplette Zusammenfassung mit allem, was du für das Teilen und die Integration benötigst. Von E-Mail-Links bis zu deiner automatisch erstellten Landingpage und mehr. An dieser Stelle findest du ebenfalls den Link zum Analytics/**Statistik**-Dashboard für diese Event-Gruppe.
 
 ## Das Event
 

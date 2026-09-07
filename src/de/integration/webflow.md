@@ -23,7 +23,7 @@ Für die Integration des Add to Calendar Buttons oder RSVP Formulars mit Webflow
 
 * Wieder im Designer musst du nun ein neues Custom Element erstellen.
 * Als Tag Name (unter "Settings" in dem neuen Element) gibst du `add-to-calendar-button` ein.
-* Füge nun ein neues Attribute hinzu. Der Name muss "proKey" lauten. Der Value entspricht dann dem proKey, den du für das Element nutzen möchtest.
+* Füge nun ein neues Attribute hinzu. Der Name muss "prokey" lauten. Der Value entspricht dann dem prokey, den du für das Element nutzen möchtest.
 * Das war's. Du kannst das Ganze nun veröffentlichen und testen.
 
 <br /><br />

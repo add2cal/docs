@@ -11,7 +11,7 @@ description: Lerne ics-Dateien, RSVP-Antworten und mehr über die Add to Calenda
 GET /ics/:prokey
 ```
 
-Indem du den proKey des jeweiligen Events angibst, kannst du den "Body" der zugehörigen ics-Datei abrufen.
+Indem du den prokey des jeweiligen Events angibst, kannst du den "Body" der zugehörigen ics-Datei abrufen.
 
 Nutze dies, um die ics-Datei in deinem System zu erstellen - ohne Abhängigkeit zur Generierung auf unserer Seite (was dazu führt, dass die ics-Datei auf einem öffentlich erreichbaren Storage abgelegt wird).
 
@@ -115,7 +115,7 @@ Erhalte eine Liste aller eingerichteten verfügbaren Custom Domains sowie die gl
 GET /rsvp-answers/:prokey
 ```
 
-Indem du den proKey des jeweiligen Events angibst, kannst du eine Liste aller verbundenen RSVP-Rückmeldungen erhalten.
+Indem du den prokey des jeweiligen Events angibst, kannst du eine Liste aller verbundenen RSVP-Rückmeldungen erhalten.
 
 ### Mögliche Response
 
@@ -152,7 +152,7 @@ Indem du den proKey des jeweiligen Events angibst, kannst du eine Liste aller ve
 ]
 ```
 
-### Neueste Antwort für ProKey aufrufen
+### Neueste Antwort für Prokey aufrufen
 
 Du kannst ausschließlich die neueste Antwort mit dem Stichwort "latest" abrufen:
 
@@ -162,7 +162,7 @@ GET /rsvp-answers/:prokey/latest
 
 ### Neueste globale Antwort aufrufen
 
-Wenn du den ProKey weg lässt, gilt die Abfrage global über alle ProKeys.
+Wenn du den Prokey weg lässt, gilt die Abfrage global über alle Prokeys.
 
 ```
 GET /rsvp-answers/latest

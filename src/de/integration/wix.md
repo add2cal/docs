@@ -39,12 +39,12 @@ https://cdn.jsdelivr.net/npm/add-to-calendar-button
 Obwohl es möglich ist, unser npm-Paket zu deiner Seite hinzuzufügen; eine Velo-Datei zu erstellen, in der du "add-to-calendar-button" importierst; und diese Datei hier als Velo-Datei auszuwählen, empfehlen wir lieber mit der CDN-Version zu arbeiten!
 :::
 
-## Schritt 2: Setze das ProKey-Attribut
+## Schritt 2: Setze das Prokey-Attribut
 
 * Schließe das Panel aus Schritt 1 und klicke auf "Attribute einrichten".
 * Erstelle ein neues Attribut, indem du im Panel auf den Button klickst, der ebenfalls mit "Attribute einrichten" beschriftet ist.
-* Als Namen verwendest du `proKey`.
-* Als Wert benutzt du den **ProKey deines Events**.
+* Als Namen verwendest du `prokey`.
+* Als Wert benutzt du den **Prokey deines Events**.
 * Das war's.
 
 

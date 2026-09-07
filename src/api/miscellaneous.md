@@ -11,7 +11,7 @@ description: Learn how to retrieve ics files, RSVP replies, and more via Add to 
 GET /ics/:prokey
 ```
 
-Providing the proKey of the respective event, you can get the body for the ics file.
+Providing the prokey of the respective event, you can get the body for the ics file.
 
 Use this to create the ics file on your side without relying on any auto-generation on our side (which would result in an ics file, placed on a public storage).
 
@@ -115,7 +115,7 @@ Retrieves a list of all set up available custom domains as well as the global de
 GET /rsvp-answers/:prokey
 ```
 
-Providing the proKey of the respective event, you can get a list of all connected RSVP answers/replies.
+Providing the prokey of the respective event, you can get a list of all connected RSVP answers/replies.
 
 ### Potential response
 

@@ -29,7 +29,7 @@ Gets the latest group.
 GET /group/:prokey
 ```
 
-Reading a specific group does not allow for any additional parameters. It only takes the proKey in the request url and simply provides you with all data for this one.
+Reading a specific group does not allow for any additional parameters. It only takes the prokey in the request url and simply provides you with all data for this one.
 
 The response holds more fields than you might expect, as a group can be combined with a calendar subscription and therefore with a style and cta template.
 
@@ -43,6 +43,7 @@ The response holds more fields than you might expect, as a group can be combined
   "internal_note": null,
   "subscription": "no",
   "subscription_cal_url": null,
+  "public_event_overview": true,
   "layout": null,
   "landingpage": null,
   "cta": false,
@@ -80,8 +81,9 @@ Mind that you cannot add events on group creation. **You can only link events to
 {
   "name": "Name of the Event Group",
   "internal_note": null, // an optional simple string
-  "subscription": "no", // can be "no" or "external" - the latter one requires a subscription_cal_url
+  "subscription": "no", // can be "no", "children", or "external" - the latter one requires a subscription_cal_url.
   "subscription_cal_url": null, // url to an external calendar. Needs to start with "http"! Usually ends with ".ics"
+  "public_event_overview": true, // if true, the Add to Calendar Button, matched with this group's prokey turns into a list of all nested events
   "layout": "id-of-a-style-template", // take the id from the url in the application or the response when creating one via API
   "landingpage": "id-of-a-landing-page-template", // take the id from the url in the application or the response when creating one via API
   "cta": true,
@@ -99,7 +101,7 @@ Mind that you cannot add events on group creation. **You can only link events to
 }
 ```
 
-You can use the ProKey for further processing (incl. creating events within this group).
+You can use the Prokey for further processing (incl. creating events within this group).
 
 <br />
 

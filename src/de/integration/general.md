@@ -17,15 +17,15 @@ Lies den Rest dieser Seite für ausführlichere Details und Optionen zur Anpassu
 Es sind nur 2 Schritte notwendig, um RSVP-Formulare und Add to Calendar Buttons in deiner Anwendung oder auf deiner Webseite anzuzeigen.
 
 1. Lade das Skript (durch Importieren des Pakets, Laden des Skripts über CDN oder über ein Plugin).
-2. Platziere ein `<add-to-calendar-button>`-Tag dort, wo du das Element anzeigen möchtest, und füge den proKey als Attribut hinzu.
+2. Platziere ein `<add-to-calendar-button>`-Tag dort, wo du das Element anzeigen möchtest, und füge den prokey als Attribut hinzu.
 
 ```html
-<add-to-calendar-button proKey="prokey-deines-events"></add-to-calendar-button>
+<add-to-calendar-button prokey="prokey-deines-events"></add-to-calendar-button>
 ```
 
-Wir generieren automatisch einen proKey für jedes von dir erstellte Event. Du kannst ihn ganz oben auf der jeweiligen Eventseite finden.
+Wir generieren automatisch einen prokey für jedes von dir erstellte Event. Du kannst ihn ganz oben auf der jeweiligen Eventseite finden.
 
-Wenn du ein [Event über unsere API erstellst](/de/api/events#event-erstellen), erhältst du den proKey als Response.
+Wenn du ein [Event über unsere API erstellst](/de/api/events#event-erstellen), erhältst du den prokey als Response.
 
 ::: Warnung Client only!
 Bedenke, dass der Button nur auf Seite des "Clients" funktioniert.

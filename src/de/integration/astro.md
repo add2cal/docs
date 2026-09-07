@@ -27,13 +27,13 @@ Erstelle eine neue Komponente `add-to-calendar.astro` (üblicherweise unter `./s
 
 ## Schritt 3: Definiere die Props
 
-Definiere die Props der Komponente. Dies sollte mindestens der ProKey sein.
+Definiere die Props der Komponente. Dies sollte mindestens der Prokey sein.
 
 ```tsx
 import type { AddToCalendarButtonType } from 'add-to-calendar-button';
 
 interface Props {
-  prokey: AddToCalendarButtonType['proKey'];
+  prokey: AddToCalendarButtonType['prokey'];
 } 
 
 const { prokey } = Astro.props as Props;

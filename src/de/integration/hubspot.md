@@ -23,12 +23,12 @@ Kopiere den folgenden Code-Block und füge ihn dort ein:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button" async defer></script>
-<script type="text/javascript" async defer>document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll(".add-to-calendar-pro-frame");e.forEach(e=>{let t=e.innerHTML.trim(),a=t.match(/^[a-z0-9\-]+$/);if(a){let r=document.createElement("add-to-calendar-button");r.setAttribute("proKey",a[0]),e.parentNode.replaceChild(r,e)}})});</script>
+<script type="text/javascript" async defer>document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll(".add-to-calendar-pro-frame");e.forEach(e=>{let t=e.innerHTML.trim(),a=t.match(/^[a-z0-9\-]+$/);if(a){let r=document.createElement("add-to-calendar-button");r.setAttribute("prokey",a[0]),e.parentNode.replaceChild(r,e)}})});</script>
 ```
 
 ## Schritt 2: Loslegen
 
-Nun kannst du damit beginnen, deine Buttons und Formulare zu integrieren, indem du `<div></div>` Tags im Quellcode eines Rich-Text-Elements oder als "Einbettungscode" eines Video-Elements anlegst. Gib dem Tag die Klasse (class) "add-to-calendar-pro-frame" und kopiere deinen proKey.
+Nun kannst du damit beginnen, deine Buttons und Formulare zu integrieren, indem du `<div></div>` Tags im Quellcode eines Rich-Text-Elements oder als "Einbettungscode" eines Video-Elements anlegst. Gib dem Tag die Klasse (class) "add-to-calendar-pro-frame" und kopiere deinen prokey.
 
 Wir empfehlen zudem einen "Wrapper" um das Element, um die Positionierung zu optimieren.
 

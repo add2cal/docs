@@ -25,7 +25,7 @@ import { AddToCalendarButton } from 'add-to-calendar-button-react';
 
 ## Step 3: Use it
 
-Start using it by adding a `<AddtoCalendarButton proKey="prokey-of-your-event" />` tag to your source code.
+Start using it by adding a `<AddtoCalendarButton prokey="prokey-of-your-event" />` tag to your source code.
 
 ::: warning use client!
 The button works only on the client side!
@@ -51,6 +51,6 @@ In the following example, we also use this element as trigger onClick:
 
 ```javascript
 const button = document.getElementById('my-custom-button');
-button.addEventListener('click', () => atcb_action({ proKey: "prokey-of-your-event"}, button));
+button.addEventListener('click', () => atcb_action({ prokey: "prokey-of-your-event"}, button));
 
 ```

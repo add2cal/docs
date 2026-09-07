@@ -31,11 +31,11 @@ Du kannst nun ganz einfach den entsprechenden "Block" mit dem WordPress Gutenber
 
 * Füge einen neuen Block hinzu und suche hierbei nach "Add to Calendar Button".
 * Klicke auf den Block, bzw. auf den Button.
-* Füge den proKey in die Eingabe auf der rechten Seite bei den "Block"-Einstellungen hinzu.
+* Füge den prokey in die Eingabe auf der rechten Seite bei den "Block"-Einstellungen hinzu.
 
 ### B: Shortcode
 
-Alternativ kannst du auch den Shortcode `[add-to-calendar-button]` verwenden und den proKey direkt darin hinzufügen:
+Alternativ kannst du auch den Shortcode `[add-to-calendar-button]` verwenden und den prokey direkt darin hinzufügen:
 
 ```
 [add-to-calendar-button prokey="prokey-of-your-event"]
