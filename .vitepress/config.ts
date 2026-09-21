@@ -242,7 +242,6 @@ export default defineConfig({
     [ 'link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicons/apple-touch-icon-180x180.png' },],
     [ 'link', { rel: 'mask-icon', color: '#9755ff', href: '/favicons/safari-pinned-tab.svg' },],
     [ 'link', { rel: 'dns-prefetch', href: 'https://a.add-to-calendar-pro.com' },],
-    [ 'script', { async: 'true', defer: 'true', 'data-website-id': '442d1c34-8464-4b6f-ad6b-973b682e42f7', src: 'https://a.add-to-calendar-pro.com/atcpa.js', 'data-host-url': 'https://a.add-to-calendar-pro.com', 'data-domains': 'docs.add-to-calendar-pro.com' }],
   ],
 
   themeConfig: {

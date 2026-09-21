@@ -2,6 +2,7 @@
 import { h, watchEffect } from 'vue';
 import { useData, inBrowser } from 'vitepress';
 import DefaultTheme  from 'vitepress/theme';
+import { init } from '@plausible-analytics/tracker';
 import './custom.css';
 
 export default {
@@ -19,7 +20,12 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
-  enhanceApp({ app, router, siteData }) {
-    // ...
+  enhanceApp() {
+    if (inBrowser) {
+      init({
+        domain: 'docs.add-to-calendar-pro.com',
+        endpoint: 'https://a.add-to-calendar-pro.com/api/event',
+      });
+    }
   }
 }
