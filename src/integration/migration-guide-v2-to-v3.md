@@ -14,7 +14,7 @@ This guide adapts the [Add to Calendar Button v2 to v3 migration guide](https://
 | Integration | What you need to do |
 | :--- | :--- |
 | A `<script>` tag loading from `cdn.jsdelivr.net` | Remove any v2 version pin or change it to v3. Styles and languages load automatically. |
-| An npm dependency imported in your website code | Upgrade the package and explicitly import the additional styles and languages you use, or have your IT team configure dynamic loading. |
+| An npm dependency imported in your website code | Upgrade the package and import all styles and languages, or have your IT team configure dynamic loading. |
 
 If you are unsure, ask the team responsible for your website to check the script URL or the dependency in `package.json`.
 
@@ -62,23 +62,21 @@ For React and Next.js, replace the unsupported React wrapper with the core packa
 
 ### Import your styles and languages
 
-**Only the default button style and English are bundled by default.** Unlike v2, an npm import does not automatically include all other styles and languages. Import every additional style and language used by your PRO events, buttons, and RSVP forms.
-
-For example, for the `3d` style and German:
+**Only the default button style and English are bundled by default.** Unlike v2, an npm import does not automatically include all other styles and languages. Because PRO can change a button's style and language remotely, import all supported assets:
 
 ```javascript
 import 'add-to-calendar-button';
-import 'add-to-calendar-button/styles/3d';
-import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button/styles/all';
+import 'add-to-calendar-button/i18n/all';
 ```
 
-These imports make the assets available; your settings in the PRO app still determine which style and language a button uses. Without the required imports or a dynamic asset source, a new style or language selected in the app may not appear correctly on your website.
+These imports make every supported asset in your installed version available; your settings in the PRO app still determine which style and language a button uses. A later dashboard change does not require an application-code deployment. Newly released assets still require a package update.
 
 ### Choose a shared loading strategy with your IT team
 
 You can put these imports into a shared component or setup module and load it once through your website's shared entry point. Every button using that package instance can then use the registered styles and languages.
 
-Discuss with your IT team whether to import only the assets you currently use or **all available styles and languages**. To include everything, add an explicit import for each supported style and locale to that shared module, following the example above. There is no `/styles/all` or `/i18n/all` entry.
+Use `add-to-calendar-button/styles/all` and `add-to-calendar-button/i18n/all` in the shared module. The imports shown above load all supported assets without maintaining manual lists.
 
 Loading everything makes future style and language changes in the PRO app available on the website without another code change, as long as those assets exist in your installed version and you have not overridden the settings in code. The downside is a larger bundle: visitors load all those styles and languages even if the page only uses one. Newly released assets still require a package update.
 

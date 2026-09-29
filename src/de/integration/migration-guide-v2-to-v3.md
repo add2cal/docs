@@ -14,7 +14,7 @@ Diese Anleitung überträgt die [Add to Calendar Button Migrationsanleitung von 
 | Integration | Was du tun musst |
 | :--- | :--- |
 | Ein `<script>`-Tag mit einer URL von `cdn.jsdelivr.net` | Entferne eine vorhandene Festlegung auf v2 oder ändere sie auf v3. Styles und Sprachen werden automatisch geladen. |
-| Eine npm-Abhängigkeit, die dein Webseiten-Code importiert | Aktualisiere das Paket und importiere zusätzlich benötigte Styles und Sprachen explizit. Alternativ kann deine IT dynamisches Laden einrichten. |
+| Eine npm-Abhängigkeit, die dein Webseiten-Code importiert | Aktualisiere das Paket und importiere alle Styles und Sprachen. Alternativ kann deine IT dynamisches Laden einrichten. |
 
 Wenn du unsicher bist, bitte dein Webseiten-Team, die Skript-URL oder die Abhängigkeit in der `package.json` zu prüfen.
 
@@ -62,23 +62,21 @@ Ersetze bei React und Next.js den nicht mehr unterstützten React Wrapper durch 
 
 ### Styles und Sprachen importieren
 
-**Nur der Standard-Style und Englisch sind standardmäßig enthalten.** Anders als in v2 enthält ein npm-Import nicht automatisch alle weiteren Styles und Sprachen. Importiere jeden zusätzlichen Style und jede Sprache, die deine PRO Events, Buttons und RSVP-Formulare verwenden.
-
-Beispiel für den Style `3d` und Deutsch:
+**Nur der Standard-Style und Englisch sind standardmäßig enthalten.** Anders als in v2 enthält ein npm-Import nicht automatisch alle weiteren Styles und Sprachen. Da PRO Style und Sprache eines Buttons remote ändern kann, importiere alle unterstützten Dateien:
 
 ```javascript
 import 'add-to-calendar-button';
-import 'add-to-calendar-button/styles/3d';
-import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button/styles/all';
+import 'add-to-calendar-button/i18n/all';
 ```
 
-Die Imports stellen die Dateien bereit. Deine Einstellungen in der PRO App bestimmen weiterhin, welcher Style und welche Sprache verwendet werden. Ohne die nötigen Imports oder eine dynamische Dateiquelle wird eine neu ausgewählte Sprache oder ein neuer Style möglicherweise nicht korrekt auf deiner Webseite angezeigt.
+Die Imports stellen alle unterstützten Dateien deiner installierten Version bereit. Deine Einstellungen in der PRO App bestimmen weiterhin, welcher Style und welche Sprache verwendet werden. Eine spätere Änderung im Dashboard braucht kein Deployment deiner Anwendung. Neu veröffentlichte Dateien benötigen weiterhin ein Paket-Update.
 
 ### Gemeinsame Ladestrategie mit deiner IT wählen
 
 Du kannst die Imports in einer gemeinsamen Komponente oder einem Setup-Modul sammeln und einmal über den gemeinsamen Einstiegspunkt deiner Webseite laden. Alle Buttons, die dieselbe Paketinstanz verwenden, können anschließend auf die registrierten Styles und Sprachen zugreifen.
 
-Besprich mit deiner IT, ob ihr nur die aktuell benötigten Dateien oder **alle verfügbaren Styles und Sprachen** importieren möchtet. Für die vollständige Variante ergänzt ihr im gemeinsamen Modul einen expliziten Import für jeden unterstützten Style und jede Sprache nach dem Muster oben. Einen Einstieg `/styles/all` oder `/i18n/all` gibt es nicht.
+Verwendet im gemeinsamen Modul `add-to-calendar-button/styles/all` und `add-to-calendar-button/i18n/all`. Die oben gezeigten Imports laden alle unterstützten Dateien, ohne manuelle Listen zu pflegen.
 
 Wenn ihr alles ladet, können spätere Style- und Sprachänderungen in der PRO App ohne weitere Codeänderung auf der Webseite erscheinen. Voraussetzung ist, dass die Dateien in eurer installierten Version enthalten sind und ihr die Einstellungen nicht im Code überschreibt. Der Nachteil ist ein größeres Bundle: Besucher laden alle diese Styles und Sprachen, selbst wenn die Seite nur eine Variante nutzt. Neu veröffentlichte Dateien benötigen weiterhin ein Paket-Update.
 

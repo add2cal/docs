@@ -22,7 +22,13 @@ Load the core package in `onMount` so this example also works with SvelteKit and
   import { onMount } from 'svelte';
 
   onMount(() => {
-    void import('add-to-calendar-button');
+    void (async () => {
+      await Promise.all([
+        import('add-to-calendar-button/styles/all'),
+        import('add-to-calendar-button/i18n/all'),
+      ]);
+      await import('add-to-calendar-button');
+    })();
   });
 </script>
 
@@ -47,22 +53,7 @@ async function openEvent(event) {
 
 ## Styles and languages
 
-The npm package includes only the default style and English by default. Import every additional style and language selected in the PRO app for your buttons and RSVP forms:
-
-```javascript
-// Inside your component's <script> block
-onMount(() => {
-  void (async () => {
-    await Promise.all([
-      import('add-to-calendar-button/styles/3d'),
-      import('add-to-calendar-button/i18n/de'),
-    ]);
-    await import('add-to-calendar-button');
-  })();
-});
-```
-
-Replace the `onMount` callback from the first example with this one. It registers the required assets before initializing the button.
+The npm package includes only the default style and English by default. Because your PRO configuration can change styles and languages remotely, the all-imports in the `onMount` callback make every supported asset in your installed version available without another application deployment.
 
 Alternatively, load styles and languages dynamically from jsDelivr by setting `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` on the element. Apply the same strategy to custom triggers; the option is named `styleSource` in `atcb_action`.
 

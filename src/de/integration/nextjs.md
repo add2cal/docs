@@ -21,6 +21,8 @@ npm install add-to-calendar-button
 'use client';
 
 import 'add-to-calendar-button';
+import 'add-to-calendar-button/styles/all';
+import 'add-to-calendar-button/i18n/all';
 
 export default function EventButton() {
   return (
@@ -93,14 +95,7 @@ export default function CustomEventButton() {
 
 ## Styles und Sprachen
 
-Das npm-Paket enthält standardmäßig nur den Standard-Style und Englisch. Importiere alle weiteren Styles und Sprachen, die du in der PRO App für deine Buttons und RSVP-Formulare auswählst:
-
-```javascript
-import 'add-to-calendar-button/styles/3d';
-import 'add-to-calendar-button/i18n/de';
-```
-
-Füge die Imports neben dem Hauptimport oder in einem gemeinsamen Setup-Modul ein.
+Das npm-Paket enthält standardmäßig nur den Standard-Style und Englisch. Da deine PRO-Konfiguration Styles und Sprachen remote ändern kann, stellen die obigen All-Imports alle unterstützten Dateien deiner installierten Version ohne weiteres Deployment deiner Anwendung bereit.
 
 Alternativ kannst du Styles und Sprachen dynamisch von jsDelivr laden, indem du `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` am Element setzt. Dieselbe Strategie gilt für eigene Trigger; in `atcb_action` heißt die Option `styleSource`.
 

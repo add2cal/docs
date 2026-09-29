@@ -59,14 +59,11 @@ Import the module into your project/component:
 
 ```javascript
 import 'add-to-calendar-button';
+import 'add-to-calendar-button/styles/all';
+import 'add-to-calendar-button/i18n/all';
 ```
 
-The package includes only the default style and English by default. Import additional styles and languages as needed:
-
-```javascript
-import 'add-to-calendar-button/styles/3d';
-import 'add-to-calendar-button/i18n/de';
-```
+The package includes only the default style and English by default. Because a `prokey` loads configuration managed remotely in PRO, the all-imports make every supported style and language in your installed version available without another application deployment.
 
 Alternatively, your IT team can set `style-source` to load assets dynamically from jsDelivr or your own hosting. See the [V3 Migration Guide](/integration/migration-guide-v2-to-v3) for these strategies. Replace legacy `/unstyle` and `/no-pro` imports with the main entry.
 

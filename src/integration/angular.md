@@ -19,6 +19,8 @@ Import the module into the component, where you want to use the button.
 
 ```javascript
 import 'add-to-calendar-button';
+import 'add-to-calendar-button/styles/all';
+import 'add-to-calendar-button/i18n/all';
 ```
 
 ## Step 3: Optimize the Angular config
@@ -30,6 +32,8 @@ For a standalone component:
 ```typescript
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import 'add-to-calendar-button';
+import 'add-to-calendar-button/styles/all';
+import 'add-to-calendar-button/i18n/all';
 
 @Component({
   selector: 'app-event-button',
@@ -93,13 +97,6 @@ Based on your setup, the data flow might happen after the first rendering of the
 
 ## Styles and languages
 
-The npm package includes only the default style and English by default. Import every additional style and language selected in the PRO app for your buttons and RSVP forms:
-
-```javascript
-import 'add-to-calendar-button/styles/3d';
-import 'add-to-calendar-button/i18n/de';
-```
-
-Place these imports alongside the core import or in a shared setup module.
+The npm package includes only the default style and English by default. Because your PRO configuration can change styles and languages remotely, the all-imports above make every supported asset in your installed version available without another application deployment.
 
 Alternatively, load styles and languages dynamically from jsDelivr by setting `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` on the element. Apply the same strategy to custom triggers; the option is named `styleSource` in `atcb_action`.
