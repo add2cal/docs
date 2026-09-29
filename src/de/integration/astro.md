@@ -30,6 +30,8 @@ const { prokey } = Astro.props;
 
 <script>
   import 'add-to-calendar-button';
+  import 'add-to-calendar-button/styles/all';
+  import 'add-to-calendar-button/i18n/de';
 </script>
 ```
 
@@ -45,14 +47,7 @@ import AddToCalendarButton from '../components/add-to-calendar.astro';
 
 ## Styles und Sprachen
 
-Das npm-Paket enthält standardmäßig nur den Standard-Style und Englisch. Importiere alle weiteren Styles und Sprachen, die du in der PRO App für deine Buttons und RSVP-Formulare auswählst:
-
-```javascript
-import 'add-to-calendar-button/styles/3d';
-import 'add-to-calendar-button/i18n/de';
-```
-
-Füge die Imports in den Browser-`<script>`-Block deiner Astro-Komponente ein.
+Das npm-Paket enthält standardmäßig nur den Standard-Style und Englisch. Das Beispiel kombiniert `add-to-calendar-button/styles/all` mit `add-to-calendar-button/i18n/de`, was gültig ist: Nutze `add-to-calendar-button/styles/3d` bei einem festen Style oder `add-to-calendar-button/styles/all`, wenn die remote verwaltete PRO-Konfiguration ihn ohne Deployment ändern kann. Importiere standardmäßig die konkrete Sprache oder eine kleine bekannte Menge, etwa `add-to-calendar-button/i18n/de`; nutze `add-to-calendar-button/i18n/all` nur, wenn Sprachen zur Laufzeit wirklich unvorhersehbar wechseln können. Beide `/all`-Imports vergrößern das Bundle, weil sie alle jeweiligen Dateien enthalten.
 
 Alternativ kannst du Styles und Sprachen dynamisch von jsDelivr laden, indem du `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` am Element setzt. Dieselbe Strategie gilt für eigene Trigger; in `atcb_action` heißt die Option `styleSource`.
 
