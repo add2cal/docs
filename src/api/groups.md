@@ -117,16 +117,7 @@ Updating a group follows the same rules as creating one.
 - Fields you send are updated.  
 - Fields you do not send stay as they are.
 - Set a field to `null` and it gets cleared.
-
-<br />
-
-::: warning Limitations
-You can only change the subscription setting as long as there are no events linked to the group!
-
-For the status, mind that if a group gets set to draft on the application UI, you cannot publish it via API!
-
-**For every 5th update, we also deduct 1 event credit to prevent abuse!**
-:::
+- Existing `external` groups stay external. Existing `no` and `children` groups can switch between those two modes. Switching to `children` is rejected when an existing event uses RSVP, a non-literal `YYYY-MM-DD` start/end date, status, organizer, or attendee fields. `children` always enables `public_event_overview` and clears `subscription_cal_url`; switching back to `no` keeps the current overview setting.
 
 <br />
 

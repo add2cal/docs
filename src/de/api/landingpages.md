@@ -96,10 +96,19 @@ Für die Erstellung eines neuen Landingpage-Templates muss mindestens das Feld "
 }
 ```
 
-::: warning Kein Bild bei POST/PATCH
-Beachte, dass du kein Bild für den Header oder bei Verwendung der image-Option als Hintergrund angeben kannst!
-Dies kann nur über unsere Web-App erfolgen.
-:::
+## Landingpage-Bild hochladen
+
+```
+POST /upload-image
+```
+
+Verwende einen API-Token mit **Read & Write**-Scope und sende `multipart/form-data` mit genau einem Dateifeld namens `file`. Dateien dürfen höchstens 1.048.570 Bytes groß sein und müssen `image/webp`, `image/gif`, `image/png`, `image/jpg` oder `image/jpeg` sein. Vom Aufrufer gesendete Ordnerdaten werden ignoriert; die Datei wird immer im Landingpage-Zielordner deiner Organisation gespeichert.
+
+```json
+{ "status": "success", "message": "created", "id": "file-id" }
+```
+
+Verwende die zurückgegebene `id` als `header_image` oder `image` in `POST /landingpage` oder `PATCH /landingpage/:id`.
 
 ### Mögliche Response
 
