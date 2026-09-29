@@ -96,10 +96,20 @@ Creating a new landing page template requires you to at least provide the "name"
 }
 ```
 
-::: warning No image on POST/PATCH
-Mind that you cannot specify an image for the header or when using image as background option!  
-This can only be done via our web app.
-:::
+## Upload a landing-page image
+
+```
+POST /upload-image
+```
+
+Use an API token with **Read & Write** scope and send `multipart/form-data` with exactly one file field named `file`. Files are limited to 1,048,570 bytes and must be `image/webp`, `image/gif`, `image/png`, `image/jpg`, or `image/jpeg`. The server ignores caller folder metadata and always stores the file in the landing-page upload target for your organization.
+
+```json
+{ "status": "success", "message": "created", "id": "file-id" }
+```
+
+Use the returned `id` as `header_image` or `image` in `POST /landingpage` or `PATCH /landingpage/:id`.
+
 
 ### Potential response
 
