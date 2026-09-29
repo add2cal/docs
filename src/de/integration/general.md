@@ -59,10 +59,10 @@ Importiere das Modul in deinem Projekt/Komponente:
 ```javascript
 import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
-import 'add-to-calendar-button/i18n/all';
+import 'add-to-calendar-button/i18n/de';
 ```
 
-Das Paket enthält standardmäßig nur den Standard-Style und Englisch. Da ein `prokey` remote in PRO verwaltete Konfiguration lädt, stellen die All-Imports alle unterstützten Styles und Sprachen deiner installierten Version ohne weiteres Deployment deiner Anwendung bereit.
+Das Paket enthält standardmäßig nur den Standard-Style und Englisch. Wähle Styles und Sprachen unabhängig voneinander. Bei einem festen Style importiere `add-to-calendar-button/styles/3d`; nutze `add-to-calendar-button/styles/all`, wenn die remote verwaltete PRO-Konfiguration den Style ohne Deployment ändern kann. Importiere standardmäßig eine konkrete Sprache oder kleine bekannte Menge, etwa `add-to-calendar-button/i18n/de`. Nutze `add-to-calendar-button/i18n/all` nur, wenn Sprachen zur Laufzeit wirklich unvorhersehbar wechseln können. Das Beispiel kombiniert `styles/all` mit `i18n/de`, was gültig ist. Beide Aggregate-Imports vergrößern das Bundle, weil sie alle jeweiligen Dateien enthalten.
 
 Alternativ kann deine IT `style-source` für dynamisches Laden von jsDelivr oder deinem eigenen Hosting setzen. Die [V3 Migrationsanleitung](/de/integration/migration-guide-v2-to-v3) erklärt die Strategien. Frühere `/unstyle`- und `/no-pro`-Imports sollten durch den Haupteinstieg ersetzt werden.
 

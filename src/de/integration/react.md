@@ -20,7 +20,7 @@ npm install add-to-calendar-button
 ```tsx
 import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
-import 'add-to-calendar-button/i18n/all';
+import 'add-to-calendar-button/i18n/de';
 
 export default function EventButton() {
   return (
@@ -80,6 +80,6 @@ export default function CustomEventButton() {
 
 ## Styles und Sprachen
 
-Das npm-Paket enthält standardmäßig nur den Standard-Style und Englisch. Da deine PRO-Konfiguration Styles und Sprachen remote ändern kann, stellen die obigen All-Imports alle unterstützten Dateien deiner installierten Version ohne weiteres Deployment deiner Anwendung bereit.
+Das npm-Paket enthält standardmäßig nur den Standard-Style und Englisch. Das Beispiel kombiniert `add-to-calendar-button/styles/all` mit `add-to-calendar-button/i18n/de`, was gültig ist: Nutze `add-to-calendar-button/styles/3d` bei einem festen Style oder `add-to-calendar-button/styles/all`, wenn die remote verwaltete PRO-Konfiguration ihn ohne Deployment ändern kann. Importiere standardmäßig die konkrete Sprache oder eine kleine bekannte Menge, etwa `add-to-calendar-button/i18n/de`; nutze `add-to-calendar-button/i18n/all` nur, wenn Sprachen zur Laufzeit wirklich unvorhersehbar wechseln können. Beide `/all`-Imports vergrößern das Bundle, weil sie alle jeweiligen Dateien enthalten.
 
 Alternativ kannst du Styles und Sprachen dynamisch von jsDelivr laden, indem du `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` am Element setzt. Dieselbe Strategie gilt für eigene Trigger; in `atcb_action` heißt die Option `styleSource`.

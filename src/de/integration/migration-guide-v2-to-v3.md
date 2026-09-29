@@ -14,7 +14,7 @@ Diese Anleitung überträgt die [Add to Calendar Button Migrationsanleitung von 
 | Integration | Was du tun musst |
 | :--- | :--- |
 | Ein `<script>`-Tag mit einer URL von `cdn.jsdelivr.net` | Entferne eine vorhandene Festlegung auf v2 oder ändere sie auf v3. Styles und Sprachen werden automatisch geladen. |
-| Eine npm-Abhängigkeit, die dein Webseiten-Code importiert | Aktualisiere das Paket und importiere alle Styles und Sprachen. Alternativ kann deine IT dynamisches Laden einrichten. |
+| Eine npm-Abhängigkeit, die dein Webseiten-Code importiert | Aktualisiere das Paket und wähle eine Ladestrategie für Styles und Sprachen. Alternativ kann deine IT dynamisches Laden einrichten. |
 
 Wenn du unsicher bist, bitte dein Webseiten-Team, die Skript-URL oder die Abhängigkeit in der `package.json` zu prüfen.
 
@@ -62,23 +62,27 @@ Ersetze bei React und Next.js den nicht mehr unterstützten React Wrapper durch 
 
 ### Styles und Sprachen importieren
 
-**Nur der Standard-Style und Englisch sind standardmäßig enthalten.** Anders als in v2 enthält ein npm-Import nicht automatisch alle weiteren Styles und Sprachen. Da PRO Style und Sprache eines Buttons remote ändern kann, importiere alle unterstützten Dateien:
+**Nur der Standard-Style und Englisch sind standardmäßig enthalten.** Importiere Styles und Sprachen unabhängig voneinander. Bei einem festen Style importiere `add-to-calendar-button/styles/3d`. Wenn die remote verwaltete PRO-Konfiguration den Style ohne Deployment ändern kann, importiere stattdessen `add-to-calendar-button/styles/all`. Das vergrößert das Bundle, weil alle Styles enthalten sind.
+
+Importiere standardmäßig eine konkrete Sprache oder eine kleine bekannte Menge:
+
+```javascript
+import 'add-to-calendar-button';
+import 'add-to-calendar-button/styles/3d';
+import 'add-to-calendar-button/i18n/de';
+```
+
+Nutze `add-to-calendar-button/i18n/all` nur, wenn Sprachen zur Laufzeit wirklich unvorhersehbar wechseln können. Es enthält jede nicht-englische Sprache und vergrößert das Bundle. Beide Aggregate-Optionen bleiben verfügbar und können kombiniert werden. Dieses Beispiel ist etwa gültig, wenn PRO den Style remote ändern kann, Deutsch jedoch stabil bleibt:
 
 ```javascript
 import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
-import 'add-to-calendar-button/i18n/all';
+import 'add-to-calendar-button/i18n/de';
 ```
-
-Die Imports stellen alle unterstützten Dateien deiner installierten Version bereit. Deine Einstellungen in der PRO App bestimmen weiterhin, welcher Style und welche Sprache verwendet werden. Eine spätere Änderung im Dashboard braucht kein Deployment deiner Anwendung. Neu veröffentlichte Dateien benötigen weiterhin ein Paket-Update.
 
 ### Gemeinsame Ladestrategie mit deiner IT wählen
 
-Du kannst die Imports in einer gemeinsamen Komponente oder einem Setup-Modul sammeln und einmal über den gemeinsamen Einstiegspunkt deiner Webseite laden. Alle Buttons, die dieselbe Paketinstanz verwenden, können anschließend auf die registrierten Styles und Sprachen zugreifen.
-
-Verwendet im gemeinsamen Modul `add-to-calendar-button/styles/all` und `add-to-calendar-button/i18n/all`. Die oben gezeigten Imports laden alle unterstützten Dateien, ohne manuelle Listen zu pflegen.
-
-Wenn ihr alles ladet, können spätere Style- und Sprachänderungen in der PRO App ohne weitere Codeänderung auf der Webseite erscheinen. Voraussetzung ist, dass die Dateien in eurer installierten Version enthalten sind und ihr die Einstellungen nicht im Code überschreibt. Der Nachteil ist ein größeres Bundle: Besucher laden alle diese Styles und Sprachen, selbst wenn die Seite nur eine Variante nutzt. Neu veröffentlichte Dateien benötigen weiterhin ein Paket-Update.
+Sammelt die gewählten Imports in einer gemeinsamen Komponente oder einem Setup-Modul und ladet sie einmal über den gemeinsamen Einstiegspunkt eurer Webseite. Alle Buttons, die dieselbe Paketinstanz verwenden, können anschließend die registrierten Dateien nutzen. Aggregate-Imports stellen die jeweiligen Dateien eurer installierten Version ohne weiteres Code-Deployment bereit; neu veröffentlichte Dateien benötigen weiterhin ein Paket-Update.
 
 ### Fortgeschrittene Option: Dateien dynamisch laden
 

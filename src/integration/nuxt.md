@@ -20,7 +20,7 @@ Create `plugins/add-to-calendar.client.ts` in your Nuxt app directory (`app/plug
 ```typescript
 import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
-import 'add-to-calendar-button/i18n/all';
+import 'add-to-calendar-button/i18n/de';
 
 export default defineNuxtPlugin(() => {});
 ```
@@ -70,7 +70,7 @@ async function openEvent(event) {
 
 ## Styles and languages
 
-The npm package includes only the default style and English by default. Because your PRO configuration can change styles and languages remotely, the all-imports in your `.client.ts` plugin make every supported asset in your installed version available without another application deployment.
+The npm package includes only the default style and English by default. The example mixes `add-to-calendar-button/styles/all` with `add-to-calendar-button/i18n/de`, which is valid: use `add-to-calendar-button/styles/3d` when your style is fixed, or `add-to-calendar-button/styles/all` when remote PRO configuration can change it without deployment. Import the specific language or small known set, such as `add-to-calendar-button/i18n/de`, by default; use `add-to-calendar-button/i18n/all` only when languages can change unpredictably at runtime. Both `/all` imports increase the bundle because they include every respective asset.
 
 Alternatively, load styles and languages dynamically from jsDelivr by setting `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` on the element. Apply the same strategy to custom triggers; the option is named `styleSource` in `atcb_action`.
 
