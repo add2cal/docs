@@ -67,17 +67,17 @@ For React and Next.js, replace the unsupported React wrapper with the core packa
 Import a specific language or small known set by default:
 
 ```javascript
-import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/3d';
 import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
 ```
 
-Use `add-to-calendar-button/i18n/all` only when languages can change unpredictably at runtime. It includes every non-English language and increases the bundle. Both aggregate choices remain available, and they can be mixed. For example, this is valid when PRO can change the style remotely while German remains stable:
+Use `add-to-calendar-button/i18n/all` only when languages can change unpredictably at runtime. It includes every non-English language and increases the bundle. Register every required style and language module before importing `add-to-calendar-button`; import the main module last so the custom element upgrades only after the assets are registered. Both aggregate choices remain available, and they can be mixed. For example, this is valid when PRO can change the style remotely while German remains stable:
 
 ```javascript
-import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
 import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
 ```
 
 ### Choose a shared loading strategy with your IT team

@@ -20,9 +20,9 @@ npm install add-to-calendar-button
 ```tsx
 'use client';
 
-import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
 import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
 
 export default function EventButton() {
   return (

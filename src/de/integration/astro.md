@@ -29,9 +29,9 @@ const { prokey } = Astro.props;
 <add-to-calendar-button prokey={prokey}></add-to-calendar-button>
 
 <script>
-  import 'add-to-calendar-button';
   import 'add-to-calendar-button/styles/all';
   import 'add-to-calendar-button/i18n/de';
+  import 'add-to-calendar-button';
 </script>
 ```
 

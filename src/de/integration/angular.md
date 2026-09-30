@@ -18,9 +18,9 @@ npm install add-to-calendar-button
 Importiere das Modul in der Komponente, in welcher du den Button verwenden möchtest.
 
 ```javascript
-import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
 import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
 ```
 
 ## Schritt 3: Optimiere die Angular-Konfiguration
@@ -31,9 +31,9 @@ Für eine Standalone-Komponente:
 
 ```typescript
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
 import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
 
 @Component({
   selector: 'app-event-button',
