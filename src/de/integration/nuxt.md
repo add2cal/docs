@@ -18,9 +18,9 @@ npm install add-to-calendar-button
 Lege `plugins/add-to-calendar.client.ts` in deinem Nuxt-App-Verzeichnis an (bei der Standardstruktur von Nuxt 4 unter `app/plugins/`). Die Endung `.client.ts` lädt das Hauptpaket nur im Browser.
 
 ```typescript
-import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
 import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
 
 export default defineNuxtPlugin(() => {});
 ```
@@ -76,6 +76,6 @@ Alternativ kannst du Styles und Sprachen dynamisch von jsDelivr laden, indem du 
 
 ## Optional: Serverseitiges Rendering
 
-Das Paket bietet einen separaten SSR-Einstieg für eine vorgerenderte Button-Hülle. Für PRO-Daten nutze die asynchrone Variante auf dem Server. Die vollständige Interaktion und RSVP-Formulare werden weiterhin im Browser initialisiert. Siehe [SSR mit PRO](/de/integration/general#ssr-mit-pro) und die [Button Nuxt Anleitung](https://add-to-calendar-button.com/use-with-nuxt).
+Das Paket bietet einen separaten SSR-Einstieg für eine vorgerenderte Button-Hülle. In v3.3.0 behält diese servergerenderte Hülle ihre passenden Styles, bis der Client sie aktiviert. Nutze für PRO-Daten die asynchrone Variante auf dem Server und lade im Client-Plugin die benötigten Style- und Sprachmodule vor dem Hauptmodul. Die vollständige Interaktion und RSVP-Formulare werden weiterhin im Browser initialisiert. Siehe [SSR mit PRO](/de/integration/general#ssr-mit-pro) und die [Button Nuxt Anleitung](https://add-to-calendar-button.com/use-with-nuxt).
 
 Verwende für die generierte SSR-Hülle nicht `v-html`: Vue würde beim Hydrieren die Shadow-DOM-Struktur ersetzen. Die offizielle Nuxt-Anleitung zeigt eine Direktive, die bereits vorhandenes Server-Markup erhält.

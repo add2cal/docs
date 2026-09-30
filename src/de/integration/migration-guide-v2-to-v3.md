@@ -67,17 +67,17 @@ Ersetze bei React und Next.js den nicht mehr unterstützten React Wrapper durch 
 Importiere standardmäßig eine konkrete Sprache oder eine kleine bekannte Menge:
 
 ```javascript
-import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/3d';
 import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
 ```
 
-Nutze `add-to-calendar-button/i18n/all` nur, wenn Sprachen zur Laufzeit wirklich unvorhersehbar wechseln können. Es enthält jede nicht-englische Sprache und vergrößert das Bundle. Beide Aggregate-Optionen bleiben verfügbar und können kombiniert werden. Dieses Beispiel ist etwa gültig, wenn PRO den Style remote ändern kann, Deutsch jedoch stabil bleibt:
+Nutze `add-to-calendar-button/i18n/all` nur, wenn Sprachen zur Laufzeit wirklich unvorhersehbar wechseln können. Es enthält jede nicht-englische Sprache und vergrößert das Bundle. Registriere jedes benötigte Style- und Sprachmodul vor dem Import von `add-to-calendar-button`; importiere das Hauptmodul zuletzt, damit das Custom Element erst aktiviert wird, nachdem die Dateien registriert sind. Beide Aggregate-Optionen bleiben verfügbar und können kombiniert werden. Dieses Beispiel ist etwa gültig, wenn PRO den Style remote ändern kann, Deutsch jedoch stabil bleibt:
 
 ```javascript
-import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
 import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
 ```
 
 ### Gemeinsame Ladestrategie mit deiner IT wählen

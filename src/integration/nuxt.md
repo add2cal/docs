@@ -18,9 +18,9 @@ npm install add-to-calendar-button
 Create `plugins/add-to-calendar.client.ts` in your Nuxt app directory (`app/plugins/` in the default Nuxt 4 structure). The `.client.ts` suffix loads the core package only in the browser.
 
 ```typescript
-import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
 import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
 
 export default defineNuxtPlugin(() => {});
 ```
@@ -76,6 +76,6 @@ Alternatively, load styles and languages dynamically from jsDelivr by setting `s
 
 ## Optional: Server-side rendering
 
-The package provides a separate SSR entry to pre-render a button shell. Use its asynchronous variant on the server for PRO data. Full interaction and RSVP forms still initialize in the browser. See [SSR with PRO](/integration/general#ssr-with-pro) and the [Button Nuxt guide](https://add-to-calendar-button.com/use-with-nuxt).
+The package provides a separate SSR entry to pre-render a button shell. In v3.3.0, that server-rendered shell retains matching styles until the client upgrade. Use its asynchronous variant on the server for PRO data, then load required style and language modules before the main module in the client plugin. Full interaction and RSVP forms still initialize in the browser. See [SSR with PRO](/integration/general#ssr-with-pro) and the [Button Nuxt guide](https://add-to-calendar-button.com/use-with-nuxt).
 
 Do not render the generated SSR shell with `v-html`: Vue would replace its shadow DOM during hydration. The official Nuxt guide demonstrates a directive that preserves existing server markup.

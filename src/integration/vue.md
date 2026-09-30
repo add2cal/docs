@@ -18,9 +18,9 @@ npm install add-to-calendar-button
 Import the module into the component, where you want to use the button.
 
 ```javascript
-import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/all';
 import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
 ```
 
 ## Step 3: Register the custom element
