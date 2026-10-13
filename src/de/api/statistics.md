@@ -164,4 +164,4 @@ Ein Daily- oder Monthly-Cap-Fehler enthält `limit`, `bucket_limit`, `requested`
 3. Verwende für längere Views- oder Saves-Serien nicht überlappende begrenzte Fenster. Summiere weder RSVP-Snapshots über mehrere Anfragen noch inkompatible Dimensionen oder Metriktypen.
 4. Vergleiche nur gleichartige Messwerte. Leite keinen Unique-Person-Funnel aus Views, Saves oder RSVP ab. Berichte Tracking-Lücken, Retention- und Freshness-Grenzen, Trunkierung, nicht verfügbare Quellen und weitere Datenlücken ehrlich.
 
-Diese Beispiele enthalten keine Live-Credentials. Die Kandidatenvalidierung erfolgt nur durch einen backendverwalteten Non-Production-Runner mit Read-only-Key und autorisierten Fixtures.
+Diese Beispiele enthalten keine Live-Credentials.

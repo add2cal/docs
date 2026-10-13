@@ -199,4 +199,4 @@ A daily or monthly cap error includes `limit`, `bucket_limit`, `requested`, and 
 3. For a longer views or saves series, issue non-overlapping bounded windows. Do not sum RSVP snapshots across requests, and do not sum incompatible dimensions or metric types.
 4. Compare like-for-like measurements only. Do not infer a unique-person funnel from views, saves, or RSVP. Report tracking gaps, retention and freshness limitations, truncation, unavailable sources, and other missing data honestly.
 
-No live credentials are included in these examples. Candidate validation is performed only by a backend-managed non-production runner with a read-only key and authorized fixtures.
+No live credentials are included in these examples.
