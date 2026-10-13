@@ -7,35 +7,15 @@ description: Retrieve authenticated views, calendar-save, and current RSVP stati
 
 The Statistics API returns event-level metrics for events that belong to the organization authorized by the API key. It provides tracked landing-page views, tracked calendar-option clicks, and a current RSVP attendance snapshot.
 
-Base URL: `https://api.add-to-calendar-pro.com/v1`
-
-## Authentication and access
-
-Send an API key in the `Authorization` header on every request:
+## Views
 
 ```http
-Authorization: YOUR_API_KEY
+GET /statistics/views/:prokey
 ```
 
-A **Read** or **Read & Write** key is accepted. A **Write**-only key is rejected with `401`. A missing, invalid, inactive, or expired key is also rejected with `401`. An expiration date is optional: a key with no configured expiration, or a `null` expiration, remains valid when its status, read scope, and organization authorization are valid. A configured expiration at or before the request time is rejected.
-
-The response never reveals whether a requested `prokey` belongs to another organization: missing and inaccessible events both return `404`.
-
-Authentication and the organization-scoped event lookup are completed before the tracking source is queried. The tracking source is queried by the already validated `prokey`; it has no organization tag.
-
-All statistics responses use `Cache-Control: private, no-store` and inherit the API's existing rate limiting.
-
-## Routes and metrics
-
-| Route | Metric | Definition |
-| --- | --- | --- |
-| `GET /statistics/views/:prokey` | `views` | Tracked visits to the event landing page. A view is not a registration, calendar save, or unique person. |
-| `GET /statistics/saves/:prokey` | `saves` | Tracked calendar-option clicks. A click begins saving; it does not prove a calendar application completed a save, attendance, or a unique person. |
-| `GET /statistics/rsvp/:prokey` | `rsvp` | Current attendance snapshot. It is not a historical time series. |
+Returns tracked visits to the event landing page. A view is not a registration, calendar save, or unique person.
 
 Views and saves are not a unique-person funnel. In particular, do not calculate a saves-to-views conversion rate: saves may originate through channels beyond a landing-page visit.
-
-### Tracking limits
 
 Views and saves report only available tracking data:
 
@@ -44,7 +24,7 @@ Views and saves report only available tracking data:
 - Website button tracking depends on the relevant Proxy setting.
 - Missing attribution is not proof of direct traffic.
 
-## Views and saves query parameters
+### Query parameters
 
 The views and saves routes accept the same parameters. All timestamps must be ISO-8601 UTC timestamps ending in `Z` or `+00:00`.
 
@@ -71,7 +51,7 @@ With no query parameters, the effective window is the last 30 **completed** UTC 
 
 For example, `from=2026-01-01T12:00:00Z&to=2026-01-03T12:00:00Z&interval=day` is inclusive of interactions at the start and exclusive of interactions at the end. Its series buckets still align to UTC days.
 
-## Views response
+### Potential response
 
 ```http
 GET /statistics/views/11111111-1111-4111-8111-111111111111?from=2026-01-01T00:00:00Z&to=2026-01-03T00:00:00Z&interval=day&breakdown=country
@@ -106,7 +86,17 @@ Authorization: YOUR_API_KEY
 }
 ```
 
-## Saves response
+## Saves
+
+```http
+GET /statistics/saves/:prokey
+```
+
+Returns tracked calendar-option clicks. A click begins saving; it does not prove a calendar application completed a save, attendance, or a unique person.
+
+Saves accept the same query parameters, UTC windows, and limits as Views. The only supported save breakdown is `type`.
+
+### Potential response
 
 ```http
 GET /statistics/saves/11111111-1111-4111-8111-111111111111?interval=none&breakdown=type
@@ -139,7 +129,13 @@ Views and saves report available tracking data. Historical retention and source 
 
 A breakdown has one dimension per request and at most 50 returned values, ordered by value descending and then key ascending. When more values exist, `truncated` is `true`, `returned_count` is `50`, and `remaining_total` is the sum of values not returned. Do not present a truncated breakdown as complete or sum incompatible breakdown dimensions.
 
-## RSVP snapshot
+## RSVP
+
+```http
+GET /statistics/rsvp/:prokey
+```
+
+Returns a current attendance snapshot, not a historical time series.
 
 `GET /statistics/rsvp/:prokey` has no `from`, `to`, `interval`, or `breakdown` parameters. Supplying any of them returns `400`.
 
@@ -148,6 +144,8 @@ The snapshot has current counts by RSVP status, not a historical series. `entrie
 For a non-RSVP event, the endpoint returns `404` with `RSVP statistics are not available for this event.` It does not fabricate zero attendance.
 
 `capacity.max` and `capacity.max_per_person` expose configured RSVP limits or `null` when they are unlimited. `capacity.expired` is `true` only when a configured `capacity.expires` time is at or before the snapshot time. `capacity.occupancy.people` is confirmed + undecided + pending people and excludes declined people. With a finite maximum, `remaining` is clamped to zero and `full` reflects whether occupancy has reached it. For an unlimited maximum, `remaining` and `full` are `null`.
+
+### Potential response
 
 ```http
 GET /statistics/rsvp/11111111-1111-4111-8111-111111111111
@@ -191,12 +189,3 @@ Errors use this envelope. `details` is included when a validation error supplies
 | `503` | A statistics source is unavailable or the backend query deadline is reached | `{ "status": "error", "message": "backend_timeout" }` or `{ "status": "error", "message": "source_unavailable" }` |
 
 A daily or monthly cap error includes `limit`, `bucket_limit`, `requested`, and `guidance`. A malformed parameter can return the same error envelope without `details`.
-
-## Agent reporting recipe
-
-1. Discover authorized events through the existing event-list endpoints. Respect their pagination before choosing a `prokey`.
-2. For a selected event, request views and saves with the same explicit `from`, `to`, and `interval` window. Retrieve RSVP separately as its current snapshot.
-3. For a longer views or saves series, issue non-overlapping bounded windows. Do not sum RSVP snapshots across requests, and do not sum incompatible dimensions or metric types.
-4. Compare like-for-like measurements only. Do not infer a unique-person funnel from views, saves, or RSVP. Report tracking gaps, retention and freshness limitations, truncation, unavailable sources, and other missing data honestly.
-
-No live credentials are included in these examples.

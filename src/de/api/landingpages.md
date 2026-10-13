@@ -152,3 +152,7 @@ Das Löschen eines Landingpage-Templates ist einfach. Gib hierzu lediglich die I
 ::: warning Dies löscht keine Events oder Gruppen!
 Sie bleiben aktiv, verwenden dann aber stattdessen das generische Standard-Landingpage-Template.
 :::
+
+## Fehler
+
+Siehe [API-Authentifizierung](/de/api/auth) für die Key-Einrichtung. Ein fehlender oder ungültiger Key liefert `401`. Eine Operation für ein bestimmtes Landingpage-Template kann `404` liefern, wenn das Template nicht verfügbar ist.

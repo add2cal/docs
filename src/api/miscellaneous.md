@@ -167,3 +167,7 @@ Or the latest over all prokeys:
 ```
 GET /rsvp-answers/latest
 ```
+
+## Errors
+
+See [API Authentication](/api/auth) for key setup. A missing or invalid key returns `401`. A request that targets an event or RSVP answers can return `404` when the requested resource is unavailable.
