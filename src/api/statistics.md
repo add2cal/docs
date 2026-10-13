@@ -189,4 +189,3 @@ Errors use this envelope. `details` is included when a validation error supplies
 | `503` | A statistics source is unavailable or the backend query deadline is reached | `{ "status": "error", "message": "backend_timeout" }` or `{ "status": "error", "message": "source_unavailable" }` |
 
 A daily or monthly cap error includes `limit`, `bucket_limit`, `requested`, and `guidance`. A malformed parameter can return the same error envelope without `details`.
-
