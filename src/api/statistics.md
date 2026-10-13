@@ -9,10 +9,6 @@ The Statistics API returns event-level metrics for events that belong to the org
 
 Base URL: `https://api.add-to-calendar-pro.com/v1`
 
-::: warning Availability
-These endpoints are available only after the corresponding backend release. Do not rely on them before that release is announced.
-:::
-
 ## Authentication and access
 
 Send an API key in the `Authorization` header on every request:
@@ -24,6 +20,8 @@ Authorization: YOUR_API_KEY
 A **Read** or **Read & Write** key is accepted. A **Write**-only key is rejected with `401`. A missing, invalid, inactive, or expired key is also rejected with `401`. An expiration date is optional: a key with no configured expiration, or a `null` expiration, remains valid when its status, read scope, and organization authorization are valid. A configured expiration at or before the request time is rejected.
 
 The response never reveals whether a requested `prokey` belongs to another organization: missing and inaccessible events both return `404`.
+
+Authentication and the organization-scoped event lookup are completed before the tracking source is queried. The tracking source is queried by the already validated `prokey`; it has no organization tag.
 
 All statistics responses use `Cache-Control: private, no-store` and inherit the API's existing rate limiting.
 
@@ -82,26 +80,16 @@ Authorization: YOUR_API_KEY
 
 ```json
 {
-  "prokey": "11111111-1111-4111-8111-111111111111",
   "metric": "views",
   "definition": "Tracked visits to the event landing page.",
   "unit": "count",
-  "state": "available",
-  "generated_at": "2026-01-03T12:00:00.000Z",
-  "source_freshness": null,
   "window": {
     "from": "2026-01-01T00:00:00.000Z",
     "to": "2026-01-03T00:00:00.000Z",
     "timezone": "UTC",
     "interval": "day"
   },
-  "coverage": {
-    "earliest_available": null,
-    "latest_available": null,
-    "retention_known": false,
-    "completeness": "unknown"
-  },
-  "totals": { "value": 42 },
+  "total": 42,
   "breakdowns": [
     {
       "dimension": "country",
@@ -112,8 +100,8 @@ Authorization: YOUR_API_KEY
     }
   ],
   "series": [
-    { "bucket_start": "2026-01-01T00:00:00.000Z", "bucket_end": "2026-01-02T00:00:00.000Z", "value": 20 },
-    { "bucket_start": "2026-01-02T00:00:00.000Z", "bucket_end": "2026-01-03T00:00:00.000Z", "value": 22 }
+    { "start": "2026-01-01T00:00:00.000Z", "end": "2026-01-02T00:00:00.000Z", "total": 20 },
+    { "start": "2026-01-02T00:00:00.000Z", "end": "2026-01-03T00:00:00.000Z", "total": 22 }
   ]
 }
 ```
@@ -127,21 +115,11 @@ Authorization: YOUR_API_KEY
 
 ```json
 {
-  "prokey": "11111111-1111-4111-8111-111111111111",
   "metric": "saves",
   "definition": "Tracked calendar-option clicks.",
   "unit": "count",
-  "state": "available",
-  "generated_at": "2026-01-03T12:00:00.000Z",
-  "source_freshness": null,
   "window": { "from": null, "to": null, "timezone": "UTC", "interval": "none" },
-  "coverage": {
-    "earliest_available": null,
-    "latest_available": null,
-    "retention_known": false,
-    "completeness": "unknown"
-  },
-  "totals": { "value": 15 },
+  "total": 15,
   "breakdowns": [
     {
       "dimension": "type",
@@ -155,23 +133,21 @@ Authorization: YOUR_API_KEY
 }
 ```
 
-### Coverage, freshness, and breakdown bounds
+### Retention, freshness, and breakdown bounds
 
-`generated_at` is the response generation time. `source_freshness` is currently `null`; do not treat `generated_at` as a source-update timestamp.
+Views and saves report available tracking data. Historical retention and source freshness can vary, so interpret a zero only in its returned context, not as proof that a period is complete.
 
-Historical retention and completeness are not verified by this API. Views and saves therefore return `coverage.retention_known: false` and `coverage.completeness: "unknown"`, with `earliest_available` and `latest_available` set to `null`. A zero should be interpreted only in the returned context, not as proof that the full requested period is complete.
-
-A breakdown has one dimension per request and at most 50 returned values, ordered by value descending. When more values exist, `truncated` is `true`, `returned_count` is `50`, and `remaining_total` is the sum of values not returned. Do not present a truncated breakdown as complete or sum incompatible breakdown dimensions.
+A breakdown has one dimension per request and at most 50 returned values, ordered by value descending and then key ascending. When more values exist, `truncated` is `true`, `returned_count` is `50`, and `remaining_total` is the sum of values not returned. Do not present a truncated breakdown as complete or sum incompatible breakdown dimensions.
 
 ## RSVP snapshot
 
 `GET /statistics/rsvp/:prokey` has no `from`, `to`, `interval`, or `breakdown` parameters. Supplying any of them returns `400`.
 
-The snapshot has current counts by RSVP status, not a historical series. `entries` counts RSVP responses. `people` sums the places represented by responses. Pending values remain separate from `non_pending_total_entries` and `non_pending_total_people`.
+The snapshot has current counts by RSVP status, not a historical series. `entries` counts RSVP responses and `people` sums the places represented by responses. `entries` and `people` contain only `confirmed`, `undecided`, and `declined`; pending counts are in `snapshot.pending`. `snapshot.non_pending_totals` contains all three non-pending statuses.
 
-For a non-RSVP event, the endpoint returns `state: "not_applicable"`, `snapshot: null`, and `capacity: null`. It does not fabricate zero attendance.
+For a non-RSVP event, the endpoint returns `404` with `RSVP statistics are not available for this event.` It does not fabricate zero attendance.
 
-`capacity.max` and `capacity.max_per_person` expose the configured RSVP limits when present. `capacity.expired` is `true` only when a configured `capacity.expires` time is at or before the response snapshot time. A missing, `null`, or future expiry returns `false`. The API does not derive occupancy percentages or seats remaining.
+`capacity.max` and `capacity.max_per_person` expose configured RSVP limits or `null` when they are unlimited. `capacity.expired` is `true` only when a configured `capacity.expires` time is at or before the snapshot time. `capacity.occupancy.people` is confirmed + undecided + pending people and excludes declined people. With a finite maximum, `remaining` is clamped to zero and `full` reflects whether occupancy has reached it. For an unlimited maximum, `remaining` and `full` are `null`.
 
 ```http
 GET /statistics/rsvp/11111111-1111-4111-8111-111111111111
@@ -180,26 +156,21 @@ Authorization: YOUR_API_KEY
 
 ```json
 {
-  "prokey": "11111111-1111-4111-8111-111111111111",
   "metric": "rsvp",
   "definition": "Current attendance snapshot.",
   "unit": "count",
-  "state": "available",
-  "generated_at": "2026-01-03T12:00:00.000Z",
-  "source_freshness": null,
   "snapshot": {
-    "entries": { "confirmed": 8, "undecided": 2, "declined": 1, "pending": 3 },
-    "people": { "confirmed": 10, "undecided": 2, "declined": 1, "pending": 4 },
-    "non_pending_total_entries": 11,
-    "non_pending_total_people": 13,
-    "pending_entries": 3,
-    "pending_people": 4
+    "entries": { "confirmed": 8, "undecided": 2, "declined": 1 },
+    "people": { "confirmed": 10, "undecided": 2, "declined": 1 },
+    "non_pending_totals": { "entries": 11, "people": 13 },
+    "pending": { "entries": 3, "people": 4 }
   },
   "capacity": {
     "max": 50,
     "max_per_person": 2,
     "expires": "2026-01-10T12:00:00.000Z",
-    "expired": false
+    "expired": false,
+    "occupancy": { "people": 16, "remaining": 34, "full": false }
   }
 }
 ```
@@ -216,7 +187,7 @@ Errors use this envelope. `details` is included when a validation error supplies
 | --- | --- | --- |
 | `400` | Invalid or unsupported parameters, a reversed or unpaired range, or a range that exceeds a cap | `{ "status": "error", "message": "Requested range exceeds the limit.", "details": { "limit": 90, "bucket_limit": 90, "requested": 91, "guidance": "Narrow the range, use month, or request interval=none." } }` |
 | `401` | Missing, invalid, inactive, expired, or insufficient-scope API key | `{ "status": "error", "message": "Not authenticated." }` |
-| `404` | Event is missing or not accessible to the authorized organization | `{ "status": "error", "message": "Event not found." }` |
+| `404` | Event is missing or not accessible to the authorized organization; RSVP statistics are unavailable for a non-RSVP event | `{ "status": "error", "message": "Event not found." }` or `{ "status": "error", "message": "RSVP statistics are not available for this event." }` |
 | `503` | A statistics source is unavailable or the backend query deadline is reached | `{ "status": "error", "message": "backend_timeout" }` or `{ "status": "error", "message": "source_unavailable" }` |
 
 A daily or monthly cap error includes `limit`, `bucket_limit`, `requested`, and `guidance`. A malformed parameter can return the same error envelope without `details`.
@@ -225,7 +196,7 @@ A daily or monthly cap error includes `limit`, `bucket_limit`, `requested`, and 
 
 1. Discover authorized events through the existing event-list endpoints. Respect their pagination before choosing a `prokey`.
 2. For a selected event, request views and saves with the same explicit `from`, `to`, and `interval` window. Retrieve RSVP separately as its current snapshot.
-3. For a longer views or saves series, issue non-overlapping bounded windows and preserve every response's coverage metadata. Do not sum RSVP snapshots across requests, and do not sum incompatible dimensions or metric types.
-4. Compare like-for-like measurements only. Do not infer a unique-person funnel from views, saves, or RSVP. Report tracking gaps, `retention_known: false`, `completeness: "unknown"`, truncation, unavailable sources, and other missing data honestly.
+3. For a longer views or saves series, issue non-overlapping bounded windows. Do not sum RSVP snapshots across requests, and do not sum incompatible dimensions or metric types.
+4. Compare like-for-like measurements only. Do not infer a unique-person funnel from views, saves, or RSVP. Report tracking gaps, retention and freshness limitations, truncation, unavailable sources, and other missing data honestly.
 
 No live credentials are included in these examples. Candidate validation is performed only by a backend-managed non-production runner with a read-only key and authorized fixtures.

@@ -9,10 +9,6 @@ Die Statistik-API liefert Event-Metriken für Events der durch den API-Key autor
 
 Basis-URL: `https://api.add-to-calendar-pro.com/v1`
 
-::: warning Verfügbarkeit
-Diese Endpunkte sind erst nach dem zugehörigen Backend-Release verfügbar. Verlasse dich nicht vor der Release-Ankündigung auf sie.
-:::
-
 ## Authentifizierung und Zugriff
 
 Sende bei jeder Anfrage einen API-Key im `Authorization`-Header:
@@ -24,6 +20,8 @@ Authorization: YOUR_API_KEY
 Ein **Read**- oder **Read & Write**-Key wird akzeptiert. Ein **Write**-only-Key wird mit `401` abgewiesen. Fehlende, ungültige, inaktive oder abgelaufene Keys werden ebenfalls mit `401` abgewiesen. Ein Ablaufdatum ist optional: Ein Key ohne konfiguriertes Ablaufdatum oder mit `null` als Ablaufdatum bleibt gültig, wenn Status, Read-Scope und Organisationsautorisierung gültig sind. Ein konfiguriertes Ablaufdatum zum oder vor dem Anfragezeitpunkt wird abgewiesen.
 
 Die Response verrät nicht, ob ein `prokey` einer anderen Organisation gehört: Fehlende und nicht zugängliche Events liefern beide `404`.
+
+Authentifizierung und der organisationsbezogene Event-Lookup werden abgeschlossen, bevor die Tracking-Quelle abgefragt wird. Die Tracking-Quelle wird mit dem bereits validierten `prokey` abgefragt; sie hat keinen Organization-Tag.
 
 Alle Statistik-Responses verwenden `Cache-Control: private, no-store` und unterliegen dem bestehenden API Rate Limit.
 
@@ -82,18 +80,13 @@ Authorization: YOUR_API_KEY
 
 ```json
 {
-  "prokey": "11111111-1111-4111-8111-111111111111",
   "metric": "views",
   "definition": "Tracked visits to the event landing page.",
   "unit": "count",
-  "state": "available",
-  "generated_at": "2026-01-03T12:00:00.000Z",
-  "source_freshness": null,
   "window": { "from": "2026-01-01T00:00:00.000Z", "to": "2026-01-03T00:00:00.000Z", "timezone": "UTC", "interval": "day" },
-  "coverage": { "earliest_available": null, "latest_available": null, "retention_known": false, "completeness": "unknown" },
-  "totals": { "value": 42 },
+  "total": 42,
   "breakdowns": [{ "dimension": "country", "values": [{ "key": "DE", "value": 30 }, { "key": "US", "value": 12 }], "truncated": false, "returned_count": 2, "remaining_total": 0 }],
-  "series": [{ "bucket_start": "2026-01-01T00:00:00.000Z", "bucket_end": "2026-01-02T00:00:00.000Z", "value": 20 }, { "bucket_start": "2026-01-02T00:00:00.000Z", "bucket_end": "2026-01-03T00:00:00.000Z", "value": 22 }]
+  "series": [{ "start": "2026-01-01T00:00:00.000Z", "end": "2026-01-02T00:00:00.000Z", "total": 20 }, { "start": "2026-01-02T00:00:00.000Z", "end": "2026-01-03T00:00:00.000Z", "total": 22 }]
 }
 ```
 
@@ -106,38 +99,31 @@ Authorization: YOUR_API_KEY
 
 ```json
 {
-  "prokey": "11111111-1111-4111-8111-111111111111",
   "metric": "saves",
   "definition": "Tracked calendar-option clicks.",
   "unit": "count",
-  "state": "available",
-  "generated_at": "2026-01-03T12:00:00.000Z",
-  "source_freshness": null,
   "window": { "from": null, "to": null, "timezone": "UTC", "interval": "none" },
-  "coverage": { "earliest_available": null, "latest_available": null, "retention_known": false, "completeness": "unknown" },
-  "totals": { "value": 15 },
+  "total": 15,
   "breakdowns": [{ "dimension": "type", "values": [{ "key": "google", "value": 10 }, { "key": "ical", "value": 5 }], "truncated": false, "returned_count": 2, "remaining_total": 0 }],
   "series": null
 }
 ```
 
-### Coverage, Freshness und Breakdown-Grenzen
+### Retention, Freshness und Breakdown-Grenzen
 
-`generated_at` ist der Zeitpunkt der Response-Erstellung. `source_freshness` ist aktuell `null`; behandle `generated_at` nicht als Zeitpunkt einer Quellaktualisierung.
+Views und Saves enthalten verfügbare Tracking-Daten. Historische Retention und Quell-Freshness können variieren. Interpretiere eine Null daher nur im zurückgegebenen Kontext, nicht als Beweis für einen vollständigen Zeitraum.
 
-Historische Retention und Vollständigkeit sind über diese API nicht verifiziert. Views und Saves liefern daher `coverage.retention_known: false` und `coverage.completeness: "unknown"`; `earliest_available` und `latest_available` sind `null`. Eine Null darf nur im zurückgegebenen Kontext interpretiert werden, nicht als Beweis für einen vollständigen Zeitraum.
-
-Ein Breakdown enthält eine Dimension pro Anfrage und maximal 50 Werte, absteigend nach Wert sortiert. Bei weiteren Werten ist `truncated` auf `true`, `returned_count` auf `50` und `remaining_total` ist die Summe nicht zurückgegebener Werte. Stelle einen gekürzten Breakdown nicht als vollständig dar und summiere keine inkompatiblen Breakdown-Dimensionen.
+Ein Breakdown enthält eine Dimension pro Anfrage und maximal 50 Werte, absteigend nach Wert und anschließend aufsteigend nach Key sortiert. Bei weiteren Werten ist `truncated` auf `true`, `returned_count` auf `50` und `remaining_total` ist die Summe nicht zurückgegebener Werte. Stelle einen gekürzten Breakdown nicht als vollständig dar und summiere keine inkompatiblen Breakdown-Dimensionen.
 
 ## RSVP-Snapshot
 
 `GET /statistics/rsvp/:prokey` hat keine `from`-, `to`-, `interval`- oder `breakdown`-Parameter. Jeder dieser Parameter führt zu `400`.
 
-Der Snapshot enthält aktuelle Zählungen je RSVP-Status, keine historische Zeitreihe. `entries` zählt RSVP-Antworten. `people` summiert die durch Antworten repräsentierten Plätze. Pending-Werte bleiben getrennt von `non_pending_total_entries` und `non_pending_total_people`.
+Der Snapshot enthält aktuelle Zählungen je RSVP-Status, keine historische Zeitreihe. `entries` zählt RSVP-Antworten und `people` summiert die durch Antworten repräsentierten Plätze. `entries` und `people` enthalten nur `confirmed`, `undecided` und `declined`; Pending-Werte stehen unter `snapshot.pending`. `snapshot.non_pending_totals` enthält alle drei nicht-pending Status.
 
-Für ein Nicht-RSVP-Event liefert der Endpunkt `state: "not_applicable"`, `snapshot: null` und `capacity: null`. Er erfindet keine Null-Teilnahme.
+Für ein Nicht-RSVP-Event liefert der Endpunkt `404` mit `RSVP statistics are not available for this event.` Er erfindet keine Null-Teilnahme.
 
-`capacity.max` und `capacity.max_per_person` zeigen konfigurierte RSVP-Limits, wenn vorhanden. `capacity.expired` ist nur `true`, wenn ein konfiguriertes `capacity.expires` zum oder vor dem Snapshot-Zeitpunkt liegt. Fehlende, `null`- oder zukünftige Ablaufzeiten liefern `false`. Die API berechnet weder Auslastungsprozente noch verbleibende Plätze.
+`capacity.max` und `capacity.max_per_person` zeigen konfigurierte RSVP-Limits oder bei unbegrenzter Kapazität `null`. `capacity.expired` ist nur `true`, wenn ein konfiguriertes `capacity.expires` zum oder vor dem Snapshot-Zeitpunkt liegt. `capacity.occupancy.people` ist die Summe bestätigter, unentschiedener und pending Personen und schließt abgelehnte Personen aus. Bei einem endlichen Maximum wird `remaining` bei null gedeckelt und `full` zeigt, ob die Belegung das Maximum erreicht. Bei unbegrenztem Maximum sind `remaining` und `full` `null`.
 
 ```http
 GET /statistics/rsvp/11111111-1111-4111-8111-111111111111
@@ -146,15 +132,11 @@ Authorization: YOUR_API_KEY
 
 ```json
 {
-  "prokey": "11111111-1111-4111-8111-111111111111",
   "metric": "rsvp",
   "definition": "Current attendance snapshot.",
   "unit": "count",
-  "state": "available",
-  "generated_at": "2026-01-03T12:00:00.000Z",
-  "source_freshness": null,
-  "snapshot": { "entries": { "confirmed": 8, "undecided": 2, "declined": 1, "pending": 3 }, "people": { "confirmed": 10, "undecided": 2, "declined": 1, "pending": 4 }, "non_pending_total_entries": 11, "non_pending_total_people": 13, "pending_entries": 3, "pending_people": 4 },
-  "capacity": { "max": 50, "max_per_person": 2, "expires": "2026-01-10T12:00:00.000Z", "expired": false }
+  "snapshot": { "entries": { "confirmed": 8, "undecided": 2, "declined": 1 }, "people": { "confirmed": 10, "undecided": 2, "declined": 1 }, "non_pending_totals": { "entries": 11, "people": 13 }, "pending": { "entries": 3, "people": 4 } },
+  "capacity": { "max": 50, "max_per_person": 2, "expires": "2026-01-10T12:00:00.000Z", "expired": false, "occupancy": { "people": 16, "remaining": 34, "full": false } }
 }
 ```
 
@@ -170,7 +152,7 @@ Fehler verwenden dieses Envelope. `details` wird nur eingeschlossen, wenn ein Va
 | --- | --- | --- |
 | `400` | Ungültige oder nicht unterstützte Parameter, umgekehrte oder ungepaarte Range oder Limitüberschreitung | `{ "status": "error", "message": "Requested range exceeds the limit.", "details": { "limit": 90, "bucket_limit": 90, "requested": 91, "guidance": "Narrow the range, use month, or request interval=none." } }` |
 | `401` | Fehlender, ungültiger, inaktiver, abgelaufener oder unzureichend berechtigter API-Key | `{ "status": "error", "message": "Not authenticated." }` |
-| `404` | Event fehlt oder ist für die autorisierte Organisation nicht zugänglich | `{ "status": "error", "message": "Event not found." }` |
+| `404` | Event fehlt oder ist für die autorisierte Organisation nicht zugänglich; RSVP-Statistiken sind für ein Nicht-RSVP-Event nicht verfügbar | `{ "status": "error", "message": "Event not found." }` oder `{ "status": "error", "message": "RSVP statistics are not available for this event." }` |
 | `503` | Statistikquelle nicht verfügbar oder Backend-Query-Deadline erreicht | `{ "status": "error", "message": "backend_timeout" }` oder `{ "status": "error", "message": "source_unavailable" }` |
 
 Ein Daily- oder Monthly-Cap-Fehler enthält `limit`, `bucket_limit`, `requested` und `guidance`. Ein malformed Parameter kann das gleiche Envelope ohne `details` liefern.
@@ -179,7 +161,7 @@ Ein Daily- oder Monthly-Cap-Fehler enthält `limit`, `bucket_limit`, `requested`
 
 1. Ermittle autorisierte Events über die bestehenden Event-List-Endpunkte. Beachte deren Paginierung, bevor du einen `prokey` auswählst.
 2. Rufe für ein gewähltes Event Views und Saves mit identischem explizitem `from`-, `to`- und `interval`-Fenster ab. RSVP wird getrennt als aktueller Snapshot abgerufen.
-3. Verwende für längere Views- oder Saves-Serien nicht überlappende begrenzte Fenster und bewahre die Coverage-Metadaten jeder Response. Summiere weder RSVP-Snapshots über mehrere Anfragen noch inkompatible Dimensionen oder Metriktypen.
-4. Vergleiche nur gleichartige Messwerte. Leite keinen Unique-Person-Funnel aus Views, Saves oder RSVP ab. Berichte Tracking-Lücken, `retention_known: false`, `completeness: "unknown"`, Trunkierung, nicht verfügbare Quellen und weitere Datenlücken ehrlich.
+3. Verwende für längere Views- oder Saves-Serien nicht überlappende begrenzte Fenster. Summiere weder RSVP-Snapshots über mehrere Anfragen noch inkompatible Dimensionen oder Metriktypen.
+4. Vergleiche nur gleichartige Messwerte. Leite keinen Unique-Person-Funnel aus Views, Saves oder RSVP ab. Berichte Tracking-Lücken, Retention- und Freshness-Grenzen, Trunkierung, nicht verfügbare Quellen und weitere Datenlücken ehrlich.
 
 Diese Beispiele enthalten keine Live-Credentials. Die Kandidatenvalidierung erfolgt nur durch einen backendverwalteten Non-Production-Runner mit Read-only-Key und autorisierten Fixtures.
