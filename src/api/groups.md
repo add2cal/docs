@@ -130,3 +130,7 @@ DELETE /group/:prokey
 Deleting a group is simple. Only provide the prokey and it (incl. all linked events) gets removed.
 
 **Be careful with this call!**
+
+## Errors
+
+See [API Authentication](/api/auth) for key setup. A missing or invalid key returns `401`. An operation that targets a specific group can return `404` when the group is unavailable.
