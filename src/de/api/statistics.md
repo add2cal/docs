@@ -154,3 +154,4 @@ Fehler verwenden dieses Envelope. `details` wird nur eingeschlossen, wenn ein Va
 | `503` | Statistikquelle nicht verfügbar oder Backend-Query-Deadline erreicht | `{ "status": "error", "message": "backend_timeout" }` oder `{ "status": "error", "message": "source_unavailable" }` |
 
 Ein Daily- oder Monthly-Cap-Fehler enthält `limit`, `bucket_limit`, `requested` und `guidance`. Ein malformed Parameter kann das gleiche Envelope ohne `details` liefern.
+
