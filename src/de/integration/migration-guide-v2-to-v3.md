@@ -99,13 +99,13 @@ Setze anschließend die Dateiquelle am Button:
 ```html
 <add-to-calendar-button
   prokey="prokey-deines-events"
-  style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"
+  style-source="jsdelivr"
 ></add-to-calendar-button>
 ```
 
-Damit werden fehlende Styles aus `dist/styles/` und fehlende Sprachen aus dem benachbarten Verzeichnis `dist/locales/` auf jsDelivr geladen. Deutsch wird beispielsweise von `https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/locales/de.json` geladen. Für so geladene Dateien sind keine separaten Imports nötig. Ein zusätzliches CDN-Skript-Tag ist ebenfalls nicht erforderlich.
+Damit werden fehlende Styles und Sprachen von jsDelivr geladen, automatisch passend zur installierten Paketversion. Separate Datei-Imports oder ein zusätzliches CDN-Skript-Tag sind nicht nötig. Für eigene Trigger verwendest du `styleSource: 'jsdelivr'` in `atcb_action`.
 
-Die URL mit `@3` folgt Updates innerhalb von v3. Für eine exakte Übereinstimmung mit deinem installierten npm-Paket ersetzt du `@3` durch dessen vollständige Versionsnummer und aktualisierst beides gemeinsam. Behalte die Endung `/dist/styles/` bei: Der Sprachloader ersetzt das abschließende `styles/` durch `locales/`.
+Für eine andere Version kannst du auch eine Paket-URL wie `https://cdn.jsdelivr.net/npm/add-to-calendar-button@3` angeben. jsDelivr-Paket- und Dateipfade werden automatisch aufgelöst. Mit dem empfohlenen Kürzel `jsdelivr` bleiben Dateien und Code versionsgleich.
 
 Selbst-Hosting bleibt eine Alternative. Kopiert dafür `dist/styles/` und `dist/locales/` aus dem installierten Paket in benachbarte Verzeichnisse auf eurer Webseite. Zum Beispiel:
 

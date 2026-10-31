@@ -99,13 +99,13 @@ Then set the asset source on your button:
 ```html
 <add-to-calendar-button
   prokey="prokey-of-your-event"
-  style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"
+  style-source="jsdelivr"
 ></add-to-calendar-button>
 ```
 
-This loads missing styles from `dist/styles/` and missing languages from the sibling `dist/locales/` directory on jsDelivr. For example, German loads from `https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/locales/de.json`. No separate imports are needed for assets loaded this way, and no additional CDN script tag is required.
+This loads missing styles and languages from jsDelivr, automatically matching your installed package version. No separate asset imports or additional CDN script tag are needed. For custom triggers, use `styleSource: 'jsdelivr'` in `atcb_action`.
 
-The `@3` URL follows updates within v3. For an exact match with your installed npm package, replace `@3` with that package's full version and update both together. Keep the `/dist/styles/` suffix: the language loader replaces the final `styles/` with `locales/`.
+To choose a different version explicitly, you can also provide a package URL such as `https://cdn.jsdelivr.net/npm/add-to-calendar-button@3`. jsDelivr package and asset paths are resolved automatically; the `jsdelivr` shortcut is recommended to keep assets and code in sync.
 
 Self-hosting remains an alternative. Copy `dist/styles/` and `dist/locales/` from the installed package into sibling directories on your website. For example:
 
