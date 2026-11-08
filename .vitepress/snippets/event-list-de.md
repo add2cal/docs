@@ -1,10 +1,4 @@
----
-title: Event-Liste konfigurieren
-description: Vollständige Referenz zur Darstellung einer öffentlichen Add to Calendar PRO Gruppe als konfigurierbare Event-Liste.
-outline: [2,3]
----
-
-# Event-Liste konfigurieren
+## Event-Listen {#event-lists}
 
 Die Event-Listen-Funktion rendert die öffentlichen Events einer Add to Calendar PRO Gruppe über die `<add-to-calendar-button>` Web Component.
 
@@ -48,6 +42,20 @@ Es gibt eine Ausnahme: Wenn die Gruppe gleichzeitig als Kalender-Abonnement konf
 ```
 
 `group-overview` funktioniert nur zusammen mit einem gültigen `prokey`. Du kannst das Attribut bei jeder Gruppe mit aktiver öffentlicher Event-Übersicht gefahrlos setzen. Notwendig ist es nur im Abonnement-Fall.
+
+Wenn die Übersicht einer Abonnement-Gruppe angefordert wird, erscheint oben bei den Datumsfiltern ein Add to Calendar Button für das Abonnement. Die Event-Einträge darunter sind rein informativ: Es gibt keine Landingpage-Links, individuellen Kalenderaktionen oder RSVP-Modals. Das hat Vorrang vor `no-details` und `add-via-list`.
+
+Um den Abonnement-Button auszublenden und die normalen Listen-Interaktionen wiederherzustellen, setze die Übersichtsoption **No subscribe button** (`no-subscribe-button`) auf `true`:
+
+```html
+<add-to-calendar-button
+  prokey="DEIN-GRUPPEN-PROKEY"
+  group-overview
+  group-overview-config='{"no-subscribe-button":true}'
+></add-to-calendar-button>
+```
+
+Ein ausdrücklich gesetztes `no-add:true` bleibt dabei wirksam.
 
 Zusätzliche Einstellungen gehören in das Objekt `group-overview-config`:
 
@@ -98,7 +106,7 @@ Im Jahr 2027 wäre der Standard beispielsweise:
 
 Events aus Jahren vor dem vorherigen Jahr werden nicht gerendert.
 
-Es gibt standardmäßig keine Obergrenze.
+Für die API-Abfrage und nicht wiederkehrende Termine gibt es standardmäßig keine Obergrenze. Für Wiederholungen gilt das unten beschriebene separate Zeitfenster.
 
 ### Jahresauswahl
 
@@ -118,13 +126,23 @@ Der aktuelle Monat wird ausgewählt, wenn er Events enthält. Andernfalls wird d
 
 Ein Event erscheint im Monat und Jahr seines Startdatums.
 
-Wenn ein Event in einem Jahr beginnt und in einem späteren Jahr endet, erscheint es zusätzlich im Januar des Endjahres. Es wird nicht in jedem Monat zwischen Start- und Enddatum wiederholt.
+Wenn ein nicht wiederkehrendes Event in einem Jahr beginnt und in einem späteren Jahr endet, erscheint es zusätzlich im Januar des Endjahres. Es wird nicht in jedem Monat zwischen Start- und Enddatum wiederholt.
 
 Bei Events mit mehreren Terminen wird jedes vom Gruppen-Endpunkt zurückgegebene Datum zu einem eigenen Listeneintrag.
+
+### Wiederkehrende Events
+
+Wiederkehrende Events werden unterstützt. Jedes Vorkommen erscheint in seinem jeweiligen Monat und Jahr, vom **ersten Tag des aktuellen Monats bis einschließlich zum letzten Tag des Monats in 18 Monaten**. Das Zeitfenster beginnt also nicht erst heute: Frühere Vorkommen im aktuellen Monat werden ebenfalls angezeigt. Vorkommen außerhalb dieses Zeitfensters werden ausgelassen.
+
+Die Optionen `from` und `to` filtern die API-Abfrage; sie erweitern dieses feste Wiederholungsfenster nicht. Die Wiederholungsregel einschließlich Enddatum oder Anzahl der Vorkommen gilt weiterhin. Jeder dargestellte Termin verweist bei Landingpage, Kalenderaktion oder RSVP auf das ursprüngliche wiederkehrende Event, statt ein eigenes Event anzulegen. Jahresübergreifende wiederkehrende Termine werden nicht zusätzlich im Januar ihres Endjahres angezeigt.
 
 ## Konfigurationsreferenz
 
 `group-overview-config` kann keine, einige oder alle der folgenden Eigenschaften enthalten.
+
+| Eigenschaft | Typ | Standard | Beschreibung |
+| :--- | :--- | :--- | :--- |
+| `no-subscribe-button` | Boolean | `false` | Blendet bei Abonnement-Gruppen den oberen Abonnement-Button aus und stellt die normalen Listen-Interaktionen wieder her. Ohne diese Option sind die Einträge unabhängig von `no-details` und `add-via-list` rein informativ. Ein ausdrücklich gesetztes `no-add:true` deaktiviert die Interaktionen weiterhin. |
 
 | Eigenschaft     | Typ     | Standard                        | Beschreibung                                                                                                                                                                  |
 | :-------------- | :------ | :------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -194,6 +212,8 @@ Datum | Event-Titel
 Der vollständige Text ist verlinkt. Wenn direkte Add-to-Calendar-Aktionen aktiv sind, ersetzt die Plus-Marke bei regulären Events den Listenpunkt. RSVP-Einträge verwenden stattdessen einen ausgerichteten Punkt.
 
 ## Interaktionsverhalten
+
+Übersichten von Abonnement-Gruppen zeigen standardmäßig einen Abonnement-Button und rein informative Einträge. Die folgenden Regeln gelten für Gruppen ohne Abonnement oder nach dem Setzen von `no-subscribe-button:true` bei einer Abonnement-Gruppe.
 
 Die Interaktion hängt von `no-add`, `no-details`, `add-via-list`, dem ausgewählten Layout und der Verwendung von RSVP ab.
 
@@ -273,6 +293,8 @@ add-to-calendar-button::part(atcb-group-overview-event) {
 
 Folgende Parts stehen zur Verfügung:
 
+Der Container des Abonnement-Buttons stellt außerdem `atcb-group-overview-subscribe` bereit, wenn er vorhanden ist.
+
 | Part                                | Element                                 |
 | :---------------------------------- | :-------------------------------------- |
 | `atcb-group-overview`               | Wurzelelement der Übersicht             |
@@ -301,13 +323,6 @@ Nicht jeder Part existiert in jedem Layout oder jeder Konfiguration.
 
 ## Einschränkungen und Hinweise
 
-### Wiederkehrende Events
-
-::: warning Aktuelle Einschränkung
-Wiederkehrende Events werden nicht vollständig unterstützt. Die Übersicht kann eine Wiederholung nicht zuverlässig in alle einzelnen Vorkommen auflösen. Filterung und Monatszuordnung können daher unvollständig sein.
-:::
-
-Verwende einzelne Termine oder Events mit mehreren Daten, wenn jedes Vorkommen in der Liste erscheinen muss.
 
 ### Öffentliche Daten
 

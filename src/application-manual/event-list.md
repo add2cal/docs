@@ -22,9 +22,11 @@ Choose a group dedicated to the content you want to publish. Enabling the public
 
 ## Put the list on your website
 
-Give your website team the group ProKey and the [event-list integration guide](/integration/event-list). The app's **Integration** action also provides the relevant starting snippet.
+Give your website team the group ProKey and the [event-list integration guide](/integration/general#event-lists). The app's **Integration** action also provides the relevant starting snippet.
 
 For a regular group with the public event list enabled, integrating the group displays the list automatically. For a group that also offers a calendar subscription, the integration must explicitly request the overview; otherwise visitors see a subscription button.
+
+When a subscription group's overview is shown, a subscription Add to Calendar button appears at the top and the event entries are read-only. Your website team can enable **No subscribe button** (`no-subscribe-button:true`) in the overview options to hide that button and restore normal entry interactions. An explicitly configured read-only list (`no-add:true`) remains read-only.
 
 You can maintain event titles, descriptions, locations, and dates in PRO after the website setup is complete.
 
@@ -38,16 +40,16 @@ Your website team can configure three layouts:
 | **Cards** | A wider page where events should be visually separated. |
 | **Compact** | A short schedule with date and title. |
 
-By default, clicking an event opens its landing page. The integration can instead open calendar options or the RSVP form directly, or show entries without interaction.
+For non-subscription groups, or after opting out of the subscription button, clicking an event opens its landing page by default. The integration can instead open calendar options or the RSVP form directly, or show entries without interaction.
 
 RSVP events follow the registration flow; they do not have the separate quick-add action used by ordinary calendar events.
 
 ## Check the published list
 
-Open the website as a visitor. Switch between the available years and months, open an ordinary event, and try an RSVP event if the group contains one.
+Open the website as a visitor. Switch between the available years and months. For subscription-group overviews, check the top subscription button and read-only entries; after opting out, or for other groups, open an ordinary event and try an RSVP event if the group contains one.
 
 If an event is missing, check its group, publication/privacy settings, and dates. The default list starts at January 1 of the previous year; older years are not shown. Additional date limits may have been set by your website team.
 
-Multi-date events produce separate list entries. Recurring events are not reliably expanded into every occurrence in this list. Use separate dates or events when every session must appear.
+Multi-date events produce separate list entries. Recurring events are supported within a bounded rolling window. See the [integration date logic](/integration/general#recurring-events) for the exact range before treating an omitted occurrence as missing data.
 
-For layout options, date filtering, and visual customization, refer your website team to [Event List Configuration](/integration/event-list).
+For layout options, date filtering, and visual customization, refer your website team to [Event List Configuration](/integration/general#event-lists).

@@ -11,7 +11,7 @@ You can use the Add to Calendar Button web component to turn an Add to Calendar 
 The list is generated automatically from the events in that group. It includes year and month navigation, links to the individual event landing pages, and optional Add to Calendar actions.
 
 ::: tip Looking for all settings?
-This recipe focuses on getting the list online. See the [Event List reference](/integration/event-list) for every configuration option, layout behavior, interaction rule, limitation, and CSS part.
+This recipe focuses on getting the list online. See the [Event List reference](/integration/general#event-lists) for every configuration option, layout behavior, interaction rule, limitation, and CSS part.
 :::
 
 ## 1. Prepare an event group
@@ -69,7 +69,17 @@ If the same group is additionally configured as a calendar subscription, the com
 ```
 :::
 
-Instead of rendering a regular Add to Calendar button, the component now:
+For a subscription group's overview, a subscription Add to Calendar button appears at the top and the event entries are read-only. To hide that button and restore the regular entry interactions described below, use:
+
+```html
+<add-to-calendar-button
+  prokey="YOUR-GROUP-PROKEY"
+  group-overview
+  group-overview-config='{"no-subscribe-button":true}'
+></add-to-calendar-button>
+```
+
+The component now:
 
 1. Loads the public events belonging to the group.
 2. Selects the current year.
@@ -97,7 +107,7 @@ Available layouts are:
 
 ## 7. Choose what happens on click
 
-By default, the whole event entry links to the event's Add to Calendar PRO landing page in a new tab.
+For non-subscription groups, or subscription groups with `no-subscribe-button:true`, the whole event entry links to the event's Add to Calendar PRO landing page in a new tab by default. Without that opt-out, subscription-group entries remain read-only regardless of the interaction options below.
 
 This is the recommended flow, especially for RSVP events, because the landing page can show the complete event information and RSVP form.
 
@@ -174,10 +184,8 @@ Check the following before publishing:
 
 ## Limitations
 
-::: warning Recurring events
-Recurring events are currently not fully supported by the event list. The list does not reliably expand and place every recurrence. Use individual, non-recurring dates when the overview must show every occurrence.
-:::
+Recurring events are supported. Their occurrences are expanded within a bounded rolling window, with each entry still linked to the original recurring event. See the [recurrence date logic](/integration/general#recurring-events) for the exact window.
 
-Events are assigned to the month and year of their start date. If an event spans into a later year, it is also represented in January of the year in which it ends.
+Events are assigned to the month and year of their start date. Non-recurring events spanning into a later year are also represented in January of the year in which they end.
 
-For the full date logic, all configuration fields, styling hooks, and interaction combinations, continue with the [Event List reference](/integration/event-list).
+For the full date logic, all configuration fields, styling hooks, and interaction combinations, continue with the [Event List reference](/integration/general#event-lists).

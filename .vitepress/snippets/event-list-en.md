@@ -1,10 +1,4 @@
----
-title: Event List Configuration
-description: Complete reference for rendering a public Add to Calendar PRO group as a configurable event list on your website.
-outline: [2,3]
----
-
-# Event List Configuration
+## Event lists {#event-lists}
 
 The event list feature renders the public events of an Add to Calendar PRO group through the `<add-to-calendar-button>` web component.
 
@@ -48,6 +42,20 @@ There is one exception: if the group is also configured as a calendar subscripti
 ```
 
 `group-overview` only takes effect together with a valid `prokey`. Setting it on any group that has the public event overview enabled is always safe, but only necessary in the subscription case.
+
+When a subscription group's overview is requested, a subscription Add to Calendar button is shown at the top, alongside the date controls. The event entries below it are read-only: no landing-page links, individual calendar actions, or RSVP modals are available. This takes precedence over `no-details` and `add-via-list`.
+
+To hide the subscription button and restore the regular list interactions, set the overview option **No subscribe button** (`no-subscribe-button`) to `true`:
+
+```html
+<add-to-calendar-button
+  prokey="YOUR-GROUP-PROKEY"
+  group-overview
+  group-overview-config='{"no-subscribe-button":true}'
+></add-to-calendar-button>
+```
+
+This opt-out does not override an explicit `no-add:true` setting.
 
 Additional settings belong in the `group-overview-config` object:
 
@@ -98,7 +106,7 @@ For example, during 2027 the default is:
 
 Events from years earlier than the previous year are not rendered.
 
-There is no default upper limit.
+There is no default upper limit for the API request or non-recurring dates. Recurrence expansion has a separate fixed window described below.
 
 ### Year selection
 
@@ -118,13 +126,23 @@ The current month is selected when it contains events. Otherwise, the first avai
 
 An event appears in the month and year of its start date.
 
-If an event starts in one year and ends in a later year, it also appears in January of the ending year. It is not repeated in every month between the start and end dates.
+If a non-recurring event starts in one year and ends in a later year, it also appears in January of the ending year. It is not repeated in every month between the start and end dates.
 
 For multi-date events, every date returned by the group endpoint becomes its own list entry.
+
+### Recurring events
+
+Recurring events are supported. Each occurrence is rendered in its own month and year, from the **first day of the current month through the last day of the month 18 months ahead**, inclusive. This is a month-based window, not a cutoff starting today: earlier occurrences in the current month are included. Occurrences outside that window are omitted.
+
+The `from` and `to` options filter the API request; they do not extend this recurrence-expansion window. Recurrence rules, including their end date or occurrence count, still apply. Every rendered occurrence points to the original recurring event for its landing page and Add to Calendar or RSVP action, rather than creating a separate event. Cross-year recurring occurrences are not duplicated in January of their ending year.
 
 ## Configuration reference
 
 `group-overview-config` can contain none, some, or all of the following properties.
+
+| Property | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `no-subscribe-button` | Boolean | `false` | For subscription-group overviews, hides the top subscription button and restores normal list interactions. Without this opt-out, subscription entries are read-only regardless of `no-details` or `add-via-list`. An explicit `no-add:true` still disables entry interactions. |
 
 | Property        | Type    | Default                        | Description                                                                                                                                                                        |
 | :-------------- | :------ | :----------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -194,6 +212,8 @@ Date | Event title
 The complete text is linked. When direct Add to Calendar actions are enabled, the plus badge becomes the list marker for regular events. RSVP entries use an aligned dot instead.
 
 ## Interaction behavior
+
+Subscription-group overviews show a subscription button with read-only entries by default. The following interaction rules apply to non-subscription groups, or after setting `no-subscribe-button:true` for a subscription group.
 
 The interaction depends on `no-add`, `no-details`, `add-via-list`, the selected layout, and whether the event uses RSVP.
 
@@ -273,6 +293,8 @@ add-to-calendar-button::part(atcb-group-overview-event) {
 
 Available parts are:
 
+The subscription button container also exposes `atcb-group-overview-subscribe` when present.
+
 | Part                                | Element                            |
 | :---------------------------------- | :--------------------------------- |
 | `atcb-group-overview`               | Root overview element              |
@@ -301,13 +323,6 @@ Not every part exists in every layout or configuration.
 
 ## Limitations and considerations
 
-### Recurring events
-
-::: warning Current limitation
-Recurring events are not fully supported. The overview does not reliably expand a recurrence into all of its occurrences, so filtering and month placement can be incomplete.
-:::
-
-Use individual dates or multi-date events when every occurrence must appear in the list.
 
 ### Public data
 

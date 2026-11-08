@@ -1,9 +1,9 @@
 ---
-title: Nutze die Buttons und RSVP-Formulare mit deinem Tech Stack
-description: Lerne Add to Calendar PRO mit jedem Tech Stack zu integrieren. Vollständige Implementierungsanleitung für Kalender-Buttons und RSVP-Formulare.
+title: Nutze Buttons, RSVP-Formulare und Event-Listen mit deinem Tech Stack
+description: Integriere Add to Calendar PRO Buttons, RSVP-Formulare und öffentliche Event-Listen mit deinem Tech Stack.
 outline: [2,3]
 ---
-# Nutze die Buttons und RSVP-Formulare mit deinem Tech Stack
+# Nutze Buttons, RSVP-Formulare und Event-Listen mit deinem Tech Stack
 Unsere Add to Calendar Buttons und RSVP-Formulare lassen sich ganz einfach mit praktisch jedem Tech Stack integrieren.  
 Die Einrichtung mit den Standardeinstellungen ist innerhalb von 1 Minute erledigt. Details kannst du anschließend nach Belieben anpassen.
 
@@ -108,6 +108,8 @@ Im ersten Fall werden die Links zu den Kalendern direkt im Browser dynamisch gen
 Bei Verwendung des Proxys werden Links und Dateien auf unserer Seite generiert und der Benutzer wird zuerst zu uns umgeleitet. Sollte etwas nicht funktionieren, können wir den Benutzer damit auch darüber informieren und Alternativen sowie Anleitungen anbieten. Dies ist daher der stabilere Weg, für den Benutzer aber etwas langsamer.
 
 Du kannst die Proxy-Einstellung über einen Style verwalten, den du mit dem Event (oder Event-Gruppe) verbindest. Wenn kein Style definiert ist, verwendet wir standardmäßig die Proxy-Option.
+
+<!--@include: ../../../.vitepress/snippets/event-list-de.md-->
 
 ## Einstellungen überschreiben
 
