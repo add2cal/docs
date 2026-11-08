@@ -65,7 +65,7 @@ import 'add-to-calendar-button';
 
 The package includes only the default style and English by default. Choose styles and languages independently. For a fixed style, import `add-to-calendar-button/styles/3d`; use `add-to-calendar-button/styles/all` when remote PRO configuration can change the style without a deployment. Import a specific language or small known set, such as `add-to-calendar-button/i18n/de`, by default. Use `add-to-calendar-button/i18n/all` only when languages can change unpredictably at runtime. The example mixes `styles/all` with `i18n/de`, which is valid. Import every needed style and language module before `add-to-calendar-button`; load the main module last so it upgrades the custom element only after the assets are registered. Both aggregate imports increase the bundle because they include every respective asset.
 
-Alternatively, your IT team can set `style-source` to load assets dynamically from jsDelivr or your own hosting. See the [V3 Migration Guide](/integration/migration-guide-v2-to-v3) for these strategies. Replace legacy `/unstyle` and `/no-pro` imports with the main entry.
+Alternatively, set `style-source="jsdelivr"` to load styles and languages on demand, matching the installed package version. Custom triggers use `styleSource: 'jsdelivr'` in `atcb_action`. See the [V3 Migration Guide](/integration/migration-guide-v2-to-v3) for self-hosting and other strategies. Replace legacy `/unstyle` and `/no-pro` imports with the main entry.
 
 *Based on your framework/library, you might need to make minor adjustments to the respective config.*
 
