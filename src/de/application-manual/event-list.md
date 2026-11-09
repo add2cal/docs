@@ -22,9 +22,11 @@ Nutze eine Gruppe für die Inhalte, die du veröffentlichen möchtest. Die öffe
 
 ## Liste in die Webseite einbinden
 
-Gib den Gruppen-ProKey und die [Integrationsanleitung für Event-Listen](/de/integration/event-list) an dein Webseiten-Team. Die Aktion **Integration** in der App liefert ebenfalls das passende Einstiegsbeispiel.
+Gib den Gruppen-ProKey und die [Integrationsanleitung für Event-Listen](/de/integration/general#event-lists) an dein Webseiten-Team. Die Aktion **Integration** in der App liefert ebenfalls das passende Einstiegsbeispiel.
 
 Bei einer normalen Gruppe mit aktivierter öffentlicher Liste zeigt die Gruppen-Integration automatisch die Liste. Bietet die Gruppe zusätzlich ein Kalender-Abonnement, muss die Integration ausdrücklich die Übersicht anfordern. Andernfalls erscheint der Abo-Button.
+
+Wird die Übersicht einer Abonnement-Gruppe angezeigt, erscheint oben ein Add to Calendar Button für das Abonnement; die Event-Einträge sind rein informativ. Dein Webseiten-Team kann **No subscribe button** (`no-subscribe-button:true`) in den Übersichtsoptionen aktivieren, um den Button auszublenden und normale Interaktionen wiederherzustellen. Eine ausdrücklich als rein informativ konfigurierte Liste (`no-add:true`) bleibt ohne Interaktion.
 
 Nach der Website-Einrichtung pflegst du Titel, Beschreibungen, Orte und Termine weiterhin in PRO.
 
@@ -38,16 +40,16 @@ Dein Webseiten-Team kann drei Darstellungen konfigurieren:
 | **Karten** | Breitere Seiten mit optisch getrennten Events. |
 | **Kompakt** | Einen kurzen Terminplan mit Datum und Titel. |
 
-Standardmäßig öffnet ein Klick die Landingpage. Die Integration kann stattdessen direkt Kalender-Optionen oder das RSVP-Formular öffnen oder Einträge ganz ohne Interaktion zeigen.
+Bei Gruppen ohne Abonnement oder nach dem Ausblenden des Abonnement-Buttons öffnet ein Klick standardmäßig die Landingpage. Die Integration kann stattdessen direkt Kalender-Optionen oder das RSVP-Formular öffnen oder Einträge ganz ohne Interaktion zeigen.
 
 RSVP-Events folgen dem Anmeldeablauf. Sie haben nicht die zusätzliche Schnellaktion zum Kalender-Speichern gewöhnlicher Events.
 
 ## Die veröffentlichte Liste prüfen
 
-Öffne die Webseite als Besucher. Wechsle zwischen verfügbaren Jahren und Monaten und öffne sowohl ein normales als auch ein RSVP-Event, sofern enthalten.
+Öffne die Webseite als Besucher und wechsle zwischen verfügbaren Jahren und Monaten. Prüfe bei Abonnement-Gruppen den oberen Abonnement-Button und die rein informativen Einträge. Nach dem Ausblenden dieses Buttons oder bei anderen Gruppen öffnest du sowohl ein normales als auch ein RSVP-Event, sofern enthalten.
 
 Fehlt ein Event, prüfe Gruppe, Veröffentlichung, Privatsphäre und Termine. Die Standardliste beginnt am 1. Januar des Vorjahres; ältere Jahre erscheinen nicht. Dein Webseiten-Team kann zusätzliche Datumsgrenzen gesetzt haben.
 
-Events mit mehreren Terminen erzeugen mehrere Einträge. Wiederkehrende Events werden nicht zuverlässig in alle Einzeltermine aufgelöst. Nutze einzelne Termine oder Events, wenn jede Sitzung erscheinen muss.
+Events mit mehreren Terminen erzeugen mehrere Einträge. Wiederkehrende Events werden innerhalb eines begrenzten, mitlaufenden Zeitfensters unterstützt. Prüfe den genauen Zeitraum unter [Wiederkehrende Events](/de/integration/general#wiederkehrende-events), bevor du ein ausgelassenes Vorkommen als fehlende Daten wertest.
 
-Für Layout, Datumsfilter und optische Anpassungen nutzt dein Webseiten-Team [Event-Liste konfigurieren](/de/integration/event-list).
+Für Layout, Datumsfilter und optische Anpassungen nutzt dein Webseiten-Team [Event-Liste konfigurieren](/de/integration/general#event-lists).

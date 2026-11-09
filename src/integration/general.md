@@ -1,9 +1,9 @@
 ---
-title: Using Buttons and RSVP Forms with your Tech Stack
-description: Learn to integrate Add to Calendar PRO with any tech stack. Complete implementation guide for calendar buttons and RSVP forms.
+title: Using Buttons, RSVP Forms, and Event Lists with your Tech Stack
+description: Integrate Add to Calendar PRO buttons, RSVP forms, and public event lists with any tech stack.
 outline: [2,3]
 ---
-# Using Buttons and RSVP Forms with your Tech Stack
+# Using Buttons, RSVP Forms, and Event Lists with your Tech Stack
 
 Our Add to Calendar Buttons and RSVP forms can be easily integrated with basically every tech stack.  
 Getting things up and running with the default can be done within 1 minute. Fine-tune details afterwards if you want to.
@@ -110,6 +110,8 @@ With the proxy, links and files get generated on our side and the user gets redi
 This way, when something does not work, we can tell the user about it and offer alternatives and guidance. It is more stable, but a little slower for the user.
 
 You can control this setting at a style, which you then link to your event or group. If no style is set, the proxy will be the default.
+
+<!--@include: ../../.vitepress/snippets/event-list-en.md-->
 
 ## Overwrite settings
 

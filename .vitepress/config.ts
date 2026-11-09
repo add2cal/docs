@@ -131,7 +131,6 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'Allgemein', link: '/de/integration/general' },
-              { text: 'Event-Liste', link: '/de/integration/event-list' },
               { text: 'Angular', link: '/de/integration/angular' },
               { text: 'Astro', link: '/de/integration/astro' },
               { text: 'HTML / JavaScript', link: '/de/integration/html' },
@@ -290,7 +289,6 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'General', link: '/integration/general' },
-          { text: 'Event List', link: '/integration/event-list' },
           { text: 'Angular', link: '/integration/angular' },
           { text: 'Astro', link: '/integration/astro' },
           { text: 'HTML / JavaScript', link: '/integration/html' },
