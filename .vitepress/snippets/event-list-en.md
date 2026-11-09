@@ -8,7 +8,7 @@ Instead of rendering a button, the component loads the group's event data and bu
 If you want to get a list online first, follow the step-by-step [Create an Event List on your Website recipe](/recipes/event-list).
 :::
 
-## Requirements
+### Requirements
 
 The feature requires all of the following:
 
@@ -20,7 +20,7 @@ The feature requires all of the following:
 
 The component cannot confirm whether a Prokey belongs to a group. You are responsible for providing the correct group Prokey.
 
-## Basic configuration
+### Basic configuration
 
 Provide the group Prokey. Nothing else is required:
 
@@ -74,7 +74,7 @@ Additional settings belong in the `group-overview-config` object:
 
 HTML object attributes must contain valid JSON. A convenient pattern is to use single quotes around the attribute and double quotes inside the JSON. Do not add comments or trailing commas.
 
-## How data is loaded
+### How data is loaded
 
 The component requests the public events from the Add to Calendar PRO Events API. Internally, it uses:
 
@@ -92,9 +92,9 @@ The `from` parameter is always included. The `to` parameter is only included whe
 
 In development mode, the component uses the development API, development event configuration endpoint, and `dev.caldn.net` landing-page links.
 
-## Date organization
+### Date organization
 
-### Default range
+#### Default range
 
 The default lower limit is January 1 of the previous calendar year at `00:00:00Z`.
 
@@ -108,7 +108,7 @@ Events from years earlier than the previous year are not rendered.
 
 There is no default upper limit for the API request or non-recurring dates. Recurrence expansion has a separate fixed window described below.
 
-### Year selection
+#### Year selection
 
 The current year is selected initially and is always available in the year selector.
 
@@ -116,13 +116,13 @@ Other years only appear when at least one event is assigned to them. A year with
 
 The component's `language` setting controls the empty message, month names, and formatted date strings.
 
-### Month selection
+#### Month selection
 
 In the default mode, a second selector shows the months available in the selected year. Months without events are omitted.
 
 The current month is selected when it contains events. Otherwise, the first available month is selected.
 
-### Start and end dates
+#### Start and end dates
 
 An event appears in the month and year of its start date.
 
@@ -130,13 +130,13 @@ If a non-recurring event starts in one year and ends in a later year, it also ap
 
 For multi-date events, every date returned by the group endpoint becomes its own list entry.
 
-### Recurring events
+#### Recurring events
 
 Recurring events are supported. Each occurrence is rendered in its own month and year, from the **first day of the current month through the last day of the month 18 months ahead**, inclusive. This is a month-based window, not a cutoff starting today: earlier occurrences in the current month are included. Occurrences outside that window are omitted.
 
 The `from` and `to` options filter the API request; they do not extend this recurrence-expansion window. Recurrence rules, including their end date or occurrence count, still apply. Every rendered occurrence points to the original recurring event for its landing page and Add to Calendar or RSVP action, rather than creating a separate event. Cross-year recurring occurrences are not duplicated in January of their ending year.
 
-## Configuration reference
+### Configuration reference
 
 `group-overview-config` can contain none, some, or all of the following properties.
 
@@ -155,7 +155,7 @@ The `from` and `to` options filter the API request; they do not extend this recu
 | `custom-domain` | String  | `caldn.net`                    | Hostname used when creating landing-page links, for example `events.example.com`. Do not include a protocol or path. The domain must already be configured in Add to Calendar PRO. |
 | `add-via-list`  | Boolean | `false`                        | Adds a direct calendar-options trigger for regular events. Its exact presentation depends on `type`, `no-details`, and whether the event uses RSVP.                                |
 
-### UTC datetime format
+#### UTC datetime format
 
 `from` and `to` must use a UTC ISO datetime without milliseconds:
 
@@ -173,9 +173,9 @@ The following values are not valid for these settings:
 
 If `to` is invalid or falls before the effective `from`, the overview cannot be initialized.
 
-## Layout types
+### Layout types
 
-### `list`
+#### `list`
 
 The list layout renders one event per row and is limited to a width of 600px.
 
@@ -188,7 +188,7 @@ Each entry contains:
 
 The whole card is the event link or action trigger.
 
-### `cards`
+#### `cards`
 
 The cards layout renders equal-width cards and uses the component's container width, not the viewport width.
 
@@ -201,7 +201,7 @@ Each card contains the datetime above the title, followed by the location and de
 
 Incomplete rows keep the same column width as complete rows.
 
-### `compact`
+#### `compact`
 
 The compact layout renders a minimal text list using this basic pattern:
 
@@ -211,7 +211,7 @@ Date | Event title
 
 The complete text is linked. When direct Add to Calendar actions are enabled, the plus badge becomes the list marker for regular events. RSVP entries use an aligned dot instead.
 
-## Interaction behavior
+### Interaction behavior
 
 Subscription-group overviews show a subscription button with read-only entries by default. The following interaction rules apply to non-subscription groups, or after setting `no-subscribe-button:true` for a subscription group.
 
@@ -228,13 +228,13 @@ With `no-add` disabled (the default), the following combinations apply:
 | `true`       | `false`        | The whole entry opens the calendar options modal.                                                                                              | The whole entry opens the RSVP form in a modal.                         |
 | `true`       | `true`         | In `list` and `cards`, the badge is a visual part of the same action link; clicking anywhere opens the modal. In `compact`, no badge is shown. | The whole entry opens the RSVP form in a modal. No plus badge is shown. |
 
-### RSVP events
+#### RSVP events
 
 RSVP events intentionally do not receive an independent plus action. A personalized calendar file can depend on the RSVP response and belongs to the RSVP flow.
 
 With the default settings, the event therefore opens its landing page. With `no-details` enabled, the RSVP form is forced into a modal, even if that event's style normally requests inline RSVP rendering.
 
-## Landing pages and custom domains
+### Landing pages and custom domains
 
 Without `custom-domain`, event links use:
 
@@ -258,7 +258,7 @@ The value changes the generated source link. Add to Calendar PRO may redirect to
 
 The custom domain must be active in Add to Calendar PRO. The web component does not configure or validate the remote domain setup.
 
-## Language and custom labels
+### Language and custom labels
 
 Use the regular `language` attribute to localize month names, date strings, and the empty-current-year message:
 
@@ -271,7 +271,7 @@ Use the regular `language` attribute to localize month names, date strings, and 
 
 The empty message can also be overridden through `customLabels` using the key `group_overview.empty`.
 
-## Styling
+### Styling
 
 The event list uses a simple black-and-white base style. It does not change with the regular Add to Calendar Button `buttonStyle` setting.
 
@@ -321,22 +321,22 @@ The subscription button container also exposes `atcb-group-overview-subscribe` w
 
 Not every part exists in every layout or configuration.
 
-## Limitations and considerations
+### Limitations and considerations
 
 
-### Public data
+#### Public data
 
 The group and its returned event data are public when **Public Event Overview** is active. Do not use the feature as an access-control mechanism.
 
-### Client-side rendering
+#### Client-side rendering
 
 The component fetches and renders the events in the browser. Account for the loading request in performance, Content Security Policy, and privacy reviews.
 
-### Event details remain managed in PRO
+#### Event details remain managed in PRO
 
 The list is an overview, not a second event database. Titles, dates, descriptions, locations, landing pages, and RSVP configuration should continue to be maintained in Add to Calendar PRO.
 
-## Complete example
+### Complete example
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button" async defer></script>
