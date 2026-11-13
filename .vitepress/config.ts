@@ -109,6 +109,7 @@ export default defineConfig({
               { text: 'Statistiken', link: '/de/application-manual/analytics' },
               { text: 'Team', link: '/de/application-manual/team' },
               { text: 'Einstellungen', link: '/de/application-manual/settings' },
+              { text: 'MCP', link: '/de/application-manual/mcp' },
               { text: 'Fehlerbehebung', link: '/de/application-manual/troubleshooting' }
             ]
           },
@@ -267,6 +268,7 @@ export default defineConfig({
           { text: 'Analytics', link: '/application-manual/analytics' },
           { text: 'Team', link: '/application-manual/team' },
           { text: 'Settings', link: '/application-manual/settings' },
+          { text: 'MCP', link: '/application-manual/mcp' },
           { text: 'Troubleshooting', link: '/application-manual/troubleshooting' }
         ]
       },
