@@ -136,3 +136,7 @@ DELETE /webhook/:id
 Das Löschen eines Webhooks ist einfach. Gib hierzu lediglich die ID an, und er wird entfernt.
 
 **Sei bei diesem Aufruf sehr vorsichtig, da dies die entsprechende Funktionalität sofort entfernt!**
+
+## Fehler
+
+Siehe [API-Authentifizierung](/de/api/auth) für die Key-Einrichtung. Ein fehlender oder ungültiger Key liefert `401`. Eine Operation für einen bestimmten Webhook kann `404` liefern, wenn der Webhook nicht verfügbar ist.

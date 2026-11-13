@@ -201,3 +201,7 @@ Diese bleiben aktiv, verwandeln sich aber in reguläre Events, da die RSVP-Verbi
 
 Das bedeutet, dass ein eingebundenes RSVP-Formular zu einem Add to Calendar Button wird.
 :::
+
+## Fehler
+
+Siehe [API-Authentifizierung](/de/api/auth) für die Key-Einrichtung. Ein fehlender oder ungültiger Key liefert `401`. Eine Operation für ein bestimmtes RSVP-Template kann `404` liefern, wenn das Template nicht verfügbar ist.

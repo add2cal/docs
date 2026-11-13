@@ -132,7 +132,6 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'Allgemein', link: '/de/integration/general' },
-              { text: 'Event-Liste', link: '/de/integration/event-list' },
               { text: 'Angular', link: '/de/integration/angular' },
               { text: 'Astro', link: '/de/integration/astro' },
               { text: 'HTML / JavaScript', link: '/de/integration/html' },
@@ -155,6 +154,7 @@ export default defineConfig({
               { text: 'Authentication', link: '/de/api/auth' },
               { text: 'Gruppen', link: '/de/api/groups' },
               { text: 'Events', link: '/de/api/events' },
+              { text: 'Statistiken', link: '/de/api/statistics' },
               { text: 'Styles', link: '/de/api/styles' },
               { text: 'RSVP-Templates', link: '/de/api/rsvp' },
               { text: "CTA-Templates", link: '/de/api/cta' },
@@ -291,7 +291,6 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'General', link: '/integration/general' },
-          { text: 'Event List', link: '/integration/event-list' },
           { text: 'Angular', link: '/integration/angular' },
           { text: 'Astro', link: '/integration/astro' },
           { text: 'HTML / JavaScript', link: '/integration/html' },
@@ -314,6 +313,7 @@ export default defineConfig({
           { text: 'Authentication', link: '/api/auth' },
           { text: 'Groups', link: '/api/groups' },
           { text: 'Events', link: '/api/events' },
+          { text: 'Statistics', link: '/api/statistics' },
           { text: 'Styles', link: '/api/styles' },
           { text: 'RSVP Templates', link: '/api/rsvp' },
           { text: "CTA Templates", link: '/api/cta' },

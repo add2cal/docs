@@ -136,3 +136,7 @@ DELETE /webhook/:id
 Deleting a webook is simple. Only provide the prokey and it gets removed.
 
 **Be careful with this call as it would immediately remove the corresponding functionality!**
+
+## Errors
+
+See [API Authentication](/api/auth) for key setup. A missing or invalid key returns `401`. An operation that targets a specific webhook can return `404` when the webhook is unavailable.

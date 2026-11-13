@@ -18,6 +18,8 @@ npm install add-to-calendar-button
 Create `plugins/add-to-calendar.client.ts` in your Nuxt app directory (`app/plugins/` in the default Nuxt 4 structure). The `.client.ts` suffix loads the core package only in the browser.
 
 ```typescript
+import 'add-to-calendar-button/styles/all';
+import 'add-to-calendar-button/i18n/de';
 import 'add-to-calendar-button';
 
 export default defineNuxtPlugin(() => {});
@@ -68,19 +70,12 @@ async function openEvent(event) {
 
 ## Styles and languages
 
-The npm package includes only the default style and English by default. Import every additional style and language selected in the PRO app for your buttons and RSVP forms:
+The npm package includes only the default style and English by default. The example mixes `add-to-calendar-button/styles/all` with `add-to-calendar-button/i18n/de`, which is valid: use `add-to-calendar-button/styles/3d` when your style is fixed, or `add-to-calendar-button/styles/all` when remote PRO configuration can change it without deployment. Import the specific language or small known set, such as `add-to-calendar-button/i18n/de`, by default; use `add-to-calendar-button/i18n/all` only when languages can change unpredictably at runtime. Both `/all` imports increase the bundle because they include every respective asset.
 
-```javascript
-import 'add-to-calendar-button/styles/3d';
-import 'add-to-calendar-button/i18n/de';
-```
-
-Place these imports in your `.client.ts` plugin.
-
-Alternatively, load styles and languages dynamically from jsDelivr by setting `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` on the element. Apply the same strategy to custom triggers; the option is named `styleSource` in `atcb_action`.
+Alternatively, set `style-source="jsdelivr"` to load styles and languages on demand from jsDelivr, matching your installed package version automatically. For custom triggers, use `styleSource: 'jsdelivr'` in `atcb_action`.
 
 ## Optional: Server-side rendering
 
-The package provides a separate SSR entry to pre-render a button shell. Use its asynchronous variant on the server for PRO data. Full interaction and RSVP forms still initialize in the browser. See [SSR with PRO](/integration/general#ssr-with-pro) and the [Button Nuxt guide](https://add-to-calendar-button.com/use-with-nuxt).
+The package provides a separate SSR entry to pre-render a button shell. In v3.3.0, that server-rendered shell retains matching styles until the client upgrade. Use its asynchronous variant on the server for PRO data, then load required style and language modules before the main module in the client plugin. Full interaction and RSVP forms still initialize in the browser. See [SSR with PRO](/integration/general#ssr-with-pro) and the [Button Nuxt guide](https://add-to-calendar-button.com/use-with-nuxt).
 
 Do not render the generated SSR shell with `v-html`: Vue would replace its shadow DOM during hydration. The official Nuxt guide demonstrates a directive that preserves existing server markup.

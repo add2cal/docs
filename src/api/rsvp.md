@@ -201,3 +201,7 @@ They remain active, but transform into regular events, as the RSVP link gets dro
 
 This means that an integrated RSVP form transforms into an Add to Calendar button.
 :::
+
+## Errors
+
+See [API Authentication](/api/auth) for key setup. A missing or invalid key returns `401`. An operation that targets a specific RSVP template can return `404` when the template is unavailable.

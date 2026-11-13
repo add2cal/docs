@@ -18,6 +18,8 @@ npm install add-to-calendar-button
 Importiere das Modul in der Komponente, in welcher du den Button verwenden möchtest.
 
 ```javascript
+import 'add-to-calendar-button/styles/all';
+import 'add-to-calendar-button/i18n/de';
 import 'add-to-calendar-button';
 ```
 
@@ -29,6 +31,8 @@ Für eine Standalone-Komponente:
 
 ```typescript
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import 'add-to-calendar-button/styles/all';
+import 'add-to-calendar-button/i18n/de';
 import 'add-to-calendar-button';
 
 @Component({
@@ -93,13 +97,6 @@ Je nach Konfiguration könnte der Datenfluss nach dem ersten Rendern des Buttons
 
 ## Styles und Sprachen
 
-Das npm-Paket enthält standardmäßig nur den Standard-Style und Englisch. Importiere alle weiteren Styles und Sprachen, die du in der PRO App für deine Buttons und RSVP-Formulare auswählst:
+Das npm-Paket enthält standardmäßig nur den Standard-Style und Englisch. Das Beispiel kombiniert `add-to-calendar-button/styles/all` mit `add-to-calendar-button/i18n/de`, was gültig ist: Nutze `add-to-calendar-button/styles/3d` bei einem festen Style oder `add-to-calendar-button/styles/all`, wenn die remote verwaltete PRO-Konfiguration ihn ohne Deployment ändern kann. Importiere standardmäßig die konkrete Sprache oder eine kleine bekannte Menge, etwa `add-to-calendar-button/i18n/de`; nutze `add-to-calendar-button/i18n/all` nur, wenn Sprachen zur Laufzeit wirklich unvorhersehbar wechseln können. Beide `/all`-Imports vergrößern das Bundle, weil sie alle jeweiligen Dateien enthalten.
 
-```javascript
-import 'add-to-calendar-button/styles/3d';
-import 'add-to-calendar-button/i18n/de';
-```
-
-Füge die Imports neben dem Hauptimport oder in einem gemeinsamen Setup-Modul ein.
-
-Alternativ kannst du Styles und Sprachen dynamisch von jsDelivr laden, indem du `style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"` am Element setzt. Dieselbe Strategie gilt für eigene Trigger; in `atcb_action` heißt die Option `styleSource`.
+Alternativ lädt `style-source="jsdelivr"` Styles und Sprachen bei Bedarf von jsDelivr, automatisch passend zur installierten Paketversion. Für eigene Trigger verwendest du `styleSource: 'jsdelivr'` in `atcb_action`.

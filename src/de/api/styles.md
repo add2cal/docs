@@ -177,3 +177,7 @@ Das Löschen eines Styles ist einfach. Gib hierzu lediglich die ID an, und er wi
 ::: warning Dies löscht keine Events oder Gruppen!
 Sie bleiben aktiv, verwenden dann aber stattdessen den Standard-Style.
 :::
+
+## Fehler
+
+Siehe [API-Authentifizierung](/de/api/auth) für die Key-Einrichtung. Ein fehlender oder ungültiger Key liefert `401`. Eine Operation für einen bestimmten Style kann `404` liefern, wenn der Style nicht verfügbar ist.

@@ -14,7 +14,7 @@ Diese Anleitung überträgt die [Add to Calendar Button Migrationsanleitung von 
 | Integration | Was du tun musst |
 | :--- | :--- |
 | Ein `<script>`-Tag mit einer URL von `cdn.jsdelivr.net` | Entferne eine vorhandene Festlegung auf v2 oder ändere sie auf v3. Styles und Sprachen werden automatisch geladen. |
-| Eine npm-Abhängigkeit, die dein Webseiten-Code importiert | Aktualisiere das Paket und importiere zusätzlich benötigte Styles und Sprachen explizit. Alternativ kann deine IT dynamisches Laden einrichten. |
+| Eine npm-Abhängigkeit, die dein Webseiten-Code importiert | Aktualisiere das Paket und wähle eine Ladestrategie für Styles und Sprachen. Alternativ kann deine IT dynamisches Laden einrichten. |
 
 Wenn du unsicher bist, bitte dein Webseiten-Team, die Skript-URL oder die Abhängigkeit in der `package.json` zu prüfen.
 
@@ -62,25 +62,27 @@ Ersetze bei React und Next.js den nicht mehr unterstützten React Wrapper durch 
 
 ### Styles und Sprachen importieren
 
-**Nur der Standard-Style und Englisch sind standardmäßig enthalten.** Anders als in v2 enthält ein npm-Import nicht automatisch alle weiteren Styles und Sprachen. Importiere jeden zusätzlichen Style und jede Sprache, die deine PRO Events, Buttons und RSVP-Formulare verwenden.
+**Nur der Standard-Style und Englisch sind standardmäßig enthalten.** Importiere Styles und Sprachen unabhängig voneinander. Bei einem festen Style importiere `add-to-calendar-button/styles/3d`. Wenn die remote verwaltete PRO-Konfiguration den Style ohne Deployment ändern kann, importiere stattdessen `add-to-calendar-button/styles/all`. Das vergrößert das Bundle, weil alle Styles enthalten sind.
 
-Beispiel für den Style `3d` und Deutsch:
+Importiere standardmäßig eine konkrete Sprache oder eine kleine bekannte Menge:
 
 ```javascript
-import 'add-to-calendar-button';
 import 'add-to-calendar-button/styles/3d';
 import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
 ```
 
-Die Imports stellen die Dateien bereit. Deine Einstellungen in der PRO App bestimmen weiterhin, welcher Style und welche Sprache verwendet werden. Ohne die nötigen Imports oder eine dynamische Dateiquelle wird eine neu ausgewählte Sprache oder ein neuer Style möglicherweise nicht korrekt auf deiner Webseite angezeigt.
+Nutze `add-to-calendar-button/i18n/all` nur, wenn Sprachen zur Laufzeit wirklich unvorhersehbar wechseln können. Es enthält jede nicht-englische Sprache und vergrößert das Bundle. Registriere jedes benötigte Style- und Sprachmodul vor dem Import von `add-to-calendar-button`; importiere das Hauptmodul zuletzt, damit das Custom Element erst aktiviert wird, nachdem die Dateien registriert sind. Beide Aggregate-Optionen bleiben verfügbar und können kombiniert werden. Dieses Beispiel ist etwa gültig, wenn PRO den Style remote ändern kann, Deutsch jedoch stabil bleibt:
+
+```javascript
+import 'add-to-calendar-button/styles/all';
+import 'add-to-calendar-button/i18n/de';
+import 'add-to-calendar-button';
+```
 
 ### Gemeinsame Ladestrategie mit deiner IT wählen
 
-Du kannst die Imports in einer gemeinsamen Komponente oder einem Setup-Modul sammeln und einmal über den gemeinsamen Einstiegspunkt deiner Webseite laden. Alle Buttons, die dieselbe Paketinstanz verwenden, können anschließend auf die registrierten Styles und Sprachen zugreifen.
-
-Besprich mit deiner IT, ob ihr nur die aktuell benötigten Dateien oder **alle verfügbaren Styles und Sprachen** importieren möchtet. Für die vollständige Variante ergänzt ihr im gemeinsamen Modul einen expliziten Import für jeden unterstützten Style und jede Sprache nach dem Muster oben. Einen Einstieg `/styles/all` oder `/i18n/all` gibt es nicht.
-
-Wenn ihr alles ladet, können spätere Style- und Sprachänderungen in der PRO App ohne weitere Codeänderung auf der Webseite erscheinen. Voraussetzung ist, dass die Dateien in eurer installierten Version enthalten sind und ihr die Einstellungen nicht im Code überschreibt. Der Nachteil ist ein größeres Bundle: Besucher laden alle diese Styles und Sprachen, selbst wenn die Seite nur eine Variante nutzt. Neu veröffentlichte Dateien benötigen weiterhin ein Paket-Update.
+Sammelt die gewählten Imports in einer gemeinsamen Komponente oder einem Setup-Modul und ladet sie einmal über den gemeinsamen Einstiegspunkt eurer Webseite. Alle Buttons, die dieselbe Paketinstanz verwenden, können anschließend die registrierten Dateien nutzen. Aggregate-Imports stellen die jeweiligen Dateien eurer installierten Version ohne weiteres Code-Deployment bereit; neu veröffentlichte Dateien benötigen weiterhin ein Paket-Update.
 
 ### Fortgeschrittene Option: Dateien dynamisch laden
 
@@ -97,13 +99,13 @@ Setze anschließend die Dateiquelle am Button:
 ```html
 <add-to-calendar-button
   prokey="prokey-deines-events"
-  style-source="https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/styles/"
+  style-source="jsdelivr"
 ></add-to-calendar-button>
 ```
 
-Damit werden fehlende Styles aus `dist/styles/` und fehlende Sprachen aus dem benachbarten Verzeichnis `dist/locales/` auf jsDelivr geladen. Deutsch wird beispielsweise von `https://cdn.jsdelivr.net/npm/add-to-calendar-button@3/dist/locales/de.json` geladen. Für so geladene Dateien sind keine separaten Imports nötig. Ein zusätzliches CDN-Skript-Tag ist ebenfalls nicht erforderlich.
+Damit werden fehlende Styles und Sprachen von jsDelivr geladen, automatisch passend zur installierten Paketversion. Separate Datei-Imports oder ein zusätzliches CDN-Skript-Tag sind nicht nötig. Für eigene Trigger verwendest du `styleSource: 'jsdelivr'` in `atcb_action`.
 
-Die URL mit `@3` folgt Updates innerhalb von v3. Für eine exakte Übereinstimmung mit deinem installierten npm-Paket ersetzt du `@3` durch dessen vollständige Versionsnummer und aktualisierst beides gemeinsam. Behalte die Endung `/dist/styles/` bei: Der Sprachloader ersetzt das abschließende `styles/` durch `locales/`.
+Für eine andere Version kannst du auch eine Paket-URL wie `https://cdn.jsdelivr.net/npm/add-to-calendar-button@3` angeben. jsDelivr-Paket- und Dateipfade werden automatisch aufgelöst. Mit dem empfohlenen Kürzel `jsdelivr` bleiben Dateien und Code versionsgleich.
 
 Selbst-Hosting bleibt eine Alternative. Kopiert dafür `dist/styles/` und `dist/locales/` aus dem installierten Paket in benachbarte Verzeichnisse auf eurer Webseite. Zum Beispiel:
 

@@ -168,3 +168,7 @@ Wenn du den Prokey weg lässt, gilt die Abfrage global über alle Prokeys.
 GET /rsvp-answers/latest
 ```
 
+## Fehler
+
+Siehe [API-Authentifizierung](/de/api/auth) für die Key-Einrichtung. Ein fehlender oder ungültiger Key liefert `401`. Eine Anfrage für ein Event oder RSVP-Antworten kann `404` liefern, wenn die angeforderte Ressource nicht verfügbar ist.
+

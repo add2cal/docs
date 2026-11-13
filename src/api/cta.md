@@ -172,3 +172,7 @@ Deleting a CTA template block is simple. Only provide the prokey and it gets rem
 ::: warning This does not delete events or groups!
 They remain active, but lose their CTA functionality.
 :::
+
+## Errors
+
+See [API Authentication](/api/auth) for key setup. A missing or invalid key returns `401`. An operation that targets a CTA template can return `404` when that template is unavailable.

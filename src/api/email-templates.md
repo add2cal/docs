@@ -39,3 +39,7 @@ GET /email-template/latest
 ```
 
 Gets the latest email template.
+
+## Errors
+
+See [API Authentication](/api/auth) for key setup. A missing or invalid key returns `401`. A request for a specific email template can return `404` when the template is unavailable.

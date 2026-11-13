@@ -1,10 +1,4 @@
----
-title: Event-Liste konfigurieren
-description: Vollständige Referenz zur Darstellung einer öffentlichen Add to Calendar PRO Gruppe als konfigurierbare Event-Liste.
-outline: [2,3]
----
-
-# Event-Liste konfigurieren
+## Event-Listen {#event-lists}
 
 Die Event-Listen-Funktion rendert die öffentlichen Events einer Add to Calendar PRO Gruppe über die `<add-to-calendar-button>` Web Component.
 
@@ -14,7 +8,7 @@ Anstatt einen Button darzustellen, lädt die Komponente die Event-Daten der Grup
 Wenn du zunächst eine Liste online bringen möchtest, folge der Schritt-für-Schritt-Anleitung [Eine Event-Liste auf deiner Webseite erstellen](/de/recipes/event-list).
 :::
 
-## Voraussetzungen
+### Voraussetzungen
 
 Die Funktion benötigt folgende Voraussetzungen:
 
@@ -26,7 +20,7 @@ Die Funktion benötigt folgende Voraussetzungen:
 
 Die Komponente kann nicht prüfen, ob ein Prokey zu einer Gruppe gehört. Du bist dafür verantwortlich, den richtigen Gruppen-Prokey anzugeben.
 
-## Basiskonfiguration
+### Basiskonfiguration
 
 Gib den Gruppen-Prokey an. Mehr ist nicht erforderlich:
 
@@ -49,6 +43,20 @@ Es gibt eine Ausnahme: Wenn die Gruppe gleichzeitig als Kalender-Abonnement konf
 
 `group-overview` funktioniert nur zusammen mit einem gültigen `prokey`. Du kannst das Attribut bei jeder Gruppe mit aktiver öffentlicher Event-Übersicht gefahrlos setzen. Notwendig ist es nur im Abonnement-Fall.
 
+Wenn die Übersicht einer Abonnement-Gruppe angefordert wird, erscheint oben bei den Datumsfiltern ein Add to Calendar Button für das Abonnement. Die Event-Einträge darunter sind rein informativ: Es gibt keine Landingpage-Links, individuellen Kalenderaktionen oder RSVP-Modals. Das hat Vorrang vor `no-details` und `add-via-list`.
+
+Um den Abonnement-Button auszublenden und die normalen Listen-Interaktionen wiederherzustellen, setze die Übersichtsoption **No subscribe button** (`no-subscribe-button`) auf `true`:
+
+```html
+<add-to-calendar-button
+  prokey="DEIN-GRUPPEN-PROKEY"
+  group-overview
+  group-overview-config='{"no-subscribe-button":true}'
+></add-to-calendar-button>
+```
+
+Ein ausdrücklich gesetztes `no-add:true` bleibt dabei wirksam.
+
 Zusätzliche Einstellungen gehören in das Objekt `group-overview-config`:
 
 ```html
@@ -66,7 +74,7 @@ Zusätzliche Einstellungen gehören in das Objekt `group-overview-config`:
 
 Objekt-Attribute in HTML müssen valides JSON enthalten. Eine praktische Schreibweise verwendet einfache Anführungszeichen um das Attribut und doppelte Anführungszeichen innerhalb des JSON. Verwende keine Kommentare oder nachgestellten Kommas.
 
-## Laden der Daten
+### Laden der Daten
 
 Die Komponente lädt die öffentlichen Events über die Add to Calendar PRO Events API. Intern verwendet sie:
 
@@ -84,9 +92,9 @@ Der Parameter `from` wird immer übertragen. `to` wird nur ergänzt, wenn du ihn
 
 Im Entwicklungsmodus verwendet die Komponente die Entwicklungs-API, den Entwicklungs-Endpunkt für Event-Konfigurationen und Landingpage-Links über `dev.caldn.net`.
 
-## Datumsorganisation
+### Datumsorganisation
 
-### Standardzeitraum
+#### Standardzeitraum
 
 Die standardmäßige Untergrenze ist der 1. Januar des vorherigen Kalenderjahres um `00:00:00Z`.
 
@@ -98,9 +106,9 @@ Im Jahr 2027 wäre der Standard beispielsweise:
 
 Events aus Jahren vor dem vorherigen Jahr werden nicht gerendert.
 
-Es gibt standardmäßig keine Obergrenze.
+Für die API-Abfrage und nicht wiederkehrende Termine gibt es standardmäßig keine Obergrenze. Für Wiederholungen gilt das unten beschriebene separate Zeitfenster.
 
-### Jahresauswahl
+#### Jahresauswahl
 
 Das aktuelle Jahr ist zunächst ausgewählt und steht in der Jahresauswahl immer zur Verfügung.
 
@@ -108,23 +116,33 @@ Andere Jahre erscheinen nur, wenn ihnen mindestens ein Event zugeordnet ist. Ein
 
 Die `language`-Einstellung der Komponente steuert den leeren Hinweis, die Monatsnamen und die formatierten Datumsangaben.
 
-### Monatsauswahl
+#### Monatsauswahl
 
 Im Standardmodus zeigt eine zweite Auswahl die verfügbaren Monate des ausgewählten Jahres. Monate ohne Events werden nicht angeboten.
 
 Der aktuelle Monat wird ausgewählt, wenn er Events enthält. Andernfalls wird der erste verfügbare Monat ausgewählt.
 
-### Start- und Enddaten
+#### Start- und Enddaten
 
 Ein Event erscheint im Monat und Jahr seines Startdatums.
 
-Wenn ein Event in einem Jahr beginnt und in einem späteren Jahr endet, erscheint es zusätzlich im Januar des Endjahres. Es wird nicht in jedem Monat zwischen Start- und Enddatum wiederholt.
+Wenn ein nicht wiederkehrendes Event in einem Jahr beginnt und in einem späteren Jahr endet, erscheint es zusätzlich im Januar des Endjahres. Es wird nicht in jedem Monat zwischen Start- und Enddatum wiederholt.
 
 Bei Events mit mehreren Terminen wird jedes vom Gruppen-Endpunkt zurückgegebene Datum zu einem eigenen Listeneintrag.
 
-## Konfigurationsreferenz
+#### Wiederkehrende Events
+
+Wiederkehrende Events werden unterstützt. Jedes Vorkommen erscheint in seinem jeweiligen Monat und Jahr, vom **ersten Tag des aktuellen Monats bis einschließlich zum letzten Tag des Monats in 18 Monaten**. Das Zeitfenster beginnt also nicht erst heute: Frühere Vorkommen im aktuellen Monat werden ebenfalls angezeigt. Vorkommen außerhalb dieses Zeitfensters werden ausgelassen.
+
+Die Optionen `from` und `to` filtern die API-Abfrage; sie erweitern dieses feste Wiederholungsfenster nicht. Die Wiederholungsregel einschließlich Enddatum oder Anzahl der Vorkommen gilt weiterhin. Jeder dargestellte Termin verweist bei Landingpage, Kalenderaktion oder RSVP auf das ursprüngliche wiederkehrende Event, statt ein eigenes Event anzulegen. Jahresübergreifende wiederkehrende Termine werden nicht zusätzlich im Januar ihres Endjahres angezeigt.
+
+### Konfigurationsreferenz
 
 `group-overview-config` kann keine, einige oder alle der folgenden Eigenschaften enthalten.
+
+| Eigenschaft | Typ | Standard | Beschreibung |
+| :--- | :--- | :--- | :--- |
+| `no-subscribe-button` | Boolean | `false` | Blendet bei Abonnement-Gruppen den oberen Abonnement-Button aus und stellt die normalen Listen-Interaktionen wieder her. Ohne diese Option sind die Einträge unabhängig von `no-details` und `add-via-list` rein informativ. Ein ausdrücklich gesetztes `no-add:true` deaktiviert die Interaktionen weiterhin. |
 
 | Eigenschaft     | Typ     | Standard                        | Beschreibung                                                                                                                                                                  |
 | :-------------- | :------ | :------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -137,7 +155,7 @@ Bei Events mit mehreren Terminen wird jedes vom Gruppen-Endpunkt zurückgegebene
 | `custom-domain` | String  | `caldn.net`                     | Hostname für Landingpage-Links, beispielsweise `events.example.com`. Gib kein Protokoll und keinen Pfad an. Die Domain muss bereits in Add to Calendar PRO konfiguriert sein. |
 | `add-via-list`  | Boolean | `false`                         | Ergänzt bei regulären Events einen direkten Auslöser für die Kalenderoptionen. Die genaue Darstellung hängt von `type`, `no-details` und der Verwendung von RSVP ab.          |
 
-### UTC-Datetime-Format
+#### UTC-Datetime-Format
 
 `from` und `to` müssen UTC-ISO-Zeitstempel ohne Millisekunden verwenden:
 
@@ -155,9 +173,9 @@ Die folgenden Werte sind für diese Einstellungen nicht gültig:
 
 Wenn `to` ungültig ist oder vor dem effektiven `from` liegt, kann die Übersicht nicht initialisiert werden.
 
-## Layout-Typen
+### Layout-Typen
 
-### `list`
+#### `list`
 
 Das Listen-Layout rendert ein Event pro Zeile und ist auf eine Breite von 600 px begrenzt.
 
@@ -170,7 +188,7 @@ Jeder Eintrag enthält:
 
 Die gesamte Karte ist der Event-Link oder Aktionsauslöser.
 
-### `cards`
+#### `cards`
 
 Das Karten-Layout rendert gleich breite Karten und orientiert sich an der Container-Breite der Komponente, nicht an der Breite des Browserfensters.
 
@@ -183,7 +201,7 @@ Jede Karte zeigt Datum und Uhrzeit über dem Titel, gefolgt von Ort und Beschrei
 
 Unvollständige Reihen behalten dieselbe Spaltenbreite wie vollständige Reihen.
 
-### `compact`
+#### `compact`
 
 Das kompakte Layout rendert eine minimale Textliste nach diesem Grundmuster:
 
@@ -193,7 +211,9 @@ Datum | Event-Titel
 
 Der vollständige Text ist verlinkt. Wenn direkte Add-to-Calendar-Aktionen aktiv sind, ersetzt die Plus-Marke bei regulären Events den Listenpunkt. RSVP-Einträge verwenden stattdessen einen ausgerichteten Punkt.
 
-## Interaktionsverhalten
+### Interaktionsverhalten
+
+Übersichten von Abonnement-Gruppen zeigen standardmäßig einen Abonnement-Button und rein informative Einträge. Die folgenden Regeln gelten für Gruppen ohne Abonnement oder nach dem Setzen von `no-subscribe-button:true` bei einer Abonnement-Gruppe.
 
 Die Interaktion hängt von `no-add`, `no-details`, `add-via-list`, dem ausgewählten Layout und der Verwendung von RSVP ab.
 
@@ -208,13 +228,13 @@ Wenn `no-add` deaktiviert ist (der Standard), gelten die folgenden Kombinationen
 | `true`       | `false`        | Der gesamte Eintrag öffnet das Modal mit den Kalenderoptionen.                                                                                                             | Der gesamte Eintrag öffnet das RSVP-Formular in einem Modal.                                     |
 | `true`       | `true`         | Bei `list` und `cards` ist die Marke ein visueller Teil desselben Aktionslinks; ein Klick an beliebiger Stelle öffnet das Modal. Bei `compact` wird keine Marke angezeigt. | Der gesamte Eintrag öffnet das RSVP-Formular in einem Modal. Es wird keine Plus-Marke angezeigt. |
 
-### RSVP-Events
+#### RSVP-Events
 
 RSVP-Events erhalten bewusst keine unabhängige Plus-Aktion. Eine personalisierte Kalenderdatei kann von der RSVP-Antwort abhängen und gehört deshalb zum RSVP-Ablauf.
 
 Mit den Standardeinstellungen öffnet das Event daher seine Landingpage. Wenn `no-details` aktiv ist, wird das RSVP-Formular in einem Modal geöffnet, selbst wenn der Event-Stil normalerweise eine Inline-Darstellung des RSVP-Formulars anfordert.
 
-## Landingpages und eigene Domains
+### Landingpages und eigene Domains
 
 Ohne `custom-domain` verwenden Event-Links folgendes Schema:
 
@@ -238,7 +258,7 @@ Der Wert verändert den im Quellcode erzeugten Link. Add to Calendar PRO leitet 
 
 Die eigene Domain muss in Add to Calendar PRO aktiv sein. Die Web Component konfiguriert oder validiert die externe Domain-Einrichtung nicht.
 
-## Sprache und individuelle Beschriftungen
+### Sprache und individuelle Beschriftungen
 
 Verwende das reguläre `language`-Attribut, um Monatsnamen, Datumsangaben und den Hinweis für ein leeres aktuelles Jahr zu lokalisieren:
 
@@ -251,7 +271,7 @@ Verwende das reguläre `language`-Attribut, um Monatsnamen, Datumsangaben und de
 
 Der leere Hinweis kann außerdem über `customLabels` mit dem Schlüssel `group_overview.empty` überschrieben werden.
 
-## Styling
+### Styling
 
 Die Event-Liste verwendet einen einfachen Schwarz-Weiß-Basisstil. Sie verändert sich nicht mit der regulären `buttonStyle`-Einstellung des Add to Calendar Buttons.
 
@@ -272,6 +292,8 @@ add-to-calendar-button::part(atcb-group-overview-event) {
 ```
 
 Folgende Parts stehen zur Verfügung:
+
+Der Container des Abonnement-Buttons stellt außerdem `atcb-group-overview-subscribe` bereit, wenn er vorhanden ist.
 
 | Part                                | Element                                 |
 | :---------------------------------- | :-------------------------------------- |
@@ -299,29 +321,22 @@ Folgende Parts stehen zur Verfügung:
 
 Nicht jeder Part existiert in jedem Layout oder jeder Konfiguration.
 
-## Einschränkungen und Hinweise
+### Einschränkungen und Hinweise
 
-### Wiederkehrende Events
 
-::: warning Aktuelle Einschränkung
-Wiederkehrende Events werden nicht vollständig unterstützt. Die Übersicht kann eine Wiederholung nicht zuverlässig in alle einzelnen Vorkommen auflösen. Filterung und Monatszuordnung können daher unvollständig sein.
-:::
-
-Verwende einzelne Termine oder Events mit mehreren Daten, wenn jedes Vorkommen in der Liste erscheinen muss.
-
-### Öffentliche Daten
+#### Öffentliche Daten
 
 Die Gruppe und die zurückgegebenen Event-Daten sind öffentlich, wenn **Public Event Overview** aktiv ist. Verwende diese Funktion nicht als Zugriffskontrolle.
 
-### Client-seitiges Rendering
+#### Client-seitiges Rendering
 
 Die Komponente lädt und rendert die Events im Browser. Berücksichtige die zusätzliche Anfrage bei Performance-, Content-Security-Policy- und Datenschutzprüfungen.
 
-### Event-Details bleiben in PRO verwaltet
+#### Event-Details bleiben in PRO verwaltet
 
 Die Liste ist eine Übersicht und keine zweite Event-Datenbank. Titel, Daten, Beschreibungen, Orte, Landingpages und RSVP-Konfigurationen sollten weiterhin in Add to Calendar PRO gepflegt werden.
 
-## Vollständiges Beispiel
+### Vollständiges Beispiel
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button" async defer></script>

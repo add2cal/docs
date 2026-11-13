@@ -177,3 +177,7 @@ Deleting a style is simple. Only provide the prokey and it gets removed.
 ::: warning This does not delete events or groups!
 They remain active, but will then use default styl instead.
 :::
+
+## Errors
+
+See [API Authentication](/api/auth) for key setup. A missing or invalid key returns `401`. An operation that targets a specific style can return `404` when the style is unavailable.

@@ -11,7 +11,7 @@ Mit der Add to Calendar Button Web Component kannst du eine Add to Calendar PRO 
 Die Liste wird automatisch aus den Events dieser Gruppe erzeugt. Sie enthält eine Jahres- und Monatsauswahl, Links zu den individuellen Event-Landingpages und optionale Add-to-Calendar-Aktionen.
 
 ::: tip Du suchst alle Einstellungen?
-Diese Anleitung konzentriert sich darauf, die Event-Liste online zu bringen. In der [Referenz zur Event-Liste](/de/integration/event-list) findest du alle Konfigurationsoptionen, Layouts, Interaktionsregeln, Einschränkungen und CSS Parts.
+Diese Anleitung konzentriert sich darauf, die Event-Liste online zu bringen. In der [Referenz zur Event-Liste](/de/integration/general#event-lists) findest du alle Konfigurationsoptionen, Layouts, Interaktionsregeln, Einschränkungen und CSS Parts.
 :::
 
 ## 1. Eine Event-Gruppe vorbereiten
@@ -69,7 +69,17 @@ Wenn dieselbe Gruppe zusätzlich als Kalender-Abonnement konfiguriert ist, rende
 ```
 :::
 
-Anstelle eines normalen Add to Calendar Buttons führt die Komponente nun folgende Schritte aus:
+Bei der Übersicht einer Abonnement-Gruppe erscheint oben ein Add to Calendar Button für das Abonnement; die Event-Einträge sind rein informativ. Um den Button auszublenden und die unten beschriebenen normalen Interaktionen wiederherzustellen, verwende:
+
+```html
+<add-to-calendar-button
+  prokey="DEIN-GRUPPEN-PROKEY"
+  group-overview
+  group-overview-config='{"no-subscribe-button":true}'
+></add-to-calendar-button>
+```
+
+Die Komponente führt nun folgende Schritte aus:
 
 1. Sie lädt die öffentlichen Events der Gruppe.
 2. Sie wählt das aktuelle Jahr aus.
@@ -97,7 +107,7 @@ Folgende Layouts stehen zur Verfügung:
 
 ## 7. Das Verhalten beim Anklicken festlegen
 
-Standardmäßig verlinkt der gesamte Event-Eintrag auf die Add to Calendar PRO Landingpage des Events. Sie wird in einem neuen Tab geöffnet.
+Bei Gruppen ohne Abonnement oder mit `no-subscribe-button:true` verlinkt der gesamte Event-Eintrag standardmäßig auf die Add to Calendar PRO Landingpage des Events. Sie wird in einem neuen Tab geöffnet. Ohne diese Option bleiben Einträge von Abonnement-Gruppen unabhängig von den folgenden Interaktionseinstellungen rein informativ.
 
 Das ist insbesondere für RSVP-Events der empfohlene Ablauf, da die Landingpage alle Event-Informationen und das RSVP-Formular anzeigen kann.
 
@@ -174,10 +184,8 @@ Prüfe vor der Veröffentlichung folgende Punkte:
 
 ## Einschränkungen
 
-::: warning Wiederkehrende Events
-Wiederkehrende Events werden von der Event-Liste derzeit nicht vollständig unterstützt. Die Liste kann nicht zuverlässig jede Wiederholung auflösen und einordnen. Verwende einzelne, nicht wiederkehrende Termine, wenn jede Wiederholung in der Übersicht erscheinen muss.
-:::
+Wiederkehrende Events werden unterstützt. Ihre Vorkommen werden innerhalb eines begrenzten, mitlaufenden Zeitfensters aufgelöst; jeder Eintrag verweist weiterhin auf das ursprüngliche wiederkehrende Event. Das genaue Zeitfenster findest du unter [Wiederkehrende Events](/de/integration/general#wiederkehrende-events).
 
-Events werden dem Monat und Jahr ihres Startdatums zugeordnet. Wenn ein Event bis in ein späteres Jahr reicht, wird es zusätzlich im Januar des Endjahres dargestellt.
+Events werden dem Monat und Jahr ihres Startdatums zugeordnet. Nicht wiederkehrende Events, die bis in ein späteres Jahr reichen, werden zusätzlich im Januar des Endjahres dargestellt.
 
-Die vollständige Datumslogik, alle Konfigurationsfelder, Styling-Schnittstellen und Interaktionskombinationen findest du in der [Referenz zur Event-Liste](/de/integration/event-list).
+Die vollständige Datumslogik, alle Konfigurationsfelder, Styling-Schnittstellen und Interaktionskombinationen findest du in der [Referenz zur Event-Liste](/de/integration/general#event-lists).

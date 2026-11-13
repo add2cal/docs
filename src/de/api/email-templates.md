@@ -40,3 +40,7 @@ GET /email-template/latest
 
 Ruft das neueste E-Mail-Template ab.
 
+## Fehler
+
+Siehe [API-Authentifizierung](/de/api/auth) für die Key-Einrichtung. Ein fehlender oder ungültiger Key liefert `401`. Eine Anfrage für ein bestimmtes E-Mail-Template kann `404` liefern, wenn das Template nicht verfügbar ist.
+

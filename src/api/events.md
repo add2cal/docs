@@ -240,3 +240,7 @@ DELETE /event/:prokey
 Deleting an event is simple. Only provide the prokey and it gets removed.
 
 **Be careful with this call!**
+
+## Errors
+
+See [API Authentication](/api/auth) for key setup. A missing or invalid key returns `401`. An operation that targets a specific event can return `404` when the event is unavailable.
